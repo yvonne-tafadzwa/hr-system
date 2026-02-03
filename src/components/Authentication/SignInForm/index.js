@@ -209,7 +209,7 @@ const SignInForm = () => {
 
                 <Form.Group>
                   <p className="text-center mb-0" style={{ fontSize: '12px' }}>
-                    Don't have an account?{" "}
+                    Don&apos;t have an account?{" "}
                     <Link
                       href="/authentication/sign-up/"
                       className="fw-medium text-primary text-decoration-none"

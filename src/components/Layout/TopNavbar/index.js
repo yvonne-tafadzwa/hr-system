@@ -24,7 +24,7 @@ const TopNavbar = ({ toogleActive }) => {
       try {
         // Get the current user
         const { data: { user } } = await supabase.auth.getUser();
-        
+
         if (user && user.email) {
           // First, check if user is an administrator (matches company login_email)
           const { data: adminCompany } = await supabase
@@ -33,35 +33,35 @@ const TopNavbar = ({ toogleActive }) => {
             .eq('login_email', user.email)
             .eq('is_active', true)
             .single();
-          
+
           if (adminCompany) {
             setCompanyName(adminCompany.name);
             return;
           }
-          
+
           // Try to get company from user's metadata
           const userCompanyId = user.user_metadata?.company_id;
-          
+
           if (userCompanyId) {
             const { data: company } = await supabase
               .from('companies')
               .select('name')
               .eq('id', userCompanyId)
               .single();
-            
+
             if (company) {
               setCompanyName(company.name);
               return;
             }
           }
-          
+
           // If not an admin, try to get from employees table
           const { data: employee } = await supabase
             .from('employees')
             .select('company_id, companies(name)')
             .eq('id', user.id)
             .single();
-          
+
           if (employee?.companies?.name) {
             setCompanyName(employee.companies.name);
           } else if (employee?.company_id) {
@@ -70,7 +70,7 @@ const TopNavbar = ({ toogleActive }) => {
               .select('name')
               .eq('id', employee.company_id)
               .single();
-            
+
             if (company) {
               setCompanyName(company.name);
             }
@@ -82,7 +82,7 @@ const TopNavbar = ({ toogleActive }) => {
             .select('name')
             .eq('is_active', true)
             .limit(1);
-          
+
           if (companies && companies.length > 0) {
             setCompanyName(companies[0].name);
           }
@@ -110,7 +110,7 @@ const TopNavbar = ({ toogleActive }) => {
                   <h4 className="mb-0 d-flex align-items-center" style={{ fontSize: '16px', fontWeight: '600', color: '#333' }}>
                     Hi, {companyName || 'Company'} 👋
                   </h4>
-                  <span style={{ fontSize: '12px', color: '#6c757d' }}>Welcome back! Here's what's happening today.</span>
+                  <span style={{ fontSize: '12px', color: '#6c757d' }}>Welcome back! Here&apos;s what&apos;s happening today.</span>
                 </div>
               </div>
             </div>
