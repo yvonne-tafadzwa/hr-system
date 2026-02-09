@@ -1,29 +1,24 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { Row, Col, Spinner } from "react-bootstrap";
 import { supabase } from "@/lib/supabase";
 
 const Logout = () => {
-  const router = useRouter();
-
   useEffect(() => {
-    const performLogout = async () => {
-      try {
-        // Sign out
-        await supabase.auth.signOut();
-        console.log('User logged out successfully');
-      } catch (error) {
-        console.error('Error during logout:', error);
-      } finally {
-        // Redirect to sign-in page
-        router.replace('/sign-in/');
-      }
-    };
+    // Start signOut in background (don't await)
+    supabase.auth.signOut().then(() => {
+      console.log('User logged out successfully');
+    }).catch((error) => {
+      console.error('Error during logout:', error);
+    });
 
-    performLogout();
-  }, [router]);
+    // Immediately redirect to sign-in page using window.location for fast redirect
+    // Small delay to ensure signOut request is sent
+    setTimeout(() => {
+      window.location.href = '/sign-in/';
+    }, 500);
+  }, []);
 
   // Show a brief loading state while logging out
   return (
@@ -51,4 +46,3 @@ const Logout = () => {
 };
 
 export default Logout;
-
