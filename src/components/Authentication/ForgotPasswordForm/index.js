@@ -72,7 +72,7 @@ const ForgotPasswordForm = () => {
                   <p>
                     Back to{" "}
                     <Link
-                      href="/authentication/sign-in/"
+                      href="/sign-in/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Sign In

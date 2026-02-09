@@ -7,7 +7,7 @@ import { supabase } from "@/lib/supabase";
 
 const CompanyDetails = ({ companyId }) => {
   const router = useRouter();
-  
+
   const [company, setCompany] = useState(null);
   const [departments, setDepartments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +22,7 @@ const CompanyDetails = ({ companyId }) => {
   const fetchCompanyDetails = async () => {
     try {
       setIsLoading(true);
-      
+
       // Fetch company data
       const { data: companyData, error: companyError } = await supabase
         .from('companies')
@@ -80,7 +80,7 @@ const CompanyDetails = ({ companyId }) => {
   const formatDate = (dateString) => {
     if (!dateString) return '-';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
@@ -105,13 +105,13 @@ const CompanyDetails = ({ companyId }) => {
           <br />
           <Button
             variant="secondary"
-            onClick={() => router.push('/companies/companies')}
+            onClick={() => router.push('/companies/')}
             className="mt-3"
           >
             Back to Companies
           </Button>
         </div>
-      </div>
+      </div >
     );
   }
 
@@ -133,7 +133,7 @@ const CompanyDetails = ({ companyId }) => {
               </Button>
               <Button
                 variant="secondary"
-                onClick={() => router.push('/companies/companies')}
+                onClick={() => router.push('/companies/')}
                 style={{ fontSize: '12px' }}
               >
                 Back
@@ -220,7 +220,7 @@ const CompanyDetails = ({ companyId }) => {
             </Col>
           </Row>
         </Card.Body>
-      </Card>
+      </Card >
     </>
   );
 };

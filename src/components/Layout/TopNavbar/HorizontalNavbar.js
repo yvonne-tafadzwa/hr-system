@@ -28,9 +28,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/ecommerce/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/ecommerce/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/ecommerce/" ? "active" : ""
+                      }`}
                   >
                     eCommerce
                   </Link>
@@ -38,9 +37,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/crm"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/crm/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/crm/" ? "active" : ""
+                      }`}
                   >
                     CRM
                   </Link>
@@ -48,11 +46,10 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/project-management/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/project-management/"
-                        ? "active"
-                        : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/project-management/"
+                      ? "active"
+                      : ""
+                      }`}
                   >
                     Project Management
                   </Link>
@@ -60,9 +57,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/lms/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/lms/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/lms/" ? "active" : ""
+                      }`}
                   >
                     LMS
                   </Link>
@@ -70,9 +66,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/helpdesk/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/helpdesk/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/helpdesk/" ? "active" : ""
+                      }`}
                   >
                     HelpDesk
                     <span className="trezo-badge d-inline-block position-relative">
@@ -83,9 +78,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/analytics/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/analytics/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/analytics/" ? "active" : ""
+                      }`}
                   >
                     Analytics
                   </Link>
@@ -93,9 +87,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/crypto/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/crypto/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/crypto/" ? "active" : ""
+                      }`}
                   >
                     Crypto
                   </Link>
@@ -103,9 +96,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/sales/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/sales/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/sales/" ? "active" : ""
+                      }`}
                   >
                     Sales
                   </Link>
@@ -113,9 +105,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/hospital/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/hospital/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/hospital/" ? "active" : ""
+                      }`}
                   >
                     Hospital
                   </Link>
@@ -123,9 +114,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/hrm/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/hrm/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/hrm/" ? "active" : ""
+                      }`}
                   >
                     HRM
                   </Link>
@@ -133,9 +123,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/school/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/school/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/school/" ? "active" : ""
+                      }`}
                   >
                     School
                   </Link>
@@ -143,9 +132,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/call-center/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/call-center/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/call-center/" ? "active" : ""
+                      }`}
                   >
                     Call Center
                     <span className="trezo-badge d-inline-block position-relative style-two">
@@ -156,9 +144,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/marketing/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/marketing/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/marketing/" ? "active" : ""
+                      }`}
                   >
                     Marketing
                   </Link>
@@ -166,9 +153,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/nft/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/nft/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/nft/" ? "active" : ""
+                      }`}
                   >
                     NFT
                   </Link>
@@ -176,9 +162,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/saas/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/saas/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/saas/" ? "active" : ""
+                      }`}
                   >
                     SaaS
                   </Link>
@@ -186,9 +171,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/real-estate/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/real-estate/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/real-estate/" ? "active" : ""
+                      }`}
                   >
                     Real Estate
                     <span className="trezo-badge d-inline-block position-relative style-three">
@@ -199,9 +183,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/shipment/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/shipment/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/shipment/" ? "active" : ""
+                      }`}
                   >
                     Shipment
                   </Link>
@@ -209,9 +192,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/finance/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/finance/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/finance/" ? "active" : ""
+                      }`}
                   >
                     Finance
                   </Link>
@@ -219,9 +201,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/pos-system/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/pos-system/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/pos-system/" ? "active" : ""
+                      }`}
                   >
                     POS System
                     <span className="trezo-badge d-inline-block position-relative">
@@ -232,9 +213,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/podcast/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/podcast/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/podcast/" ? "active" : ""
+                      }`}
                   >
                     Podcast
                     <span className="trezo-badge d-inline-block position-relative">
@@ -245,11 +225,10 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/social-media/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/social-media-system/"
-                        ? "active"
-                        : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/social-media-system/"
+                      ? "active"
+                      : ""
+                      }`}
                   >
                     Social Media
                     <span className="trezo-badge d-inline-block position-relative">
@@ -260,9 +239,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/doctor/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/doctor/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/doctor/" ? "active" : ""
+                      }`}
                   >
                     Doctor
                     <span className="trezo-badge d-inline-block position-relative">
@@ -273,9 +251,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/beauty-salon/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/beauty-salon/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/beauty-salon/" ? "active" : ""
+                      }`}
                   >
                     Beauty Salon
                     <span className="trezo-badge d-inline-block position-relative">
@@ -286,9 +263,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/store-analysis/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/store-analysis/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/store-analysis/" ? "active" : ""
+                      }`}
                   >
                     Store Analysis
                     <span className="trezo-badge d-inline-block position-relative">
@@ -299,9 +275,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/dashboard/restaurant/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/dashboard/restaurant/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/restaurant/" ? "active" : ""
+                      }`}
                   >
                     Restaurant
                     <span className="trezo-badge d-inline-block position-relative">
@@ -326,9 +301,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/apps/to-do-list/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/apps/to-do-list/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/to-do-list/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">
                       format_list_bulleted
@@ -338,10 +312,9 @@ const HorizontalNavbar = () => {
                 </li>
                 <li className="sidemenu-item">
                   <Link
-                    href="/apps/calendar/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/apps/calendar/" ? "active" : ""
-                    }`}
+                    href="/calendar/"
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/calendar/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">date_range</i>
                     <span className="title lh-1">Calendar</span>
@@ -350,9 +323,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/apps/contacts/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/apps/contacts/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/contacts/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">contact_page</i>
                     <span className="title lh-1">Contacts</span>
@@ -361,9 +333,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/apps/chat/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/apps/chat/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/chat/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">chat</i>
                     <span className="title lh-1">Chat</span>
@@ -386,9 +357,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/email/inbox/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/email/inbox/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/inbox/" ? "active" : ""
+                            }`}
                         >
                           Inbox
                         </Link>
@@ -396,9 +366,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/email/compose/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/email/compose/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/compose/" ? "active" : ""
+                            }`}
                         >
                           Compose
                         </Link>
@@ -406,11 +375,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/email/read-email/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/email/read-email/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/read-email/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Read
                         </Link>
@@ -422,9 +390,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/apps/kanban-board/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/apps/kanban-board/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/kanban-board/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">team_dashboard</i>
                     <span className="title lh-1">Kanban Board</span>
@@ -447,9 +414,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/" ? "active" : ""
+                            }`}
                         >
                           My Drive
                         </Link>
@@ -457,11 +423,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/assets/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/assets/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/assets/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Assets
                         </Link>
@@ -469,11 +434,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/projects/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/projects/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/projects/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Projects
                         </Link>
@@ -481,11 +445,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/personal/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/personal/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/personal/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Personal
                         </Link>
@@ -493,11 +456,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/applications/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/applications/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/applications/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Applications
                         </Link>
@@ -505,11 +467,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/documents/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/documents/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/documents/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Documents
                         </Link>
@@ -517,11 +478,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/apps/file-manager/media/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/apps/file-manager/media/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/media/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Media
                         </Link>
@@ -556,9 +516,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/" ? "active" : ""
+                            }`}
                         >
                           Home
                         </Link>
@@ -566,11 +525,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/front-pages/features/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/front-pages/features/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/features/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Features
                         </Link>
@@ -578,9 +536,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/front-pages/team/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/front-pages/team/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/team/" ? "active" : ""
+                            }`}
                         >
                           Our Team
                         </Link>
@@ -588,9 +545,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/front-pages/faq/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/front-pages/faq/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/faq/" ? "active" : ""
+                            }`}
                         >
                           FAQ’s
                         </Link>
@@ -598,9 +554,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/front-pages/contact/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/front-pages/contact/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/contact/" ? "active" : ""
+                            }`}
                         >
                           Contact
                         </Link>
@@ -631,11 +586,10 @@ const HorizontalNavbar = () => {
                             <li className="sidemenu-item">
                               <Link
                                 href="/ecommerce/products-grid/"
-                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                                  pathname === "/ecommerce/products-grid/"
-                                    ? "active"
-                                    : ""
-                                }`}
+                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/products-grid/"
+                                  ? "active"
+                                  : ""
+                                  }`}
                               >
                                 Products Grid
                               </Link>
@@ -643,11 +597,10 @@ const HorizontalNavbar = () => {
                             <li className="sidemenu-item">
                               <Link
                                 href="/ecommerce/products-list/"
-                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                                  pathname === "/ecommerce/products-list/"
-                                    ? "active"
-                                    : ""
-                                }`}
+                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/products-list/"
+                                  ? "active"
+                                  : ""
+                                  }`}
                               >
                                 Products List
                               </Link>
@@ -655,11 +608,10 @@ const HorizontalNavbar = () => {
                             <li className="sidemenu-item">
                               <Link
                                 href="/ecommerce/product-details/"
-                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                                  pathname === "/ecommerce/product-details/"
-                                    ? "active"
-                                    : ""
-                                }`}
+                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/product-details/"
+                                  ? "active"
+                                  : ""
+                                  }`}
                               >
                                 Product Details
                               </Link>
@@ -667,11 +619,10 @@ const HorizontalNavbar = () => {
                             <li className="sidemenu-item">
                               <Link
                                 href="/ecommerce/create-product/"
-                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                                  pathname === "/ecommerce/create-product/"
-                                    ? "active"
-                                    : ""
-                                }`}
+                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/create-product/"
+                                  ? "active"
+                                  : ""
+                                  }`}
                               >
                                 Create Product
                               </Link>
@@ -679,11 +630,10 @@ const HorizontalNavbar = () => {
                             <li className="sidemenu-item">
                               <Link
                                 href="/ecommerce/edit-product/"
-                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                                  pathname === "/ecommerce/edit-product/"
-                                    ? "active"
-                                    : ""
-                                }`}
+                                className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/edit-product/"
+                                  ? "active"
+                                  : ""
+                                  }`}
                               >
                                 Edit Product
                               </Link>
@@ -695,9 +645,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/cart/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/cart/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/cart/" ? "active" : ""
+                            }`}
                         >
                           Cart
                         </Link>
@@ -705,9 +654,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/checkout/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/checkout/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/checkout/" ? "active" : ""
+                            }`}
                         >
                           Checkout
                         </Link>
@@ -715,9 +663,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/orders/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/orders/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/" ? "active" : ""
+                            }`}
                         >
                           Orders
                         </Link>
@@ -725,11 +672,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/orders/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/orders/details/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/details/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Order Details
                         </Link>
@@ -737,11 +683,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/orders/create/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/orders/create/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/create/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Create Order
                         </Link>
@@ -749,11 +694,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/orders/tracking/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/orders/tracking/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/tracking/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Order Tracking
                         </Link>
@@ -761,9 +705,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/customers/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/customers/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/customers/" ? "active" : ""
+                            }`}
                         >
                           Customers
                         </Link>
@@ -771,11 +714,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/customers/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/customers/details/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/customers/details/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Customer Details
                         </Link>
@@ -783,11 +725,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/categories/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/categories/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/categories/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Categories
                         </Link>
@@ -795,9 +736,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/sellers/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/sellers/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/" ? "active" : ""
+                            }`}
                         >
                           Sellers
                         </Link>
@@ -805,11 +745,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/sellers/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/sellers/details/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/details/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Seller Details
                         </Link>
@@ -817,11 +756,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/sellers/create/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/sellers/create/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/create/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Create Seller
                         </Link>
@@ -829,9 +767,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/reviews/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/reviews/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/reviews/" ? "active" : ""
+                            }`}
                         >
                           Reviews
                         </Link>
@@ -839,9 +776,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ecommerce/refunds/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ecommerce/refunds/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/refunds/" ? "active" : ""
+                            }`}
                         >
                           Refunds
                         </Link>
@@ -863,9 +799,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/crm/contacts/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/crm/contacts/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/contacts/" ? "active" : ""
+                            }`}
                         >
                           Contacts
                         </Link>
@@ -873,9 +808,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/crm/customers/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/crm/customers/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/customers/" ? "active" : ""
+                            }`}
                         >
                           Customers
                         </Link>
@@ -883,9 +817,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/crm/leads/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/crm/leads/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/leads/" ? "active" : ""
+                            }`}
                         >
                           Leads
                         </Link>
@@ -893,9 +826,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/crm/deals/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/crm/deals/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/deals/" ? "active" : ""
+                            }`}
                         >
                           Deals
                         </Link>
@@ -917,11 +849,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/project-overview/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/project-overview/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/project-overview/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Project Overview
                         </Link>
@@ -929,11 +860,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/projects-list/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/projects-list/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/projects-list/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Projects List
                         </Link>
@@ -941,11 +871,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/create-project/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/create-project/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/create-project/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Create Project
                         </Link>
@@ -953,11 +882,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/clients/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/clients/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/clients/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Clients
                         </Link>
@@ -965,11 +893,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/teams/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/teams/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/teams/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Teams
                         </Link>
@@ -977,11 +904,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/kanban-board/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/kanban-board/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/kanban-board/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Kanban Board
                         </Link>
@@ -989,11 +915,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/project-management/users/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/project-management/users/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/users/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Users
                         </Link>
@@ -1015,9 +940,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/courses/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/courses/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/" ? "active" : ""
+                            }`}
                         >
                           Courses List
                         </Link>
@@ -1025,9 +949,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/courses/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/courses/details/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/details/" ? "active" : ""
+                            }`}
                         >
                           Course Details
                         </Link>
@@ -1035,9 +958,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/lesson-preview/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/lesson-preview/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/lesson-preview/" ? "active" : ""
+                            }`}
                         >
                           Lesson Preview
                         </Link>
@@ -1045,9 +967,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/create-course/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/courses/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/" ? "active" : ""
+                            }`}
                         >
                           Create Course
                         </Link>
@@ -1055,9 +976,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/edit-course/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/edit-course/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/edit-course/" ? "active" : ""
+                            }`}
                         >
                           Edit Course
                         </Link>
@@ -1065,9 +985,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/lms/instructors/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/lms/instructors/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/instructors/" ? "active" : ""
+                            }`}
                         >
                           Instructors
                         </Link>
@@ -1089,9 +1008,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/helpdesk/tickets/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/helpdesk/tickets/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/tickets/" ? "active" : ""
+                            }`}
                         >
                           Tickets
                         </Link>
@@ -1099,11 +1017,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/helpdesk/tickets/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/helpdesk/tickets/details/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/tickets/details/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Ticket Details
                         </Link>
@@ -1111,9 +1028,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/helpdesk/agents/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/helpdesk/agents/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/agents/" ? "active" : ""
+                            }`}
                         >
                           Agents
                         </Link>
@@ -1121,9 +1037,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/helpdesk/reports/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/helpdesk/reports/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/reports/" ? "active" : ""
+                            }`}
                         >
                           Reports
                         </Link>
@@ -1145,9 +1060,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/marketplace/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/marketplace/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/marketplace/" ? "active" : ""
+                            }`}
                         >
                           Marketplace
                         </Link>
@@ -1155,9 +1069,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/explore-all/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/explore-all/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/explore-all/" ? "active" : ""
+                            }`}
                         >
                           Explore All
                         </Link>
@@ -1165,9 +1078,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/live-auction/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/live-auction/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/live-auction/" ? "active" : ""
+                            }`}
                         >
                           Live Auction
                         </Link>
@@ -1175,9 +1087,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/details/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/details/" ? "active" : ""
+                            }`}
                         >
                           NFT Details
                         </Link>
@@ -1185,9 +1096,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/creators/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/creators/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/creators/" ? "active" : ""
+                            }`}
                         >
                           Creators
                         </Link>
@@ -1195,11 +1105,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/creators/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/creators/details/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/creators/details/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Creator Details
                         </Link>
@@ -1207,9 +1116,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/nft/connect-wallet/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/nft/connect-wallet/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/connect-wallet/" ? "active" : ""
+                            }`}
                         >
                           Wallet Connect
                         </Link>
@@ -1233,11 +1141,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/property-list/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/property-list/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/property-list/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Property List
                         </Link>
@@ -1245,11 +1152,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/property-overview/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/property-overview/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/property-overview/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Property Details
                         </Link>
@@ -1257,11 +1163,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/add-property/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/add-property/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/add-property/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Add Property
                         </Link>
@@ -1269,11 +1174,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/agent-list/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/agent-list/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/agent-list/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Agents
                         </Link>
@@ -1281,11 +1185,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/agent-overview/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/agent-overview/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/agent-overview/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Agent Details
                         </Link>
@@ -1293,11 +1196,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/add-agent/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/add-agent/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/add-agent/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Add Agent
                         </Link>
@@ -1305,11 +1207,10 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/real-estate/customers/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/real-estate/customers/"
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/customers/"
+                            ? "active"
+                            : ""
+                            }`}
                         >
                           Customers
                         </Link>
@@ -1331,9 +1232,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/finance/wallet/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/finance/wallet/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/finance/wallet/" ? "active" : ""
+                            }`}
                         >
                           Wallet
                         </Link>
@@ -1341,9 +1241,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/finance/transaction/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/finance/transaction/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/finance/transaction/" ? "active" : ""
+                            }`}
                         >
                           Transactions
                         </Link>
@@ -1364,10 +1263,9 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/events/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/events/" ? "active" : ""
-                          }`}
+                          href="/events/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/" ? "active" : ""
+                            }`}
                         >
                           Events Grid
                         </Link>
@@ -1375,9 +1273,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/events/list/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/events/list/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/list/" ? "active" : ""
+                            }`}
                         >
                           Events List
                         </Link>
@@ -1385,9 +1282,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/events/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/events/details/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/details/" ? "active" : ""
+                            }`}
                         >
                           Event Details
                         </Link>
@@ -1395,9 +1291,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/events/create-an-event/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/events/create-an-event/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/create-an-event/" ? "active" : ""
+                            }`}
                         >
                           Create An Event
                         </Link>
@@ -1405,9 +1300,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/events/edit-an-event/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/events/edit-an-event/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/edit-an-event/" ? "active" : ""
+                            }`}
                         >
                           Edit An Event
                         </Link>
@@ -1428,10 +1322,9 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/social/profile/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/social/profile/" ? "active" : ""
-                          }`}
+                          href="/social/profile/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/social/profile/" ? "active" : ""
+                            }`}
                         >
                           Profile
                         </Link>
@@ -1439,9 +1332,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/social/settings/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/social/settings/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/social/settings/" ? "active" : ""
+                            }`}
                         >
                           Settings
                         </Link>
@@ -1463,9 +1355,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/invoices/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/invoices/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/" ? "active" : ""
+                            }`}
                         >
                           Invoices
                         </Link>
@@ -1473,9 +1364,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/invoices/details/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/invoices/details/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/details/" ? "active" : ""
+                            }`}
                         >
                           Invoice Details
                         </Link>
@@ -1483,9 +1373,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/invoices/create/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/invoices/create/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/create/" ? "active" : ""
+                            }`}
                         >
                           Create Invoice
                         </Link>
@@ -1493,16 +1382,15 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/invoices/edit/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/invoices/edit/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/edit/" ? "active" : ""
+                            }`}
                         >
                           Edit Invoice
                         </Link>
                       </li>
                     </ul>
                   </div>
-                </li> 
+                </li>
 
                 <li className="sidemenu-item">
                   <button
@@ -1517,9 +1405,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/users/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/users/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/users/" ? "active" : ""
+                            }`}
                         >
                           Team Members
                         </Link>
@@ -1527,9 +1414,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/users/users-list/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/users/users-list/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/users/users-list/" ? "active" : ""
+                            }`}
                         >
                           Users List
                         </Link>
@@ -1537,9 +1423,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/users/add-user/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/invoices/add-user/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/add-user/" ? "active" : ""
+                            }`}
                         >
                           Add User
                         </Link>
@@ -1561,9 +1446,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/profile/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/profile/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/" ? "active" : ""
+                            }`}
                         >
                           User Profile
                         </Link>
@@ -1571,9 +1455,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/profile/teams/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/profile/teams/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/teams/" ? "active" : ""
+                            }`}
                         >
                           Teams
                         </Link>
@@ -1581,9 +1464,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/profile/projects/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/profile/projects/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/projects/" ? "active" : ""
+                            }`}
                         >
                           Projects
                         </Link>
@@ -1594,10 +1476,9 @@ const HorizontalNavbar = () => {
 
                 <li className="sidemenu-item">
                   <Link
-                    href="/starter/" 
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/starter/" ? "active" : ""
-                    }`}
+                    href="/starter/"
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/starter/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">star_border</i>
                     <span className="title lh-1">Starter</span>
@@ -1629,10 +1510,9 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/ui-kit/alerts/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/alerts/" ? "active" : ""
-                          }`}
+                          href="/ui-kit/alerts/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/alerts/" ? "active" : ""
+                            }`}
                         >
                           Alerts
                         </Link>
@@ -1640,9 +1520,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/avatar/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/avatar/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/avatar/" ? "active" : ""
+                            }`}
                         >
                           Avatars
                         </Link>
@@ -1650,9 +1529,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/buttons/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/buttons/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/buttons/" ? "active" : ""
+                            }`}
                         >
                           Buttons
                         </Link>
@@ -1660,9 +1538,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/badges/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/badges/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/badges/" ? "active" : ""
+                            }`}
                         >
                           Badges
                         </Link>
@@ -1670,9 +1547,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/cards/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/cards/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/cards/" ? "active" : ""
+                            }`}
                         >
                           Buttons
                         </Link>
@@ -1680,9 +1556,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/carousel/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/carousel/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/carousel/" ? "active" : ""
+                            }`}
                         >
                           Carousel
                         </Link>
@@ -1690,9 +1565,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/dropdowns/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/dropdowns/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/dropdowns/" ? "active" : ""
+                            }`}
                         >
                           Dropdowns
                         </Link>
@@ -1700,9 +1574,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/images/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/images/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/images/" ? "active" : ""
+                            }`}
                         >
                           Images
                         </Link>
@@ -1710,9 +1583,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/list-groups/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/list-groups/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/list-groups/" ? "active" : ""
+                            }`}
                         >
                           List Groups
                         </Link>
@@ -1720,9 +1592,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/navbars/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/navbars/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/navbars/" ? "active" : ""
+                            }`}
                         >
                           Navbars
                         </Link>
@@ -1730,9 +1601,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/navs/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/starter/navs/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/starter/navs/" ? "active" : ""
+                            }`}
                         >
                           Navs
                         </Link>
@@ -1740,9 +1610,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/accordion/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/accordion/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/accordion/" ? "active" : ""
+                            }`}
                         >
                           Accordion
                         </Link>
@@ -1750,9 +1619,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/progress-bars/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/progress-bars/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/progress-bars/" ? "active" : ""
+                            }`}
                         >
                           Progress Bars
                         </Link>
@@ -1760,9 +1628,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/date-time-picker/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/date-time-picker/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/date-time-picker/" ? "active" : ""
+                            }`}
                         >
                           Date Time Picker
                         </Link>
@@ -1770,9 +1637,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/ui-kit/videos/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/ui-kit/videos/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/videos/" ? "active" : ""
+                            }`}
                         >
                           Videos
                         </Link>
@@ -1793,10 +1659,9 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/icons/material-symbols/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/icons/material-symbols/" ? "active" : ""
-                          }`}
+                          href="/icons/material-symbols/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/icons/material-symbols/" ? "active" : ""
+                            }`}
                         >
                           Material Symbols
                         </Link>
@@ -1804,9 +1669,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/icons/remixicon/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/icons/remixicon/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/icons/remixicon/" ? "active" : ""
+                            }`}
                         >
                           RemixIcon
                         </Link>
@@ -1817,10 +1681,9 @@ const HorizontalNavbar = () => {
 
                 <li className="sidemenu-item">
                   <Link
-                    href="/tables/" 
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/tables/" ? "active" : ""
-                    }`}
+                    href="/tables/"
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/tables/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">table_chart</i>
                     <span className="title lh-1">Tables</span>
@@ -1839,7 +1702,7 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/sign-in/"
+                          href="/sign-in/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Sign In
@@ -1847,7 +1710,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/sign-up/"
+                          href="/sign-up/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Sign Up
@@ -1855,7 +1718,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/forgot-password/"
+                          href="/forgot-password/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Forgot Password
@@ -1863,7 +1726,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/reset-password/"
+                          href="/reset-password/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Reset Password
@@ -1871,7 +1734,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/confirm-email/"
+                          href="/confirm-email/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Confirm Email
@@ -1879,7 +1742,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/lock-screen/"
+                          href="/lock-screen/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Lock Screen
@@ -1887,7 +1750,7 @@ const HorizontalNavbar = () => {
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/authentication/logout/"
+                          href="/logout/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Logout
@@ -1909,10 +1772,9 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/extra-pages/pricing-plan/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/pricing-plan/" ? "active" : ""
-                          }`}
+                          href="/extra-pages/pricing-plan/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/pricing-plan/" ? "active" : ""
+                            }`}
                         >
                           Pricing
                         </Link>
@@ -1920,9 +1782,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/timeline/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/timeline/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/timeline/" ? "active" : ""
+                            }`}
                         >
                           Timeline
                         </Link>
@@ -1930,9 +1791,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/faq/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/faq/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/faq/" ? "active" : ""
+                            }`}
                         >
                           FAQ
                         </Link>
@@ -1940,9 +1800,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/gallery/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/gallery/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/gallery/" ? "active" : ""
+                            }`}
                         >
                           Gallery
                         </Link>
@@ -1950,9 +1809,8 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/testimonials/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/testimonials/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/testimonials/" ? "active" : ""
+                            }`}
                         >
                           Testimonials
                         </Link>
@@ -1960,19 +1818,17 @@ const HorizontalNavbar = () => {
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/search/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/search/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/search/" ? "active" : ""
+                            }`}
                         >
                           Search
                         </Link>
-                      </li> 
+                      </li>
                       <li className="sidemenu-item">
                         <Link
                           href="/extra-pages/blank-page/"
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/extra-pages/blank-page/" ? "active" : ""
-                          }`}
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/blank-page/" ? "active" : ""
+                            }`}
                         >
                           Blank Page
                         </Link>
@@ -1993,20 +1849,18 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/not-found/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/not-found/" ? "active" : ""
-                          }`}
+                          href="/not-found/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/not-found/" ? "active" : ""
+                            }`}
                         >
                           404 Error Page
                         </Link>
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/internal-error/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/internal-error/" ? "active" : ""
-                          }`}
+                          href="/internal-error/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/internal-error/" ? "active" : ""
+                            }`}
                         >
                           Internal Error
                         </Link>
@@ -2017,10 +1871,9 @@ const HorizontalNavbar = () => {
 
                 <li className="sidemenu-item">
                   <Link
-                    href="/widgets/" 
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/widgets/" ? "active" : ""
-                    }`}
+                    href="/widgets/"
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/widgets/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">widgets</i>
                     <span className="title lh-1">Widgets</span>
@@ -2029,9 +1882,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/maps/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/maps/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/maps/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">map</i>
                     <span className="title lh-1">Maps</span>
@@ -2040,9 +1892,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/notifications/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/notifications/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/notifications/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">notifications</i>
                     <span className="title lh-1">Notifications</span>
@@ -2052,9 +1903,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/members/"
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/members/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/members/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">people</i>
                     <span className="title lh-1">Members</span>
@@ -2076,10 +1926,9 @@ const HorizontalNavbar = () => {
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
                   <Link
-                    href="/forms/basic-elements/" 
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/forms/basic-elements/" ? "active" : ""
-                    }`}
+                    href="/forms/basic-elements/"
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/basic-elements/" ? "active" : ""
+                      }`}
                   >
                     Basic Elements
                   </Link>
@@ -2087,9 +1936,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/forms/advanced-elements/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/forms/advanced-elements/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/advanced-elements/" ? "active" : ""
+                      }`}
                   >
                     Advanced Elements
                   </Link>
@@ -2097,9 +1945,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/forms/validation/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/forms/validation/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/validation/" ? "active" : ""
+                      }`}
                   >
                     Validation
                   </Link>
@@ -2107,9 +1954,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/forms/editors/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/forms/editors/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/editors/" ? "active" : ""
+                      }`}
                   >
                     Editors
                   </Link>
@@ -2117,9 +1963,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/forms/file-upload/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/forms/file-upload/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/file-upload/" ? "active" : ""
+                      }`}
                   >
                     File Upload
                   </Link>
@@ -2140,10 +1985,9 @@ const HorizontalNavbar = () => {
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
                   <Link
-                    href="/charts/line/" 
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/line/" ? "active" : ""
-                    }`}
+                    href="/charts/line/"
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/line/" ? "active" : ""
+                      }`}
                   >
                     Line
                   </Link>
@@ -2151,9 +1995,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/area/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/area/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/area/" ? "active" : ""
+                      }`}
                   >
                     Area
                   </Link>
@@ -2161,9 +2004,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/column/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/column/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/column/" ? "active" : ""
+                      }`}
                   >
                     Column
                   </Link>
@@ -2171,9 +2013,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/mixed/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/mixed/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/mixed/" ? "active" : ""
+                      }`}
                   >
                     Mixed
                   </Link>
@@ -2181,9 +2022,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/radialbar/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/radialbar/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/radialbar/" ? "active" : ""
+                      }`}
                   >
                     RadialBar
                   </Link>
@@ -2191,9 +2031,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/radar/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/radar/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/radar/" ? "active" : ""
+                      }`}
                   >
                     Radar
                   </Link>
@@ -2201,9 +2040,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/pie/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/pie/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/pie/" ? "active" : ""
+                      }`}
                   >
                     Pie
                   </Link>
@@ -2211,9 +2049,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/polar/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/polar/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/polar/" ? "active" : ""
+                      }`}
                   >
                     Polar
                   </Link>
@@ -2221,9 +2058,8 @@ const HorizontalNavbar = () => {
                 <li className="sidemenu-item">
                   <Link
                     href="/charts/more/"
-                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/charts/more/" ? "active" : ""
-                    }`}
+                    className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/more/" ? "active" : ""
+                      }`}
                   >
                     More
                   </Link>
@@ -2244,10 +2080,9 @@ const HorizontalNavbar = () => {
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
                   <Link
-                    href="/my-profile/" 
-                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${
-                      pathname === "/my-profile/" ? "active" : ""
-                    }`}
+                    href="/my-profile/"
+                    className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/my-profile/" ? "active" : ""
+                      }`}
                   >
                     <i className="material-symbols-outlined">account_circle</i>
                     <span className="title lh-1">My Profile</span>
@@ -2266,50 +2101,45 @@ const HorizontalNavbar = () => {
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
                         <Link
-                          href="/settings/account-settings/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/settings/account-settings/" ? "active" : ""
-                          }`}
+                          href="/settings/account-settings/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/account-settings/" ? "active" : ""
+                            }`}
                         >
                           Account Settings
                         </Link>
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/settings/change-password/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/settings/change-password/" ? "active" : ""
-                          }`}
+                          href="/settings/change-password/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/change-password/" ? "active" : ""
+                            }`}
                         >
                           Change Password
                         </Link>
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/settings/connections/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/settings/connections/" ? "active" : ""
-                          }`}
+                          href="/settings/connections/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/connections/" ? "active" : ""
+                            }`}
                         >
                           Connections
                         </Link>
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/settings/privacy-policy/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/settings/privacy-policy/" ? "active" : ""
-                          }`}
+                          href="/settings/privacy-policy/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/privacy-policy/" ? "active" : ""
+                            }`}
                         >
                           Privacy Policy
                         </Link>
                       </li>
                       <li className="sidemenu-item">
                         <Link
-                          href="/settings/terms-conditions/" 
-                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${
-                            pathname === "/settings/terms-conditions/" ? "active" : ""
-                          }`}
+                          href="/settings/terms-conditions/"
+                          className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/terms-conditions/" ? "active" : ""
+                            }`}
                         >
                           Terms & Conditions
                         </Link>
@@ -2403,7 +2233,7 @@ const HorizontalNavbar = () => {
 
                 <li className="sidemenu-item">
                   <Link
-                    href="/authentication/logout"
+                    href="/logout/"
                     className="sidemenu-link with-icon border-radius d-block position-relative transition fw-medium"
                   >
                     <i className="material-symbols-outlined">logout</i>

@@ -152,7 +152,7 @@ const Profile = () => {
             <li>
               <a
                 className="dropdown-item d-flex align-items-center text-body"
-                href="/authentication/logout/"
+                href="/logout/"
               >
                 <i className="material-symbols-outlined">logout</i>
                 <span className="ms-2">Logout</span>

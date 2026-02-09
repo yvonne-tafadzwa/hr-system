@@ -8,6 +8,7 @@ import Footer from "@/components/Layout/Footer";
 import ControlPanel from "@/components/Layout/ControlPanel";
 import { AuthProvider } from "@/context/AuthContext";
 import { NotificationProvider } from "@/context/NotificationContext";
+import { LeaderboardProvider } from "@/context/LeaderboardContext";
 
 const LayoutProvider = ({ children }) => {
   const [active, setActive] = useState(false);
@@ -20,39 +21,18 @@ const LayoutProvider = ({ children }) => {
   return (
     <AuthProvider>
       <NotificationProvider>
-        <>
-          <div className={`main-wrapper-content ${active && "active"}`}>
-            {!(
-              pathname === "/authentication/sign-in/" ||
-              pathname === "/authentication/sign-up/" ||
-              pathname === "/authentication/forgot-password/" ||
-              pathname === "/authentication/reset-password/" ||
-              pathname === "/authentication/lock-screen/" ||
-              pathname === "/authentication/confirm-email/" ||
-              pathname === "/authentication/logout/" ||
-              pathname === "/authentication/submit-sick-note/" ||
-
-              pathname === "/" ||
-              pathname === "/front-pages/features/" ||
-              pathname === "/front-pages/team/" ||
-              pathname === "/front-pages/faq/" ||
-              pathname === "/front-pages/contact/"
-            ) && (
-                <>
-                  <LeftSidebar toogleActive={toogleActive} />
-                </>
-              )}
-
-            <div className="main-content d-flex flex-column">
+        <LeaderboardProvider>
+          <>
+            <div className={`main-wrapper-content ${active && "active"}`}>
               {!(
-                pathname === "/authentication/sign-in/" ||
-                pathname === "/authentication/sign-up/" ||
-                pathname === "/authentication/forgot-password/" ||
-                pathname === "/authentication/reset-password/" ||
-                pathname === "/authentication/lock-screen/" ||
-                pathname === "/authentication/confirm-email/" ||
-                pathname === "/authentication/logout/" ||
-                pathname === "/authentication/submit-sick-note/" ||
+                pathname === "/sign-in/" ||
+                pathname === "/sign-up/" ||
+                pathname === "/forgot-password/" ||
+                pathname === "/reset-password/" ||
+                pathname === "/lock-screen/" ||
+                pathname === "/confirm-email/" ||
+                pathname === "/logout/" ||
+                pathname === "/submit-sick-note/" ||
 
                 pathname === "/" ||
                 pathname === "/front-pages/features/" ||
@@ -61,46 +41,70 @@ const LayoutProvider = ({ children }) => {
                 pathname === "/front-pages/contact/"
               ) && (
                   <>
-                    <TopNavbar toogleActive={toogleActive} />
+                    <LeftSidebar toogleActive={toogleActive} />
                   </>
                 )}
 
-              {children}
+              <div className="main-content d-flex flex-column">
+                {!(
+                  pathname === "/sign-in/" ||
+                  pathname === "/sign-up/" ||
+                  pathname === "/forgot-password/" ||
+                  pathname === "/reset-password/" ||
+                  pathname === "/lock-screen/" ||
+                  pathname === "/confirm-email/" ||
+                  pathname === "/logout/" ||
+                  pathname === "/submit-sick-note/" ||
 
-              {!(
-                pathname === "/authentication/sign-in/" ||
-                pathname === "/authentication/sign-up/" ||
-                pathname === "/authentication/forgot-password/" ||
-                pathname === "/authentication/reset-password/" ||
-                pathname === "/authentication/lock-screen/" ||
-                pathname === "/authentication/confirm-email/" ||
-                pathname === "/authentication/logout/" ||
-                pathname === "/authentication/submit-sick-note/" ||
+                  pathname === "/" ||
+                  pathname === "/front-pages/features/" ||
+                  pathname === "/front-pages/team/" ||
+                  pathname === "/front-pages/faq/" ||
+                  pathname === "/front-pages/contact/"
+                ) && (
+                    <>
+                      <TopNavbar toogleActive={toogleActive} />
+                    </>
+                  )}
 
-                pathname === "/" ||
-                pathname === "/front-pages/features/" ||
-                pathname === "/front-pages/team/" ||
-                pathname === "/front-pages/faq/" ||
-                pathname === "/front-pages/contact/"
-              ) && <Footer />}
+                {children}
+
+                {!(
+                  pathname === "/sign-in/" ||
+                  pathname === "/sign-up/" ||
+                  pathname === "/forgot-password/" ||
+                  pathname === "/reset-password/" ||
+                  pathname === "/lock-screen/" ||
+                  pathname === "/confirm-email/" ||
+                  pathname === "/logout/" ||
+                  pathname === "/submit-sick-note/" ||
+
+                  pathname === "/" ||
+                  pathname === "/front-pages/features/" ||
+                  pathname === "/front-pages/team/" ||
+                  pathname === "/front-pages/faq/" ||
+                  pathname === "/front-pages/contact/"
+                ) && <Footer />}
+              </div>
             </div>
-          </div>
 
-          <div
-            style={{
-              position: 'fixed',
-              bottom: '0',
-              right: '0',
-              opacity: '0',
-              visibility: 'hidden'
-            }}
-          >
-            <ControlPanel />
-          </div>
-        </>
+            <div
+              style={{
+                position: 'fixed',
+                bottom: '0',
+                right: '0',
+                opacity: '0',
+                visibility: 'hidden'
+              }}
+            >
+              <ControlPanel />
+            </div>
+          </>
+        </LeaderboardProvider>
       </NotificationProvider>
     </AuthProvider>
   );
 };
 
 export default LayoutProvider;
+

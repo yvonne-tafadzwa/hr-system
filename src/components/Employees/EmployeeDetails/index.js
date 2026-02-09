@@ -7,7 +7,7 @@ import { supabase } from "@/lib/supabase";
 
 const EmployeeDetails = ({ employeeId }) => {
   const router = useRouter();
-  
+
   const [employee, setEmployee] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
@@ -21,7 +21,7 @@ const EmployeeDetails = ({ employeeId }) => {
   const fetchEmployeeDetails = async () => {
     try {
       setIsLoading(true);
-      
+
       // Fetch employee data
       const { data: employeeData, error: employeeError } = await supabase
         .from('employees')
@@ -61,7 +61,7 @@ const EmployeeDetails = ({ employeeId }) => {
   const formatDate = (dateString) => {
     if (!dateString) return '-';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
@@ -86,7 +86,7 @@ const EmployeeDetails = ({ employeeId }) => {
           <br />
           <Button
             variant="secondary"
-            onClick={() => router.push('/employees/employees')}
+            onClick={() => router.push('/employees/')}
             className="mt-3"
           >
             Back to Employees
@@ -114,7 +114,7 @@ const EmployeeDetails = ({ employeeId }) => {
               </Button>
               <Button
                 variant="secondary"
-                onClick={() => router.push('/employees/employees')}
+                onClick={() => router.push('/employees/')}
                 style={{ fontSize: '12px' }}
               >
                 Back

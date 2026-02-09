@@ -102,7 +102,7 @@ const SignUpForm = () => {
 
   const handleCloseSuccessModal = () => {
     setShowSuccessModal(false);
-    router.push('/authentication/sign-in/');
+    router.push('/sign-in/');
   };
 
   return (
@@ -114,11 +114,18 @@ const SignUpForm = () => {
           font-size: 12px !important;
         }
       `}} />
-      <div className="auth-main-content m-auto m-1230 px-3 my-5">
-        <Row className="align-items-center">
-          <Col lg={12}>
-            <div className="mw-480 ms-lg-auto bg-white p-4 rounded-3" style={{ backgroundColor: '#ffffff' }}>
-              <h3 className="fs-28 mb-4" style={{ fontSize: '16px' }}>Register Company</h3>
+      <div className="auth-main-content m-auto px-3 my-4" style={{ maxWidth: '100%', width: '100%' }}>
+        <Row className="align-items-center justify-content-center">
+          <Col xs={12} sm={12} md={10} lg={8} xl={6}>
+            <div className="mx-auto bg-white rounded-3" style={{
+              minWidth: '450px',
+              maxWidth: '100%',
+              width: '100%',
+              backgroundColor: '#ffffff',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)',
+              padding: '32px'
+            }}>
+              <h3 className="mb-4" style={{ fontSize: '16px' }}>Register Company</h3>
 
               {error && (
                 <div className="alert alert-danger mb-4" role="alert" style={{ fontSize: '12px' }}>
@@ -144,7 +151,7 @@ const SignUpForm = () => {
                 </Form.Group>
 
                 <Row>
-                  <Col lg={6}>
+                  <Col xs={12} md={6}>
                     <Form.Group className="mb-4">
                       <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
                         First Name <span className="text-danger">*</span>
@@ -162,7 +169,7 @@ const SignUpForm = () => {
                     </Form.Group>
                   </Col>
 
-                  <Col lg={6}>
+                  <Col xs={12} md={6}>
                     <Form.Group className="mb-4">
                       <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
                         Last Name <span className="text-danger">*</span>
@@ -306,7 +313,7 @@ const SignUpForm = () => {
 
                 <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                   Already have an account?{' '}
-                  <Link href="/authentication/sign-in/" className="text-primary fw-medium">
+                  <Link href="/sign-in/" className="text-primary fw-medium">
                     Sign In
                   </Link>
                 </p>

@@ -48,7 +48,8 @@ const SignInForm = () => {
 
       if (result.data) {
         console.log('Login successful, redirecting...');
-        router.push("/dashboard/ecommerce/");
+        // Use window.location for a full page refresh to ensure dashboard loads fresh data
+        window.location.href = "/dashboard/";
       }
 
     } catch (err) {
@@ -71,16 +72,16 @@ const SignInForm = () => {
           font-size: 12px !important;
         }
       `}} />
-      <div className="auth-main-content m-auto m-1230 px-3 signin-form">
-        <Row className="align-items-center justify-content-center">
-          <Col lg={6} md={8} sm={10}>
+      <div className="auth-main-content m-auto px-3 signin-form" style={{ maxWidth: '100%', width: '100%' }}>
+        <Row className="align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+          <Col xs={12} sm={12} md={10} lg={8} xl={6}>
             <div className="mx-auto" style={{
-              width: '800px',
+              width: '500px',
               maxWidth: '100%',
               backgroundColor: 'white',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)',
               borderRadius: '8px',
-              padding: '40px'
+              padding: '32px'
             }}>
               <div className="mb-3">
                 <h3 className="mb-2" style={{ fontSize: '16px' }}>Welcome Back</h3>
@@ -183,7 +184,7 @@ const SignInForm = () => {
                       </label>
                     </div>
                     <Link
-                      href='/authentication/forgot-password/'
+                      href='/forgot-password/'
                       className="fw-medium text-primary text-decoration-none"
                       style={{ fontSize: '12px' }}
                     >
@@ -211,7 +212,7 @@ const SignInForm = () => {
                   <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                     Don&apos;t have an account?{" "}
                     <Link
-                      href="/authentication/sign-up/"
+                      href="/sign-up/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Register Company

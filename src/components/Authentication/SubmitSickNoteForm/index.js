@@ -105,16 +105,17 @@ const SubmitSickNoteForm = () => {
           font-size: 12px !important;
         }
       `}} />
-            <div className="auth-main-content m-auto m-1230 px-3 my-5">
-                <Row className="align-items-center justify-content-center">
-                    <Col lg={6} md={8} sm={10}>
-                        <div className="mx-auto bg-white p-4 rounded-3" style={{
-                            width: '800px',
+            <div className="auth-main-content m-auto px-3 my-4" style={{ maxWidth: '100%', width: '100%' }}>
+                <Row className="align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+                    <Col xs={12} sm={12} md={10} lg={8} xl={6}>
+                        <div className="mx-auto bg-white rounded-3" style={{
+                            minWidth: '450px',
                             maxWidth: '100%',
+                            width: '100%',
                             backgroundColor: '#ffffff',
                             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)',
                             borderRadius: '8px',
-                            padding: '40px'
+                            padding: '32px'
                         }}>
                             <h3 className="mb-2" style={{ fontSize: '16px' }}>Submit Sick Note</h3>
                             <p className="fw-medium mb-3" style={{ fontSize: '12px', color: '#666' }}>
@@ -145,7 +146,7 @@ const SubmitSickNoteForm = () => {
                                 </Form.Group>
 
                                 <Row>
-                                    <Col lg={6}>
+                                    <Col xs={12} md={6}>
                                         <Form.Group className="mb-4">
                                             <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
                                                 Start Date <span className="text-danger">*</span>
@@ -162,7 +163,7 @@ const SubmitSickNoteForm = () => {
                                         </Form.Group>
                                     </Col>
 
-                                    <Col lg={6}>
+                                    <Col xs={12} md={6}>
                                         <Form.Group className="mb-4">
                                             <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
                                                 End Date <span className="text-danger">*</span>
@@ -216,7 +217,7 @@ const SubmitSickNoteForm = () => {
 
                                 <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                                     Already have an account?{' '}
-                                    <Link href="/authentication/sign-in/" className="text-primary fw-medium">
+                                    <Link href="/sign-in/" className="text-primary fw-medium">
                                         Sign In
                                     </Link>
                                 </p>

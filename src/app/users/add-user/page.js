@@ -8,9 +8,9 @@ export default function Page() {
     <>
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
         <h3 className="mb-0">Add User</h3>
- 
+
         <Breadcrumb className="breadcrumb-page-list align-items-center mb-0 lh-1">
-          <Breadcrumb.Item href="/dashboard/ecommerce/">
+          <Breadcrumb.Item href="/dashboard/">
             <div className="d-flex align-items-center text-decoration-none">
               <i className="ri-home-4-line fs-18 text-primary me-1"></i>
               <span className="text-secondary fw-medium hover">Dashboard</span>
@@ -25,7 +25,7 @@ export default function Page() {
             <span className="fw-medium">Add User</span>
           </Breadcrumb.Item>
         </Breadcrumb>
-      </div> 
+      </div>
 
       <AddUser />
     </>

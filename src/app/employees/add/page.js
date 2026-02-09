@@ -16,7 +16,7 @@ export default function Page() {
               <span className="text-secondary fw-medium hover" style={{ fontSize: '12px' }}>Dashboard</span>
             </div>
           </Breadcrumb.Item>
-          <Breadcrumb.Item href="/employees/employees">
+          <Breadcrumb.Item href="/employees/">
             <span className="text-secondary fw-medium hover" style={{ fontSize: '12px' }}>Employees</span>
           </Breadcrumb.Item>
           <Breadcrumb.Item active>

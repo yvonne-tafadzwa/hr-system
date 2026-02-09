@@ -69,17 +69,15 @@ const Navbar = () => {
           </button>
 
           <div
-            className={`collapse navbar-collapse ${
-              isToggleNavbar ? "" : "show"
-            }`}
+            className={`collapse navbar-collapse ${isToggleNavbar ? "" : "show"
+              }`}
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
                   href="/"
-                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${
-                    pathname === "/" ? "active" : ""
-                  }`}
+                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/" ? "active" : ""
+                    }`}
                 >
                   Home
                 </Link>
@@ -88,9 +86,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   href="/front-pages/features/"
-                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${
-                    pathname === "/front-pages/features/" ? "active" : ""
-                  }`} 
+                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/features/" ? "active" : ""
+                    }`}
                 >
                   Features
                 </Link>
@@ -99,9 +96,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   href="/front-pages/team/"
-                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${
-                    pathname === "/front-pages/team/" ? "active" : ""
-                  }`} 
+                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/team/" ? "active" : ""
+                    }`}
                 >
                   Our Team
                 </Link>
@@ -110,9 +106,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   href="/front-pages/faq/"
-                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${
-                    pathname === "/front-pages/faq/" ? "active" : ""
-                  }`} 
+                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/faq/" ? "active" : ""
+                    }`}
                 >
                   FAQ’s
                 </Link>
@@ -121,9 +116,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   href="/front-pages/contact/"
-                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${
-                    pathname === "/front-pages/contact/" ? "active" : ""
-                  }`} 
+                  className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/contact/" ? "active" : ""
+                    }`}
                 >
                   Contact
                 </Link>
@@ -141,7 +135,7 @@ const Navbar = () => {
 
             <div className="othres d-flex align-items-center gap-3">
               <Link
-                href="/authentication/sign-in/"
+                href="/sign-in/"
                 className="btn btn-outline-primary-div py-2 px-4 fw-medium fs-16 rounded-3 d-flex align-items-center gap-1"
               >
                 <i className="ri-login-box-line fs-18 lh-1"></i>
@@ -149,7 +143,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/authentication/sign-up/"
+                href="/sign-up/"
                 className="btn btn-primary-div py-2 px-4 fw-medium fs-16 text-white rounded-3 d-flex align-items-center gap-1"
               >
                 <i className="ri-user-line fs-18 lh-1"></i>

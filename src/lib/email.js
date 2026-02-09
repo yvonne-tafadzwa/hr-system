@@ -172,7 +172,7 @@ The HRSY Team
     </ul>
     
     <div style="text-align: center; margin-top: 30px;">
-      <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/authentication/sign-in/" 
+      <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/sign-in/" 
          style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-weight: bold;">
         Log In to Your Dashboard
       </a>

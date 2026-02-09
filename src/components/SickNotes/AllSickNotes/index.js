@@ -282,6 +282,79 @@ const AllSickNotes = () => {
     }
   };
 
+  // Export to CSV
+  const exportToCSV = () => {
+    if (filteredSickNotes.length === 0) {
+      alert('No sick notes to export');
+      return;
+    }
+
+    // Helper function to escape CSV values
+    const escapeCSV = (value) => {
+      if (value === null || value === undefined) return '""';
+      const str = String(value);
+      // Always wrap in quotes and escape any existing quotes
+      return `"${str.replace(/"/g, '""')}"`;
+    };
+
+    // Helper function to format date for CSV (YYYY-MM-DD format)
+    const formatDateForCSV = (dateString) => {
+      if (!dateString) return '""';
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return '""';
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `"${year}-${month}-${day}"`;
+    };
+
+    // Build CSV headers - always include Company column for consistency
+    const headers = [
+      'Employee Name',
+      'Employee ID',
+      'Company',
+      'Start Date',
+      'End Date',
+      'Reason',
+      'Status',
+      'Created Date'
+    ];
+
+    // Build CSV rows
+    const rows = filteredSickNotes.map(note => {
+      const row = [
+        escapeCSV(getEmployeeName(note)),
+        escapeCSV(getEmployeeId(note)),
+        escapeCSV(getCompanyName(note)),
+        formatDateForCSV(note.start_date),
+        formatDateForCSV(note.end_date),
+        escapeCSV(note.reason || '-'),
+        escapeCSV(note.status || 'Pending'),
+        formatDateForCSV(note.created_at)
+      ];
+      return row.join(',');
+    });
+
+    // Combine headers and rows
+    const csvContent = [headers.join(','), ...rows].join('\n');
+
+    // Create and download file
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+
+    // Generate filename with date
+    const date = new Date();
+    const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    link.download = `sick_notes_export_${dateStr}.csv`;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  };
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -313,6 +386,16 @@ const AllSickNotes = () => {
                 <option value="Approved">Approved</option>
                 <option value="Rejected">Rejected</option>
               </Form.Select>
+              <Button
+                variant="outline-success"
+                onClick={exportToCSV}
+                className="fw-semibold py-1 px-2"
+                style={{ fontSize: '11px' }}
+                disabled={filteredSickNotes.length === 0}
+              >
+                <i className="ri-download-line me-1"></i>
+                Export CSV
+              </Button>
               <Button
                 variant="primary"
                 onClick={() => router.push('/sick-notes/add')}

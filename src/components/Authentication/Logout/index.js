@@ -18,7 +18,7 @@ const Logout = () => {
         console.error('Error during logout:', error);
       } finally {
         // Redirect to sign-in page
-        router.replace('/authentication/sign-in/');
+        router.replace('/sign-in/');
       }
     };
 

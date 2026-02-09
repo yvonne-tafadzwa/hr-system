@@ -244,7 +244,7 @@ const AddSickNote = () => {
       }
 
       // Success - redirect to sick notes list
-      router.push('/sick-notes/sick-notes');
+      router.push('/sick-notes/');
     } catch (err) {
       console.error('Error creating sick note:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -440,7 +440,7 @@ const AddSickNote = () => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/sick-notes/sick-notes')}
+                        onClick={() => router.push('/sick-notes/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

@@ -37,16 +37,17 @@ const LeftSidebar = ({ toogleActive }) => {
       >
         <div className="logo position-relative">
           <Link
-            href="/dashboard/ecommerce/"
+            href="/dashboard/"
             className="d-block text-decoration-none position-relative"
+            style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}
           >
             <Image
               src="/images/logo-icon.png"
               alt="logo-icon"
-              width={26}
-              height={26}
+              width={16}
+              height={16}
             />
-            <span className="logo-text fw-bold text-dark">HRSY</span>
+            <span className="logo-text fw-bold text-dark" style={{ fontSize: '18px' }}>Verity Workflow</span>
           </Link>
           <button
             className="sidebar-burger-menu bg-transparent p-0 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
@@ -56,77 +57,104 @@ const LeftSidebar = ({ toogleActive }) => {
           </button>
         </div>
 
-        <div className="sidebar-menu">
+        <div className="sidebar-menu" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 80px)' }}>
+          {/* Main Menu */}
+          <div style={{ flex: 1 }}>
+            <Accordion defaultActiveKey="0" flush>
+              <div className="menu-item">
+                <Link
+                  href="/dashboard/"
+                  className={`menu-link ${pathname === "/dashboard/" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>home</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Dashboard</span>
+                </Link>
+              </div>
+              <div className="menu-item">
+                <Link
+                  href="/companies/"
+                  className={`menu-link ${pathname === "/companies/" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>business</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Companies</span>
+                </Link>
+              </div>
+              <div className="menu-item">
+                <Link
+                  href="/sick-notes/"
+                  className={`menu-link ${pathname === "/sick-notes/" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>medical_services</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Sick Notes</span>
+                </Link>
+              </div>
+              <div className="menu-item">
+                <Link
+                  href="/employees/"
+                  className={`menu-link ${pathname === "/employees/" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>groups</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Employees</span>
+                </Link>
+              </div>
 
+              <div className="menu-item">
+                <Link
+                  href="/calendar/"
+                  className={`menu-link ${pathname === "/calendar/" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>calendar_month</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Calendar</span>
+                </Link>
+              </div>
 
-          <Accordion defaultActiveKey="0" flush>
+              <div className="menu-item">
+                <Link
+                  href="/reports"
+                  className={`menu-link ${pathname === "/reports" ? "active" : ""
+                    }`}
+                >
+                  <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>assessment</i>
+                  <span className="title" style={{ fontSize: '12px' }}>Reports</span>
+                </Link>
+              </div>
+            </Accordion>
+          </div>
 
-
-
+          {/* Account Section - Fixed at bottom */}
+          <div style={{
+            borderTop: '1px solid #e5e7eb',
+            paddingTop: '12px',
+            marginTop: 'auto',
+            paddingBottom: '20px'
+          }}>
+            <span style={{
+              fontSize: '10px',
+              color: '#9ca3af',
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+              paddingLeft: '20px',
+              display: 'block',
+              marginBottom: '8px'
+            }}>
+              Account
+            </span>
             <div className="menu-item">
               <Link
-                href="/dashboard/ecommerce/"
-                className={`menu-link ${pathname === "/dashboard/ecommerce/" ? "active" : ""
-                  }`}
-              >
-                <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>home</i>
-                <span className="title" style={{ fontSize: '12px' }}>Dashboard</span>
-              </Link>
-            </div>
-            <div className="menu-item">
-              <Link
-                href="/companies/companies"
-                className={`menu-link ${pathname === "/companies/companies" ? "active" : ""
-                  }`}
-              >
-                <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>business</i>
-                <span className="title" style={{ fontSize: '12px' }}>Companies</span>
-              </Link>
-            </div>
-            <div className="menu-item">
-              <Link
-                href="/sick-notes/sick-notes"
-                className={`menu-link ${pathname === "/sick-notes/sick-notes" ? "active" : ""
-                  }`}
-              >
-                <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>medical_services</i>
-                <span className="title" style={{ fontSize: '12px' }}>Sick Notes</span>
-              </Link>
-            </div>
-            <div className="menu-item">
-              <Link
-                href="/employees/employees"
-                className={`menu-link ${pathname === "/employees/employees" ? "active" : ""
-                  }`}
-              >
-                <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>groups</i>
-                <span className="title" style={{ fontSize: '12px' }}>Employees</span>
-              </Link>
-            </div>
-
-            <div className="menu-item">
-              <Link
-                href="/apps/calendar/"
-                className={`menu-link ${pathname === "/apps/calendar/" ? "active" : ""
-                  }`}
-              >
-                <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>calendar_month</i>
-                <span className="title" style={{ fontSize: '12px' }}>Calendar</span>
-              </Link>
-            </div>
-
-
-            <div className="menu-item">
-              <Link
-                href="/authentication/logout/"
-                className={`menu-link ${pathname === "/authentication/logout/" ? "active" : ""
+                href="/logout/"
+                className={`menu-link ${pathname === "/logout/" ? "active" : ""
                   }`}
               >
                 <i className="material-symbols-outlined" style={{ fontSize: '18px' }}>exit_to_app</i>
                 <span className="title" style={{ fontSize: '12px' }}>Logout</span>
               </Link>
             </div>
-          </Accordion>
+          </div>
         </div>
       </div>
     </>

@@ -216,7 +216,7 @@ const AddEmployee = () => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/employees');
+      router.push('/employees/');
     } catch (err) {
       console.error('Error creating employee:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -336,7 +336,7 @@ const AddEmployee = () => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/employees');
+      router.push('/employees/');
     } catch (err) {
       console.error('Error processing CSV:', err);
       setCsvError('An error occurred while processing the CSV file');
@@ -535,7 +535,7 @@ const AddEmployee = () => {
                             <Button
                               variant="secondary"
                               type="button"
-                              onClick={() => router.push('/employees/employees')}
+                              onClick={() => router.push('/employees/')}
                               className="fw-semibold py-2 px-3"
                               style={{ fontSize: '12px' }}
                             >
@@ -625,7 +625,7 @@ const AddEmployee = () => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/employees/employees')}
+                        onClick={() => router.push('/employees/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

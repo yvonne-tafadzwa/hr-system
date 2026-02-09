@@ -4,13 +4,20 @@ import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
+import { useLeaderboard } from "@/context/LeaderboardContext";
 
 const PendingSickNotes = () => {
   const { isSuperAdmin, companyId } = useAuth();
+  const { showLeaderboard } = useLeaderboard();
   const [leaderboard, setLeaderboard] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Don't fetch if leaderboard is hidden
+    if (!showLeaderboard) {
+      setIsLoading(false);
+      return;
+    }
     const fetchLeaderboard = async () => {
       try {
         setIsLoading(true);
@@ -53,23 +60,23 @@ const PendingSickNotes = () => {
 
         // Count sick notes per employee and build leaderboard
         const employeeMap = {};
-        
+
         sickNotes.forEach(note => {
           if (!note.employee_id || !note.employees) return;
-          
+
           const employee = note.employees;
-          
+
           // Skip inactive employees
           if (!employee.is_active) return;
-          
+
           // Handle user_profiles - it might be an object or array
-          const profile = Array.isArray(employee.user_profiles) 
-            ? employee.user_profiles[0] 
+          const profile = Array.isArray(employee.user_profiles)
+            ? employee.user_profiles[0]
             : employee.user_profiles;
-          
+
           // Use employee_id as the display name
           const displayName = employee.employee_id || 'Unknown';
-          
+
           // Initialize or increment count
           if (!employeeMap[employee.id]) {
             employeeMap[employee.id] = {
@@ -80,7 +87,7 @@ const PendingSickNotes = () => {
               sickNoteCount: 0,
             };
           }
-          
+
           employeeMap[employee.id].sickNoteCount++;
         });
 
@@ -114,7 +121,12 @@ const PendingSickNotes = () => {
     };
 
     fetchLeaderboard();
-  }, [isSuperAdmin, companyId]);
+  }, [isSuperAdmin, companyId, showLeaderboard]);
+
+  // Don't render if leaderboard is hidden
+  if (!showLeaderboard) {
+    return null;
+  }
 
   return (
     <>

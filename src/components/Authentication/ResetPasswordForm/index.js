@@ -42,7 +42,7 @@ const ResetPasswordForm = () => {
               <p className="fw-medium fs-16 mb-4">
                 Enter your new password and confirm it another time in the field below.
               </p>
- 
+
               <Form>
                 <Form.Group className="mb-4">
                   <label className="label text-secondary">Old Password</label>
@@ -70,7 +70,7 @@ const ResetPasswordForm = () => {
                     placeholder="Type your confirm password"
                   />
                 </Form.Group>
- 
+
                 <Form.Group className="mb-4">
                   <button
                     type="submit"
@@ -89,7 +89,7 @@ const ResetPasswordForm = () => {
                   <p>
                     Back to{" "}
                     <Link
-                      href="/authentication/sign-in/"
+                      href="/sign-in/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Sign In

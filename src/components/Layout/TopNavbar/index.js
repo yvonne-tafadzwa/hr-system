@@ -4,9 +4,11 @@ import React, { useState, useEffect } from "react";
 import Notifications from "./Notifications";
 import Profile from "./Profile";
 import { supabase } from "@/lib/supabase";
+import { useLeaderboard } from "@/context/LeaderboardContext";
 
 const TopNavbar = ({ toogleActive }) => {
   const [companyName, setCompanyName] = useState('');
+  const { showLeaderboard, toggleLeaderboard } = useLeaderboard();
 
   React.useEffect(() => {
     let elementId = document.getElementById("header");
@@ -117,6 +119,93 @@ const TopNavbar = ({ toogleActive }) => {
             <div className="col-lg-6">
               <div className="right-header-content mt-2 mt-sm-0">
                 <ul className="d-flex align-items-center justify-content-end ps-0 mb-0 list-unstyled">
+                  {/* Leaderboard Toggle Switch */}
+                  <li className="header-right-item">
+                    <div
+                      onClick={toggleLeaderboard}
+                      title={showLeaderboard ? "Hide Leaderboard" : "Show Leaderboard"}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        marginRight: '12px',
+                        userSelect: 'none',
+                        gap: '8px'
+                      }}
+                    >
+                      {/* Label */}
+                      <span
+                        style={{
+                          fontSize: '12px',
+                          fontWeight: '500',
+                          color: '#374151',
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
+                        Leader Board
+                      </span>
+
+                      {/* Toggle Track */}
+                      <div
+                        style={{
+                          position: 'relative',
+                          width: '50px',
+                          height: '26px',
+                          borderRadius: '13px',
+                          backgroundColor: showLeaderboard ? '#22c55e' : '#1f2937',
+                          transition: 'background-color 0.3s ease',
+                          display: 'flex',
+                          alignItems: 'center',
+                          padding: '0 6px',
+                          justifyContent: showLeaderboard ? 'flex-start' : 'flex-end'
+                        }}
+                      >
+                        {/* ON/OFF Text */}
+                        <span
+                          style={{
+                            fontSize: '9px',
+                            fontWeight: '700',
+                            color: '#fff',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px'
+                          }}
+                        >
+                          {showLeaderboard ? 'ON' : 'OFF'}
+                        </span>
+
+                        {/* Toggle Circle */}
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: '3px',
+                            left: showLeaderboard ? 'calc(100% - 23px)' : '3px',
+                            width: '20px',
+                            height: '20px',
+                            borderRadius: '50%',
+                            backgroundColor: '#fff',
+                            boxShadow: '0 1px 3px rgba(0,0,0,0.3)',
+                            transition: 'left 0.3s ease',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                          }}
+                        >
+                          {/* Inner dot for OFF state */}
+                          {!showLeaderboard && (
+                            <div
+                              style={{
+                                width: '8px',
+                                height: '8px',
+                                borderRadius: '50%',
+                                backgroundColor: '#1f2937'
+                              }}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
                   <li className="header-right-item">
                     <Notifications />
                   </li>
@@ -135,3 +224,4 @@ const TopNavbar = ({ toogleActive }) => {
 };
 
 export default TopNavbar;
+

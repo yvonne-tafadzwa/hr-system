@@ -38,7 +38,7 @@ const EditEmployee = ({ employeeId }) => {
   const fetchEmployeeData = async () => {
     try {
       setIsLoading(true);
-      
+
       const { data: employeeData, error: employeeError } = await supabase
         .from('employees')
         .select('*')
@@ -153,7 +153,7 @@ const EditEmployee = ({ employeeId }) => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/employees');
+      router.push('/employees/');
     } catch (err) {
       console.error('Error updating employee:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -171,7 +171,8 @@ const EditEmployee = ({ employeeId }) => {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .add-employee-form input::placeholder {
           font-size: 12px !important;
         }
@@ -312,7 +313,7 @@ const EditEmployee = ({ employeeId }) => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/employees/employees')}
+                        onClick={() => router.push('/employees/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >
