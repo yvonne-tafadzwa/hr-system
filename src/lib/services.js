@@ -790,9 +790,109 @@ export const sickNotesService = {
     return { data, error };
   },
 
-  // Approve sick note
+  // Get sick days used by employee this year (only counts approved sick notes)
+  getSickDaysUsedByEmployee: async (employeeId) => {
+    const startOfYear = new Date();
+    startOfYear.setMonth(0, 1);
+    startOfYear.setHours(0, 0, 0, 0);
+
+    const { data, error } = await supabase
+      .from('sick_notes')
+      .select('start_date, end_date')
+      .eq('employee_id', employeeId)
+      .eq('status', 'approved')
+      .gte('start_date', startOfYear.toISOString().split('T')[0]);
+
+    if (error) return { daysUsed: 0, error };
+
+    // Calculate total days
+    let totalDays = 0;
+    if (data) {
+      data.forEach(note => {
+        const start = new Date(note.start_date);
+        const end = new Date(note.end_date);
+        const diffTime = Math.abs(end - start);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end day
+        totalDays += diffDays;
+      });
+    }
+
+    return { daysUsed: totalDays, error: null };
+  },
+
+  // Get employee sick days info (used, remaining, max)
+  getEmployeeSickDaysInfo: async (employeeId, companyId) => {
+    // Get company max sick days
+    const { data: company, error: companyError } = await supabase
+      .from('companies')
+      .select('max_sick_days')
+      .eq('id', companyId)
+      .single();
+
+    if (companyError) return { data: null, error: companyError };
+
+    // Get sick days used
+    const { daysUsed, error: usedError } = await sickNotesService.getSickDaysUsedByEmployee(employeeId);
+    if (usedError) return { data: null, error: usedError };
+
+    const maxSickDays = company?.max_sick_days;
+    const remaining = maxSickDays !== null ? Math.max(0, maxSickDays - daysUsed) : null;
+
+    return {
+      data: {
+        daysUsed,
+        maxDays: maxSickDays,
+        remaining,
+        hasLimit: maxSickDays !== null,
+        isExceeded: maxSickDays !== null && daysUsed >= maxSickDays
+      },
+      error: null
+    };
+  },
+
+  // Approve sick note (with max sick days validation)
   approve: async (id, reviewNotes) => {
     const { data: { user } } = await supabase.auth.getUser();
+
+    // First, get the sick note details
+    const { data: sickNote, error: noteError } = await supabase
+      .from('sick_notes')
+      .select('employee_id, company_id, start_date, end_date')
+      .eq('id', id)
+      .single();
+
+    if (noteError) return { data: null, error: noteError };
+
+    // Get company max sick days
+    const { data: company, error: companyError } = await supabase
+      .from('companies')
+      .select('max_sick_days')
+      .eq('id', sickNote.company_id)
+      .single();
+
+    if (companyError) return { data: null, error: companyError };
+
+    // Check if company has a max sick days limit
+    if (company.max_sick_days !== null) {
+      // Calculate days in this sick note
+      const start = new Date(sickNote.start_date);
+      const end = new Date(sickNote.end_date);
+      const diffTime = Math.abs(end - start);
+      const noteDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+
+      // Get employee's current sick days used this year
+      const { daysUsed } = await sickNotesService.getSickDaysUsedByEmployee(sickNote.employee_id);
+
+      // Check if approving this would exceed the limit
+      if (daysUsed + noteDays > company.max_sick_days) {
+        return {
+          data: null,
+          error: new Error(`Cannot approve: Employee has already used ${daysUsed} of ${company.max_sick_days} sick days this year. This sick note would add ${noteDays} more days, exceeding the limit.`)
+        };
+      }
+    }
+
+    // Proceed with approval
     const { data, error } = await supabase
       .from('sick_notes')
       .update({

@@ -20,7 +20,8 @@ const AddCompany = () => {
     position: '',
     login_email: '',
     password: '',
-    is_active: true
+    is_active: true,
+    max_sick_days: ''
   });
   const [error, setError] = useState('');
 
@@ -489,6 +490,14 @@ EMP003,Bob Johnson,Sales,Sales Representative,2023-06-01,,,,
         }
       }
 
+      // Update max_sick_days if provided
+      if (companyData && formData.max_sick_days) {
+        await supabase
+          .from('companies')
+          .update({ max_sick_days: parseInt(formData.max_sick_days, 10) })
+          .eq('id', companyData.id);
+      }
+
       // Success - show success modal
       setRegistrationData(result.data);
       setShowSuccessModal(true);
@@ -729,6 +738,27 @@ EMP003,Bob Johnson,Sales,Sales Representative,2023-06-01,,,,
                               )}
                             </span>
                           </div>
+                        </Form.Group>
+                      </Col>
+
+                      <Col lg={6}>
+                        <Form.Group className="mb-4">
+                          <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
+                            Max Sick Days Per Year
+                          </Form.Label>
+                          <Form.Control
+                            type="number"
+                            name="max_sick_days"
+                            value={formData.max_sick_days}
+                            onChange={handleChange}
+                            className="h-55 text-secondary"
+                            placeholder="e.g., 10 (leave empty for unlimited)"
+                            min="0"
+                            style={{ fontSize: '12px', border: 'none', borderBottom: '1px solid #D6DAE1', borderRadius: 0, paddingLeft: 0, height: '25px', paddingTop: '4px', paddingBottom: '4px' }}
+                          />
+                          <Form.Text className="text-muted" style={{ fontSize: '10px' }}>
+                            Leave empty for unlimited sick days
+                          </Form.Text>
                         </Form.Group>
                       </Col>
 

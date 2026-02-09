@@ -16,7 +16,8 @@ const EditCompany = ({ companyId }) => {
     name: '',
     login_email: '',
     password: '',
-    is_active: true
+    is_active: true,
+    max_sick_days: ''
   });
   const [error, setError] = useState('');
 
@@ -68,7 +69,8 @@ const EditCompany = ({ companyId }) => {
           name: companyData.name || '',
           login_email: companyData.login_email || '',
           password: '', // Don't load password
-          is_active: companyData.is_active !== undefined ? companyData.is_active : true
+          is_active: companyData.is_active !== undefined ? companyData.is_active : true,
+          max_sick_days: companyData.max_sick_days !== null ? companyData.max_sick_days.toString() : ''
         });
 
         // Fetch departments for this company
@@ -548,7 +550,8 @@ EMP002,2024-03-15,2024-03-18,Back pain,pending
       const updateData = {
         name: formData.name,
         login_email: formData.login_email,
-        is_active: formData.is_active
+        is_active: formData.is_active,
+        max_sick_days: formData.max_sick_days ? parseInt(formData.max_sick_days, 10) : null
       };
 
       // Only update password if provided
@@ -767,6 +770,27 @@ EMP002,2024-03-15,2024-03-18,Back pain,pending
                         <option value="true">Active</option>
                         <option value="false">Inactive</option>
                       </Form.Select>
+                    </Form.Group>
+                  </Col>
+
+                  <Col lg={6}>
+                    <Form.Group className="mb-4">
+                      <Form.Label className="label text-secondary" style={{ fontSize: '12px' }}>
+                        Max Sick Days Per Year
+                      </Form.Label>
+                      <Form.Control
+                        type="number"
+                        name="max_sick_days"
+                        value={formData.max_sick_days}
+                        onChange={handleChange}
+                        className="h-55 text-secondary"
+                        placeholder="e.g., 10 (leave empty for unlimited)"
+                        min="0"
+                        style={{ fontSize: '12px', border: 'none', borderBottom: '1px solid #D6DAE1', borderRadius: 0, paddingLeft: 0, height: '25px', paddingTop: '4px', paddingBottom: '4px' }}
+                      />
+                      <Form.Text className="text-muted" style={{ fontSize: '10px' }}>
+                        Leave empty for unlimited sick days
+                      </Form.Text>
                     </Form.Group>
                   </Col>
 

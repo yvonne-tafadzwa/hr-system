@@ -198,6 +198,17 @@ const CompanyDetails = ({ companyId }) => {
               </div>
             </Col>
 
+            <Col lg={6}>
+              <div className="mb-3">
+                <label className="text-secondary fw-medium" style={{ fontSize: '12px' }}>Max Sick Days Per Year</label>
+                <p className="mb-0" style={{ fontSize: '12px' }}>
+                  {company.max_sick_days !== null && company.max_sick_days !== undefined
+                    ? `${company.max_sick_days} days`
+                    : 'Unlimited'}
+                </p>
+              </div>
+            </Col>
+
             <Col lg={12}>
               <div className="mb-3">
                 <label className="text-secondary fw-medium" style={{ fontSize: '12px' }}>Departments</label>
