@@ -1,15 +1,17 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Card, Form, Table, Button } from "react-bootstrap";
+import { Card, Form, Table, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
+import { sickNotesService } from "@/lib/services";
 
 const AllSickNotes = () => {
   const router = useRouter();
   const { isSuperAdmin, companyId } = useAuth();
   const [sickNotes, setSickNotes] = useState([]);
+  const [employeeSickDaysMap, setEmployeeSickDaysMap] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
@@ -95,7 +97,8 @@ const AllSickNotes = () => {
             ),
             companies (
               id,
-              name
+              name,
+              max_sick_days
             )
           `)
           .order('created_at', { ascending: false });
@@ -120,6 +123,28 @@ const AllSickNotes = () => {
 
         setSickNotes(data || []);
 
+        // Fetch sick days info for unique employees
+        if (data && data.length > 0) {
+          const uniqueEmployees = [...new Map(data.map(note => [
+            note.employees?.id,
+            { employeeId: note.employees?.id, companyId: note.company_id }
+          ])).values()].filter(e => e.employeeId);
+
+          const sickDaysPromises = uniqueEmployees.map(async (emp) => {
+            const { data: info } = await sickNotesService.getEmployeeSickDaysInfo(emp.employeeId, emp.companyId);
+            return { employeeId: emp.employeeId, info };
+          });
+
+          const sickDaysResults = await Promise.all(sickDaysPromises);
+          const sickDaysMap = {};
+          sickDaysResults.forEach(result => {
+            if (result.info) {
+              sickDaysMap[result.employeeId] = result.info;
+            }
+          });
+          setEmployeeSickDaysMap(sickDaysMap);
+        }
+
         // Set up real-time subscription
         const subscription = supabase
           .channel('sick-notes-changes')
@@ -139,7 +164,8 @@ const AllSickNotes = () => {
                   ),
                   companies (
                     id,
-                    name
+                    name,
+                    max_sick_days
                   )
                 `)
                 .order('created_at', { ascending: false });
@@ -419,11 +445,10 @@ const AllSickNotes = () => {
                     {resolvedIsSuperAdmin && (
                       <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Company</th>
                     )}
+                    <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Sick Days</th>
                     <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Start Date</th>
                     <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>End Date</th>
-                    <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Reason</th>
                     <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Status</th>
-                    <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Created Date</th>
                     <th scope="col" style={{ fontSize: '12px', padding: '10px 8px' }}>Action</th>
                   </tr>
                 </thead>
@@ -431,13 +456,13 @@ const AllSickNotes = () => {
                 <tbody>
                   {isLoading ? (
                     <tr>
-                      <td colSpan={resolvedIsSuperAdmin ? 9 : 8} className="text-center py-4" style={{ fontSize: '12px' }}>
+                      <td colSpan={resolvedIsSuperAdmin ? 8 : 7} className="text-center py-4" style={{ fontSize: '12px' }}>
                         <span className="text-muted">Loading...</span>
                       </td>
                     </tr>
                   ) : currentSickNotes.length === 0 ? (
                     <tr>
-                      <td colSpan={resolvedIsSuperAdmin ? 9 : 8} className="text-center py-4" style={{ fontSize: '12px' }}>
+                      <td colSpan={resolvedIsSuperAdmin ? 8 : 7} className="text-center py-4" style={{ fontSize: '12px' }}>
                         <span className="text-muted">No sick notes found</span>
                       </td>
                     </tr>
@@ -463,13 +488,38 @@ const AllSickNotes = () => {
                           </td>
                         )}
 
+                        {/* Sick Days tracking column */}
+                        <td style={{ fontSize: '12px', padding: '10px 8px' }}>
+                          {(() => {
+                            const empInfo = employeeSickDaysMap[note.employees?.id];
+                            if (!empInfo || !empInfo.hasLimit) {
+                              return <span className="text-muted">-</span>;
+                            }
+                            const isExceeded = empInfo.isExceeded;
+                            const isNearLimit = empInfo.remaining <= 3;
+                            return (
+                              <OverlayTrigger
+                                placement="top"
+                                overlay={
+                                  <Tooltip>
+                                    {empInfo.daysUsed} used, {empInfo.remaining} remaining of {empInfo.maxDays} max days/year
+                                  </Tooltip>
+                                }
+                              >
+                                <span
+                                  className={`badge p-1 ${isExceeded ? 'bg-danger text-white' : isNearLimit ? 'bg-warning text-dark' : 'bg-primary bg-opacity-10 text-primary'}`}
+                                  style={{ fontSize: '10px', cursor: 'help' }}
+                                >
+                                  {empInfo.daysUsed}/{empInfo.maxDays}
+                                </span>
+                              </OverlayTrigger>
+                            );
+                          })()}
+                        </td>
+
                         <td style={{ fontSize: '12px', padding: '10px 8px' }} className="text-body">{formatDate(note.start_date)}</td>
 
                         <td style={{ fontSize: '12px', padding: '10px 8px' }} className="text-body">{formatDate(note.end_date)}</td>
-
-                        <td style={{ fontSize: '12px', padding: '10px 8px', maxWidth: '150px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="text-body">
-                          {note.reason || '-'}
-                        </td>
 
                         <td style={{ fontSize: '12px', padding: '10px 8px' }}>
                           <span
@@ -479,8 +529,6 @@ const AllSickNotes = () => {
                             {note.status || 'Pending'}
                           </span>
                         </td>
-
-                        <td style={{ fontSize: '12px', padding: '10px 8px' }} className="text-body">{formatDate(note.created_at)}</td>
 
                         <td style={{ fontSize: '12px', padding: '10px 8px' }}>
                           <div className="d-flex align-items-center gap-1">

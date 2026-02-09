@@ -1,14 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card, Row, Col, Button } from "react-bootstrap";
+import { Card, Row, Col, Button, ProgressBar, Alert } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { sickNotesService } from "@/lib/services";
 
 const SickNoteDetails = ({ sickNoteId }) => {
   const router = useRouter();
-  
+
   const [sickNote, setSickNote] = useState(null);
+  const [sickDaysInfo, setSickDaysInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isUpdating, setIsUpdating] = useState(false);
   const [error, setError] = useState('');
@@ -21,9 +23,9 @@ const SickNoteDetails = ({ sickNoteId }) => {
       const subscription = supabase
         .channel(`sick-note-${sickNoteId}`)
         .on('postgres_changes',
-          { 
-            event: 'UPDATE', 
-            schema: 'public', 
+          {
+            event: 'UPDATE',
+            schema: 'public',
             table: 'sick_notes',
             filter: `id=eq.${sickNoteId}`
           },
@@ -42,7 +44,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
   const fetchSickNoteDetails = async () => {
     try {
       setIsLoading(true);
-      
+
       const { data: sickNoteData, error: sickNoteError } = await supabase
         .from('sick_notes')
         .select(`
@@ -53,7 +55,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
             employee_id,
             company_id,
             department,
-            companies(name, company_code)
+            companies(name, company_code, max_sick_days)
           )
         `)
         .eq('id', sickNoteId)
@@ -67,6 +69,15 @@ const SickNoteDetails = ({ sickNoteId }) => {
 
       if (sickNoteData) {
         setSickNote(sickNoteData);
+
+        // Fetch sick days info for this employee
+        if (sickNoteData.employees?.id && sickNoteData.employees?.company_id) {
+          const { data: daysInfo } = await sickNotesService.getEmployeeSickDaysInfo(
+            sickNoteData.employees.id,
+            sickNoteData.employees.company_id
+          );
+          setSickDaysInfo(daysInfo);
+        }
       }
     } catch (err) {
       console.error('Error fetching sick note details:', err);
@@ -83,16 +94,26 @@ const SickNoteDetails = ({ sickNoteId }) => {
     setError('');
 
     try {
-      const { error: updateError } = await supabase
-        .from('sick_notes')
-        .update({ status: newStatus })
-        .eq('id', sickNoteId);
+      if (newStatus === 'approved') {
+        // Use service to validate and approve
+        const { data, error: approveError } = await sickNotesService.approve(sickNoteId);
 
-      if (updateError) {
-        console.error('Error updating sick note:', updateError);
-        setError(updateError.message || 'Failed to update sick note status');
-        setIsUpdating(false);
-        return;
+        if (approveError) {
+          console.error('Error approving sick note:', approveError);
+          setError(approveError.message || 'Failed to approve sick note');
+          setIsUpdating(false);
+          return;
+        }
+      } else {
+        // For rejection, use the service
+        const { error: rejectError } = await sickNotesService.reject(sickNoteId);
+
+        if (rejectError) {
+          console.error('Error rejecting sick note:', rejectError);
+          setError(rejectError.message || 'Failed to reject sick note');
+          setIsUpdating(false);
+          return;
+        }
       }
 
       // Refresh the data
@@ -104,10 +125,19 @@ const SickNoteDetails = ({ sickNoteId }) => {
     }
   };
 
+  // Calculate days in this sick note
+  const calculateNoteDays = () => {
+    if (!sickNote?.start_date || !sickNote?.end_date) return 0;
+    const start = new Date(sickNote.start_date);
+    const end = new Date(sickNote.end_date);
+    const diffTime = Math.abs(end - start);
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+  };
+
   const formatDate = (dateString) => {
     if (!dateString) return '-';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
@@ -279,7 +309,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
                 <Button
                   variant="success"
                   onClick={() => handleStatusUpdate('approved')}
-                  disabled={isUpdating}
+                  disabled={isUpdating || (sickDaysInfo?.isExceeded)}
                   className="text-white"
                   style={{ fontSize: '12px' }}
                 >
@@ -309,6 +339,101 @@ const SickNoteDetails = ({ sickNoteId }) => {
           )}
         </Card.Body>
       </Card>
+
+      {/* Sick Days Tracking Card */}
+      {sickDaysInfo && sickDaysInfo.hasLimit && (
+        <Card className="bg-white border-0 rounded-3 mb-4">
+          <Card.Body className="p-4">
+            <div className="d-flex justify-content-between align-items-center mb-3">
+              <h3 className="mb-0" style={{ fontSize: '14px' }}>
+                <i className="ri-calendar-check-line me-2 text-primary"></i>
+                Sick Days Tracking
+              </h3>
+              <span
+                className={`badge ${sickDaysInfo.isExceeded ? 'bg-danger' : sickDaysInfo.remaining <= 3 ? 'bg-warning' : 'bg-success'} bg-opacity-10 ${sickDaysInfo.isExceeded ? 'text-danger' : sickDaysInfo.remaining <= 3 ? 'text-warning' : 'text-success'}`}
+                style={{ fontSize: '11px', padding: '6px 10px' }}
+              >
+                {sickDaysInfo.isExceeded ? 'Limit Exceeded' : sickDaysInfo.remaining <= 3 ? 'Low Balance' : 'Available'}
+              </span>
+            </div>
+
+            <Row className="mb-3">
+              <Col md={4}>
+                <div className="text-center p-3 rounded" style={{ background: '#f8f9fa' }}>
+                  <div className="fw-bold text-primary" style={{ fontSize: '24px' }}>{sickDaysInfo.daysUsed}</div>
+                  <small className="text-muted">Days Used (This Year)</small>
+                </div>
+              </Col>
+              <Col md={4}>
+                <div className="text-center p-3 rounded" style={{ background: '#f8f9fa' }}>
+                  <div className="fw-bold text-success" style={{ fontSize: '24px' }}>{sickDaysInfo.remaining}</div>
+                  <small className="text-muted">Days Remaining</small>
+                </div>
+              </Col>
+              <Col md={4}>
+                <div className="text-center p-3 rounded" style={{ background: '#f8f9fa' }}>
+                  <div className="fw-bold text-secondary" style={{ fontSize: '24px' }}>{sickDaysInfo.maxDays}</div>
+                  <small className="text-muted">Max Days Per Year</small>
+                </div>
+              </Col>
+            </Row>
+
+            <div className="mb-2">
+              <div className="d-flex justify-content-between mb-1">
+                <small className="text-muted">Sick Days Used</small>
+                <small className="text-muted fw-medium">{sickDaysInfo.daysUsed} / {sickDaysInfo.maxDays} days</small>
+              </div>
+              <ProgressBar
+                now={(sickDaysInfo.daysUsed / sickDaysInfo.maxDays) * 100}
+                variant={sickDaysInfo.isExceeded ? 'danger' : sickDaysInfo.daysUsed / sickDaysInfo.maxDays > 0.8 ? 'warning' : 'primary'}
+                style={{ height: '10px' }}
+              />
+            </div>
+
+            {/* This sick note info */}
+            <div className="mt-3 p-3 rounded" style={{ background: '#e7f3ff', border: '1px dashed #0d6efd' }}>
+              <div className="d-flex justify-content-between align-items-center">
+                <span style={{ fontSize: '12px' }}>
+                  <i className="ri-file-text-line me-1"></i>
+                  This sick note: <strong>{calculateNoteDays()} day{calculateNoteDays() !== 1 ? 's' : ''}</strong>
+                </span>
+                {sickNote.status?.toLowerCase() === 'pending' && (
+                  <span style={{ fontSize: '11px' }} className={sickDaysInfo.daysUsed + calculateNoteDays() > sickDaysInfo.maxDays ? 'text-danger' : 'text-success'}>
+                    {sickDaysInfo.daysUsed + calculateNoteDays() > sickDaysInfo.maxDays
+                      ? `⚠️ Would exceed limit by ${sickDaysInfo.daysUsed + calculateNoteDays() - sickDaysInfo.maxDays} day(s)`
+                      : `✓ If approved: ${sickDaysInfo.remaining - calculateNoteDays()} days remaining`
+                    }
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Warning if limit would be exceeded */}
+            {sickNote.status?.toLowerCase() === 'pending' && sickDaysInfo.daysUsed + calculateNoteDays() > sickDaysInfo.maxDays && (
+              <Alert variant="danger" className="mt-3 mb-0" style={{ fontSize: '12px' }}>
+                <i className="ri-error-warning-line me-2"></i>
+                <strong>Cannot Approve:</strong> This employee has already used {sickDaysInfo.daysUsed} of {sickDaysInfo.maxDays} sick days this year.
+                Approving this {calculateNoteDays()}-day sick note would exceed the company limit.
+              </Alert>
+            )}
+          </Card.Body>
+        </Card>
+      )}
+
+      {/* No limit set message */}
+      {sickDaysInfo && !sickDaysInfo.hasLimit && (
+        <Card className="bg-white border-0 rounded-3 mb-4">
+          <Card.Body className="p-4">
+            <div className="d-flex align-items-center">
+              <i className="ri-information-line me-2 text-info" style={{ fontSize: '20px' }}></i>
+              <div>
+                <h6 className="mb-0" style={{ fontSize: '13px' }}>No Sick Days Limit Set</h6>
+                <small className="text-muted">This company has not configured a maximum sick days limit per employee.</small>
+              </div>
+            </div>
+          </Card.Body>
+        </Card>
+      )}
     </>
   );
 };
