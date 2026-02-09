@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import TotalSales from '@/components/Dashboard/eCommerce/TotalSales';
 import TotalOrders from '@/components/Dashboard/eCommerce/TotalOrders';
@@ -11,43 +11,42 @@ import LatestSickNotes from '@/components/Dashboard/eCommerce/LatestSickNotes';
 import RecentActivities from '@/components/Dashboard/eCommerce/RecentActivities';
 
 export default function Page() {
+    const [isReady, setIsReady] = useState(false);
+
     useEffect(() => {
-        // Check if this is a fresh login (first load after navigation)
-        const hasRefreshed = sessionStorage.getItem('dashboard_refreshed');
+        // Check if we're coming from a fresh login
+        const justLoggedIn = sessionStorage.getItem('just_logged_in');
 
-        if (!hasRefreshed) {
-            // Mark that we've initiated a refresh check
-            sessionStorage.setItem('dashboard_refreshed', 'pending');
-
-            // Set a 10 second timeout to auto-refresh if page is stuck loading
-            const refreshTimer = setTimeout(() => {
-                const refreshStatus = sessionStorage.getItem('dashboard_refreshed');
-                if (refreshStatus === 'pending') {
-                    console.log('Dashboard stuck loading, auto-refreshing...');
-                    sessionStorage.setItem('dashboard_refreshed', 'done');
-                    window.location.reload();
-                }
-            }, 10000);
-
-            // Mark as done after initial render (short delay to ensure data loaded)
-            const loadCheckTimer = setTimeout(() => {
-                sessionStorage.setItem('dashboard_refreshed', 'done');
-            }, 3000);
-
-            return () => {
-                clearTimeout(refreshTimer);
-                clearTimeout(loadCheckTimer);
-            };
+        if (justLoggedIn === 'true') {
+            // Clear the flag
+            sessionStorage.removeItem('just_logged_in');
+            // Force a full page reload to ensure fresh data
+            console.log('Fresh login detected, reloading dashboard...');
+            window.location.reload();
+            return;
         }
 
-        // Clear the refresh flag when user navigates away (on unmount won't work for this)
-        // Reset flag after 30 seconds to allow refresh on next visit
-        const resetTimer = setTimeout(() => {
-            sessionStorage.removeItem('dashboard_refreshed');
-        }, 30000);
+        // Set ready state after a small delay to ensure hydration
+        const timer = setTimeout(() => {
+            setIsReady(true);
+        }, 100);
 
-        return () => clearTimeout(resetTimer);
+        return () => clearTimeout(timer);
     }, []);
+
+    // Show loading while not ready
+    if (!isReady) {
+        return (
+            <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '400px' }}>
+                <div className="text-center">
+                    <div className="spinner-border text-primary mb-3" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                    <p className="text-muted">Loading dashboard...</p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <>

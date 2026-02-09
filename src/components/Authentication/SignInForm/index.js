@@ -48,6 +48,8 @@ const SignInForm = () => {
 
       if (result.data) {
         console.log('Login successful, redirecting...');
+        // Set flag to trigger dashboard reload for fresh data
+        sessionStorage.setItem('just_logged_in', 'true');
         // Use window.location for a full page refresh to ensure dashboard loads fresh data
         window.location.href = "/dashboard/";
       }
