@@ -1,9 +1,12 @@
 "use client";
 
+import { use } from "react";
 import { Breadcrumb } from "react-bootstrap";
 import EmployeeDetails from '@/components/Employees/EmployeeDetails';
 
 export default function Page({ params }) {
+  const resolvedParams = use(params);
+
   return (
     <div style={{ overflowX: 'hidden', width: '100%' }}>
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
@@ -25,7 +28,7 @@ export default function Page({ params }) {
         </Breadcrumb>
       </div>
 
-      <EmployeeDetails employeeId={params?.id} />
+      <EmployeeDetails employeeId={resolvedParams?.id} />
     </div>
   );
 }
