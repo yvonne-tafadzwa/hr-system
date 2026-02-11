@@ -193,12 +193,14 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     let isMounted = true;
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        console.log('[AuthContext] Auth event:', event);
+    // Use getUser() for initial auth — this validates the token with the server
+    // and ensures all subsequent data queries have a valid access token
+    const initAuth = async () => {
+      try {
+        const { data: { user: authUser }, error } = await supabase.auth.getUser();
 
-        // SIGNED_OUT: clear everything immediately
-        if (event === 'SIGNED_OUT') {
+        if (error) {
+          console.warn('[AuthContext] getUser error (may be logged out):', error.message);
           if (isMounted) {
             setUser(null);
             setProfile(null);
@@ -207,55 +209,62 @@ export function AuthProvider({ children }) {
           return;
         }
 
-        // TOKEN_REFRESHED: just update user object silently, no profile re-fetch
-        // This prevents unnecessary re-renders and data re-fetches every ~10 seconds
-        if (event === 'TOKEN_REFRESHED') {
-          if (session?.user && isMounted) {
-            setUser(session.user);
-          }
-          return;
-        }
-
-        // INITIAL_SESSION and SIGNED_IN: load user + profile
-        if (session?.user && isMounted) {
-          const authUser = session.user;
+        if (authUser && isMounted) {
           setUser(authUser);
-
-          // Fast path: set profile from user_metadata immediately so dashboard
-          // can start rendering while full profile loads from DB
-          const metadataRole = authUser.user_metadata?.role || null;
-          const metadataCompanyId = authUser.user_metadata?.company_id || null;
-          if (metadataRole || metadataCompanyId) {
-            const quickProfile = {
-              id: authUser.id,
-              email: authUser.email,
-              role: metadataRole || 'company_admin',
-              company_id: metadataCompanyId,
-              is_active: true,
-            };
-            if (isMounted) {
-              setProfile(quickProfile);
-              setIsLoading(false);
-            }
-          }
-
-          // Full profile fetch from DB (runs in background if quick profile was set)
           const profileData = await fetchProfile(authUser);
-          console.log('[AuthContext] Profile loaded:', {
-            event,
+          console.log('[AuthContext] Init complete:', {
             role: profileData?.role,
             company_id: profileData?.company_id,
             isSuperAdmin: profileData?.role === 'super_admin',
           });
           if (isMounted) {
             setProfile(profileData);
+          }
+        }
+      } catch (error) {
+        console.error('Error initializing auth:', error);
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    initAuth();
+
+    // Listen for auth events (login, logout, token refresh)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        console.log('[AuthContext] Auth event:', event);
+
+        // Skip INITIAL_SESSION — initAuth() handles the initial load
+        if (event === 'INITIAL_SESSION') return;
+
+        // Skip TOKEN_REFRESHED — prevents unnecessary re-renders every ~10 seconds
+        // The token is refreshed internally by Supabase, no need to re-fetch profile
+        if (event === 'TOKEN_REFRESHED') return;
+
+        // SIGNED_IN: handle login — fetch profile for the new user
+        if (event === 'SIGNED_IN' && session?.user && isMounted) {
+          setUser(session.user);
+          const profileData = await fetchProfile(session.user);
+          console.log('[AuthContext] Logged in:', {
+            role: profileData?.role,
+            company_id: profileData?.company_id,
+          });
+          if (isMounted) {
+            setProfile(profileData);
             setIsLoading(false);
           }
-        } else if (isMounted) {
-          // No session — user is not logged in
+          return;
+        }
+
+        // SIGNED_OUT: clear everything
+        if (event === 'SIGNED_OUT' && isMounted) {
           setUser(null);
           setProfile(null);
           setIsLoading(false);
+          return;
         }
       }
     );
