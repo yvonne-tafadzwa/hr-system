@@ -50,8 +50,8 @@ const SignInForm = () => {
         console.log('Login successful, redirecting...');
         // Set flag to trigger dashboard reload for fresh data
         sessionStorage.setItem('just_logged_in', 'true');
-        // Use client-side navigation for faster redirect
-        router.push("/dashboard/");
+        // Use window.location for a full page load to ensure clean dashboard state
+        window.location.href = "/dashboard/";
       }
 
     } catch (err) {
