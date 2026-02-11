@@ -2,45 +2,18 @@
 
 import { Row, Col, Form } from "react-bootstrap";
 import Link from "next/link";
-import Image from "next/image";
 
 const ForgotPasswordForm = () => {
   return (
     <>
-      <div className="auth-main-content m-auto m-1230 px-3">
-        <Row className="align-items-center">
-          <Col lg={6} className="d-none d-lg-block">
-            <Image
-              src="/images/forgot.jpg"
-              className="rounded-3"
-              alt="forgot"
-              width={646}
-              height={804}
-            />
-          </Col>
+      <div className="auth-main-content d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+        <Row className="align-items-center justify-content-center w-100">
+          <Col lg={5} md={6} sm={8} xs={12}>
+            <div className="mw-480 mx-auto">
 
-          <Col lg={6}>
-            <div className="mw-480 ms-lg-auto">
-              <div className="d-inline-block mb-4">
-                <Image
-                  src="/images/logo.svg"
-                  className="rounded-3 for-light-logo"
-                  alt="login"
-                  width={100}
-                  height={26}
-                />
-                <Image
-                  src="/images/white-logo.svg"
-                  className="rounded-3 for-dark-logo"
-                  alt="login"
-                  width={100}
-                  height={26}
-                />
-              </div>
-
-              <h3 className="fs-28 mb-2">Forgot your password?</h3>
-              <p className="fw-medium fs-16 mb-4">
-                Enter the email address you used when you joined and we’ll send
+              <h3 className="fs-20 mb-2">Forgot your password?</h3>
+              <p className="fw-medium fs-14 mb-4">
+                Enter the email address you used when you joined and we'll send
                 you instructions to reset your password.
               </p>
 
@@ -50,7 +23,7 @@ const ForgotPasswordForm = () => {
                   <Form.Control
                     type="email"
                     className="h-55"
-                    placeholder="example@trezo.com"
+                    placeholder="example@company.com"
                   />
                 </Form.Group>
 

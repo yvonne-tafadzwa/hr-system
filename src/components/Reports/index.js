@@ -166,11 +166,11 @@ const Reports = () => {
         fetchReportData(true);
     }, [selectedPeriod, isSuperAdmin, companyId]);
 
-    // Auto-refresh every 5 seconds (without showing loading spinner)
+    // Auto-refresh every 60 seconds (without showing loading spinner)
     useEffect(() => {
         const refreshInterval = setInterval(() => {
             fetchReportData(false); // Don't show loading on auto-refresh
-        }, 5000);
+        }, 60000);
 
         // Cleanup interval on unmount
         return () => clearInterval(refreshInterval);

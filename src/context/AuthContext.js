@@ -196,12 +196,19 @@ export function AuthProvider({ children }) {
 
     const initAuth = async () => {
       try {
-        // Use getUser() which validates with the server (important for production)
-        // getSession() only reads from local storage and can be stale
-        const { data: { user: authUser }, error } = await supabase.auth.getUser();
+        // Use getSession() first for instant load from local storage,
+        // which is much faster than getUser() (server call) on production.
+        // Supabase's autoRefreshToken handles token validation automatically.
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
 
-        if (error) {
-          console.warn('[AuthContext] getUser error (may be logged out):', error.message);
+        if (sessionError) {
+          console.warn('[AuthContext] getSession error:', sessionError.message);
+        }
+
+        const authUser = session?.user || null;
+
+        if (!authUser) {
+          // No local session - user is not logged in
           if (isMounted) {
             setUser(null);
             setProfile(null);
@@ -237,6 +244,11 @@ export function AuthProvider({ children }) {
       async (event, session) => {
         // Skip INITIAL_SESSION events since initAuth handles that
         if (event === 'INITIAL_SESSION') return;
+
+        // Skip TOKEN_REFRESHED events - the user/session data doesn't change,
+        // and processing this event causes unnecessary re-renders and data re-fetches
+        // across the entire app every ~10 seconds.
+        if (event === 'TOKEN_REFRESHED') return;
 
         // Only process auth changes after initialization to avoid race conditions
         if (!isInitialized && event !== 'SIGNED_IN' && event !== 'SIGNED_OUT') return;
