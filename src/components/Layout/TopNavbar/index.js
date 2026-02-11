@@ -5,10 +5,12 @@ import Notifications from "./Notifications";
 import Profile from "./Profile";
 import { supabase } from "@/lib/supabase";
 import { useLeaderboard } from "@/context/LeaderboardContext";
+import { useAuth } from "@/context/AuthContext";
 
 const TopNavbar = ({ toogleActive }) => {
   const [companyName, setCompanyName] = useState('');
   const { showLeaderboard, toggleLeaderboard } = useLeaderboard();
+  const { user, profile, isSuperAdmin, companyId, isLoading: authLoading } = useAuth();
 
   React.useEffect(() => {
     let elementId = document.getElementById("header");
@@ -22,72 +24,56 @@ const TopNavbar = ({ toogleActive }) => {
   });
 
   useEffect(() => {
+    // Don't fetch until auth is fully loaded
+    if (authLoading) return;
+
     const fetchCompanyName = async () => {
       try {
-        // Get the current user
-        const { data: { user } } = await supabase.auth.getUser();
+        // If user is super_admin, always show "Administrator"
+        if (isSuperAdmin) {
+          setCompanyName('Administrator');
+          return;
+        }
 
-        if (user && user.email) {
-          // First, check if user is an administrator (matches company login_email)
-          const { data: adminCompany } = await supabase
+        // If we have a companyId from AuthContext, use it to get the company name
+        if (companyId) {
+          const { data: company } = await supabase
             .from('companies')
             .select('name')
-            .eq('login_email', user.email)
+            .eq('id', companyId)
+            .single();
+
+          if (company) {
+            setCompanyName(company.name);
+            return;
+          }
+        }
+
+        // Fallback: try to get company name by user email
+        if (user?.email) {
+          const { data: adminCompany } = await supabase
+            .from('companies')
+            .select('name, company_code')
+            .ilike('login_email', user.email)
             .eq('is_active', true)
             .single();
 
           if (adminCompany) {
-            setCompanyName(adminCompany.name);
+            // If this is the ADMIN company, show "Administrator"
+            if (adminCompany.company_code === 'ADMIN') {
+              setCompanyName('Administrator');
+            } else {
+              setCompanyName(adminCompany.name);
+            }
             return;
           }
+        }
 
-          // Try to get company from user's metadata
-          const userCompanyId = user.user_metadata?.company_id;
-
-          if (userCompanyId) {
-            const { data: company } = await supabase
-              .from('companies')
-              .select('name')
-              .eq('id', userCompanyId)
-              .single();
-
-            if (company) {
-              setCompanyName(company.name);
-              return;
-            }
-          }
-
-          // If not an admin, try to get from employees table
-          const { data: employee } = await supabase
-            .from('employees')
-            .select('company_id, companies(name)')
-            .eq('id', user.id)
-            .single();
-
-          if (employee?.companies?.name) {
-            setCompanyName(employee.companies.name);
-          } else if (employee?.company_id) {
-            const { data: company } = await supabase
-              .from('companies')
-              .select('name')
-              .eq('id', employee.company_id)
-              .single();
-
-            if (company) {
-              setCompanyName(company.name);
-            }
-          }
-        } else {
-          // If no user, try to get the first active company as fallback
-          const { data: companies } = await supabase
-            .from('companies')
-            .select('name')
-            .eq('is_active', true)
-            .limit(1);
-
-          if (companies && companies.length > 0) {
-            setCompanyName(companies[0].name);
-          }
+        // If no user is logged in, don't show any company name
+        // (removed dangerous fallback that showed first random company)
+        if (!user) {
+          setCompanyName('');
+          return;
         }
       } catch (error) {
         console.error('Error fetching company name:', error);
@@ -95,7 +81,7 @@ const TopNavbar = ({ toogleActive }) => {
     };
 
     fetchCompanyName();
-  }, []);
+  }, [authLoading, isSuperAdmin, companyId, user]);
 
   return (
     <>
@@ -110,7 +96,7 @@ const TopNavbar = ({ toogleActive }) => {
               <div className="left-header-content">
                 <div className="d-flex flex-column">
                   <h4 className="mb-0 d-flex align-items-center" style={{ fontSize: '16px', fontWeight: '600', color: '#333' }}>
-                    Hi, {companyName || 'Company'} 👋
+                    Hi, {authLoading ? '...' : (companyName || 'Company')} 👋
                   </h4>
                   <span style={{ fontSize: '12px', color: '#6c757d' }}>Welcome back! Here&apos;s what&apos;s happening today.</span>
                 </div>

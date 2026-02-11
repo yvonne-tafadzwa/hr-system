@@ -191,48 +191,80 @@ export function AuthProvider({ children }) {
   };
 
   useEffect(() => {
+    let isMounted = true;
+    let isInitialized = false;
+
     const initAuth = async () => {
       try {
-        const { data: { session } } = await supabase.auth.getSession();
+        // Use getUser() which validates with the server (important for production)
+        // getSession() only reads from local storage and can be stale
+        const { data: { user: authUser }, error } = await supabase.auth.getUser();
 
-        if (session?.user) {
-          setUser(session.user);
-          const profileData = await fetchProfile(session.user);
+        if (error) {
+          console.warn('[AuthContext] getUser error (may be logged out):', error.message);
+          if (isMounted) {
+            setUser(null);
+            setProfile(null);
+          }
+          return;
+        }
+
+        if (authUser && isMounted) {
+          setUser(authUser);
+          const profileData = await fetchProfile(authUser);
           console.log('[AuthContext] Init complete:', {
             role: profileData?.role,
             company_id: profileData?.company_id,
             isSuperAdmin: profileData?.role === 'super_admin',
           });
-          setProfile(profileData);
+          if (isMounted) {
+            setProfile(profileData);
+          }
         }
       } catch (error) {
         console.error('Error initializing auth:', error);
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+          isInitialized = true;
+        }
       }
     };
 
     initAuth();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (_event, session) => {
-        if (session?.user) {
+      async (event, session) => {
+        // Skip INITIAL_SESSION events since initAuth handles that
+        if (event === 'INITIAL_SESSION') return;
+
+        // Only process auth changes after initialization to avoid race conditions
+        if (!isInitialized && event !== 'SIGNED_IN' && event !== 'SIGNED_OUT') return;
+
+        console.log('[AuthContext] Auth state changed:', event);
+
+        if (session?.user && isMounted) {
           setUser(session.user);
           const profileData = await fetchProfile(session.user);
-          console.log('[AuthContext] Auth state changed:', {
+          console.log('[AuthContext] Profile updated:', {
             role: profileData?.role,
             company_id: profileData?.company_id,
           });
-          setProfile(profileData);
-        } else {
+          if (isMounted) {
+            setProfile(profileData);
+          }
+        } else if (isMounted) {
           setUser(null);
           setProfile(null);
         }
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     );
 
     return () => {
+      isMounted = false;
       subscription.unsubscribe();
     };
   }, []);
