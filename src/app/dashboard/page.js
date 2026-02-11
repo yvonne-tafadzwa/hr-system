@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import { useAuth } from "@/context/AuthContext";
 import TotalSales from '@/components/Dashboard/eCommerce/TotalSales';
 import TotalOrders from '@/components/Dashboard/eCommerce/TotalOrders';
 import TotalCustomers from '@/components/Dashboard/eCommerce/TotalCustomers';
@@ -12,26 +11,10 @@ import LatestSickNotes from '@/components/Dashboard/eCommerce/LatestSickNotes';
 import RecentActivities from '@/components/Dashboard/eCommerce/RecentActivities';
 
 export default function Page() {
-    const { isLoading: authLoading } = useAuth();
-
     useEffect(() => {
         // Clear the login flag when dashboard mounts
         sessionStorage.removeItem('just_logged_in');
     }, []);
-
-    // Show loading while auth is initializing
-    if (authLoading) {
-        return (
-            <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '400px' }}>
-                <div className="text-center">
-                    <div className="spinner-border text-primary mb-3" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <p className="text-muted">Initializing dashboard...</p>
-                </div>
-            </div>
-        );
-    }
 
     return (
         <>

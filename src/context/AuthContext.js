@@ -196,19 +196,11 @@ export function AuthProvider({ children }) {
 
     const initAuth = async () => {
       try {
-        // Use getSession() first for instant load from local storage,
-        // which is much faster than getUser() (server call) on production.
-        // Supabase's autoRefreshToken handles token validation automatically.
-        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+        // Use getUser() which validates with the server (important for production)
+        const { data: { user: authUser }, error } = await supabase.auth.getUser();
 
-        if (sessionError) {
-          console.warn('[AuthContext] getSession error:', sessionError.message);
-        }
-
-        const authUser = session?.user || null;
-
-        if (!authUser) {
-          // No local session - user is not logged in
+        if (error) {
+          console.warn('[AuthContext] getUser error (may be logged out):', error.message);
           if (isMounted) {
             setUser(null);
             setProfile(null);
