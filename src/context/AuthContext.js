@@ -193,22 +193,48 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     let isMounted = true;
 
-    // Use getUser() for initial auth — this validates the token with the server
-    // and ensures all subsequent data queries have a valid access token
     const initAuth = async () => {
       try {
-        const { data: { user: authUser }, error } = await supabase.auth.getUser();
+        // Step 1: Quick check from localStorage (no network call, no lock contention)
+        // This is critical — getUser() acquires Supabase's internal auth lock and
+        // holds it during a slow network request. If the user clicks "Sign in" while
+        // getUser() is running, signInWithPassword() deadlocks waiting for the lock.
+        const { data: { session } } = await supabase.auth.getSession();
 
-        if (error) {
-          console.warn('[AuthContext] getUser error (may be logged out):', error.message);
+        if (!session) {
+          // No session in storage — user is not logged in
+          // Return immediately so signInWithPassword() can acquire the lock
           if (isMounted) {
             setUser(null);
             setProfile(null);
-            setIsLoading(false);
           }
           return;
         }
 
+        // Step 2: Check if the access token is expired
+        const expiresAt = session.expires_at; // Unix timestamp in seconds
+        const now = Math.floor(Date.now() / 1000);
+        const isExpired = !expiresAt || now >= expiresAt - 60; // 60s safety buffer
+
+        let authUser = session.user;
+
+        if (isExpired) {
+          // Token expired — refresh it before making any data queries
+          console.log('[AuthContext] Token expired, refreshing...');
+          const { data: refreshData, error: refreshError } = await supabase.auth.refreshSession();
+
+          if (refreshError || !refreshData.session) {
+            console.warn('[AuthContext] Session refresh failed:', refreshError?.message);
+            if (isMounted) {
+              setUser(null);
+              setProfile(null);
+            }
+            return;
+          }
+          authUser = refreshData.session.user;
+        }
+
+        // Step 3: Set user and fetch profile
         if (authUser && isMounted) {
           setUser(authUser);
           const profileData = await fetchProfile(authUser);
@@ -241,17 +267,12 @@ export function AuthProvider({ children }) {
         if (event === 'INITIAL_SESSION') return;
 
         // Skip TOKEN_REFRESHED — prevents unnecessary re-renders every ~10 seconds
-        // The token is refreshed internally by Supabase, no need to re-fetch profile
         if (event === 'TOKEN_REFRESHED') return;
 
         // SIGNED_IN: handle login — fetch profile for the new user
         if (event === 'SIGNED_IN' && session?.user && isMounted) {
           setUser(session.user);
           const profileData = await fetchProfile(session.user);
-          console.log('[AuthContext] Logged in:', {
-            role: profileData?.role,
-            company_id: profileData?.company_id,
-          });
           if (isMounted) {
             setProfile(profileData);
             setIsLoading(false);
