@@ -1,8 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Supabase configuration
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key';
+// Note: The anon key is a PUBLIC key - it's always exposed in the browser bundle.
+// We validate the key format because Vercel's env dashboard sometimes corrupts pasted JWT values.
+const FALLBACK_URL = 'https://gyfudihxeexotkfbwpha.supabase.co';
+const FALLBACK_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5ZnVkaWh4ZWV4b3RrZmJ3cGhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4NDMyOTgsImV4cCI6MjA3ODQxOTI5OH0.CUcs9sl-dkXRJBcVIYjmA53ItPHT-8roLIW1zql8NLU';
+
+const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+// A valid Supabase anon key is a JWT starting with "eyJ" (base64 for '{"')
+const isValidJWT = envKey.startsWith('eyJ') && envKey.split('.').length === 3;
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || FALLBACK_URL;
+const supabaseAnonKey = isValidJWT ? envKey : FALLBACK_KEY;
 
 // Validate environment variables in development
 if (import.meta.env.DEV) {
