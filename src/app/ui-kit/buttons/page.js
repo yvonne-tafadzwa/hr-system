@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import DefaultButtons from "@/components/UIKit/Buttons/DefaultButtons";
 import OutlineButtons from "@/components/UIKit/Buttons/OutlineButtons";

@@ -1,10 +1,5 @@
-"use client";
-
 import { Row, Col, Dropdown, Card, ProgressBar } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const Teams = () => {
+import { Link } from "react-router-dom";const Teams = () => {
   return (
     <>
       <Row>
@@ -14,7 +9,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-60.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -71,7 +66,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -80,7 +75,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -89,7 +84,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -98,7 +93,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -123,8 +118,7 @@ const Teams = () => {
                 />
               </div>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -139,7 +133,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-61.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -196,7 +190,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -205,7 +199,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -214,7 +208,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -223,7 +217,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -247,8 +241,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -263,7 +256,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-62.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -320,7 +313,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -329,7 +322,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -338,7 +331,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -347,7 +340,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -371,8 +364,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -387,7 +379,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-63.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -444,7 +436,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -453,7 +445,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -462,7 +454,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -471,7 +463,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -495,8 +487,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -511,7 +502,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-64.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -568,7 +559,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -577,7 +568,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -586,7 +577,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -595,7 +586,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -619,8 +610,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -635,7 +625,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-64.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -692,7 +682,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -701,7 +691,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -710,7 +700,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -719,7 +709,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -743,8 +733,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -759,7 +748,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-66.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -816,7 +805,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -826,7 +815,7 @@ const Teams = () => {
                 </div>
 
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -835,7 +824,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -844,7 +833,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -868,8 +857,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details
@@ -884,7 +872,7 @@ const Teams = () => {
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-67.jpg"
                       className="wh-65 rounded-circle border border-2"
                       alt="user"
@@ -941,7 +929,7 @@ const Teams = () => {
 
               <div className="d-flex flex-wrap justify-content-center mb-3">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-52.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -950,7 +938,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-54.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -959,7 +947,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-55.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -968,7 +956,7 @@ const Teams = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-56.jpg"
                     className="wh-40 rounded-circle border border-2"
                     alt="user"
@@ -992,8 +980,7 @@ const Teams = () => {
                   }}
                 />
               </div>
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-outline-primary fw-medium w-100 py-2 rounded-3"
               >
                 View Details

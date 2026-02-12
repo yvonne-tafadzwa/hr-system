@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, ProgressBar, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const teamMembersData = [
   {
     image: "/images/user-6.jpg",
@@ -123,7 +119,7 @@ const TeamMembers = () => {
                         <td className="border-0 py-3 pb-0">
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.image}
                                 className="wh-44 rounded-circle"
                                 alt="user"

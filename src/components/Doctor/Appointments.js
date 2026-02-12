@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useState } from "react";
-import Image from "next/image";
 import Calendar from "react-calendar";
 import { Row, Col, Card, Form, Button } from "react-bootstrap";
 
@@ -158,7 +155,7 @@ const Appointments = () => {
                                 {appointment.title}
                               </span>
                               <div className="d-flex">
-                                <Image
+                                <img
                                   src={appointment.patientImage}
                                   className="rounded-circle border border-2 border-white"
                                   alt="user"
@@ -180,7 +177,7 @@ const Appointments = () => {
                           </button>
                         </div>
 
-                        <Image
+                        <img
                           src={
                             appointment.status === "Upcoming"
                               ? "/images/verify-border.svg"
@@ -192,7 +189,7 @@ const Appointments = () => {
                           height={24}
                         />
                       </div>
-                      <Image
+                      <img
                         src="/images/shape-14.png"
                         className="position-absolute top-0 end-0 start-0 mx-auto"
                         alt="shape"
@@ -343,7 +340,7 @@ const Appointments = () => {
             <div className="mb-4">
               <span className="d-block mb-1">Patient Name</span>
               <div className="d-flex align-items-center">
-                <Image
+                <img
                   src="/images/user-83.png"
                   className="rounded-circle border border-2 border-white"
                   alt="user"

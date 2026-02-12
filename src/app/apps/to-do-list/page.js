@@ -1,5 +1,3 @@
-"use client";
-
 import ToDoList from '@/components/Apps/ToDoList';
 import { Breadcrumb } from "react-bootstrap";
 

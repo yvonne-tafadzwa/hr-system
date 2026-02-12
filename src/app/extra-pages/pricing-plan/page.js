@@ -1,5 +1,3 @@
-"use client";
- 
 import { Breadcrumb } from "react-bootstrap";
 import PricingPlanStyle1 from "@/components/ExtraPages/PricingPlan/PricingPlanStyle1";
 import PricingPlanStyle2 from "@/components/ExtraPages/PricingPlan/PricingPlanStyle2";

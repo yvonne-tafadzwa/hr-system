@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const AdSpend = () => {
   return (
     <>
@@ -19,7 +15,7 @@ const AdSpend = () => {
             </div>
 
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src="/images/spend.gif"
                 alt="spend"
                 width={60}

@@ -1,5 +1,3 @@
-"use client";
-
 import Details from "@/components/NFT/Details";
 import { Breadcrumb } from "react-bootstrap";
 

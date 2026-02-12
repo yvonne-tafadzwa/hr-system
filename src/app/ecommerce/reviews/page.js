@@ -1,5 +1,3 @@
-"use client";
-
 import Reviews from '@/components/eCommerce/Reviews';
 import { Breadcrumb } from "react-bootstrap";
 

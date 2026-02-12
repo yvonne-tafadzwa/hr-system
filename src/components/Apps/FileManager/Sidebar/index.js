@@ -1,11 +1,8 @@
-"use client";
-
 import { Card, Form, ProgressBar } from "react-bootstrap";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   return (
     <>
@@ -30,8 +27,7 @@ const Sidebar = () => {
 
           <ul className="fm-sidebar-nav ps-0 mb-0 list-unstyled">
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/"
+              <Link to="/apps/file-manager/"
                 className={`d-flex align-items-center text-decoration-none justify-content-between ${
                   pathname === "/apps/file-manager/" ? "active" : ""
                 }`}
@@ -47,8 +43,7 @@ const Sidebar = () => {
 
               <ul className="mb-0 list-unstyled file-subdown">
                 <li>
-                  <Link
-                    href="/apps/file-manager/assets/"
+                  <Link to="/apps/file-manager/assets/"
                     className={`text-decoration-none ${
                       pathname === "/apps/file-manager/assets/" ? "active" : ""
                     }`}
@@ -57,8 +52,7 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/apps/file-manager/projects/"
+                  <Link to="/apps/file-manager/projects/"
                     className={`text-decoration-none ${
                       pathname === "/apps/file-manager/projects/"
                         ? "active"
@@ -69,8 +63,7 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/apps/file-manager/personal/"
+                  <Link to="/apps/file-manager/personal/"
                     className={`text-decoration-none ${
                       pathname === "/apps/file-manager/personal/"
                         ? "active"
@@ -81,8 +74,7 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/apps/file-manager/applications/"
+                  <Link to="/apps/file-manager/applications/"
                     className={`text-decoration-none ${
                       pathname === "/apps/file-manager/applications/"
                         ? "active"
@@ -96,8 +88,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/documents/"
+              <Link to="/apps/file-manager/documents/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/file-manager/documents/" ? "active" : ""
                 }`}
@@ -110,8 +101,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/media/"
+              <Link to="/apps/file-manager/media/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/file-manager/media/" ? "active" : ""
                 }`}
@@ -124,8 +114,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/recents/"
+              <Link to="/apps/file-manager/recents/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/file-manager/recents/" ? "active" : ""
                 }`}
@@ -138,8 +127,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/important/"
+              <Link to="/apps/file-manager/important/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/file-manager/important/" ? "active" : ""
                 }`}
@@ -152,8 +140,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-4">
-              <Link
-                href="/apps/file-manager/spam/"
+              <Link to="/apps/file-manager/spam/"
                 className={`d-flex align-items-center text-decoration-none justify-content-between ${
                   pathname === "/apps/file-manager/spam/" ? "active" : ""
                 }`}
@@ -169,8 +156,7 @@ const Sidebar = () => {
             </li>
 
             <li>
-              <Link
-                href="/apps/file-manager/trash/"
+              <Link to="/apps/file-manager/trash/"
                 className={`d-flex align-items-center text-decoration-none justify-content-between ${
                   pathname === "/apps/file-manager/trash/" ? "active" : ""
                 }`}

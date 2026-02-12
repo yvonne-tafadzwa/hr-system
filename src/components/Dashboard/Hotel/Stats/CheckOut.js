@@ -1,8 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-
 const CheckOut = () => {
   return (
     <>
@@ -44,7 +40,7 @@ const CheckOut = () => {
                 height: "79px",
               }}
             >
-              <Image
+              <img
                 src="/images/point.svg"
                 alt="point"
                 width={56}

@@ -1,7 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
 import ProgressBar from "react-bootstrap/ProgressBar";
   
 const channelsData = [
@@ -69,7 +66,7 @@ const Channels = () => {
               <div className="d-flex align-items-center justify-content-between">
                 <div className="flex-shrink-0">
                   <div className="d-flex">
-                    <Image
+                    <img
                       src={channel.icon}
                       alt={channel.name.toLowerCase()}
                       width={30}

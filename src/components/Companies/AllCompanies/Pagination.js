@@ -1,5 +1,3 @@
-"use client";
-
 const Pagination = ({ currentPage, totalPages, onPageChange, totalItems }) => {
   const handlePrevious = () => {
     if (currentPage > 1) {

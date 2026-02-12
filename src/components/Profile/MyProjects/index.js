@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import Pagination from "./Pagination";
+import { Link } from "react-router-dom";import Pagination from "./Pagination";
 
 const projectsData = [
   {
@@ -225,7 +221,7 @@ const MyProjects = () => {
                         <td className="text-body">{value.id}</td>
 
                         <td>
-                          <Link href={value.viewLink}>{value.projectName}</Link>
+                          <Link to={value.viewLink}>{value.projectName}</Link>
                         </td>
 
                         <td>{value.client}</td>
@@ -236,7 +232,7 @@ const MyProjects = () => {
                               .slice(0, 5)
                               .map((value, i) => (
                                 <li key={i} className="ms-m-10">
-                                  <Image
+                                  <img
                                     src={value.img}
                                     className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                                     alt="user"
@@ -270,7 +266,7 @@ const MyProjects = () => {
 
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Link href={value.viewLink}>
+                            <Link to={value.viewLink}>
                               <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                 <span className="material-symbols-outlined fs-16 text-primary">
                                   visibility

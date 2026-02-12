@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Form, Button, Table, Dropdown, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const GainersAndLosersTable = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -456,7 +452,7 @@ const GainersAndLosersTable = () => {
                           className="d-flex align-items-center"
                           style={{ gap: "8px" }}
                         >
-                          <Image
+                          <img
                             src={item.image}
                             alt={item.name.toLowerCase()}
                             width={22}
@@ -728,7 +724,7 @@ const GainersAndLosersTable = () => {
                     <div className="d-flex align-items-center gap-2 flex-wrap mt-2">
                       {images.map((image, index) => (
                         <div key={index} className="position-relative">
-                          <Image
+                          <img
                             src={image.url}
                             alt={image.name}
                             width={60}

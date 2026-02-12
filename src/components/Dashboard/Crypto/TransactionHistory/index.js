@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const transactionsData = [
   {
     img: "/images/cardano.png",
@@ -210,7 +206,7 @@ const TransactionHistory = () => {
                     <tr key={index}>
                       <td className="text-end fw-medium ps-0">
                         <div className="d-flex">
-                          <Image
+                          <img
                             src={transaction.img}
                             className="rounded-circle"
                             alt={transaction.coin}

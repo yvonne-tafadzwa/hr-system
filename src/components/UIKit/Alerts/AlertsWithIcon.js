@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Alert } from "react-bootstrap";
 
 const AlertsWithIcon = () => {

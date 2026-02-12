@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card, Form, Button, Row, Col, Spinner, Alert } from "react-bootstrap";
 import { useAuth } from "@/context/AuthContext";

@@ -1,5 +1,3 @@
-"use client";
-    
 import { Row, Col, Breadcrumb } from "react-bootstrap";   
 import BasicAccordion from '@/components/UIKit/Accordion/BasicAccordion';
 import FullyCollapsedState from '@/components/UIKit/Accordion/FullyCollapsedState';

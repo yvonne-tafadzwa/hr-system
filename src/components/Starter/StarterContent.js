@@ -1,15 +1,10 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const StarterContent = () => {
+import { Link } from "react-router-dom";const StarterContent = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-4 text-center">
-          <Image
+          <img
             src="/images/starter.png"
             className="mb-4"
             alt="starter"
@@ -22,8 +17,7 @@ const StarterContent = () => {
             sandwich.
           </h3>
 
-          <Link
-            href="/"
+          <Link to="/"
             className="btn btn-primary text-decoration-none py-2 px-3 fs-16 fw-medium"
           >
             <span className="d-inline-block py-1">Getting Started</span>

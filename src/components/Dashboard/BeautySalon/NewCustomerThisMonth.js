@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Card } from "react-bootstrap";
 
 const NewCustomerThisMonth = () => {
@@ -20,7 +17,7 @@ const NewCustomerThisMonth = () => {
 
           <ul className="ps-0 mb-0 list-unstyled d-flex flex-wrap align-items-center customer-join mt-5 pt-3">
             <li className="item">
-              <Image
+              <img
                 src="/images/user-82.png"
                 alt="user"
                 width={38}
@@ -28,7 +25,7 @@ const NewCustomerThisMonth = () => {
               />
             </li>
             <li className="item">
-              <Image
+              <img
                 src="/images/user-80.png"
                 alt="user"
                 width={38}
@@ -39,7 +36,7 @@ const NewCustomerThisMonth = () => {
               <span className="name">P</span>
             </li>
             <li className="item">
-              <Image
+              <img
                 src="/images/user-81.png"
                 alt="user"
                 width={38}
@@ -50,7 +47,7 @@ const NewCustomerThisMonth = () => {
               <span className="name">s</span>
             </li>
             <li className="item">
-              <Image
+              <img
                 src="/images/user-84.png"
                 alt="user"
                 width={38}

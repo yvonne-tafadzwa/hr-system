@@ -1,5 +1,3 @@
-"use client";
-
 import { Form, Button } from "react-bootstrap";
 
 const SearchForm = () => {

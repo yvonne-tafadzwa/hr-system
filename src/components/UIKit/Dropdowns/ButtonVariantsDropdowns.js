@@ -1,5 +1,3 @@
-"use client";
-
 import { Dropdown, Card, ButtonGroup, DropdownButton } from "react-bootstrap";
 
 const ButtonVariantsDropdowns = () => {

@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Toast } from "react-bootstrap";
-import Image from "next/image";
-
 const Autohide = () => {
   const [show, setShow] = useState(false);
 
@@ -24,7 +20,7 @@ const Autohide = () => {
                 autohide
               >
                 <Toast.Header>
-                  <Image
+                  <img
                     src="/images/holder1.svg"
                     className="rounded me-2"
                     alt="holder"

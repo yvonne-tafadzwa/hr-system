@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const AverageOrderValue = () => {
   return (
     <>
@@ -68,7 +64,7 @@ const AverageOrderValue = () => {
                 lineHeight: "51px",
               }}
             >
-              <Image
+              <img
                 src="/images/average-order-value-icon.svg"
                 alt="average-order-value-icon"
                 width={26}

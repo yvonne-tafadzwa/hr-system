@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const TopChannels = () => {
+import { Link } from "react-router-dom";const TopChannels = () => {
   // State for channels data
   const [channels, setChannels] = useState([]);
 
@@ -75,7 +70,7 @@ const TopChannels = () => {
           <div className="mb-4 d-flex justify-content-between align-items-center">
             <h3 className="mb-0">Top Channels</h3>
 
-            <Link href="#" className="text-decoration-none hover">
+            <Link to="#" className="text-decoration-none hover">
               Browse All
               <i className="ri-arrow-right-s-line fs-22 lh-1 position-relative top-3"></i>
             </Link>
@@ -96,7 +91,7 @@ const TopChannels = () => {
                   <div className="d-flex align-items-center justify-content-between">
                     <div className="flex-shrink-0">
                       <div className="d-flex">
-                        <Image
+                        <img
                           src={channel.image}
                           alt={channel.name}
                           width={25}

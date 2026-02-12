@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const linksData = [
   {
     icon: "/images/google3.svg",
@@ -38,7 +34,7 @@ const ExternalLinks = () => {
               }`}
             >
               <div className="d-flex justify-content-between align-items-center">
-                <Image src={link.icon} alt={link.name.toLowerCase()} width={18} height={18} />
+                <img src={link.icon} alt={link.name.toLowerCase()} width={18} height={18} />
                 <span className="text-primary fw-medium ms-2">{link.name}</span>
               </div>
               <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-decoration-none">

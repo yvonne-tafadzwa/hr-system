@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicLineChart from '@/components/Charts/LineChart/BasicLineChart';
 import DashedLineChart from '@/components/Charts/LineChart/DashedLineChart';

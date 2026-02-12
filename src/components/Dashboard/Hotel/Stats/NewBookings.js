@@ -1,8 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-
 const NewBookings = () => {
   return (
     <>
@@ -43,7 +39,7 @@ const NewBookings = () => {
                 height: "79px",
               }}
             >
-              <Image
+              <img
                 src="/images/add-event2.svg"
                 alt="add-event2"
                 width={56}

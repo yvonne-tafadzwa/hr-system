@@ -1,5 +1,3 @@
-"use client";
-    
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import TimePicker from '@/components/UIKit/DateTimePicker/TimePicker';
 import DatePicker from '@/components/UIKit/DateTimePicker/DatePicker';

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Row,
   Col,
@@ -10,7 +8,6 @@ import {
   OverlayTrigger,
   Tooltip,
 } from "react-bootstrap";
-import Image from "next/image";
 import Sidebar from "./Sidebar";
 
 const ChatContent = () => {
@@ -27,7 +24,7 @@ const ChatContent = () => {
               <div className="d-flex justify-content-between align-items-center flex-wrap ga-2 border-bottom pb-4 mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0 position-relative">
-                    <Image
+                    <img
                       src="/images/user-49.jpg"
                       className="wh-52 rounded-circle"
                       alt="user"
@@ -112,7 +109,7 @@ const ChatContent = () => {
                 <li className="mb-4">
                   <div className="d-sm-flex">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-49.jpg"
                         className="wh-48 rounded-circle"
                         alt="user"
@@ -212,7 +209,7 @@ const ChatContent = () => {
                 <li className="mb-4">
                   <div className="d-sm-flex">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-49.jpg"
                         className="wh-48 rounded-circle"
                         alt="user"
@@ -312,7 +309,7 @@ const ChatContent = () => {
                 <li className="mb-4">
                   <div className="d-sm-flex">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-49.jpg"
                         className="wh-48 rounded-circle"
                         alt="user"
@@ -415,7 +412,7 @@ const ChatContent = () => {
                 <li className="mb-4">
                   <div className="d-sm-flex">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-49.jpg"
                         className="wh-48 rounded-circle"
                         alt="user"

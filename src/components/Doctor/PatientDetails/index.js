@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useState } from "react";
-import Image from "next/image"; 
 import { Card, Row, Col } from "react-bootstrap";
 
 const PatientDetails = () => {
@@ -139,7 +136,7 @@ const PatientDetails = () => {
             <Card.Body className="p-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/email.png"
                     alt="email"
                     width={40}
@@ -163,7 +160,7 @@ const PatientDetails = () => {
             <Card.Body className="p-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/phone.png"
                     alt="phone"
                     width={40}
@@ -187,7 +184,7 @@ const PatientDetails = () => {
             <Card.Body className="p-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/map.png"
                     alt="map"
                     width={40}

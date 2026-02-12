@@ -1,5 +1,3 @@
-"use client";
-
 import { Breadcrumb } from "react-bootstrap";
 import CreateInvoice from '@/components/Invoices/CreateInvoice'; 
 

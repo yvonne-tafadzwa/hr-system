@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Photos = () => {
   return (
     <>
@@ -13,7 +9,7 @@ const Photos = () => {
           <Row>
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-6.jpg"
                   className="rounded-2"
                   alt="product"
@@ -25,7 +21,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-7.jpg"
                   className="rounded-2"
                   alt="product"
@@ -37,7 +33,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-8.jpg"
                   className="rounded-2"
                   alt="product"
@@ -49,7 +45,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-9.jpg"
                   className="rounded-2"
                   alt="product"
@@ -61,7 +57,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-10.jpg"
                   className="rounded-2"
                   alt="product"
@@ -73,7 +69,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-11.jpg"
                   className="rounded-2"
                   alt="product"
@@ -85,7 +81,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-12.jpg"
                   className="rounded-2"
                   alt="product"
@@ -97,7 +93,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-13.jpg"
                   className="rounded-2"
                   alt="product"
@@ -109,7 +105,7 @@ const Photos = () => {
 
             <Col sm={4} lg={4}>
               <div className="d-block mb-3">
-                <Image
+                <img
                   src="/images/product-14.jpg"
                   className="rounded-2"
                   alt="product"

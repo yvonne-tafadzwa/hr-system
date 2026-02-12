@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Dropdown, Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const Personal = () => {
   return (
     <>
@@ -43,7 +39,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/png.png" alt="png" width={56} height={56} />
+                <img src="/images/png.png" alt="png" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Projects
                 </span>
@@ -93,7 +89,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/jpg.png" alt="jpg" width={56} height={56} />
+                <img src="/images/jpg.png" alt="jpg" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Documents
                 </span>
@@ -143,7 +139,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/txt.png" alt="txt" width={56} height={56} />
+                <img src="/images/txt.png" alt="txt" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Media
                 </span>
@@ -193,7 +189,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/pdf.png" alt="pdf" width={56} height={56} />
+                <img src="/images/pdf.png" alt="pdf" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Applications
                 </span>
@@ -243,7 +239,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/xl4.png" alt="xl4" width={56} height={56} />
+                <img src="/images/xl4.png" alt="xl4" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   ET Template
                 </span>
@@ -293,7 +289,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/doc.png" alt="doc" width={56} height={56} />
+                <img src="/images/doc.png" alt="doc" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   React Template
                 </span>
@@ -343,7 +339,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/png.png" alt="png" width={56} height={56} />
+                <img src="/images/png.png" alt="png" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Material UI
                 </span>
@@ -393,7 +389,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/jpg.png" alt="jpg" width={56} height={56} />
+                <img src="/images/jpg.png" alt="jpg" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   WP Theme
                 </span>
@@ -443,7 +439,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/txt.png" alt="txt" width={56} height={56} />
+                <img src="/images/txt.png" alt="txt" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Personal Photos
                 </span>
@@ -493,7 +489,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/pdf.png" alt="pdf" width={56} height={56} />
+                <img src="/images/pdf.png" alt="pdf" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Mobile Apps
                 </span>
@@ -543,7 +539,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/xl4.png" alt="xl4" width={56} height={56} />
+                <img src="/images/xl4.png" alt="xl4" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Important Files
                 </span>
@@ -593,7 +589,7 @@ const Personal = () => {
               </div>
 
               <div className="py-4">
-                <Image src="/images/jpg.png" alt="jpg" width={56} height={56} />
+                <img src="/images/jpg.png" alt="jpg" width={56} height={56} />
                 <span className="fs-15 fw-bold text-secondary d-block mt-3">
                   Angular Template
                 </span>

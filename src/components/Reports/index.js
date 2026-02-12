@@ -1,13 +1,10 @@
-"use client";
-
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, lazy, Suspense } from "react";
 import { Card, Row, Col, Form, Button, Table } from "react-bootstrap";
-import dynamic from "next/dynamic";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
-// Dynamic import for ApexCharts (client-side only)
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+// Lazy import for ApexCharts (replaces next/dynamic)
+const Chart = lazy(() => import("react-apexcharts"));
 
 const Reports = () => {
     const { isSuperAdmin, companyId } = useAuth();

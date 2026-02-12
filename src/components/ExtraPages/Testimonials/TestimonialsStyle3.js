@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const TestimonialsStyle3 = () => {
   return (
     <>
@@ -25,7 +21,7 @@ const TestimonialsStyle3 = () => {
               >
                 <div className="d-flex align-items-center gap-3 mb-3">
                   <div>
-                    <Image
+                    <img
                       src="/images/user-68.jpg"
                       width={80}
                       height={80}
@@ -86,7 +82,7 @@ const TestimonialsStyle3 = () => {
               >
                 <div className="d-flex align-items-center gap-3 mb-3">
                   <div>
-                    <Image
+                    <img
                       src="/images/user-69.jpg"
                       width={80}
                       height={80}
@@ -148,7 +144,7 @@ const TestimonialsStyle3 = () => {
               >
                 <div className="d-flex align-items-center gap-3 mb-3">
                   <div>
-                    <Image
+                    <img
                       src="/images/user-70.png"
                       width={80}
                       height={80}

@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const featuredServicesData = [
   {
     id: 1,
@@ -60,7 +56,7 @@ const FeaturedServices = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center">
                 <div className="d-flex align-items-center gap-3">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={service.image}
                       alt={service.name}
                       width={32}

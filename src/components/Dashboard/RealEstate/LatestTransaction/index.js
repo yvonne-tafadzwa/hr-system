@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Table, Button, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const transactionData = [
   {
     id: "#TRE0015",
@@ -217,7 +213,7 @@ const LatestTransaction = () => {
                     </td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={transaction.imageUrl}
                           className="rounded-2"
                           alt="user"

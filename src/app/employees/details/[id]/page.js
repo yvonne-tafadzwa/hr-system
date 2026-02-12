@@ -1,11 +1,9 @@
-"use client";
-
-import { use } from "react";
+import { useParams } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 import EmployeeDetails from '@/components/Employees/EmployeeDetails';
 
-export default function Page({ params }) {
-  const resolvedParams = use(params);
+export default function Page() {
+  const { id } = useParams();
 
   return (
     <div style={{ overflowX: 'hidden', width: '100%' }}>
@@ -13,7 +11,7 @@ export default function Page({ params }) {
         <h3 className="mb-0" style={{ fontSize: '14px' }}>Employee Details</h3>
 
         <Breadcrumb className="breadcrumb-page-list align-items-center mb-0 lh-1">
-          <Breadcrumb.Item href="/dashboard/ecommerce/">
+          <Breadcrumb.Item href="/dashboard/">
             <div className="d-flex align-items-center text-decoration-none">
               <i className="ri-home-4-line fs-18 text-primary me-1"></i>
               <span className="text-secondary fw-medium hover" style={{ fontSize: '12px' }}>Dashboard</span>
@@ -28,8 +26,7 @@ export default function Page({ params }) {
         </Breadcrumb>
       </div>
 
-      <EmployeeDetails employeeId={resolvedParams?.id} />
+      <EmployeeDetails employeeId={id} />
     </div>
   );
 }
-

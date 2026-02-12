@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Image from "next/image";
 import Pagination from "./Pagination";
 import SearchForm from "./SearchForm";
 
@@ -170,7 +167,7 @@ const Refunds = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.customerImg}
                                 className="wh-34 rounded-circle"
                                 alt="user"

@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Profile = () => {
   return (
     <>
@@ -11,7 +7,7 @@ const Profile = () => {
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div className="d-flex align-items-center">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/seller-1.png"
                   className="wh-52"
                   alt="seller"

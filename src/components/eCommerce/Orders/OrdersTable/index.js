@@ -1,11 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Table, Form } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const ordersData = [
+import { Link } from "react-router-dom";const ordersData = [
   {
     orderID: "#JAN-2345",
     customerImg: "/images/user-1.jpg",
@@ -250,8 +245,7 @@ const OrdersTable = () => {
               </span>
             </Form>
 
-            <Link
-              href="#"
+            <Link to="#"
               className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
             >
               <span className="py-sm-1 d-block">
@@ -285,7 +279,7 @@ const OrdersTable = () => {
 
                         <td>
                           <div className="d-flex align-items-center">
-                            <Image
+                            <img
                               src={order.customerImg}
                               className="wh-40 rounded-3"
                               alt="product-1"

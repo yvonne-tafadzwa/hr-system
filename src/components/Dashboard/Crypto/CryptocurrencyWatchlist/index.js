@@ -1,5 +1,3 @@
-"use client";
-
 import Bitcoin from "./Bitcoin";
 import Ethereum from "./Ethereum";
 import Solana from "./Solana";

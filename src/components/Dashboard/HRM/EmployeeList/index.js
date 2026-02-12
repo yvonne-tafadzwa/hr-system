@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Table, Button, Form, Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import { useState } from "react";
 
 const EmployeeList = () => {
@@ -366,7 +363,7 @@ const EmployeeList = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={employee.image}
                                 className="rounded-circle"
                                 alt="user"

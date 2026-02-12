@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, ListGroup } from "react-bootstrap";
 
 const StyleActions = () => {

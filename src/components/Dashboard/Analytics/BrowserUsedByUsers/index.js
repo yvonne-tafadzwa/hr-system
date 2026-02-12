@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const BrowserUsedByUsers = () => {
   const [browserData] = useState([
     {
@@ -94,7 +90,7 @@ const BrowserUsedByUsers = () => {
                   <tr key={index}>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={browser.icon}
                           className="wh-16 rounded-circle"
                           alt={browser.name}

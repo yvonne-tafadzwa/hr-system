@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import SellerOverview from '@/components/eCommerce/Sellers/Details/SellerOverview';
 import Profile from '@/components/eCommerce/Sellers/Details/Profile';

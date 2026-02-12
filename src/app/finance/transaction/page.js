@@ -1,5 +1,3 @@
-"use client";
-
 import TransactionHistory from "@/components/Finance/Transaction/TransactionHistory";
 import { Breadcrumb } from "react-bootstrap";
 

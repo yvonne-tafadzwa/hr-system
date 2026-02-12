@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const AccountSettings = () => {
   return (
     <>
@@ -255,7 +251,7 @@ const AccountSettings = () => {
                   </h4>
                   <p>This will be displayed on your profile.</p>
                 </div>
-                <Image
+                <img
                   src="/images/user-70.png"
                   className="rounded-4 wh-75 ms-3 ms-lg-0 rounded-circle"
                   alt="user"

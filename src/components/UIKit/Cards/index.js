@@ -1,10 +1,5 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const Cards = () => {
+import { Link } from "react-router-dom";const Cards = () => {
   return (
     <>
       <Row>
@@ -26,8 +21,7 @@ const Cards = () => {
                 find.
               </p>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-primary py-2 px-4 bg-primary bg-opacity-10 fw-semibold text-primary border-0 hover-bg"
               >
                 View Details
@@ -54,8 +48,7 @@ const Cards = () => {
                 find.
               </p>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-primary py-2 px-4 bg-primary bg-opacity-10 fw-semibold text-primary border-0 hover-bg"
               >
                 View Details
@@ -82,8 +75,7 @@ const Cards = () => {
                 find.
               </p>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-primary py-2 px-4 bg-primary bg-opacity-10 fw-semibold text-primary border-0 hover-bg"
               >
                 View Details
@@ -110,8 +102,7 @@ const Cards = () => {
                 find.
               </p>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-primary py-2 px-4 bg-primary bg-opacity-10 fw-semibold text-primary border-0 hover-bg"
               >
                 View Details
@@ -132,7 +123,7 @@ const Cards = () => {
                 </span>
               </div>
 
-              <Image
+              <img
                 src="/images/card-1.jpg"
                 className="mb-4 rounded-3"
                 alt="card"
@@ -146,8 +137,7 @@ const Cards = () => {
                 find.
               </p>
 
-              <Link
-                href="#"
+              <Link to="#"
                 className="btn btn-primary py-2 px-4 bg-primary bg-opacity-10 fw-semibold text-primary border-0 hover-bg"
               >
                 View Details
@@ -158,7 +148,7 @@ const Cards = () => {
 
         <Col sm={6} md={6} lg={4} xl={4} xxl={3}>
           <Card className="text-bg-dark border-0 rounded-3">
-            <Image
+            <img
               src="/images/card-2.jpg"
               className="card-img"
               alt="card"

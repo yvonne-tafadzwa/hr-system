@@ -1,5 +1,3 @@
-"use client";
-
 import MenusTable from "@/components/Restaurant/MenusTable";
 import { Breadcrumb } from "react-bootstrap";
 

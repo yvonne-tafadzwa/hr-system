@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
 import TicketDescription from "./TicketDescription";
 import Attachments from "./Attachments";

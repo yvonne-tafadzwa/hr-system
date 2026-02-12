@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const RecentClients = () => {
+import { Link } from "react-router-dom";const RecentClients = () => {
   // State for clients data
   const [clients, setClients] = useState([]);
 
@@ -136,7 +131,7 @@ const RecentClients = () => {
                     className="flex-shrink-0 position-relative"
                     style={{ top: "-2px" }}
                   >
-                    <Image
+                    <img
                       src={client.image}
                       alt={client.name}
                       width={35}
@@ -164,7 +159,7 @@ const RecentClients = () => {
                     </span>
                   </div>
                 </div>
-                <Link href={client.link} className="text-decoration-none">
+                <Link to={client.link} className="text-decoration-none">
                   <i className="ri-arrow-right-line fs-18"></i>
                 </Link>
               </li>

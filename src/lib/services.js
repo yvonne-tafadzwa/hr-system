@@ -57,10 +57,10 @@ export const authService = {
 
     // Super admins can login with any company code or without one
     if (profile.role === 'super_admin') {
-      // Store role in user metadata for reliable access
-      await supabase.auth.updateUser({
+      // Store role in user metadata for reliable access (non-blocking)
+      supabase.auth.updateUser({
         data: { role: 'super_admin' }
-      });
+      }).catch(err => console.warn('Could not update user metadata:', err));
       return { data: authData, error: null };
     }
 
@@ -78,10 +78,10 @@ export const authService = {
       return { data: null, error: new Error('Invalid company ID for this account') };
     }
 
-    // Store company_id in user metadata for reliable access
-    await supabase.auth.updateUser({
+    // Store company_id in user metadata for reliable access (non-blocking)
+    supabase.auth.updateUser({
       data: { company_id: profile.company_id, role: profile.role || 'company_admin' }
-    });
+    }).catch(err => console.warn('Could not update user metadata:', err));
 
     return { data: authData, error: null };
   },
@@ -91,7 +91,7 @@ export const authService = {
     try {
       console.log('Attempting login with company code:', companyCode);
 
-      // Handle ADMIN company code specially - authenticate directly with admin email
+      // ── ADMIN shortcut ──────────────────────────────────────────────
       if (companyCode.toUpperCase() === 'ADMIN') {
         console.log('ADMIN company code detected, attempting direct authentication...');
 
@@ -100,22 +100,16 @@ export const authService = {
           password: password,
         });
 
-        console.log('Admin auth result:', {
-          success: !!authData,
-          error: authError,
-          userEmail: authData?.user?.email
-        });
-
         if (authError) {
           console.error('Admin auth error:', authError);
           return { data: null, error: new Error(`Login failed: ${authError.message}`) };
         }
 
-        if (!authData || !authData.user) {
+        if (!authData?.user) {
           return { data: null, error: new Error('Authentication failed. Please check your credentials.') };
         }
 
-        // Store super_admin role in user metadata (non-blocking)
+        // Non-blocking metadata update
         supabase.auth.updateUser({
           data: { role: 'super_admin' }
         }).catch(err => console.warn('Could not update user metadata:', err));
@@ -123,15 +117,15 @@ export const authService = {
         return { data: authData, error: null };
       }
 
-      // For regular companies, find the company first
+      // ── Regular company login ───────────────────────────────────────
+
+      // Step 1: Look up company (single query)
       const { data: company, error: companyError } = await supabase
         .from('companies')
         .select('id, company_code, name, login_email')
         .eq('company_code', companyCode.toUpperCase())
         .limit(1)
         .single();
-
-      console.log('Company lookup result:', { company, companyError });
 
       if (companyError) {
         if (companyError.code === 'PGRST116') {
@@ -145,86 +139,72 @@ export const authService = {
         return { data: null, error: new Error('Invalid Company ID - company not found') };
       }
 
-      // Find users with matching company_id
-      console.log('Looking up user profiles for company_id:', company.id);
+      // Step 2: Resolve login email — try company.login_email first (fast path),
+      // only query user_profiles if login_email is missing
+      let loginEmail = company.login_email || null;
 
-      const { data: companyProfiles, error: companyProfileError } = await supabase
-        .from('user_profiles')
-        .select('id, email, role, company_id, is_active')
-        .eq('company_id', company.id)
-        .eq('is_active', true)
-        .in('role', ['company_admin', 'employee'])
-        .limit(1);
+      if (!loginEmail) {
+        const { data: companyProfiles, error: companyProfileError } = await supabase
+          .from('user_profiles')
+          .select('email, role')
+          .eq('company_id', company.id)
+          .eq('is_active', true)
+          .in('role', ['company_admin', 'employee'])
+          .order('role', { ascending: true }) // company_admin sorts before employee
+          .limit(1)
+          .single();
 
-      console.log('User profiles lookup result:', { companyProfiles, companyProfileError });
-
-      let loginEmail = null;
-
-      // Try to get email from user profiles first
-      if (!companyProfileError && companyProfiles && companyProfiles.length > 0) {
-        const selectedProfile = companyProfiles.find(p => p.role === 'company_admin') || companyProfiles[0];
-        if (selectedProfile && selectedProfile.email) {
-          loginEmail = selectedProfile.email;
+        if (!companyProfileError && companyProfiles?.email) {
+          loginEmail = companyProfiles.email;
           console.log('Using email from user_profiles:', loginEmail);
         }
-      }
-
-      // Fallback: Use the company's login_email if no user profiles found
-      if (!loginEmail && company.login_email) {
-        loginEmail = company.login_email;
-        console.log('Using fallback login_email from company:', loginEmail);
       }
 
       if (!loginEmail) {
         return { data: null, error: new Error('No login email found for this company. Please contact support.') };
       }
 
+      // Step 3: Authenticate — this is the ONLY blocking call that matters
       console.log('Attempting auth with email:', loginEmail);
 
-      // Sign in with the email and provided password
       const { data: authData, error: authError } = await supabase.auth.signInWithPassword({
         email: loginEmail,
         password: password,
       });
-
-      console.log('Auth result:', { authData: authData?.user?.email, authError });
 
       if (authError) {
         console.error('Auth error:', authError);
         return { data: null, error: new Error(`Login failed: ${authError.message}`) };
       }
 
-      // After successful login, ensure user profile has company_id linked (non-blocking)
-      if (authData && authData.user) {
-        // Update profile in background
-        supabase
-          .from('user_profiles')
-          .select('id, company_id')
-          .eq('id', authData.user.id)
-          .single()
-          .then(({ data: existingProfile }) => {
-            if (existingProfile && !existingProfile.company_id) {
-              console.log('Updating user profile with company_id:', company.id);
-              supabase
-                .from('user_profiles')
-                .update({ company_id: company.id })
-                .eq('id', authData.user.id);
-            }
-          })
-          .catch(err => console.warn('Could not update user profile:', err));
-
-        // Store company_id in user metadata (non-blocking)
-        supabase.auth.updateUser({
-          data: { company_id: company.id, role: 'company_admin' }
-        }).catch(err => console.warn('Could not update user metadata:', err));
+      // ── Return immediately — do all post-auth work in background ──
+      // Once signInWithPassword succeeds, Supabase fires SIGNED_IN event
+      // and AuthContext picks up the session. Don't block the UI.
+      if (authData?.user) {
+        // Fire-and-forget: link profile + store metadata
+        Promise.allSettled([
+          supabase
+            .from('user_profiles')
+            .select('id, company_id')
+            .eq('id', authData.user.id)
+            .single()
+            .then(({ data: existingProfile }) => {
+              if (existingProfile && !existingProfile.company_id) {
+                return supabase
+                  .from('user_profiles')
+                  .update({ company_id: company.id })
+                  .eq('id', authData.user.id);
+              }
+            }),
+          supabase.auth.updateUser({
+            data: { company_id: company.id, role: 'company_admin' }
+          }),
+        ]).catch(err => console.warn('Post-auth background tasks error:', err));
       }
 
       return { data: authData, error: null };
     } catch (err) {
       console.error('SignIn exception:', err);
-      if (err.name === 'AbortError') {
-        return { data: null, error: new Error('Request timed out. Please try again.') };
-      }
       return { data: null, error: new Error(err.message || 'An error occurred during sign in') };
     }
   },

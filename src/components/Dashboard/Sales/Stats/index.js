@@ -1,7 +1,4 @@
-"use client";
-
 import { Row, Col, Button } from "react-bootstrap";
-import Image from "next/image";
 import TotalSales from "./TotalSales";
 import TotalOrders from "./TotalOrders";
 import TotalProfit from "./TotalProfit";
@@ -14,7 +11,7 @@ const Stats = () => {
       <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
         <h3 className="fs-24 fw-normal mb-0">
           Welcome Back, <span className="text-primary">Olivia!</span>{" "}
-          <Image src="/images/dog.svg" alt="dog" width={32} height={32} />
+          <img src="/images/dog.svg" alt="dog" width={32} height={32} />
         </h3>
 
         <div className="d-flex flex-wrap gap-3 align-items-center">

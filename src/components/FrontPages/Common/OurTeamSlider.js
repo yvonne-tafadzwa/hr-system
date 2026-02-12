@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -51,7 +48,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-1.jpg"
                     alt="team"
                     width={600}
@@ -99,7 +96,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-2.jpg"
                     alt="team"
                     width={600}
@@ -147,7 +144,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-3.jpg"
                     alt="team"
                     width={600}
@@ -195,7 +192,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-1.jpg"
                     alt="team"
                     width={600}
@@ -243,7 +240,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-2.jpg"
                     alt="team"
                     width={600}
@@ -291,7 +288,7 @@ const OurTeamSlider = () => {
             <SwiperSlide>
               <div className="our-team-single-item">
                 <div className="team-img">
-                  <Image
+                  <img
                     src="/images/landing/team-3.jpg"
                     alt="team"
                     width={600}
@@ -339,14 +336,14 @@ const OurTeamSlider = () => {
         </div>
 
         {/* Shape Images */}
-        <Image
+        <img
           src="/images/landing/shape-1.png"
           className="shape shape-3"
           alt="shape"
           width={1130}
           height={1130}
         />
-        <Image
+        <img
           src="/images/landing/shape-2.png"
           className="shape shape-4"
           alt="shape"

@@ -1,11 +1,8 @@
-"use client";
-
 import React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const HorizontalNavbar = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   return (
     <>
@@ -26,8 +23,7 @@ const HorizontalNavbar = () => {
             <div className="accordion-body border-radius">
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/ecommerce/"
+                  <Link to="/dashboard/ecommerce/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/ecommerce/" ? "active" : ""
                       }`}
                   >
@@ -35,8 +31,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/crm"
+                  <Link to="/dashboard/crm"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/crm/" ? "active" : ""
                       }`}
                   >
@@ -44,8 +39,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/project-management/"
+                  <Link to="/dashboard/project-management/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/project-management/"
                       ? "active"
                       : ""
@@ -55,8 +49,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/lms/"
+                  <Link to="/dashboard/lms/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/lms/" ? "active" : ""
                       }`}
                   >
@@ -64,8 +57,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/helpdesk/"
+                  <Link to="/dashboard/helpdesk/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/helpdesk/" ? "active" : ""
                       }`}
                   >
@@ -76,8 +68,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/analytics/"
+                  <Link to="/dashboard/analytics/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/analytics/" ? "active" : ""
                       }`}
                   >
@@ -85,8 +76,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/crypto/"
+                  <Link to="/dashboard/crypto/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/crypto/" ? "active" : ""
                       }`}
                   >
@@ -94,8 +84,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/sales/"
+                  <Link to="/dashboard/sales/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/sales/" ? "active" : ""
                       }`}
                   >
@@ -103,8 +92,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/hospital/"
+                  <Link to="/dashboard/hospital/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/hospital/" ? "active" : ""
                       }`}
                   >
@@ -112,8 +100,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/hrm/"
+                  <Link to="/dashboard/hrm/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/hrm/" ? "active" : ""
                       }`}
                   >
@@ -121,8 +108,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/school/"
+                  <Link to="/dashboard/school/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/school/" ? "active" : ""
                       }`}
                   >
@@ -130,8 +116,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/call-center/"
+                  <Link to="/dashboard/call-center/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/call-center/" ? "active" : ""
                       }`}
                   >
@@ -142,8 +127,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/marketing/"
+                  <Link to="/dashboard/marketing/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/marketing/" ? "active" : ""
                       }`}
                   >
@@ -151,8 +135,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/nft/"
+                  <Link to="/dashboard/nft/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/nft/" ? "active" : ""
                       }`}
                   >
@@ -160,8 +143,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/saas/"
+                  <Link to="/dashboard/saas/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/saas/" ? "active" : ""
                       }`}
                   >
@@ -169,8 +151,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/real-estate/"
+                  <Link to="/dashboard/real-estate/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/real-estate/" ? "active" : ""
                       }`}
                   >
@@ -181,8 +162,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/shipment/"
+                  <Link to="/dashboard/shipment/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/shipment/" ? "active" : ""
                       }`}
                   >
@@ -190,8 +170,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/finance/"
+                  <Link to="/dashboard/finance/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/finance/" ? "active" : ""
                       }`}
                   >
@@ -199,8 +178,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/pos-system/"
+                  <Link to="/dashboard/pos-system/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/pos-system/" ? "active" : ""
                       }`}
                   >
@@ -211,8 +189,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/podcast/"
+                  <Link to="/dashboard/podcast/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/podcast/" ? "active" : ""
                       }`}
                   >
@@ -223,8 +200,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/social-media/"
+                  <Link to="/dashboard/social-media/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/social-media-system/"
                       ? "active"
                       : ""
@@ -237,8 +213,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/doctor/"
+                  <Link to="/dashboard/doctor/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/doctor/" ? "active" : ""
                       }`}
                   >
@@ -249,8 +224,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/beauty-salon/"
+                  <Link to="/dashboard/beauty-salon/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/beauty-salon/" ? "active" : ""
                       }`}
                   >
@@ -261,8 +235,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/store-analysis/"
+                  <Link to="/dashboard/store-analysis/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/store-analysis/" ? "active" : ""
                       }`}
                   >
@@ -273,8 +246,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/dashboard/restaurant/"
+                  <Link to="/dashboard/restaurant/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/dashboard/restaurant/" ? "active" : ""
                       }`}
                   >
@@ -299,8 +271,7 @@ const HorizontalNavbar = () => {
             <div className="accordion-body border-radius">
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
-                  <Link
-                    href="/apps/to-do-list/"
+                  <Link to="/apps/to-do-list/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/to-do-list/" ? "active" : ""
                       }`}
                   >
@@ -311,8 +282,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/calendar/"
+                  <Link to="/calendar/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/calendar/" ? "active" : ""
                       }`}
                   >
@@ -321,8 +291,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/apps/contacts/"
+                  <Link to="/apps/contacts/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/contacts/" ? "active" : ""
                       }`}
                   >
@@ -331,8 +300,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/apps/chat/"
+                  <Link to="/apps/chat/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/chat/" ? "active" : ""
                       }`}
                   >
@@ -355,8 +323,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/email/inbox/"
+                        <Link to="/apps/email/inbox/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/inbox/" ? "active" : ""
                             }`}
                         >
@@ -364,8 +331,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/email/compose/"
+                        <Link to="/apps/email/compose/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/compose/" ? "active" : ""
                             }`}
                         >
@@ -373,8 +339,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/email/read-email/"
+                        <Link to="/apps/email/read-email/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/email/read-email/"
                             ? "active"
                             : ""
@@ -388,8 +353,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/apps/kanban-board/"
+                  <Link to="/apps/kanban-board/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/apps/kanban-board/" ? "active" : ""
                       }`}
                   >
@@ -412,8 +376,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/"
+                        <Link to="/apps/file-manager/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/" ? "active" : ""
                             }`}
                         >
@@ -421,8 +384,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/assets/"
+                        <Link to="/apps/file-manager/assets/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/assets/"
                             ? "active"
                             : ""
@@ -432,8 +394,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/projects/"
+                        <Link to="/apps/file-manager/projects/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/projects/"
                             ? "active"
                             : ""
@@ -443,8 +404,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/personal/"
+                        <Link to="/apps/file-manager/personal/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/personal/"
                             ? "active"
                             : ""
@@ -454,8 +414,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/applications/"
+                        <Link to="/apps/file-manager/applications/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/applications/"
                             ? "active"
                             : ""
@@ -465,8 +424,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/documents/"
+                        <Link to="/apps/file-manager/documents/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/documents/"
                             ? "active"
                             : ""
@@ -476,8 +434,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/apps/file-manager/media/"
+                        <Link to="/apps/file-manager/media/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/apps/file-manager/media/"
                             ? "active"
                             : ""
@@ -514,8 +471,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/"
+                        <Link to="/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/" ? "active" : ""
                             }`}
                         >
@@ -523,8 +479,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/front-pages/features/"
+                        <Link to="/front-pages/features/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/features/"
                             ? "active"
                             : ""
@@ -534,8 +489,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/front-pages/team/"
+                        <Link to="/front-pages/team/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/team/" ? "active" : ""
                             }`}
                         >
@@ -543,8 +497,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/front-pages/faq/"
+                        <Link to="/front-pages/faq/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/faq/" ? "active" : ""
                             }`}
                         >
@@ -552,8 +505,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/front-pages/contact/"
+                        <Link to="/front-pages/contact/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/front-pages/contact/" ? "active" : ""
                             }`}
                         >
@@ -584,8 +536,7 @@ const HorizontalNavbar = () => {
                         <div className="accordion-body border-radius">
                           <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                             <li className="sidemenu-item">
-                              <Link
-                                href="/ecommerce/products-grid/"
+                              <Link to="/ecommerce/products-grid/"
                                 className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/products-grid/"
                                   ? "active"
                                   : ""
@@ -595,8 +546,7 @@ const HorizontalNavbar = () => {
                               </Link>
                             </li>
                             <li className="sidemenu-item">
-                              <Link
-                                href="/ecommerce/products-list/"
+                              <Link to="/ecommerce/products-list/"
                                 className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/products-list/"
                                   ? "active"
                                   : ""
@@ -606,8 +556,7 @@ const HorizontalNavbar = () => {
                               </Link>
                             </li>
                             <li className="sidemenu-item">
-                              <Link
-                                href="/ecommerce/product-details/"
+                              <Link to="/ecommerce/product-details/"
                                 className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/product-details/"
                                   ? "active"
                                   : ""
@@ -617,8 +566,7 @@ const HorizontalNavbar = () => {
                               </Link>
                             </li>
                             <li className="sidemenu-item">
-                              <Link
-                                href="/ecommerce/create-product/"
+                              <Link to="/ecommerce/create-product/"
                                 className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/create-product/"
                                   ? "active"
                                   : ""
@@ -628,8 +576,7 @@ const HorizontalNavbar = () => {
                               </Link>
                             </li>
                             <li className="sidemenu-item">
-                              <Link
-                                href="/ecommerce/edit-product/"
+                              <Link to="/ecommerce/edit-product/"
                                 className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/edit-product/"
                                   ? "active"
                                   : ""
@@ -643,8 +590,7 @@ const HorizontalNavbar = () => {
                       </li>
 
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/cart/"
+                        <Link to="/ecommerce/cart/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/cart/" ? "active" : ""
                             }`}
                         >
@@ -652,8 +598,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/checkout/"
+                        <Link to="/ecommerce/checkout/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/checkout/" ? "active" : ""
                             }`}
                         >
@@ -661,8 +606,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/orders/"
+                        <Link to="/ecommerce/orders/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/" ? "active" : ""
                             }`}
                         >
@@ -670,8 +614,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/orders/details/"
+                        <Link to="/ecommerce/orders/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/details/"
                             ? "active"
                             : ""
@@ -681,8 +624,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/orders/create/"
+                        <Link to="/ecommerce/orders/create/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/create/"
                             ? "active"
                             : ""
@@ -692,8 +634,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/orders/tracking/"
+                        <Link to="/ecommerce/orders/tracking/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/orders/tracking/"
                             ? "active"
                             : ""
@@ -703,8 +644,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/customers/"
+                        <Link to="/ecommerce/customers/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/customers/" ? "active" : ""
                             }`}
                         >
@@ -712,8 +652,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/customers/details/"
+                        <Link to="/ecommerce/customers/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/customers/details/"
                             ? "active"
                             : ""
@@ -723,8 +662,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/categories/"
+                        <Link to="/ecommerce/categories/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/categories/"
                             ? "active"
                             : ""
@@ -734,8 +672,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/sellers/"
+                        <Link to="/ecommerce/sellers/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/" ? "active" : ""
                             }`}
                         >
@@ -743,8 +680,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/sellers/details/"
+                        <Link to="/ecommerce/sellers/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/details/"
                             ? "active"
                             : ""
@@ -754,8 +690,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/sellers/create/"
+                        <Link to="/ecommerce/sellers/create/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/sellers/create/"
                             ? "active"
                             : ""
@@ -765,8 +700,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/reviews/"
+                        <Link to="/ecommerce/reviews/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/reviews/" ? "active" : ""
                             }`}
                         >
@@ -774,8 +708,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ecommerce/refunds/"
+                        <Link to="/ecommerce/refunds/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ecommerce/refunds/" ? "active" : ""
                             }`}
                         >
@@ -797,8 +730,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/crm/contacts/"
+                        <Link to="/crm/contacts/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/contacts/" ? "active" : ""
                             }`}
                         >
@@ -806,8 +738,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/crm/customers/"
+                        <Link to="/crm/customers/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/customers/" ? "active" : ""
                             }`}
                         >
@@ -815,8 +746,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/crm/leads/"
+                        <Link to="/crm/leads/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/leads/" ? "active" : ""
                             }`}
                         >
@@ -824,8 +754,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/crm/deals/"
+                        <Link to="/crm/deals/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/crm/deals/" ? "active" : ""
                             }`}
                         >
@@ -847,8 +776,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/project-overview/"
+                        <Link to="/project-management/project-overview/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/project-overview/"
                             ? "active"
                             : ""
@@ -858,8 +786,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/projects-list/"
+                        <Link to="/project-management/projects-list/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/projects-list/"
                             ? "active"
                             : ""
@@ -869,8 +796,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/create-project/"
+                        <Link to="/project-management/create-project/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/create-project/"
                             ? "active"
                             : ""
@@ -880,8 +806,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/clients/"
+                        <Link to="/project-management/clients/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/clients/"
                             ? "active"
                             : ""
@@ -891,8 +816,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/teams/"
+                        <Link to="/project-management/teams/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/teams/"
                             ? "active"
                             : ""
@@ -902,8 +826,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/kanban-board/"
+                        <Link to="/project-management/kanban-board/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/kanban-board/"
                             ? "active"
                             : ""
@@ -913,8 +836,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/project-management/users/"
+                        <Link to="/project-management/users/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/project-management/users/"
                             ? "active"
                             : ""
@@ -938,8 +860,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/courses/"
+                        <Link to="/lms/courses/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/" ? "active" : ""
                             }`}
                         >
@@ -947,8 +868,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/courses/details/"
+                        <Link to="/lms/courses/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/details/" ? "active" : ""
                             }`}
                         >
@@ -956,8 +876,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/lesson-preview/"
+                        <Link to="/lms/lesson-preview/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/lesson-preview/" ? "active" : ""
                             }`}
                         >
@@ -965,8 +884,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/create-course/"
+                        <Link to="/lms/create-course/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/courses/" ? "active" : ""
                             }`}
                         >
@@ -974,8 +892,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/edit-course/"
+                        <Link to="/lms/edit-course/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/edit-course/" ? "active" : ""
                             }`}
                         >
@@ -983,8 +900,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lms/instructors/"
+                        <Link to="/lms/instructors/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/lms/instructors/" ? "active" : ""
                             }`}
                         >
@@ -1006,8 +922,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/helpdesk/tickets/"
+                        <Link to="/helpdesk/tickets/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/tickets/" ? "active" : ""
                             }`}
                         >
@@ -1015,8 +930,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/helpdesk/tickets/details/"
+                        <Link to="/helpdesk/tickets/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/tickets/details/"
                             ? "active"
                             : ""
@@ -1026,8 +940,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/helpdesk/agents/"
+                        <Link to="/helpdesk/agents/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/agents/" ? "active" : ""
                             }`}
                         >
@@ -1035,8 +948,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/helpdesk/reports/"
+                        <Link to="/helpdesk/reports/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/helpdesk/reports/" ? "active" : ""
                             }`}
                         >
@@ -1058,8 +970,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/marketplace/"
+                        <Link to="/nft/marketplace/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/marketplace/" ? "active" : ""
                             }`}
                         >
@@ -1067,8 +978,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/explore-all/"
+                        <Link to="/nft/explore-all/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/explore-all/" ? "active" : ""
                             }`}
                         >
@@ -1076,8 +986,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/live-auction/"
+                        <Link to="/nft/live-auction/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/live-auction/" ? "active" : ""
                             }`}
                         >
@@ -1085,8 +994,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/details/"
+                        <Link to="/nft/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/details/" ? "active" : ""
                             }`}
                         >
@@ -1094,8 +1002,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/creators/"
+                        <Link to="/nft/creators/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/creators/" ? "active" : ""
                             }`}
                         >
@@ -1103,8 +1010,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/creators/details/"
+                        <Link to="/nft/creators/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/creators/details/"
                             ? "active"
                             : ""
@@ -1114,8 +1020,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/nft/connect-wallet/"
+                        <Link to="/nft/connect-wallet/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/nft/connect-wallet/" ? "active" : ""
                             }`}
                         >
@@ -1139,8 +1044,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/property-list/"
+                        <Link to="/real-estate/property-list/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/property-list/"
                             ? "active"
                             : ""
@@ -1150,8 +1054,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/property-overview/"
+                        <Link to="/real-estate/property-overview/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/property-overview/"
                             ? "active"
                             : ""
@@ -1161,8 +1064,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/add-property/"
+                        <Link to="/real-estate/add-property/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/add-property/"
                             ? "active"
                             : ""
@@ -1172,8 +1074,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/agent-list/"
+                        <Link to="/real-estate/agent-list/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/agent-list/"
                             ? "active"
                             : ""
@@ -1183,8 +1084,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/agent-overview/"
+                        <Link to="/real-estate/agent-overview/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/agent-overview/"
                             ? "active"
                             : ""
@@ -1194,8 +1094,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/add-agent/"
+                        <Link to="/real-estate/add-agent/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/add-agent/"
                             ? "active"
                             : ""
@@ -1205,8 +1104,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/real-estate/customers/"
+                        <Link to="/real-estate/customers/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/real-estate/customers/"
                             ? "active"
                             : ""
@@ -1230,8 +1128,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/finance/wallet/"
+                        <Link to="/finance/wallet/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/finance/wallet/" ? "active" : ""
                             }`}
                         >
@@ -1239,8 +1136,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/finance/transaction/"
+                        <Link to="/finance/transaction/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/finance/transaction/" ? "active" : ""
                             }`}
                         >
@@ -1262,8 +1158,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/events/"
+                        <Link to="/events/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/" ? "active" : ""
                             }`}
                         >
@@ -1271,8 +1166,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/events/list/"
+                        <Link to="/events/list/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/list/" ? "active" : ""
                             }`}
                         >
@@ -1280,8 +1174,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/events/details/"
+                        <Link to="/events/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/details/" ? "active" : ""
                             }`}
                         >
@@ -1289,8 +1182,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/events/create-an-event/"
+                        <Link to="/events/create-an-event/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/create-an-event/" ? "active" : ""
                             }`}
                         >
@@ -1298,8 +1190,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/events/edit-an-event/"
+                        <Link to="/events/edit-an-event/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/events/edit-an-event/" ? "active" : ""
                             }`}
                         >
@@ -1321,8 +1212,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/social/profile/"
+                        <Link to="/social/profile/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/social/profile/" ? "active" : ""
                             }`}
                         >
@@ -1330,8 +1220,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/social/settings/"
+                        <Link to="/social/settings/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/social/settings/" ? "active" : ""
                             }`}
                         >
@@ -1353,8 +1242,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/invoices/"
+                        <Link to="/invoices/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/" ? "active" : ""
                             }`}
                         >
@@ -1362,8 +1250,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/invoices/details/"
+                        <Link to="/invoices/details/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/details/" ? "active" : ""
                             }`}
                         >
@@ -1371,8 +1258,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/invoices/create/"
+                        <Link to="/invoices/create/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/create/" ? "active" : ""
                             }`}
                         >
@@ -1380,8 +1266,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/invoices/edit/"
+                        <Link to="/invoices/edit/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/edit/" ? "active" : ""
                             }`}
                         >
@@ -1403,8 +1288,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/users/"
+                        <Link to="/users/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/users/" ? "active" : ""
                             }`}
                         >
@@ -1412,8 +1296,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/users/users-list/"
+                        <Link to="/users/users-list/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/users/users-list/" ? "active" : ""
                             }`}
                         >
@@ -1421,8 +1304,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/users/add-user/"
+                        <Link to="/users/add-user/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/invoices/add-user/" ? "active" : ""
                             }`}
                         >
@@ -1444,8 +1326,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/profile/"
+                        <Link to="/profile/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/" ? "active" : ""
                             }`}
                         >
@@ -1453,8 +1334,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/profile/teams/"
+                        <Link to="/profile/teams/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/teams/" ? "active" : ""
                             }`}
                         >
@@ -1462,8 +1342,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/profile/projects/"
+                        <Link to="/profile/projects/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/profile/projects/" ? "active" : ""
                             }`}
                         >
@@ -1475,8 +1354,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/starter/"
+                  <Link to="/starter/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/starter/" ? "active" : ""
                       }`}
                   >
@@ -1509,8 +1387,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/alerts/"
+                        <Link to="/ui-kit/alerts/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/alerts/" ? "active" : ""
                             }`}
                         >
@@ -1518,8 +1395,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/avatar/"
+                        <Link to="/ui-kit/avatar/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/avatar/" ? "active" : ""
                             }`}
                         >
@@ -1527,8 +1403,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/buttons/"
+                        <Link to="/ui-kit/buttons/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/buttons/" ? "active" : ""
                             }`}
                         >
@@ -1536,8 +1411,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/badges/"
+                        <Link to="/ui-kit/badges/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/badges/" ? "active" : ""
                             }`}
                         >
@@ -1545,8 +1419,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/cards/"
+                        <Link to="/ui-kit/cards/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/cards/" ? "active" : ""
                             }`}
                         >
@@ -1554,8 +1427,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/carousel/"
+                        <Link to="/ui-kit/carousel/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/carousel/" ? "active" : ""
                             }`}
                         >
@@ -1563,8 +1435,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/dropdowns/"
+                        <Link to="/ui-kit/dropdowns/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/dropdowns/" ? "active" : ""
                             }`}
                         >
@@ -1572,8 +1443,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/images/"
+                        <Link to="/ui-kit/images/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/images/" ? "active" : ""
                             }`}
                         >
@@ -1581,8 +1451,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/list-groups/"
+                        <Link to="/ui-kit/list-groups/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/list-groups/" ? "active" : ""
                             }`}
                         >
@@ -1590,8 +1459,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/navbars/"
+                        <Link to="/ui-kit/navbars/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/navbars/" ? "active" : ""
                             }`}
                         >
@@ -1599,8 +1467,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/navs/"
+                        <Link to="/ui-kit/navs/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/starter/navs/" ? "active" : ""
                             }`}
                         >
@@ -1608,8 +1475,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/accordion/"
+                        <Link to="/ui-kit/accordion/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/accordion/" ? "active" : ""
                             }`}
                         >
@@ -1617,8 +1483,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/progress-bars/"
+                        <Link to="/ui-kit/progress-bars/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/progress-bars/" ? "active" : ""
                             }`}
                         >
@@ -1626,8 +1491,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/date-time-picker/"
+                        <Link to="/ui-kit/date-time-picker/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/date-time-picker/" ? "active" : ""
                             }`}
                         >
@@ -1635,8 +1499,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/ui-kit/videos/"
+                        <Link to="/ui-kit/videos/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/ui-kit/videos/" ? "active" : ""
                             }`}
                         >
@@ -1658,8 +1521,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/icons/material-symbols/"
+                        <Link to="/icons/material-symbols/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/icons/material-symbols/" ? "active" : ""
                             }`}
                         >
@@ -1667,8 +1529,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/icons/remixicon/"
+                        <Link to="/icons/remixicon/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/icons/remixicon/" ? "active" : ""
                             }`}
                         >
@@ -1680,8 +1541,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/tables/"
+                  <Link to="/tables/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/tables/" ? "active" : ""
                       }`}
                   >
@@ -1701,56 +1561,49 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/sign-in/"
+                        <Link to="/sign-in/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Sign In
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/sign-up/"
+                        <Link to="/sign-up/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Sign Up
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/forgot-password/"
+                        <Link to="/forgot-password/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Forgot Password
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/reset-password/"
+                        <Link to="/reset-password/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Reset Password
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/confirm-email/"
+                        <Link to="/confirm-email/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Confirm Email
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/lock-screen/"
+                        <Link to="/lock-screen/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Lock Screen
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/logout/"
+                        <Link to="/logout/"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Logout
@@ -1771,8 +1624,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/pricing-plan/"
+                        <Link to="/extra-pages/pricing-plan/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/pricing-plan/" ? "active" : ""
                             }`}
                         >
@@ -1780,8 +1632,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/timeline/"
+                        <Link to="/extra-pages/timeline/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/timeline/" ? "active" : ""
                             }`}
                         >
@@ -1789,8 +1640,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/faq/"
+                        <Link to="/extra-pages/faq/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/faq/" ? "active" : ""
                             }`}
                         >
@@ -1798,8 +1648,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/gallery/"
+                        <Link to="/extra-pages/gallery/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/gallery/" ? "active" : ""
                             }`}
                         >
@@ -1807,8 +1656,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/testimonials/"
+                        <Link to="/extra-pages/testimonials/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/testimonials/" ? "active" : ""
                             }`}
                         >
@@ -1816,8 +1664,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/search/"
+                        <Link to="/extra-pages/search/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/search/" ? "active" : ""
                             }`}
                         >
@@ -1825,8 +1672,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/extra-pages/blank-page/"
+                        <Link to="/extra-pages/blank-page/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/extra-pages/blank-page/" ? "active" : ""
                             }`}
                         >
@@ -1848,8 +1694,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/not-found/"
+                        <Link to="/not-found/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/not-found/" ? "active" : ""
                             }`}
                         >
@@ -1857,8 +1702,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/internal-error/"
+                        <Link to="/internal-error/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/internal-error/" ? "active" : ""
                             }`}
                         >
@@ -1870,8 +1714,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/widgets/"
+                  <Link to="/widgets/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/widgets/" ? "active" : ""
                       }`}
                   >
@@ -1880,8 +1723,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/maps/"
+                  <Link to="/maps/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/maps/" ? "active" : ""
                       }`}
                   >
@@ -1890,8 +1732,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/notifications/"
+                  <Link to="/notifications/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/notifications/" ? "active" : ""
                       }`}
                   >
@@ -1901,8 +1742,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/members/"
+                  <Link to="/members/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/members/" ? "active" : ""
                       }`}
                   >
@@ -1925,8 +1765,7 @@ const HorizontalNavbar = () => {
             <div className="accordion-body border-radius">
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
-                  <Link
-                    href="/forms/basic-elements/"
+                  <Link to="/forms/basic-elements/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/basic-elements/" ? "active" : ""
                       }`}
                   >
@@ -1934,8 +1773,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/forms/advanced-elements/"
+                  <Link to="/forms/advanced-elements/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/advanced-elements/" ? "active" : ""
                       }`}
                   >
@@ -1943,8 +1781,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/forms/validation/"
+                  <Link to="/forms/validation/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/validation/" ? "active" : ""
                       }`}
                   >
@@ -1952,8 +1789,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/forms/editors/"
+                  <Link to="/forms/editors/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/editors/" ? "active" : ""
                       }`}
                   >
@@ -1961,8 +1797,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/forms/file-upload/"
+                  <Link to="/forms/file-upload/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/forms/file-upload/" ? "active" : ""
                       }`}
                   >
@@ -1984,8 +1819,7 @@ const HorizontalNavbar = () => {
             <div className="accordion-body border-radius">
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/line/"
+                  <Link to="/charts/line/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/line/" ? "active" : ""
                       }`}
                   >
@@ -1993,8 +1827,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/area/"
+                  <Link to="/charts/area/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/area/" ? "active" : ""
                       }`}
                   >
@@ -2002,8 +1835,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/column/"
+                  <Link to="/charts/column/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/column/" ? "active" : ""
                       }`}
                   >
@@ -2011,8 +1843,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/mixed/"
+                  <Link to="/charts/mixed/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/mixed/" ? "active" : ""
                       }`}
                   >
@@ -2020,8 +1851,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/radialbar/"
+                  <Link to="/charts/radialbar/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/radialbar/" ? "active" : ""
                       }`}
                   >
@@ -2029,8 +1859,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/radar/"
+                  <Link to="/charts/radar/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/radar/" ? "active" : ""
                       }`}
                   >
@@ -2038,8 +1867,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/pie/"
+                  <Link to="/charts/pie/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/pie/" ? "active" : ""
                       }`}
                   >
@@ -2047,8 +1875,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/polar/"
+                  <Link to="/charts/polar/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/polar/" ? "active" : ""
                       }`}
                   >
@@ -2056,8 +1883,7 @@ const HorizontalNavbar = () => {
                   </Link>
                 </li>
                 <li className="sidemenu-item">
-                  <Link
-                    href="/charts/more/"
+                  <Link to="/charts/more/"
                     className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/charts/more/" ? "active" : ""
                       }`}
                   >
@@ -2079,8 +1905,7 @@ const HorizontalNavbar = () => {
             <div className="accordion-body border-radius">
               <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                 <li className="sidemenu-item">
-                  <Link
-                    href="/my-profile/"
+                  <Link to="/my-profile/"
                     className={`sidemenu-link with-icon border-radius d-block position-relative transition fw-medium ${pathname === "/my-profile/" ? "active" : ""
                       }`}
                   >
@@ -2100,8 +1925,7 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="/settings/account-settings/"
+                        <Link to="/settings/account-settings/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/account-settings/" ? "active" : ""
                             }`}
                         >
@@ -2109,8 +1933,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/settings/change-password/"
+                        <Link to="/settings/change-password/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/change-password/" ? "active" : ""
                             }`}
                         >
@@ -2118,8 +1941,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/settings/connections/"
+                        <Link to="/settings/connections/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/connections/" ? "active" : ""
                             }`}
                         >
@@ -2127,8 +1949,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/settings/privacy-policy/"
+                        <Link to="/settings/privacy-policy/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/privacy-policy/" ? "active" : ""
                             }`}
                         >
@@ -2136,8 +1957,7 @@ const HorizontalNavbar = () => {
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="/settings/terms-conditions/"
+                        <Link to="/settings/terms-conditions/"
                           className={`sidemenu-link border-radius d-block position-relative transition fw-medium ${pathname === "/settings/terms-conditions/" ? "active" : ""
                             }`}
                         >
@@ -2159,16 +1979,14 @@ const HorizontalNavbar = () => {
                   <div className="accordion-body border-radius">
                     <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                       <li className="sidemenu-item">
-                        <Link
-                          href="#"
+                        <Link to="#"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           First
                         </Link>
                       </li>
                       <li className="sidemenu-item">
-                        <Link
-                          href="#"
+                        <Link to="#"
                           className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                         >
                           Third
@@ -2188,8 +2006,7 @@ const HorizontalNavbar = () => {
                         <div className="accordion-body border-radius">
                           <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                             <li className="sidemenu-item">
-                              <Link
-                                href="#"
+                              <Link to="#"
                                 className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                               >
                                 Third 1
@@ -2206,8 +2023,7 @@ const HorizontalNavbar = () => {
                               <div className="accordion-body border-radius">
                                 <ul className="sidebar-sub-menu p-0 list-unstyled mb-0">
                                   <li className="sidemenu-item">
-                                    <Link
-                                      href="#"
+                                    <Link to="#"
                                       className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                                     >
                                       Four 1
@@ -2217,8 +2033,7 @@ const HorizontalNavbar = () => {
                               </div>
                             </li>
                             <li className="sidemenu-item">
-                              <Link
-                                href="#"
+                              <Link to="#"
                                 className="sidemenu-link border-radius d-block position-relative transition fw-medium"
                               >
                                 Third 3
@@ -2232,8 +2047,7 @@ const HorizontalNavbar = () => {
                 </li>
 
                 <li className="sidemenu-item">
-                  <Link
-                    href="/logout/"
+                  <Link to="/logout/"
                     className="sidemenu-link with-icon border-radius d-block position-relative transition fw-medium"
                   >
                     <i className="material-symbols-outlined">logout</i>

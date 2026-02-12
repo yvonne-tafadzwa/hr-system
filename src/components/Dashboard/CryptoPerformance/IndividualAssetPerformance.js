@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const IndividualAssetPerformance = () => {
   const [Chart, setChart] = useState();
   const [assets, setAssets] = useState([]);
@@ -254,7 +250,7 @@ const IndividualAssetPerformance = () => {
                         className="d-flex align-items-center"
                         style={{ gap: "8px" }}
                       >
-                        <Image
+                        <img
                           src={asset.icon}
                           alt={asset.symbol.toLowerCase()}
                           width={22}

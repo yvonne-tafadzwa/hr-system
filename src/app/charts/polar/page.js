@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicPolarChart from '@/components/Charts/PolarCharts/BasicPolarChart';
 import MonochromePolarChart from '@/components/Charts/PolarCharts/MonochromePolarChart';

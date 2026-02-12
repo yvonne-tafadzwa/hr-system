@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Row, Col } from "react-bootstrap";
-import Image from "next/image";
 import WorldMapContent from "./WorldMapContent";
 
 const ShippingToLeadingCountriesWorldwide = () => {
@@ -42,7 +39,7 @@ const ShippingToLeadingCountriesWorldwide = () => {
             {countries.map((country, index) => (
               <Col sm={6} key={index}>
                 <div className="d-flex align-items-center mt-3">
-                  <Image
+                  <img
                     src={country.image}
                     className="rounded-circle"
                     alt={country.name.toLowerCase()}

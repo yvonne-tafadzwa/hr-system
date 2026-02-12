@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const ManageYourNft = () => {
   // Modal
   const [isShowModal, setShowModal] = useState(true);
@@ -30,7 +26,7 @@ const ManageYourNft = () => {
       >
         <div className="d-flex flex-wrap gap-2 align-items-center">
           <div className="flex-grow-1 me-3">
-            <Image
+            <img
               src="/images/shape-8.png"
               className="position-absolute top-0 end-0"
               alt="shape"
@@ -84,7 +80,7 @@ const ManageYourNft = () => {
                   className="d-flex align-items-center bg-border-color p-4 rounded-2 position-relative"
                   style={{ border: "2px dashed #5DA8FF" }}
                 >
-                  <Image
+                  <img
                     src="/images/upload.png"
                     alt="upload"
                     width={46}

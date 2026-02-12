@@ -1,5 +1,3 @@
-"use client";
-   
 import GainersAndLosersTable from "@/components/CryptoTrader/GainersAndLosersTable";
 import { Breadcrumb } from "react-bootstrap";
 

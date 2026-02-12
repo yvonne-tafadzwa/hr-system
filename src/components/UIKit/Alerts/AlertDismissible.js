@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Button, Alert } from "react-bootstrap";
 import { useState } from "react"; 
 

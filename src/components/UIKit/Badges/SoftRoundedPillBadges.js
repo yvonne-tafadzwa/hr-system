@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Badge, Stack } from "react-bootstrap";
 
 const SoftRoundedPillBadges = () => {

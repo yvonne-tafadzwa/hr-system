@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
 import { useState } from "react";
 
 const Teachers = () => {
@@ -70,7 +67,7 @@ const Teachers = () => {
                     <td>
                       <div className="d-flex align-items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                          <img
                             src={teacher.image}
                             className="rounded-circle"
                             alt="user"

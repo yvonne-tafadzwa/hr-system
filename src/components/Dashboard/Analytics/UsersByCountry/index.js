@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import { Row, Col, Card, Form } from "react-bootstrap";
-import Image from "next/image";
 import WorldMapContent from "./WorldMapContent";
 
 const UsersByCountry = () => {
@@ -28,7 +25,7 @@ const UsersByCountry = () => {
             <Col sm={6}>
               <div className="d-flex mb-4">
                 <div className="flex-shrink-0 position-relative top-1">
-                  <Image
+                  <img
                     src="/images/united-states-2.png"
                     className="rounded-circle"
                     alt="united-states"
@@ -50,7 +47,7 @@ const UsersByCountry = () => {
             <Col sm={6}>
               <div className="d-flex mb-4">
                 <div className="flex-shrink-0 position-relative top-1">
-                  <Image
+                  <img
                     src="/images/united-kingdom-2.png"
                     className="rounded-circle"
                     alt="united-states"
@@ -76,7 +73,7 @@ const UsersByCountry = () => {
             <Col sm={6}>
               <div className="d-flex mb-4">
                 <div className="flex-shrink-0 position-relative top-1">
-                  <Image
+                  <img
                     src="/images/canada-2.png"
                     className="rounded-circle"
                     alt="canada"
@@ -96,7 +93,7 @@ const UsersByCountry = () => {
             <Col sm={6}>
               <div className="d-flex mb-4">
                 <div className="flex-shrink-0 position-relative top-1">
-                  <Image
+                  <img
                     src="/images/australia.png"
                     className="rounded-circle"
                     alt="australia"

@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import { Row, Col, Card, Button, Dropdown } from "react-bootstrap";
 
 const ViewCampaign = () => {
@@ -10,7 +7,7 @@ const ViewCampaign = () => {
       <div className="campaign-stepper-content">
         <div className="d-flex align-items-center mb-4 mb-md-5">
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/images/christmas.png"
               alt="christmas"
               width={50}
@@ -86,7 +83,7 @@ const ViewCampaign = () => {
                         variant="light"
                         className="border-0 p-2 d-flex align-items-center rounded-2"
                       >
-                        <Image
+                        <img
                           src={imgSrc}
                           width={30}
                           height={30}
@@ -179,7 +176,7 @@ const ViewCampaign = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom border-body-bg pb-4 mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/pdf.png" 
                       alt="pdf"
                       width={35}
@@ -203,7 +200,7 @@ const ViewCampaign = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom border-body-bg pb-4 mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/doc.png" 
                       alt="doc"
                       width={35}
@@ -229,7 +226,7 @@ const ViewCampaign = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom border-body-bg pb-4 mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/xl4.png" 
                       alt="xl4"
                       width={35}
@@ -253,7 +250,7 @@ const ViewCampaign = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/jpg.png" 
                       alt="pdf"
                       width={35}

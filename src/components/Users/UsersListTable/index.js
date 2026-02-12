@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import SearchForm from "./SearchForm";
+import { Link } from "react-router-dom";import SearchForm from "./SearchForm";
 import Pagination from "./Pagination";
 
 const userListData = [
@@ -137,8 +133,7 @@ const UsersListTable = () => {
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-4">
             <SearchForm />
 
-            <Link
-              href="/users/add-user/"
+            <Link to="/users/add-user/"
               className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
             >
               <span className="py-sm-1 d-block">
@@ -170,7 +165,7 @@ const UsersListTable = () => {
                         <td>{value.userID}</td>
                         <td>
                           <div className="d-flex align-items-center">
-                            <Image
+                            <img
                               src={value.user.img}
                               className="wh-40 rounded-circle"
                               alt="user"

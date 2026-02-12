@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const CourseDetails = () => {
   return (
     <>
@@ -40,7 +36,7 @@ const CourseDetails = () => {
                     <td>
                       <div className="d-flex align-items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                          <img
                             src="/images/user-42.jpg"
                             className="wh-34 rounded-circle"
                             alt="user"

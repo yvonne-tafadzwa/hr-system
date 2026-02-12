@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
-import Image from "next/image";
 import { Card, Table } from "react-bootstrap";
-import Link from "next/link";
-
-const PatientsListTable = () => {
+import { Link } from "react-router-dom";const PatientsListTable = () => {
   const patientsData = [
     {
       id: "001",
@@ -251,8 +246,7 @@ const PatientsListTable = () => {
               </button>
             </form>
 
-            <Link
-              href="/doctor/add-patient/"
+            <Link to="/doctor/add-patient/"
               className="btn btn-outline-primary fs-14 fw-medium rounded-3 hover-bg"
               style={{
                 padding: "3px 13px",
@@ -354,7 +348,7 @@ const PatientsListTable = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={patient.image}
                                 className="rounded-circle"
                                 alt="nft"

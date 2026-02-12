@@ -1,8 +1,4 @@
-"use client";
-
-import Link from "next/link";
-
-const Pagination = () => {
+import { Link } from "react-router-dom";const Pagination = () => {
   return (
     <>
       <div className="p-4 pt-lg-4">

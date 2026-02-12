@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, Table, Form, Button, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const PropertiesTable = () => {
+import { Link } from "react-router-dom";const PropertiesTable = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
   const handleToggleShowModal = () => {
@@ -461,11 +456,10 @@ const PropertiesTable = () => {
                         </td>
 
                         <td>
-                          <Link
-                            href={property.link}
+                          <Link to={property.link}
                             className="d-flex align-items-center"
                           >
-                            <Image
+                            <img
                               src={property.image}
                               className="rounded-3"
                               alt={property.name}
@@ -508,7 +502,7 @@ const PropertiesTable = () => {
                         <td>
                           <div className="d-flex align-items-center gap-1">
                             <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <Link href={property.link}>
+                              <Link to={property.link}>
                                 <i className="material-symbols-outlined fs-16 text-primary">
                                   visibility
                                 </i>
@@ -719,7 +713,7 @@ const PropertiesTable = () => {
                     <div className="d-flex align-items-center gap-2 flex-wrap mt-2">
                       {images.map((image, index) => (
                         <div key={index} className="position-relative">
-                          <Image
+                          <img
                             src={image.url}
                             alt={image.name}
                             width={60}

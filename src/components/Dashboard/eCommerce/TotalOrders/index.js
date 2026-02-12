@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { supabase } from "@/lib/supabase";

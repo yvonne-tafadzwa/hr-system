@@ -1,10 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const recentOrdersData = [
+import { Link } from "react-router-dom";const recentOrdersData = [
   {
     orderID: '#JAN-2345',
     customer: {
@@ -95,11 +90,10 @@ const RecentOrders = () => {
                       <tr key={i}>
                         <td>{value.orderID}</td>
                         <td>
-                          <Link
-                            href="/my-profile"
+                          <Link to="/my-profile"
                             className="d-flex align-items-center"
                           >
-                            <Image
+                            <img
                               src={value.customer.img}
                               className="wh-40 rounded-3"
                               alt="user"

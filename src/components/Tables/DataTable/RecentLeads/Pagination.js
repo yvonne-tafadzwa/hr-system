@@ -1,8 +1,4 @@
-"use client";
-
-import Link from "next/link";
-
-const Pagination = () => {
+import { Link } from "react-router-dom";const Pagination = () => {
   return (
     <>
       <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap p-4">

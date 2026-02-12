@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Table, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const products = [
   {
     code: "#3421",
@@ -179,7 +175,7 @@ const StockAlert = () => {
                       <td>
                         <div className="d-flex align-items-center gap-2">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={product.image}
                               className="rounded-1"
                               alt="product"

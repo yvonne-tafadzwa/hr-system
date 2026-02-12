@@ -1,15 +1,13 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
 const useGoBack = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const goBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
-      router.back(); // Go back to the previous page
+      navigate(-1); // Go back to the previous page
     } else {
-      router.push("/"); // Redirect to home if no history exists
+      navigate("/"); // Redirect to home if no history exists
     }
   };
 
@@ -17,4 +15,3 @@ const useGoBack = () => {
 };
 
 export default useGoBack;
-

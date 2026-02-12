@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicAlerts from "@/components/UIKit/Alerts/BasicAlerts";
 import BasicAlertsWithBG from "@/components/UIKit/Alerts/BasicAlertsWithBG";

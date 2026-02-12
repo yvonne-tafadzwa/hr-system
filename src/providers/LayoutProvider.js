@@ -1,7 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 import LeftSidebar from "@/components/Layout/LeftSidebar";
 import TopNavbar from "@/components/Layout/TopNavbar";
 import Footer from "@/components/Layout/Footer";
@@ -12,7 +10,7 @@ import { LeaderboardProvider } from "@/context/LeaderboardContext";
 
 const LayoutProvider = ({ children }) => {
   const [active, setActive] = useState(false);
-  const pathname = usePathname();
+  const { pathname } = useLocation();
 
   const toogleActive = () => {
     setActive(!active);

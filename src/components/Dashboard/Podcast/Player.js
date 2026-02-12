@@ -1,8 +1,4 @@
-"use client";
-
 import React, { useRef, useState, useEffect } from "react";
-import Image from "next/image";
-
 const Player = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState("0:00");
@@ -64,7 +60,7 @@ const Player = () => {
       </div>
 
       <div style={{ marginBottom: "20px" }}>
-        <Image
+        <img
           src="/images/player.png"
           className="rounded-3 d-lg-none w-100"
           alt="player"

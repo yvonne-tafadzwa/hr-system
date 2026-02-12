@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import { Card, Form, Row, Col } from "react-bootstrap";
 
 const AddPatientForm = () => {
@@ -117,7 +114,7 @@ const AddPatientForm = () => {
                       </span>
 
                       <div>
-                        <Image
+                        <img
                           src="/images/user-144.png"
                           alt="user"
                           className="rounded-circle"

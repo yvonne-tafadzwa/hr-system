@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import SalesByCategoryProducts from "./SalesByCategoryProducts";
 
 const SalesAnalytics = () => {
@@ -200,7 +197,7 @@ const SalesAnalytics = () => {
                         lineHeight: "44px",
                       }}
                     >
-                      <Image
+                      <img
                         src="/images/sales-over-time-icon.svg"
                         alt="sales-over-time-icon"
                         width={24}
@@ -277,7 +274,7 @@ const SalesAnalytics = () => {
                         lineHeight: "44px",
                       }}
                     >
-                      <Image
+                      <img
                         src="/images/electronics-icon.svg"
                         alt="electronics-icon"
                         width={24}
@@ -302,7 +299,7 @@ const SalesAnalytics = () => {
                         lineHeight: "44px",
                       }}
                     >
-                      <Image
+                      <img
                         src="/images/clothing-icon.svg"
                         alt="clothing-icon"
                         width={24}
@@ -327,7 +324,7 @@ const SalesAnalytics = () => {
                         lineHeight: "44px",
                       }}
                     >
-                      <Image
+                      <img
                         src="/images/home-goods-icon.svg"
                         alt="home-goods-icon"
                         width={24}

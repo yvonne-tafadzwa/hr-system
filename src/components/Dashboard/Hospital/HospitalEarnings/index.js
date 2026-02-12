@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const HospitalEarnings = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -122,7 +118,7 @@ const HospitalEarnings = () => {
           <Row className="align-items-center">
             <Col lg={5}>
               <div className="hospital-img pt-3 pb-4 text-center">
-                <Image
+                <img
                   src="/images/hospital.png"
                   alt="hospital"
                   width={280}

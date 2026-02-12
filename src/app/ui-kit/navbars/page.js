@@ -1,5 +1,3 @@
-"use client";
-    
 import { Row, Col, Breadcrumb } from "react-bootstrap";  
 import BasicNavbar from '@/components/UIKit/Navbars/BasicNavbar';
 import ColorSchemesNavbar from '@/components/UIKit/Navbars/ColorSchemesNavbar'; 

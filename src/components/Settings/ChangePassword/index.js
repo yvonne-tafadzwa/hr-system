@@ -1,9 +1,5 @@
-"use client";
-
 import { Row, Col, Form } from "react-bootstrap";
-import Link from "next/link"; 
-
-const ChangePassword = () => {
+import { Link } from "react-router-dom";const ChangePassword = () => {
   return (
     <>
       <Form>
@@ -66,7 +62,7 @@ const ChangePassword = () => {
                 <i className="ri-check-line text-white fw-medium"></i> Change
                 Password
               </button>
-              <Link href="#" className="text-danger fs-16 text-decoration-none">
+              <Link to="#" className="text-danger fs-16 text-decoration-none">
                 Forgot Password?
               </Link>
             </Form.Group>

@@ -1,12 +1,10 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Row, Col, Card, Form, Button } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 
 const EditEmployee = ({ employeeId }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [companies, setCompanies] = useState([]);
@@ -153,7 +151,7 @@ const EditEmployee = ({ employeeId }) => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/');
+      navigate('/employees/');
     } catch (err) {
       console.error('Error updating employee:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -313,7 +311,7 @@ const EditEmployee = ({ employeeId }) => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/employees/')}
+                        onClick={() => navigate('/employees/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

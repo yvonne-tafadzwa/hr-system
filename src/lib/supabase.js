@@ -1,34 +1,43 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Supabase configuration
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key';
 
 // Validate environment variables in development
-if (process.env.NODE_ENV === 'development') {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+if (import.meta.env.DEV) {
+  if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
     console.warn('⚠️ Missing Supabase environment variables!');
     console.warn('Please create a .env.local file with:');
-    console.warn('  NEXT_PUBLIC_SUPABASE_URL=your_supabase_url');
-    console.warn('  NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key');
+    console.warn('  VITE_SUPABASE_URL=your_supabase_url');
+    console.warn('  VITE_SUPABASE_ANON_KEY=your_supabase_anon_key');
   }
 }
 
-// Custom fetch without abort signal
-const customFetch = (url, options) => {
-  const { signal, ...rest } = options || {};
-  return fetch(url, rest);
-};
+// Custom fetch that strips abort signals to prevent React 18 StrictMode
+// double-mount from aborting in-flight Supabase requests.
+// Without this, you get "signal is aborted without reason" errors.
 
 // Create a single supabase client for interacting with your database
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true,
-    detectSessionInUrl: false,
+    detectSessionInUrl: true,
+    flowType: 'implicit',
+    // Unique storage key to avoid conflicts
+    storageKey: 'verity-workforce-auth',
+    // Bypass navigator.locks which causes "signal is aborted without reason"
+    // errors in React. Provide a no-op lock that just runs the callback.
+    lock: async (name, acquireTimeout, fn) => {
+      return await fn();
+    },
   },
   global: {
-    fetch: customFetch,
+    fetch: (url, options = {}) => {
+      const { signal, ...restOptions } = options;
+      return fetch(url, restOptions);
+    },
   },
 });
 
@@ -207,4 +216,3 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
  * @property {boolean} is_read
  * @property {string} created_at
  */
-

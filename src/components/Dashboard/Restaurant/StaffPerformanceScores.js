@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Card, Dropdown } from "react-bootstrap";
 
 const StaffPerformanceScores = () => {
@@ -96,7 +93,7 @@ const StaffPerformanceScores = () => {
                   className="d-flex align-items-center"
                   style={{ gap: "8px" }}
                 >
-                  <Image
+                  <img
                     src={staff.image}
                     className="rounded-circle"
                     alt="user"

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, ProgressBar } from "react-bootstrap";
 
 const Animated = () => {

@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
 

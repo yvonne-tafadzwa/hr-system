@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const NewCustomersThisMonth = () => {
   return (
     <>
@@ -26,7 +22,7 @@ const NewCustomersThisMonth = () => {
 
           <ul className="ps-0 mb-0 list-unstyled d-flex align-items-center">
             <li>
-              <Image
+              <img
                 src="/images/user-63.jpg"
                 className="rounded-circle border border-1 border-color-white"
                 alt="user"
@@ -35,7 +31,7 @@ const NewCustomersThisMonth = () => {
               />
             </li>
             <li className="ms-m-15">
-              <Image
+              <img
                 src="/images/user-64.jpg"
                 className="rounded-circle border border-1 border-color-white"
                 alt="user"
@@ -44,7 +40,7 @@ const NewCustomersThisMonth = () => {
               />
             </li>
             <li className="ms-m-15">
-              <Image
+              <img
                 src="/images/user-65.jpg"
                 className="rounded-circle border border-1 border-color-white"
                 alt="user"
@@ -53,7 +49,7 @@ const NewCustomersThisMonth = () => {
               />
             </li>
             <li className="ms-m-15">
-              <Image
+              <img
                 src="/images/user-66.jpg"
                 className="rounded-circle border border-1 border-color-white"
                 alt="user"

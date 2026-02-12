@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Dropdown, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
 import WorldMapContent from "./WorldMapContent";
 
 const SalesByCountry = () => {
@@ -84,7 +81,7 @@ const SalesByCountry = () => {
             <div className="d-flex align-items-center justify-content-between">
               <div className="flex-shrink-0">
                 <div className="d-flex align-items-center">
-                  <Image src={creator.image} alt={creator.country} width={24} height={24} />
+                  <img src={creator.image} alt={creator.country} width={24} height={24} />
                   <div className="ms-3">
                     <h4 className="mb-0 fs-12 fw-semibold lh-1">{creator.country}</h4>
                   </div>

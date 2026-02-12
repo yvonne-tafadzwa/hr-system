@@ -1,10 +1,5 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
-const DownloadApp = () => {
+import { Link } from "react-router-dom";const DownloadApp = () => {
   return (
     <>
       <div
@@ -18,8 +13,7 @@ const DownloadApp = () => {
             Manage Your Dashboard From Your Mobile
           </h2>
 
-          <Link
-            href="https://www.apple.com/app-store/"
+          <Link to="https://www.apple.com/app-store/"
             className="rea-app-btn"
             target="_blank"
           >
@@ -27,7 +21,7 @@ const DownloadApp = () => {
           </Link>
 
           <div className="text-center">
-            <Image src="/images/saas.png" alt="saas" width={207} height={188} />
+            <img src="/images/saas.png" alt="saas" width={207} height={188} />
           </div>
         </div>
       </div>

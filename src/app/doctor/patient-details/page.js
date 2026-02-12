@@ -1,5 +1,3 @@
-"use client"; 
-
 import PatientDetails from "@/components/Doctor/PatientDetails";
 import { Breadcrumb } from "react-bootstrap";
 

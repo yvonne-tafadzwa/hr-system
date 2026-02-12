@@ -1,11 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
     <>
       <div className="m-auto py-5 text-center">
-        <Image
+        <img
           src="/images/error.png"
           className="mb-4"
           alt="error"
@@ -21,7 +20,7 @@ export default function NotFound() {
           But no worries! Our team is looking ever where while you wait safely.
         </p>
 
-        <Link href="/" className="btn btn-primary py-2 px-4 fs-16 fw-medium">
+        <Link to="/" className="btn btn-primary py-2 px-4 fs-16 fw-medium">
           <span className="d-inline-block py-1">Back To Home</span>
         </Link>
       </div>

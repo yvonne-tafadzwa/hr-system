@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicRadarChart from '@/components/Charts/RadarCharts/BasicRadarChart';
 import MultipleRadarChart from '@/components/Charts/RadarCharts/MultipleRadarChart';

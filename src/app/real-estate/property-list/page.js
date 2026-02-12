@@ -1,5 +1,3 @@
-"use client";
-
 import PropertyList from "@/components/RealEstate/PropertyList";
 import { Breadcrumb } from "react-bootstrap";
 

@@ -1,13 +1,11 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Row, Col, Card, Form, Button, Nav, Tab } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
 const AddEmployee = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [activeTab, setActiveTab] = useState("manual");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -216,7 +214,7 @@ const AddEmployee = () => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/');
+      navigate('/employees/');
     } catch (err) {
       console.error('Error creating employee:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -336,7 +334,7 @@ const AddEmployee = () => {
       }
 
       // Success - redirect to employees list
-      router.push('/employees/');
+      navigate('/employees/');
     } catch (err) {
       console.error('Error processing CSV:', err);
       setCsvError('An error occurred while processing the CSV file');
@@ -535,7 +533,7 @@ const AddEmployee = () => {
                             <Button
                               variant="secondary"
                               type="button"
-                              onClick={() => router.push('/employees/')}
+                              onClick={() => navigate('/employees/')}
                               className="fw-semibold py-2 px-3"
                               style={{ fontSize: '12px' }}
                             >
@@ -625,7 +623,7 @@ const AddEmployee = () => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/employees/')}
+                        onClick={() => navigate('/employees/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

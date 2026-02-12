@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState, useMemo } from "react";
 import { Card } from "react-bootstrap";
 import FullCalendar from '@fullcalendar/react';

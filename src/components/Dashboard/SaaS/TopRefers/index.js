@@ -1,11 +1,6 @@
-"use client";
-
 import React from "react";
 import { Card, ProgressBar } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const TopRefers = () => {
+import { Link } from "react-router-dom";const TopRefers = () => {
   // Dynamic data for the list of referrers
   const refersData = [
     {
@@ -64,7 +59,7 @@ const TopRefers = () => {
         <Card.Body className="p-4">
           <div className="mb-3 mb-lg-30 d-flex flex-wrap gap-2 justify-content-between align-items-center">
             <h3 className="mb-0">Top Refers</h3>
-            <Link href="#" className="text-body text-decoration-none">
+            <Link to="#" className="text-body text-decoration-none">
               <span>Browse All</span>
               <i className="ri-arrow-right-s-line"></i>
             </Link>
@@ -76,7 +71,7 @@ const TopRefers = () => {
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="flex-shrink-0">
                     <div className="d-flex">
-                      <Image src={refer.image} alt={refer.name} width={30} height={30} />
+                      <img src={refer.image} alt={refer.name} width={30} height={30} />
                       <div className="ms-3">
                         <h4 className="mb-0 fs-14 fw-semibold lh-1">{refer.name}</h4>
                         <span className="fs-12">{refer.category}</span>

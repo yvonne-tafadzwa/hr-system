@@ -1,7 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
 import CommentForm from "./CommentForm"; 
 
 const TicketDescription = () => {
@@ -59,7 +56,7 @@ const TicketDescription = () => {
         <Card.Body className="p-4">
           <div className="border-bottom border-primary pb-4 mb-4">
             <div className="d-flex flex-wrap gap-3 align-items-center mb-3">
-              <Image
+              <img
                 src="/images/user-6.jpg"
                 className="wh-34 rounded-circle"
                 alt="user"
@@ -82,7 +79,7 @@ const TicketDescription = () => {
             </p>
 
             <h4 className="fs-15 mb-2 pb-1">Screenshots</h4>
-            <Image
+            <img
               src="/images/screenshorts.jpg"
               className="mw-80 rounded-3"
               alt="screenshorts"
@@ -93,7 +90,7 @@ const TicketDescription = () => {
 
           <div className="border-bottom pb-4 mb-4 ps-4">
             <div className="d-flex flex-wrap gap-3 align-items-center mb-3">
-              <Image
+              <img
                 src="/images/user-7.jpg"
                 className="wh-34 rounded-circle"
                 alt="user"
@@ -119,14 +116,14 @@ const TicketDescription = () => {
 
             <h4 className="fs-15 mb-2 pb-1">Screenshots</h4>
             <div className="d-flex flex-wrap gap-3">
-              <Image
+              <img
                 src="/images/screenshorts-2.jpg"
                 className="mw-80 rounded-3"
                 alt="screenshorts"
                 width={80}
                 height={80}
               />
-              <Image
+              <img
                 src="/images/screenshorts-3.jpg"
                 className="mw-80 rounded-3"
                 alt="screenshorts"
@@ -138,7 +135,7 @@ const TicketDescription = () => {
 
           <div className="border-bottom pb-4 mb-4 ps-4">
             <div className="d-flex flex-wrap gap-3 align-items-center mb-3">
-              <Image
+              <img
                 src="/images/user-6.jpg"
                 className="wh-34 rounded-circle"
                 alt="user"
@@ -156,7 +153,7 @@ const TicketDescription = () => {
 
           <div className="border-bottom pb-4 mb-4 ps-4">
             <div className="d-flex flex-wrap gap-3 align-items-center mb-3">
-              <Image
+              <img
                 src="/images/user-7.jpg"
                 className="wh-34 rounded-circle"
                 alt="user"

@@ -1,10 +1,5 @@
-"use client";
-
 import { Row, Col, Dropdown, Card, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const TeamMembers = () => {
+import { Link } from "react-router-dom";const TeamMembers = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -21,8 +16,7 @@ const TeamMembers = () => {
               </span>
             </Form>
 
-            <Link
-              href="/users/add-user/"
+            <Link to="/users/add-user/"
               className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
             >
               <span className="py-sm-1 d-block">
@@ -41,7 +35,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-60.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -159,7 +153,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-61.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -277,7 +271,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-62.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -392,7 +386,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-63.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -507,7 +501,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-64.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -622,7 +616,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-65.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -737,7 +731,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-66.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -852,7 +846,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-67.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -967,7 +961,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-68.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -1082,7 +1076,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-69.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -1197,7 +1191,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-60.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"
@@ -1312,7 +1306,7 @@ const TeamMembers = () => {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/user-61.jpg"
                       className="wh-65 rounded-circle"
                       alt="user"

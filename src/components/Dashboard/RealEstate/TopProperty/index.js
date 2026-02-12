@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const TopProperty = () => {
   const properties = [
     {
@@ -63,7 +59,7 @@ const TopProperty = () => {
         {properties.map((property, index) => (
           <div className="d-flex align-items-center mb-4 lcbmp-none" key={index}>
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src={property.image}
                 className="rounded-3"
                 alt={property.type.toLowerCase()}

@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Row, Col } from "react-bootstrap";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 
@@ -166,7 +163,7 @@ const RecentAppointment = () => {
                         <div className="d-flex flex-wrap gap-1 justify-content-between align-items-center">
                           <div className="d-flex align-items-center gap-2">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={appointment.client.image}
                                 className="rounded-circle border border-2 border-color-white position-relative top-2"
                                 alt="client"
@@ -184,7 +181,7 @@ const RecentAppointment = () => {
 
                           <div className="d-flex align-items-center gap-2">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={appointment.servedBy.image}
                                 className="rounded-circle border border-2 border-color-white position-relative top-2"
                                 alt="served-by"
@@ -201,7 +198,7 @@ const RecentAppointment = () => {
                           </div>
                         </div>
 
-                        <Image
+                        <img
                           src={appointment.verifyIcon}
                           className="verifyIcon bg-white position-absolute top-50 start-0 translate-middle"
                           alt="verify"

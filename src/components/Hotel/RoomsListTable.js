@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Row, Card, Table, Form, Button, Col } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const RoomsListTable = () => {
+import { Link } from "react-router-dom";const RoomsListTable = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
   const handleToggleShowModal = () => {
@@ -464,11 +459,10 @@ const RoomsListTable = () => {
                         </td>
 
                         <td>
-                          <Link
-                            href={room.link}
+                          <Link to={room.link}
                             className="d-flex align-items-center"
                           >
-                            <Image
+                            <img
                               src={room.image}
                               className="rounded-3"
                               alt={room.name}
@@ -511,7 +505,7 @@ const RoomsListTable = () => {
                         <td>
                           <div className="d-flex align-items-center gap-1">
                             <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <Link href={room.link}>
+                              <Link to={room.link}>
                                 <i className="material-symbols-outlined fs-16 text-primary">
                                   visibility
                                 </i>
@@ -722,7 +716,7 @@ const RoomsListTable = () => {
                     <div className="d-flex align-items-center gap-2 flex-wrap mt-2">
                       {images.map((image, index) => (
                         <div key={index} className="position-relative">
-                          <Image
+                          <img
                             src={image.url}
                             alt={image.name}
                             width={60}

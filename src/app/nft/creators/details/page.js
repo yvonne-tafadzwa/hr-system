@@ -1,5 +1,3 @@
-"use client";
- 
 import NftsTabs from "@/components/NFT/Creators/Details/NftsTabs";
 import Profile from "@/components/NFT/Creators/Details/Profile";
 import { Row, Col, Breadcrumb } from "react-bootstrap";

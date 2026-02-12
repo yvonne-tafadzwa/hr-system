@@ -1,5 +1,3 @@
-"use client";
-    
 import { Row, Col, Breadcrumb } from "react-bootstrap";   
 import BasicNav from '@/components/UIKit/Navs/BasicNav';
 import Alignment from '@/components/UIKit/Navs/Alignment';

@@ -1,13 +1,11 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Row, Col, Card, Form, Button } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
 const AddSickNote = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [employees, setEmployees] = useState([]);
@@ -244,7 +242,7 @@ const AddSickNote = () => {
       }
 
       // Success - redirect to sick notes list
-      router.push('/sick-notes/');
+      navigate('/sick-notes/');
     } catch (err) {
       console.error('Error creating sick note:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -440,7 +438,7 @@ const AddSickNote = () => {
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/sick-notes/')}
+                        onClick={() => navigate('/sick-notes/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

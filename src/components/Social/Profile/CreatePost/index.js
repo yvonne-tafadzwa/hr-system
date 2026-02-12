@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const CreatePost = () => {
   return (
     <>
@@ -51,7 +47,7 @@ const CreatePost = () => {
           <div className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
             <div className="d-flex align-items-center text-decoration-none">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-6.jpg"
                   className="wh-44 rounded-circle"
                   alt="user"
@@ -121,7 +117,7 @@ const CreatePost = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center text-decoration-none w-100">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-68.jpg"
                     className="wh-44 rounded-circle"
                     alt="user"
@@ -161,7 +157,7 @@ const CreatePost = () => {
           <div className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
             <div className="d-flex align-items-center text-decoration-none">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-7.jpg"
                   className="wh-44 rounded-circle"
                   alt="user"
@@ -226,7 +222,7 @@ const CreatePost = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center text-decoration-none w-100">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-68.jpg"
                     className="wh-44 rounded-circle"
                     alt="user"
@@ -269,7 +265,7 @@ const CreatePost = () => {
           <div className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
             <div className="d-flex align-items-center text-decoration-none">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-8.jpg"
                   className="wh-44 rounded-circle"
                   alt="user"
@@ -336,7 +332,7 @@ const CreatePost = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center text-decoration-none w-100">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-68.jpg"
                     className="wh-44 rounded-circle"
                     alt="user"
@@ -379,7 +375,7 @@ const CreatePost = () => {
           <div className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-2">
             <div className="d-flex align-items-center text-decoration-none">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-8.jpg"
                   className="wh-44 rounded-circle"
                   alt="user"
@@ -418,7 +414,7 @@ const CreatePost = () => {
 
           <div className="row">
             <div className="col-lg-6 col-sm-6">
-              <Image
+              <img
                 src="/images/product-6.jpg"
                 className="rounded-3"
                 alt="product"
@@ -428,7 +424,7 @@ const CreatePost = () => {
             </div>
 
             <div className="col-lg-6 col-sm-6 mt-4 mt-sm-0">
-              <Image
+              <img
                 src="/images/product-7.jpg"
                 className="rounded-3"
                 alt="product"
@@ -461,7 +457,7 @@ const CreatePost = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center text-decoration-none w-100">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-68.jpg"
                     className="wh-44 rounded-circle"
                     alt="user"

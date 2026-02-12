@@ -1,10 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Link from "next/link";
-
-const TopBrowsingPagesToday = () => {
+import { Link } from "react-router-dom";const TopBrowsingPagesToday = () => {
   const data = [
     {
       url: "/dashboard-overview",
@@ -170,7 +166,7 @@ const TopBrowsingPagesToday = () => {
                   currentData.map((item, index) => (
                     <tr key={index}>
                       <td className="fw-medium">
-                        <Link href="#" className="text-primary">
+                        <Link to="#" className="text-primary">
                           {item.url}
                         </Link>
                       </td>

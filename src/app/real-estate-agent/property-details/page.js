@@ -1,5 +1,3 @@
-"use client";
-  
 import PropertyDetailsContent from "@/components/RealEstateAgent/PropertyDetailsContent";
 import Reviews from "@/components/RealEstateAgent/Reviews";
 import { Breadcrumb } from "react-bootstrap";

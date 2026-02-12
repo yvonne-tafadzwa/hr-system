@@ -1,10 +1,7 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   return (
     <>

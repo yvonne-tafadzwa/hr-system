@@ -1,8 +1,4 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Table, Form, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Table, Form, Card, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 const mockSellerData = [
@@ -161,7 +157,7 @@ const MostPopularSellers = () => {
                   <tr key={seller.id}>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={seller.userImage}
                           alt={seller.name}
                           width={40}
@@ -194,8 +190,7 @@ const MostPopularSellers = () => {
                       </div>
                     </td>
                     <td className="text-end">
-                      <Link
-                        href="/creator-details"
+                      <Link to="/creator-details"
                         className="rounded-circle d-inline-block text-center fs-18 hover-bg"
                         style={{
                           backgroundColor: "#ECEEF2",

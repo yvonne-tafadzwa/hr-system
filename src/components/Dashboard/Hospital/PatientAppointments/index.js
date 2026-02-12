@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Table, Button} from "react-bootstrap";
-import Image from "next/image";
 import DateTimePickerDemo from "./DateTimePickerDemo";
 
 const PatientAppointments = () => {
@@ -156,7 +153,7 @@ const PatientAppointments = () => {
                     </td>
                     <td className="fw-medium">
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={appointment.doctor.imgSrc}
                           className="rounded-circle"
                           alt="user"

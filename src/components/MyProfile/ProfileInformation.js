@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "react-bootstrap";
 import { useAuth } from "@/context/AuthContext";
 

@@ -1,11 +1,7 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
 import SearchForm from "./SearchForm";
 import Pagination from "./Pagination";
-import Image from "next/image";
-
 const userData = [
   {
     id: "#999",
@@ -173,7 +169,7 @@ const User = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.userImg}
                                 className="wh-34 rounded-circle"
                                 alt="user"

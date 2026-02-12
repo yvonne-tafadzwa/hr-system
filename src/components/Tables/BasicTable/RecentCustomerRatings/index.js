@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const topInstructorsData = [
   {
     image: "/images/user-13.jpg",
@@ -221,7 +217,7 @@ const RecentCustomerRatings = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.image}
                                 className="wh-44 rounded-circle"
                                 alt="user"

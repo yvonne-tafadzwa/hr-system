@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicGoogleMap from '@/components/Maps/BasicGoogleMap';
 import GoogleMapsWithMarker from '@/components/Maps/GoogleMapsWithMarker';

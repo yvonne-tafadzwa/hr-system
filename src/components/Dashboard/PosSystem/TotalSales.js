@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const TotalSales = () => {
   return (
     <>
@@ -66,7 +62,7 @@ const TotalSales = () => {
                 lineHeight: "51px",
               }}
             >
-              <Image
+              <img
                 src="/images/total-sales-icon.svg"
                 alt="total-sales-icon"
                 width={26}

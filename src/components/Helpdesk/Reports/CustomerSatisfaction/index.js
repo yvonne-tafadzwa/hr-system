@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Card, Form } from "react-bootstrap";
 
 const CustomerSatisfaction = () => {
@@ -123,7 +120,7 @@ const CustomerSatisfaction = () => {
               )}
             </div>
 
-            <Image
+            <img
               src="/images/satisfaction.png"
               alt="satisfaction"
               width={99}

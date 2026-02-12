@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Card, Table, Form, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Card, Table, Form, Button, Row, Col } from "react-bootstrap";
 
 const MenusTable = () => {
   const [menus, setMenus] = useState([]);
@@ -309,7 +305,7 @@ const MenusTable = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={menu.image}
                               className="rounded-circle"
                               alt="order"
@@ -318,8 +314,7 @@ const MenusTable = () => {
                             />
                           </div>
                           <div className="flex-grow-1 ms-2">
-                            <Link
-                              href={menu.viewLink}
+                            <Link to={menu.viewLink}
                               className="fs-14 fw-semibold mb-0 text-secondary"
                             >
                               {menu.item}

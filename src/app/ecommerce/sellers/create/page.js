@@ -1,5 +1,3 @@
-"use client";
- 
 import CreateSeller from '@/components/eCommerce/CreateSeller';
 import { Breadcrumb } from "react-bootstrap";
 

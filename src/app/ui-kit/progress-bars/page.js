@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap"; 
 import BasicProgressBars from "@/components/UIKit/ProgressBars/BasicProgressBars";
 import ProgressWithLabel from "@/components/UIKit/ProgressBars/ProgressWithLabel";

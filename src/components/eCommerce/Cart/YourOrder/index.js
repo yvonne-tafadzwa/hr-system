@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import ProductQuantity from "./ProductQuantity";
+import { Link } from "react-router-dom";import ProductQuantity from "./ProductQuantity";
 
 const YourOrder = () => {
   return (
@@ -31,11 +27,10 @@ const YourOrder = () => {
                   <tr>
                     <td className="text-secondary">#JAN-2345</td>
                     <td>
-                      <Link
-                        href="/ecommerce/product-details"
+                      <Link to="/ecommerce/product-details"
                         className="d-flex align-items-center"
                       >
-                        <Image
+                        <img
                           src="/images/product-1.jpg"
                           className="wh-40 rounded-3"
                           alt="product-1"
@@ -57,11 +52,10 @@ const YourOrder = () => {
                   <tr>
                     <td className="text-secondary">#JAN-1323</td>
                     <td>
-                      <Link
-                        href="/ecommerce/product-details"
+                      <Link to="/ecommerce/product-details"
                         className="d-flex align-items-center"
                       >
-                        <Image
+                        <img
                           src="/images/product-2.jpg"
                           className="wh-40 rounded-3"
                           alt="product-1"
@@ -83,11 +77,10 @@ const YourOrder = () => {
                   <tr>
                     <td className="text-secondary">#DEC-1234</td>
                     <td>
-                      <Link
-                        href="/ecommerce/product-details"
+                      <Link to="/ecommerce/product-details"
                         className="d-flex align-items-center"
                       >
-                        <Image
+                        <img
                           src="/images/product-3.jpg"
                           className="wh-40 rounded-3"
                           alt="product-1"
@@ -111,11 +104,10 @@ const YourOrder = () => {
                   <tr>
                     <td className="text-secondary">#DEC-3567</td>
                     <td>
-                      <Link
-                        href="/ecommerce/product-details"
+                      <Link to="/ecommerce/product-details"
                         className="d-flex align-items-center"
                       >
-                        <Image
+                        <img
                           src="/images/product-4.jpg"
                           className="wh-40 rounded-3"
                           alt="product-1"
@@ -139,11 +131,10 @@ const YourOrder = () => {
                   <tr>
                     <td className="text-secondary">#DEC-1098</td>
                     <td>
-                      <Link
-                        href="/ecommerce/product-details"
+                      <Link to="/ecommerce/product-details"
                         className="d-flex align-items-center"
                       >
-                        <Image
+                        <img
                           src="/images/product-5.jpg"
                           className="wh-40 rounded-3"
                           alt="product-1"

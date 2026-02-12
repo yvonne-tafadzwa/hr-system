@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Row, Col, Dropdown, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const MarketPriceStatistics = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -352,7 +348,7 @@ const MarketPriceStatistics = () => {
 
             <Dropdown className="action-opt">
               <Dropdown.Toggle className="btn bg-transparent p-0 d-flex align-items-center gap-1">
-                <Image
+                <img
                   src="/images/cardano.png"
                   alt="cardano"
                   width={24}
@@ -368,7 +364,7 @@ const MarketPriceStatistics = () => {
 
               <Dropdown.Menu className="bg-white border box-shadow">
                 <Dropdown.Item className="text-secondary" href="#">
-                  <Image
+                  <img
                     src="/images/ethereum.png"
                     alt="ethereum"
                     width={24}
@@ -378,7 +374,7 @@ const MarketPriceStatistics = () => {
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
-                  <Image
+                  <img
                     src="/images/solana.png"
                     alt="solana"
                     width={24}
@@ -388,7 +384,7 @@ const MarketPriceStatistics = () => {
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
-                  <Image
+                  <img
                     src="/images/binance.png"
                     alt="binance"
                     width={24}
@@ -398,7 +394,7 @@ const MarketPriceStatistics = () => {
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
-                  <Image
+                  <img
                     src="/images/bitcoin.png"
                     alt="binance"
                     width={24}
@@ -417,7 +413,7 @@ const MarketPriceStatistics = () => {
               <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center">
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/cardano.png"
                       className="rounded-circle"
                       alt="cardano"

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Tabs, Nav } from "react-bootstrap";
 
 const TabsDemo = () => {

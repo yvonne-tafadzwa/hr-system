@@ -1,8 +1,4 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Card } from "react-bootstrap";
 
 const UpgradeYourPlan = () => {
   return (
@@ -23,7 +19,7 @@ const UpgradeYourPlan = () => {
           </p>
 
           <div className="mb-3">
-            <Image
+            <img
               src="/images/upgrade-2.png"
               alt="upgrade"
               width={274}
@@ -31,8 +27,7 @@ const UpgradeYourPlan = () => {
             />
           </div>
 
-          <Link
-            href="#"
+          <Link to="#"
             className="btn btn-primary rounded-3 fs-16 fw-medium"
             style={{
               padding: "7px 21px",

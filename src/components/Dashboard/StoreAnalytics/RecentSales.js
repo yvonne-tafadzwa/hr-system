@@ -1,9 +1,5 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const RecentSales = () => {
   const [sales, setSales] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -300,7 +296,7 @@ const RecentSales = () => {
                           <td>
                             <div className="d-flex align-items-center">
                               <div className="flex-shrink-0">
-                                <Image
+                                <img
                                   src={sale.customerImage}
                                   className="rounded-circle"
                                   alt={sale.customerName}
@@ -326,7 +322,7 @@ const RecentSales = () => {
 
                           <td>
                             <div className="d-flex align-items-center gap-1">
-                              <Image
+                              <img
                                 src={sale.paymentMethod.logo}
                                 alt={sale.paymentMethod.name}
                                 width={24}

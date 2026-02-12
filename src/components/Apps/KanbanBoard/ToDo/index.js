@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Dropdown, Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const ToDo = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -58,7 +54,7 @@ const ToDo = () => {
             <div className="d-flex align-items-center justify-content-between pt-1">
               <div className="d-flex">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-30.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -67,7 +63,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-31.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -76,7 +72,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-32.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -109,7 +105,7 @@ const ToDo = () => {
             <div className="d-flex align-items-center justify-content-between pt-1">
               <div className="d-flex">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-30.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -118,7 +114,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-31.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -151,7 +147,7 @@ const ToDo = () => {
             <div className="d-flex align-items-center justify-content-between pt-1">
               <div className="d-flex">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-30.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -160,7 +156,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-31.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -169,7 +165,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-32.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -202,7 +198,7 @@ const ToDo = () => {
             <div className="d-flex align-items-center justify-content-between pt-1">
               <div className="d-flex">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-30.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -211,7 +207,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-31.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -244,7 +240,7 @@ const ToDo = () => {
             <div className="d-flex align-items-center justify-content-between pt-1">
               <div className="d-flex">
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-30.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -253,7 +249,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-31.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -262,7 +258,7 @@ const ToDo = () => {
                   />
                 </div>
                 <div className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-32.jpg"
                     className="wh-34 rounded-circle border border-2 border-color-white"
                     alt="user"

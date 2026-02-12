@@ -1,5 +1,3 @@
-"use client";
-
 import DebitCard from "@/components/Finance/Wallet/DebitCard";
 import Static from "@/components/Finance/Wallet/Static";
 import TotalBalance from "@/components/Finance/Wallet/TotalBalance";

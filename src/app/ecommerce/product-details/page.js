@@ -1,5 +1,3 @@
-"use client";
-
 import ProductDescription from '@/components/eCommerce/ProductDetails/ProductDescription';
 import ProductDetails from '@/components/eCommerce/ProductDetails';
 import { Breadcrumb } from "react-bootstrap";

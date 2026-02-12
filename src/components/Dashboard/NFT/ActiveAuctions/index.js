@@ -1,8 +1,4 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Table, Form, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Table, Form, Card, Button } from "react-bootstrap";
 import { useState } from "react";
 
 // Mock data for auctions (replace with data from an API or a state variable)
@@ -201,7 +197,7 @@ const ActiveAuctions = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={auction.imageUrl}
                               className="rounded-3"
                               alt="nft"
@@ -228,7 +224,7 @@ const ActiveAuctions = () => {
 
                       <td>
                         <div className="d-flex align-items-center">
-                          <Image
+                          <img
                             src={auction.recentOffer.userImage}
                             className="border border-1 box-shadow border-color-white rounded-circle"
                             alt="user"
@@ -246,8 +242,7 @@ const ActiveAuctions = () => {
                       </td>
 
                       <td className="text-end">
-                        <Link
-                          href={auction.viewLink}
+                        <Link to={auction.viewLink}
                           className="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
                           style={{
                             backgroundColor: "#ECEEF2",

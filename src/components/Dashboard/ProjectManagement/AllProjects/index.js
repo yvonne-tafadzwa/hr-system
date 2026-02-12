@@ -1,11 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const projectsData = [
+import { Link } from "react-router-dom";const projectsData = [
   {
     id: "#854",
     projectName: "Project CyberSphere",
@@ -313,7 +308,7 @@ const AllProjects = () => {
                       <td className="text-body">{project.id}</td>
 
                       <td>
-                        <Link href={project.viewLink}>
+                        <Link to={project.viewLink}>
                           {project.projectName}
                         </Link>
                       </td>
@@ -326,7 +321,7 @@ const AllProjects = () => {
                             .slice(0, 5)
                             .map((assignee, i) => (
                               <li key={i} className="ms-m-10">
-                                <Image
+                                <img
                                   src={assignee.img}
                                   className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                                   alt="user"
@@ -359,7 +354,7 @@ const AllProjects = () => {
 
                       <td>
                         <div className="d-flex align-items-center gap-1">
-                          <Link href={project.viewLink}>
+                          <Link to={project.viewLink}>
                             <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                               <span className="material-symbols-outlined fs-16 text-primary">
                                 visibility

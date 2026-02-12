@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Image from "next/image";
 import Stats from "./Stats";
 
 const Welcome = () => {
@@ -36,7 +33,7 @@ const Welcome = () => {
             </Col>
 
             <Col lg={6} className="text-lg-end text-center">
-              <Image
+              <img
                 src="/images/bank-real-estate.png"
                 alt="bank-real-estate"
                 width={470}

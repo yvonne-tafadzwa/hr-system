@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Form, Button, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const Chat = () => {
   return (
     <>
@@ -46,7 +42,7 @@ const Chat = () => {
             <li className="mb-3">
               <div className="d-flex align-items-center mb-2">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-62.jpg"
                     className="rounded-circle"
                     alt="user"
@@ -71,7 +67,7 @@ const Chat = () => {
                   <span className="fs-12">05:30PM</span>
                 </div>
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-63.jpg"
                     className="rounded-circle"
                     alt="user"
@@ -92,7 +88,7 @@ const Chat = () => {
             <li className="mb-3">
               <div className="d-flex align-items-center mb-2">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-64.jpg"
                     className="rounded-circle"
                     alt="user"
@@ -117,7 +113,7 @@ const Chat = () => {
                   <span className="fs-12">05:30PM</span>
                 </div>
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/user-65.jpg"
                     className="rounded-circle"
                     alt="user"

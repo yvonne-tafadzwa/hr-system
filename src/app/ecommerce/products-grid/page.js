@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsGrid from '@/components/eCommerce/ProductsGrid';
 import { Breadcrumb } from "react-bootstrap";
 

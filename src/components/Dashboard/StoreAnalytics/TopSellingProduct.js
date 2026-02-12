@@ -1,9 +1,5 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const TopSellingProduct = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -96,7 +92,7 @@ const TopSellingProduct = () => {
               >
                 <div className="d-flex align-items-center gap-2">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={product.image}
                       alt={product.name}
                       className="rounded-2"

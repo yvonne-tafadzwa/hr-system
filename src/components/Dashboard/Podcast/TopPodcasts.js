@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const podcastsData = [
   {
     id: 1,
@@ -132,7 +128,7 @@ const TopPodcasts = () => {
                   <td>
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0">
-                        <Image
+                        <img
                           src={podcast.image}
                           className="wh-44 rounded-circle"
                           alt={podcast.name}

@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useRef, useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -238,7 +235,7 @@ const FeaturedMusic = () => {
                 </div>
               </div>
 
-              <Image
+              <img
                 src={track.image}
                 className="position-absolute bottom-0 end-0 z-n1 for-rtl-shape d-none d-md-block"
                 alt="shape"

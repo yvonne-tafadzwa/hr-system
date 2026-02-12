@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Image from "next/image";
 import Pagination from "./Pagination";
 
 const agentsData = [
@@ -125,7 +122,7 @@ const PerformanceOfAgents = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.agentName.img}
                                 className="wh-34 rounded-circle"
                                 alt="user"

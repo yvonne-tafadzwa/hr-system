@@ -1,5 +1,3 @@
-"use client";
-
 import EditProduct from '@/components/eCommerce/EditProduct';
 import { Breadcrumb } from "react-bootstrap";
 

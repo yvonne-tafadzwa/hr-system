@@ -1,12 +1,7 @@
-"use client";
-
 import { Dropdown } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Image from "next/image";
-import Link from "next/link";
-
-const TopSellingProducts = () => {
+import { Link } from "react-router-dom";const TopSellingProducts = () => {
   const products = [
     {
       id: 1,
@@ -148,11 +143,10 @@ const TopSellingProducts = () => {
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>
-                <Link
-                  href={product.viewDetails}
+                <Link to={product.viewDetails}
                   className="beauty-product d-block text-decoration-none"
                 >
-                  <Image
+                  <img
                     src={product.image}
                     className="mb-3 rounded-2"
                     alt={product.name}

@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Link from "next/link";
-
-const YourOrder = () => {
+import { Link } from "react-router-dom";const YourOrder = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -12,7 +8,7 @@ const YourOrder = () => {
 
           <div className="d-flex justify-content-between align-items-center mb-3">
             <span className="text-secondary">Ordered items</span>
-            <Link href="/ecommerce/cart" className="text-primary text-decoration-none">
+            <Link to="/ecommerce/cart" className="text-primary text-decoration-none">
               Edit Cart{" "}
             </Link>
           </div>

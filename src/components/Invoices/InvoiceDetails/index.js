@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const InvoiceDetails = () => {
   return (
     <>
@@ -25,7 +21,7 @@ const InvoiceDetails = () => {
 
             <Col sm={4} md={4} lg={4}>
               <div className="mb-4 text-center">
-                <Image
+                <img
                   src="/images/qr-code.svg"
                   className="wh-150"
                   alt="qr-code"

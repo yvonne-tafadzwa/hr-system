@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Image } from "react-bootstrap";
 
 const FluidExample = () => {

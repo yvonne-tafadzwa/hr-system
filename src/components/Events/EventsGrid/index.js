@@ -1,10 +1,5 @@
-"use client";
-
 import { Row, Col, Card, ProgressBar } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const EventsGrid = () => {
+import { Link } from "react-router-dom";const EventsGrid = () => {
   return (
     <>
       <Row>
@@ -12,8 +7,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-1.jpg"
                     className="rounded-3"
                     alt="event"
@@ -28,8 +23,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Annual Conference 2024
@@ -42,7 +36,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-6.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -51,7 +45,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-7.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -60,7 +54,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-8.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -69,7 +63,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-9.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -99,8 +93,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-2.jpg"
                     className="rounded-3"
                     alt="event"
@@ -115,8 +109,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Leadership Summit 2024
@@ -129,7 +122,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-10.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -139,7 +132,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-11.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -169,8 +162,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-1.jpg"
                     className="rounded-3"
                     alt="event"
@@ -185,8 +178,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Product Launch Webinar
@@ -199,7 +191,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-12.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -208,7 +200,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-13.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -217,7 +209,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-14.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -247,8 +239,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-4.jpg"
                     className="rounded-3"
                     alt="event"
@@ -263,8 +255,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 AI in Healthcare Symposium
@@ -277,7 +268,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-15.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -307,8 +298,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-5.jpg"
                     className="rounded-3"
                     alt="event"
@@ -323,8 +314,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Tech Summit 2024
@@ -337,7 +327,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-16.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -346,7 +336,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-17.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -376,8 +366,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-6.jpg"
                     className="rounded-3"
                     alt="event"
@@ -392,8 +382,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Startup Pitch Day
@@ -406,7 +395,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-18.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -415,7 +404,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-19.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -424,7 +413,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-20.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -454,8 +443,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-7.jpg"
                     className="rounded-3"
                     alt="event"
@@ -470,8 +459,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Workshop: Digital Marketing
@@ -484,7 +472,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-21.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -514,8 +502,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-8.jpg"
                     className="rounded-3"
                     alt="event"
@@ -530,8 +518,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Charity Gala Dinner
@@ -544,7 +531,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-22.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -554,7 +541,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-23.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -564,7 +551,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-24.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -574,7 +561,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-25.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -604,8 +591,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-9.jpg"
                     className="rounded-3"
                     alt="event"
@@ -620,8 +607,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Web Development Seminar
@@ -634,7 +620,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-26.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -644,7 +630,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-27.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -674,8 +660,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-10.jpg"
                     className="rounded-3"
                     alt="event"
@@ -690,8 +676,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Networking Mixer
@@ -704,7 +689,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-28.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -714,7 +699,7 @@ const EventsGrid = () => {
                 </li>
 
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-29.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -744,8 +729,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-1.jpg"
                     className="rounded-3"
                     alt="event"
@@ -760,8 +745,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Annual Conference 2024
@@ -774,7 +758,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-6.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -783,7 +767,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-7.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -792,7 +776,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-8.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -822,8 +806,8 @@ const EventsGrid = () => {
           <Card className="bg-white border-0 rounded-3 mb-4 transition-y">
             <Card.Body className="p-4">
               <div className="position-relative mb-3">
-                <Link href="/events/details">
-                  <Image
+                <Link to="/events/details">
+                  <img
                     src="/images/event-2.jpg"
                     className="rounded-3"
                     alt="event"
@@ -838,8 +822,7 @@ const EventsGrid = () => {
                 </div>
               </div>
 
-              <Link
-                href="/events/details"
+              <Link to="/events/details"
                 className="text-secondary text-decoration-none fs-18 fw-bold hover d-block mb-2"
               >
                 Leadership Summit 2024
@@ -852,7 +835,7 @@ const EventsGrid = () => {
 
               <ul className="ps-0 mb-4 list-unstyled d-flex align-items-center">
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-10.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -861,7 +844,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-11.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -870,7 +853,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-12.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"
@@ -879,7 +862,7 @@ const EventsGrid = () => {
                   />
                 </li>
                 <li className="ms-m-15">
-                  <Image
+                  <img
                     src="/images/user-13.jpg"
                     className="wh-40 rounded-circle border border-2 border-color-white"
                     alt="user"

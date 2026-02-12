@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Button, Table, Form, Row, Col } from "react-bootstrap";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import AddANewCustomerModal from "./AddANewCustomerModal";
 
@@ -335,7 +332,7 @@ const Customers = () => {
                         </td>
                         <td>
                           <div className="d-flex align-items-center">
-                            <Image
+                            <img
                               src={customer.image}
                               className="wh-44 rounded-2"
                               alt={customer.name}

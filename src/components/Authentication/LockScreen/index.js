@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const LockScreen = () => {
   return (
     <>
@@ -26,7 +22,7 @@ const LockScreen = () => {
           <Card className="bg-white border-0 rounded-bottom-3 mb-4">
             <Card.Body className="p-4">
               <div className="text-center">
-                <Image
+                <img
                   src="/images/user-53.jpg"
                   className="wh-55 border border-2 border-color-white"
                   alt="user"

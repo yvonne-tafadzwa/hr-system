@@ -1,11 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Button, Row, Col, Dropdown, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-// Example property data array
+import { Link } from "react-router-dom";// Example property data array
 const properties = [
   {
     id: 1,
@@ -231,8 +226,7 @@ const PropertyList = () => {
         </Col>
 
         <Col sm={7} className="text-sm-end text-center mt-3 mt-sm-0">
-          <Link
-            href="/real-estate/add-property/"
+          <Link to="/real-estate/add-property/"
             className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
           >
             <i className="ri-add-line d-none d-sm-inline-block"></i>
@@ -247,8 +241,7 @@ const PropertyList = () => {
             <Card className="border-0 rounded-3 bg-white property-list-hover mb-4">
               <Card.Body className="p-4">
                 <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
-                  <Link
-                    href={property.viewMore}
+                  <Link to={property.viewMore}
                     className="text-decoration-none"
                   >
                     <h3 className="mb-0">{property.location}</h3>
@@ -281,11 +274,10 @@ const PropertyList = () => {
                   </Dropdown>
                 </div>
 
-                <Link
-                  href={property.viewMore}
+                <Link to={property.viewMore}
                   className="text-decoration-none d-block mb-4"
                 >
-                  <Image
+                  <img
                     src={property.imageSrc}
                     className="rounded-2"
                     alt="property"
@@ -350,12 +342,11 @@ const PropertyList = () => {
                 </ul>
 
                 <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center">
-                  <Link
-                    href={property.agent.detailsLink}
+                  <Link to={property.agent.detailsLink}
                     className="d-flex align-items-center text-decoration-none"
                   >
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src={property.agent.image}
                         className="rounded-circle border border-white"
                         alt="user"
@@ -372,8 +363,7 @@ const PropertyList = () => {
                       </span>
                     </div>
                   </Link>
-                  <Link
-                    href={property.viewMore}
+                  <Link to={property.viewMore}
                     className="text-primary fs-15 text-decoration-none read"
                   >
                     View More

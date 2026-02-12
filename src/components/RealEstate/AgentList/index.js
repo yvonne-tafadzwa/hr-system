@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Button, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { Link } from "react-router-dom";import { useState } from "react";
 
 // Sample agent data (this could come from an API or database)
 const agents = [
@@ -191,7 +187,7 @@ const AgentList = () => {
               <div className="d-flex">
                 <div className="flex-shrink-0">
                   <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                    <Image
+                    <img
                       src={agent.image}
                       className="rounded-3"
                       alt={agent.name}
@@ -266,14 +262,12 @@ const AgentList = () => {
                 </ul>
 
                 <div className="d-flex align-items-center">
-                  <Link
-                    href="/apps/chat/"
+                  <Link to="/apps/chat/"
                     className="btn btn-primary py-2 px-3 fw-medium"
                   >
                     Message
                   </Link>
-                  <Link
-                    href="/real-estate/agent-overview/"
+                  <Link to="/real-estate/agent-overview/"
                     className="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
                   >
                     View Profile

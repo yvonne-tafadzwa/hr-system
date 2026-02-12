@@ -1,5 +1,3 @@
-"use client";
- 
 import ConnectWallet from "@/components/NFT/ConnectWallet";
 import { Breadcrumb } from "react-bootstrap";
 

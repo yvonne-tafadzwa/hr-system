@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const ChooseLanguage = () => {
   return (
     <>
@@ -29,7 +25,7 @@ const ChooseLanguage = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/usa.svg"
                       className="wh-30 rounded-circle"
                       alt="united-states"
@@ -53,7 +49,7 @@ const ChooseLanguage = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/canada.svg"
                       className="wh-30 rounded-circle"
                       alt="spain"
@@ -77,7 +73,7 @@ const ChooseLanguage = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/germany.svg"
                       className="wh-30 rounded-circle"
                       alt="spain"
@@ -101,7 +97,7 @@ const ChooseLanguage = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/portugal.svg"
                       className="wh-30 rounded-circle"
                       alt="portugal"
@@ -125,7 +121,7 @@ const ChooseLanguage = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/spain.svg"
                       className="wh-30 rounded-circle"
                       alt="spain"

@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const MyCards = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -44,7 +40,7 @@ const MyCards = () => {
                   <span className="text-white fs-12 fw-medium d-block mb-3">
                     Credit Card
                   </span>
-                  <Image
+                  <img
                     src="/images/board-1.png"
                     alt="board"
                     width={45}
@@ -85,7 +81,7 @@ const MyCards = () => {
                   <span className="text-white fs-12 fw-medium d-block mb-3">
                     Credit Card
                   </span>
-                  <Image
+                  <img
                     src="/images/board-1.png"
                     alt="board"
                     width={45}

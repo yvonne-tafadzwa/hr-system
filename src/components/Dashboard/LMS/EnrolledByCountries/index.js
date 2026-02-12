@@ -1,7 +1,4 @@
-"use client";
-
 import { Dropdown, Card, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
 import WorldMapContent from "./WorldMapContent";
 
 const salesData = [
@@ -93,7 +90,7 @@ const EnrolledByCountries = () => {
             {salesData.map((location, index) => (
               <li key={index} className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={location.flag}
                     className="rounded-circle"
                     alt={location.name}

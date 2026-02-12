@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Dropdown, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import WorldMapContent from "./WorldMapContent";
 
@@ -98,7 +95,7 @@ const CallCenterGeography = () => {
             {locationsData.map((location, index) => (
               <li className="d-flex align-items-center pe-0" key={index}>
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={location.image}
                     className="rounded-circle"
                     alt={location.country}

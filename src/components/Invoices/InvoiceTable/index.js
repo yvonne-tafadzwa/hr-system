@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import SearchForm from "./SearchForm";
+import { Link } from "react-router-dom";import SearchForm from "./SearchForm";
 import Pagination from "./Pagination";
 
 const invoiceData = [
@@ -171,7 +167,7 @@ const InvoiceTable = () => {
                         <td>{value.invoiceID}</td>
                         <td>
                           <div className="d-flex align-items-center">
-                            <Image
+                            <img
                               src={value.customer.img}
                               className="wh-40"
                               alt="user"
@@ -193,7 +189,7 @@ const InvoiceTable = () => {
                         <td>{value.walletBalance}</td>
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Link href="/invoices/details/">
+                            <Link to="/invoices/details/">
                               <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                 <span className="material-symbols-outlined fs-16 text-primary">
                                   visibility

@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const PopularRooms = () => {
@@ -136,11 +132,10 @@ const PopularRooms = () => {
         >
           {rooms.map((room) => (
             <SwiperSlide key={room.id}>
-              <Link
-                href={room.link}
+              <Link to={room.link}
                 className="text-decoration-none position-relative d-block"
               >
-                <Image
+                <img
                   src={room.image}
                   className="rounded-3"
                   alt={room.name}

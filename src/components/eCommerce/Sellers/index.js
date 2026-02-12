@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col, Dropdown, Card, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-// Seller data
+import { Link } from "react-router-dom";// Seller data
 const sellersData = [
   {
     id: 1,
@@ -268,8 +263,7 @@ const Sellers = () => {
               </span>
             </Form>
 
-            <Link
-              href="/ecommerce/sellers/create/"
+            <Link to="/ecommerce/sellers/create/"
               className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
             >
               <span className="py-sm-1 d-block">
@@ -290,7 +284,7 @@ const Sellers = () => {
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0">
-                        <Image
+                        <img
                           src={seller.image}
                           className="wh-52"
                           alt="seller"
@@ -299,8 +293,7 @@ const Sellers = () => {
                         />
                       </div>
                       <div className="flex-grow-1 ms-3">
-                        <Link
-                          href="/ecommerce/sellers/details/"
+                        <Link to="/ecommerce/sellers/details/"
                           className="text-decoration-none text-secondary fw-medium fs-16 mb-1"
                         >
                           {seller.name}

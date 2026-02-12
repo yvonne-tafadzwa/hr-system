@@ -1,9 +1,5 @@
-"use client";
-
 import React from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const DailyLimit = () => {
   return (
     <>
@@ -52,7 +48,7 @@ const DailyLimit = () => {
         >
           <div className="d-flex align-items-center" style={{ gap: "10px" }}>
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src="/images/avatar-with-laptop.png"
                 alt="avatar-with-laptop"
                 width={75}
@@ -67,7 +63,7 @@ const DailyLimit = () => {
             </div>
           </div>
 
-          <Image
+          <img
             src="/images/4dots.png"
             className="position-absolute bottom-0 end-0"
             alt="4dots"

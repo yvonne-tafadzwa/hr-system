@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap"; 
 import DefaultBadges from "@/components/UIKit/Badges/DefaultBadges";
 import RoundedPillBadges from "@/components/UIKit/Badges/RoundedPillBadges";

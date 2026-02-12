@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap"; 
 import VideoDefault from "@/components/UIKit/Videos/VideoDefault";
 import VideoRounded from "@/components/UIKit/Videos/VideoRounded";

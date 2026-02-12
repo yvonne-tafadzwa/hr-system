@@ -1,5 +1,3 @@
-"use client";
-  
 import TransactionsTable from "@/components/CryptoTrader/TransactionsTable";
 import { Breadcrumb } from "react-bootstrap";
 

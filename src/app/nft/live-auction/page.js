@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import DownloadApp from "@/components/NFT/LiveAuction/DownloadApp";
 import HistoryOfBids from "@/components/NFT/LiveAuction/HistoryOfBids";

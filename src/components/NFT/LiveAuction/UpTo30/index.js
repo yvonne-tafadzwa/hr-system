@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col, Button, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const nftData = [
+import { Link } from "react-router-dom";const nftData = [
   {
     id: 35250,
     title: "BDancing Cookies",
@@ -150,11 +145,10 @@ const UpTo30 = () => {
         {currentItems.map((nft) => (
           <Col sm={6} xxl={4} key={nft.id}>
             <div className="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4">
-              <Link
-                href={nft.nftDetails}
+              <Link to={nft.nftDetails}
                 className="d-block mb-3 text-decoration-none position-relative"
               >
-                <Image
+                <img
                   src={nft.nftImage}
                   className="rounded-3"
                   alt="nft"
@@ -167,12 +161,11 @@ const UpTo30 = () => {
               </Link>
 
               <div className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
-                <Link
-                  href={nft.creatorDetails}
+                <Link to={nft.creatorDetails}
                   className="d-flex align-items-center text-decoration-none"
                 >
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={nft.userImage}
                       className="rounded-circle"
                       alt="user"
@@ -185,7 +178,7 @@ const UpTo30 = () => {
                     <h4 className="fw-semibold fs-14 mb-0">{nft.title}</h4>
                   </div>
                 </Link>
-                <Image
+                <img
                   src="/images/verify.svg"
                   className="cursor"
                   alt="verify"
@@ -195,8 +188,7 @@ const UpTo30 = () => {
               </div>
 
               <div className="d-flex justify-content-between align-items-center mb-4 pb-2">
-                <Link
-                  href={nft.nftDetails}
+                <Link to={nft.nftDetails}
                   className="d-flex align-items-center text-decoration-none"
                 >
                   <div className="flex-grow-1">

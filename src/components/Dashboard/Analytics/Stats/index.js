@@ -1,7 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
 import WebsiteVisits from "./WebsiteVisits";
 import NewRegisters from "./NewRegisters";
 
@@ -47,7 +44,7 @@ const Stats = () => {
           </Col>
 
           <Col lg={3} className="d-none d-md-block">
-            <Image
+            <img
               src="/images/shape-2.png"
               className="position-absolute top-0 end-0 bottom-0 shape-2"
               alt="shape"

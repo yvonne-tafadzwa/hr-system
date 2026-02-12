@@ -1,7 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Card } from "react-bootstrap";
 
 const SearchContent = () => {
   return (

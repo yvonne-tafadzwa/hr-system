@@ -1,7 +1,4 @@
-"use client";
-
 import { Dropdown, Card, Table } from "react-bootstrap";
-import Image from "next/image";
 import WorldMapContent from "./WorldMapContent";
 import { useState } from "react";
 
@@ -133,7 +130,7 @@ const SalesByLocations = () => {
                     <tr key={index} className="tr-lcbp-none">
                       <td className="text-end fw-medium ps-0">
                         <div className="d-flex">
-                          <Image
+                          <img
                             src={location.flag}
                             className="rounded-circle"
                             alt={location.country}

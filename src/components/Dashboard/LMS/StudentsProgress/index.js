@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Dropdown, Card, Table, ProgressBar, Button } from "react-bootstrap";
 

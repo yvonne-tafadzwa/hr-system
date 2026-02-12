@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Dropdown, Row, Col, Table, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const AgentsPerformanceOverview = () => {
@@ -119,7 +116,7 @@ const AgentsPerformanceOverview = () => {
               <Col sm={4}>
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0 position-relative">
-                    <Image
+                    <img
                       src={topAgent.image}
                       className="rounded-2"
                       alt={topAgent.name}
@@ -162,7 +159,7 @@ const AgentsPerformanceOverview = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0 position-relative">
-                            <Image
+                            <img
                               src={agent.image}
                               className="rounded-2"
                               alt={agent.name}

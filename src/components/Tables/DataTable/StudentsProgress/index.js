@@ -1,5 +1,3 @@
-"use client";
-
 import { Dropdown, Card, Table, ProgressBar } from "react-bootstrap";
 import Pagination from "./Pagination";
 

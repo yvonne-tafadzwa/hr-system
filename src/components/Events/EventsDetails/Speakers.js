@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const speakersData = [
   {
     image: "/images/user-1.jpg",
@@ -47,7 +43,7 @@ const Speakers = () => {
                   <tr key={i}>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={value.image}
                           className="wh-40 rounded-3"
                           alt="user-1"

@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Dropdown, Card, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const initialInstructors = [
   {
     image: "/images/user-13.jpg",
@@ -170,7 +166,7 @@ const TopInstructors = () => {
                   <tr key={i}>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={instructor.image}
                           className="wh-44 rounded-circle"
                           alt="user"

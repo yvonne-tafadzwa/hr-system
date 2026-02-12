@@ -1,9 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
-
-const HeroBanner = () => {
+import { Link } from "react-router-dom";const HeroBanner = () => {
   return (
     <>
       <div className="banner-area bg-img pb-0" id="home">
@@ -19,8 +14,7 @@ const HeroBanner = () => {
               confidence.
             </p>
 
-            <Link
-              href="/front-pages/contact/"
+            <Link to="/front-pages/contact/"
               className="btn btn-primary py-2 px-4 fs-16 fw-medium rounded-3"
             >
               <div className="d-flex align-items-center gap-1">
@@ -31,7 +25,7 @@ const HeroBanner = () => {
           </div>
 
           <div className="banner-img-wrap text-center">
-            <Image
+            <img
               src="/images/landing/banner-img.png"
               alt="banner-img"
               width={848}
@@ -40,28 +34,28 @@ const HeroBanner = () => {
           </div>
 
           {/* Shape Images */}
-          <Image
+          <img
             src="/images/landing/shape-3.png"
             className="shape shape-7"
             alt="shape"
             width={685}
             height={685}
           />
-          <Image
+          <img
             src="/images/landing/shape-4.png"
             className="shape shape-8"
             alt="shape"
             width={447}
             height={453}
           />
-          <Image
+          <img
             src="/images/landing/shape-5.png"
             className="shape shape-9"
             alt="shape"
             width={171}
             height={171}
           />
-          <Image
+          <img
             src="/images/landing/shape-6.png"
             className="shape shape-10"
             alt="shape"

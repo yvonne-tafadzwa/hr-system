@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Stats = () => {
   // State for stats data
   const [stats, setStats] = useState([]);
@@ -84,7 +80,7 @@ const Stats = () => {
                   </div>
 
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={stat.image}
                       width={60}
                       height={60}

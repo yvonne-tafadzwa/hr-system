@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const channelsData = [
   {
     id: 1,
@@ -57,7 +53,7 @@ const CustomersFromChannels = () => {
                 <div className="d-flex align-items-center justify-content-between gap-2">
                   <div className="flex-shrink-0">
                     <div className="d-flex gap-3">
-                      <Image
+                      <img
                         src={channel.icon} 
                         alt={channel.name}
                         width={30}

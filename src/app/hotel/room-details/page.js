@@ -1,5 +1,3 @@
-"use client";
-
 import Reviews from "@/components/Hotel/Reviews";
 import RoomDetailsContent from "@/components/Hotel/RoomDetailsContent";
 import { Breadcrumb } from "react-bootstrap";

@@ -1,9 +1,5 @@
-"use client";
-
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const episodesData = [
   {
     id: 1,
@@ -111,7 +107,7 @@ const UpcomingEpisodes = () => {
                       lineHeight: "40px",
                     }}
                   >
-                    <Image
+                    <img
                       src={episode.icon}
                       alt="notice-board-icon"
                       width={24}

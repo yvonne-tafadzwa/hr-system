@@ -1,5 +1,3 @@
-"use client";
-
 import AgentOverview from "@/components/RealEstate/AgentOverview";
 import { Breadcrumb } from "react-bootstrap";
 

@@ -1,5 +1,3 @@
-"use client";
-   
 import WalletTable from "@/components/CryptoTrader/WalletTable";
 import { Breadcrumb } from "react-bootstrap";
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { Form} from "react-bootstrap";
 
 const TimePicker = () => {

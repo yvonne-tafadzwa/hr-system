@@ -1,12 +1,8 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   const [isToggleNavbar, setToggleNavbar] = useState(true);
 
@@ -39,14 +35,14 @@ const Navbar = () => {
       >
         <div className="container">
           <Link className="navbar-brand me-xl-5 me-3" href="/">
-            <Image
+            <img
               src="/images/landing/logo.svg"
               alt="logo"
               width={132}
               height={34}
               className="black-logo"
             />
-            <Image
+            <img
               src="/images/white-logo.svg"
               alt="logo"
               width={132}
@@ -74,8 +70,7 @@ const Navbar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
-                  href="/"
+                <Link to="/"
                   className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/" ? "active" : ""
                     }`}
                 >
@@ -84,8 +79,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  href="/front-pages/features/"
+                <Link to="/front-pages/features/"
                   className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/features/" ? "active" : ""
                     }`}
                 >
@@ -94,8 +88,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  href="/front-pages/team/"
+                <Link to="/front-pages/team/"
                   className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/team/" ? "active" : ""
                     }`}
                 >
@@ -104,8 +97,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  href="/front-pages/faq/"
+                <Link to="/front-pages/faq/"
                   className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/faq/" ? "active" : ""
                     }`}
                 >
@@ -114,8 +106,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  href="/front-pages/contact/"
+                <Link to="/front-pages/contact/"
                   className={`nav-link fs-16 fw-medium text-body hover px-0 px-md-2 mx-1 mx-xl-0 px-xl-4 ${pathname === "/front-pages/contact/" ? "active" : ""
                     }`}
                 >
@@ -134,16 +125,14 @@ const Navbar = () => {
             </ul>
 
             <div className="othres d-flex align-items-center gap-3">
-              <Link
-                href="/sign-in/"
+              <Link to="/sign-in/"
                 className="btn btn-outline-primary-div py-2 px-4 fw-medium fs-16 rounded-3 d-flex align-items-center gap-1"
               >
                 <i className="ri-login-box-line fs-18 lh-1"></i>
                 <span>Login</span>
               </Link>
 
-              <Link
-                href="/sign-up/"
+              <Link to="/sign-up/"
                 className="btn btn-primary-div py-2 px-4 fw-medium fs-16 text-white rounded-3 d-flex align-items-center gap-1"
               >
                 <i className="ri-user-line fs-18 lh-1"></i>

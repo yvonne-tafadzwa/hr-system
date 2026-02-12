@@ -1,9 +1,5 @@
-"use client";
-
 import { Dropdown, Card, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
-import Link from "next/link";
-
-const Snoozed = () => {
+import { Link } from "react-router-dom";const Snoozed = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -188,8 +184,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Google</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         2-Step Verification Turn Off{" "}
@@ -223,8 +218,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Facebook</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Friend Request{" "}
@@ -258,8 +252,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Linkedin</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Travel Information{" "}
@@ -293,8 +286,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Ethan Parker</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Leave Application{" "}
@@ -328,8 +320,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Dribbble</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Design Inspiration{" "}
@@ -363,8 +354,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Instagram</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Training Schedule{" "}
@@ -398,8 +388,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Isabella Cooper</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Internal Auditor{" "}
@@ -433,8 +422,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Google</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Password Changed{" "}
@@ -468,8 +456,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Olivia Rodriguez</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Virtual Training{" "}
@@ -503,8 +490,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">YouTube</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         New Subscriber{" "}
@@ -538,8 +524,7 @@ const Snoozed = () => {
                       <span className="fs-14 fw-medium">Google</span>
                     </td>
                     <td>
-                      <Link
-                        href="/apps/email/read-email/"
+                      <Link to="/apps/email/read-email/"
                         className="w-330 d-inline-block text-truncate text-secondary"
                       >
                         Security Alert{" "}

@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Carousel } from "react-bootstrap";
-import Image from "next/image";
-
 const UncontrolledSlides = () => {
   return (
     <>
@@ -12,7 +8,7 @@ const UncontrolledSlides = () => {
 
           <Carousel>
             <Carousel.Item>
-              <Image
+              <img
                 src="/images/carousel-1.jpg"
                 className="d-block w-100"
                 alt="carousel"
@@ -28,7 +24,7 @@ const UncontrolledSlides = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-              <Image
+              <img
                 src="/images/carousel-2.jpg"
                 className="d-block w-100"
                 alt="carousel"

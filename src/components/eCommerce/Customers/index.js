@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const customersData = [
   {
     id: "#JAN-854",
@@ -333,7 +329,7 @@ const Customers = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={customer.customerImg}
                               className="wh-34 rounded-circle"
                               alt="user"

@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Button, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const ConnectWallet = () => {
   // Define wallet data in state
   const [wallets, setWallets] = useState([
@@ -51,7 +47,7 @@ const ConnectWallet = () => {
         <Col key={wallet.id} sm={6} lg={4} className="mb-4">
           <Card className="bg-white border-0 rounded-3 p-4 py-lg-5 text-center h-100">
             <div className="mb-3">
-              <Image
+              <img
                 src={wallet.image}
                 className="rounded-circle"
                 alt={wallet.name}

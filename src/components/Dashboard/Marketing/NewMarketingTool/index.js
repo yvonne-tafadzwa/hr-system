@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const NewMarketingTool = () => {
   return (
     <>
@@ -20,7 +16,7 @@ const NewMarketingTool = () => {
           </h3>
 
           <div className="py-4 mb-3">
-            <Image
+            <img
               src="/images/marketing-tool.png"
               alt="marketing-tool"
               width={244}

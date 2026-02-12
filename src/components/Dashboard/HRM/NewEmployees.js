@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const NewEmployees = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -61,7 +57,7 @@ const NewEmployees = () => {
                 className="text-center rounded-2 bg-primary-div-50"
                 style={{ width: "44px", height: "44px", lineHeight: "44px" }}
               >
-                <Image
+                <img
                   src="/images/new-employees.svg"
                   alt="icon-employees"
                   width={25}

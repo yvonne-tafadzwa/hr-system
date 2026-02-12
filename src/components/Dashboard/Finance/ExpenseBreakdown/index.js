@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
 import { Card } from "react-bootstrap";

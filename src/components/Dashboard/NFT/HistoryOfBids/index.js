@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Dropdown, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const HistoryOfBids = () => {
   // State for dynamic bid data
   const [bids, setBids] = useState([
@@ -106,7 +102,7 @@ const HistoryOfBids = () => {
                   <td>
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0">
-                        <Image
+                        <img
                           src={bid.imageUrl}
                           className="rounded-circle"
                           alt={bid.name}

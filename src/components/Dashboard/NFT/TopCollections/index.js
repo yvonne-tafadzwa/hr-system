@@ -1,8 +1,4 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Card } from "react-bootstrap";
 import { useState } from "react";
@@ -40,7 +36,7 @@ const TopCollections = () => {
       <Card.Body className="p-4">
         <div className="mb-4 d-flex flex-wrap gap-2 justify-content-between align-items-center">
           <h3 className="mb-0">Top Collections</h3>
-          <Link href="#" className="text-decoration-none text-primary fs-12">
+          <Link to="#" className="text-decoration-none text-primary fs-12">
             View More
           </Link>
         </div>
@@ -61,8 +57,8 @@ const TopCollections = () => {
           {collections.map((collection) => (
             <SwiperSlide key={collection.id}>
               <div className="position-relative">
-                <Link href="#" className="d-block position-relative">
-                  <Image
+                <Link to="#" className="d-block position-relative">
+                  <img
                     src={collection.imageUrl}
                     className="rounded-3"
                     alt="collection"
@@ -80,14 +76,14 @@ const TopCollections = () => {
                   >
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src={collection.userImage}
                           className="rounded-circle"
                           alt="user"
                           width={27}
                           height={27}
                         />
-                        <Image
+                        <img
                           src={collection.verifiedBadge}
                           className="position-absolute top-100 start-100 translate-middle"
                           alt="verified"
@@ -104,8 +100,7 @@ const TopCollections = () => {
                         </span>
                       </div>
                     </div>
-                    <Link
-                      href="#"
+                    <Link to="#"
                       className="d-inline-block text-secondary text-center rounded-circle text-decoration-none fs-16 hover-bg"
                       style={{
                         width: "30px",

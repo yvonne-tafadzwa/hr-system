@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const RecentLabReports = () => {
   const [reports, setReports] = useState([]);
 
@@ -48,7 +44,7 @@ const RecentLabReports = () => {
                 >
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src={`/images/${report.type}.png`}
                         alt="pdf"
                         width={30}

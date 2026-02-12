@@ -1,11 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Card, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const productData = [
+import { Link } from "react-router-dom";const productData = [
   {
     id: 1,
     name: 'Apple MacBook Pro 16.2" with M3 Pro Chip',
@@ -156,8 +151,8 @@ const ProductsGrid = () => {
             <Col key={product.id} sm={6} lg={4}>
               <div className="mb-4 transition-y">
                 <div className="position-relative mb-3">
-                  <Link href={product.viewLink}>
-                    <Image
+                  <Link to={product.viewLink}>
+                    <img
                       src={product.image}
                       className="rounded-3"
                       alt={product.name}
@@ -176,8 +171,7 @@ const ProductsGrid = () => {
                   </button>
                 </div>
 
-                <Link
-                  href={product.viewLink}
+                <Link to={product.viewLink}
                   className="text-secondary text-decoration-none fs-16 hover d-block mb-4"
                 >
                   {product.name}

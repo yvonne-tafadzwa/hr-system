@@ -1,7 +1,4 @@
-"use client";
-
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 
 const Profile = () => {
@@ -70,7 +67,7 @@ const Profile = () => {
         <Dropdown.Toggle className="d-xxl-flex align-items-center bg-transparent border-0 text-start p-0 cursor">
           <div className="flex-shrink-0">
             {profile?.avatar_url ? (
-              <Image
+              <img
                 className="rounded-circle wh-40 administrator"
                 src={getAvatarUrl()}
                 alt="profile"
@@ -109,7 +106,7 @@ const Profile = () => {
           <div className="d-flex align-items-center info">
             <div className="flex-shrink-0">
               {profile?.avatar_url ? (
-                <Image
+                <img
                   className="rounded-circle wh-30 administrator"
                   src={getAvatarUrl()}
                   alt="profile"

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Badge } from "react-bootstrap";
 
 const HeadingsBadges = () => {

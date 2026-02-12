@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Welcome = () => {
   return (
     <>
@@ -58,7 +54,7 @@ const Welcome = () => {
 
             <Col xs={12} sm={6} lg={3} xl={4} xxl={5}>
               <div className="welcome-img text-center text-sm-end mt-4 mt-sm-0">
-                <Image
+                <img
                   src="/images/dr-olivia.png"
                   alt="welcome"
                   width={152}
@@ -69,7 +65,7 @@ const Welcome = () => {
           </Row>
         </Card.Body>
 
-        <Image
+        <img
           src="/images/shape-7.png"
           className="position-absolute top-50 end-0 translate-middle-y z-n1 h-100"
           alt="shape"

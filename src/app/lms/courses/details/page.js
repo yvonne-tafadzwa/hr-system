@@ -1,5 +1,3 @@
-"use client";
- 
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import CourseDetails from '@/components/Lms/CourseDetails';
 import TablesOfContent from '@/components/Lms/CourseDetails/TablesOfContent';

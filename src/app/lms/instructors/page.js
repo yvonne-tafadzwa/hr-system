@@ -1,5 +1,3 @@
-"use client";
-
 import { Breadcrumb } from "react-bootstrap";
 import Instructors from '@/components/Lms/Instructors'; 
 

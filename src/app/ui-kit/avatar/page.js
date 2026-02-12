@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import SingleUserExample from "@/components/UIKit/Avatar/SingleUserExample";
 import GroupUserExample from "@/components/UIKit/Avatar/GroupUserExample";

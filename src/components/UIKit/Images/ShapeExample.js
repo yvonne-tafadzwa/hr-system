@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card, Image } from "react-bootstrap";
 
 const ShapeExample = () => {

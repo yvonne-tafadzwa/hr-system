@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import { Card } from "react-bootstrap";
 
 const Welcome = () => {
@@ -63,21 +60,21 @@ const Welcome = () => {
         </div>
 
         <div className="dish-wrap">
-          <Image
+          <img
             src="/images/dish.png"
             className="dish-img"
             alt="dish"
             width={185}
             height={183}
           />
-          <Image
+          <img
             src="/images/dish-shape1.png"
             className="dish-shape1"
             alt="dish-shape"
             width={42}
             height={45}
           />
-          <Image
+          <img
             src="/images/dish-shape2.png"
             className="dish-shape2"
             alt="dish-shape"

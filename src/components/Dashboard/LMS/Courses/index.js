@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
+import { Link } from "react-router-dom";import { useState } from "react";
 
 const courseData = [
   {
@@ -166,7 +162,7 @@ const Courses = () => {
                     <tr key={i}>
                       <td className="text-body">{defaultValue.id}</td>
                       <td>
-                        <Link href={defaultValue.detailsLink}>
+                        <Link to={defaultValue.detailsLink}>
                           {defaultValue.courseName}
                         </Link>
                       </td>
@@ -174,7 +170,7 @@ const Courses = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={defaultValue.instructorImg}
                               className="wh-34 rounded-circle"
                               alt="user"
@@ -195,7 +191,7 @@ const Courses = () => {
                       <td>{defaultValue.price}</td>
                       <td>
                         <div className="d-flex align-items-center gap-1">
-                          <Link href={defaultValue.detailsLink}>
+                          <Link to={defaultValue.detailsLink}>
                             <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                               <span className="material-symbols-outlined fs-16 text-primary">
                                 visibility

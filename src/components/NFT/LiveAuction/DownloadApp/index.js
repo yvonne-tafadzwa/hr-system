@@ -1,9 +1,4 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-
-const DownloadApp = () => {
+import { Link } from "react-router-dom";const DownloadApp = () => {
   return (
     <>
       <div
@@ -18,11 +13,10 @@ const DownloadApp = () => {
           <h3 className="fs-20 mb-1">New Mobile App?</h3>
 
           <div className="py-4 py-xxl-5">
-            <Image src="/images/app-2.png" alt="app" width={170} height={188} />
+            <img src="/images/app-2.png" alt="app" width={170} height={188} />
           </div>
 
-          <Link
-            href="#"
+          <Link to="#"
             className="btn btn-primary py-2 px-3 fs-16 fw-medium"
             target="_blank"
           >

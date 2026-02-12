@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Card, Table, Dropdown } from "react-bootstrap";
 
 const RecentOrdersList = () => {
@@ -255,7 +252,7 @@ const RecentOrdersList = () => {
                     <td>
                       <div className="d-flex align-items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                          <img
                             src={order.image}
                             className="rounded-circle"
                             alt="order"

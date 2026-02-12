@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const PricingPlanStyle2 = () => {
   return (
     <>
@@ -114,7 +110,7 @@ const PricingPlanStyle2 = () => {
                 </li>
               </ul>
 
-              <Image
+              <img
                 src="/images/popular.svg"
                 className="position-absolute populartsgs"
                 alt="popular"

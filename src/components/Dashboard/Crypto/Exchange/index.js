@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card, Form, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const Exchange = () => {
   return (
     <>
@@ -35,7 +31,7 @@ const Exchange = () => {
             <Dropdown className="action-opt mb-3">
               <Dropdown.Toggle className="bg-transparent p-0 d-flex justify-content-between align-items-center w-100">
                 <div className="d-flex align-items-center gap-2">
-                  <Image
+                  <img
                     src="/images/ethereum.png"
                     alt="cardano"
                     width={42}
@@ -55,7 +51,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/ethereum.png"
                     alt="ethereum"
                     width={24}
@@ -68,7 +64,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/solana.png"
                     alt="solana"
                     width={24}
@@ -81,7 +77,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/binance.png"
                     alt="binance"
                     width={24}
@@ -94,7 +90,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/bitcoin.png"
                     alt="binance"
                     width={24}
@@ -126,7 +122,7 @@ const Exchange = () => {
             <Dropdown className="action-opt mb-3">
               <Dropdown.Toggle className="bg-transparent p-0 d-flex justify-content-between align-items-center w-100">
                 <div className="d-flex align-items-center gap-2">
-                  <Image
+                  <img
                     src="/images/solana.png"
                     alt="solana"
                     width={42}
@@ -146,7 +142,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/ethereum.png"
                     alt="ethereum"
                     width={24}
@@ -159,7 +155,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/solana.png"
                     alt="solana"
                     width={24}
@@ -172,7 +168,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/binance.png"
                     alt="binance"
                     width={24}
@@ -185,7 +181,7 @@ const Exchange = () => {
                   className="text-secondary d-flex align-items-center gap-2"
                   href="#"
                 >
-                  <Image
+                  <img
                     src="/images/bitcoin.png"
                     alt="binance"
                     width={24}

@@ -1,10 +1,6 @@
-"use client";
-
 import React from "react";
 import { Card } from "react-bootstrap";
-import Link from "next/link";
-
-const Breadcrumb = () => {
+import { Link } from "react-router-dom";const Breadcrumb = () => {
   return (
     <>
       <Card
@@ -19,8 +15,7 @@ const Breadcrumb = () => {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb align-items-center mb-0 lh-1">
               <li className="breadcrumb-item">
-                <Link
-                  href="/dashboard/ecommerce/"
+                <Link to="/dashboard/ecommerce/"
                   className="d-flex align-items-center text-decoration-none"
                 >
                   <i className="ri-home-4-line fs-18 text-white me-1 position-relative"></i>

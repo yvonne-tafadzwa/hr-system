@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useState } from "react";
-import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 
 const DishDetailsContent = () => {
@@ -19,7 +16,7 @@ const DishDetailsContent = () => {
             <div className="dish-details-images-card bg-white">
               {activeTab === 0 && (
                 <>
-                  <Image
+                  <img
                     src="/images/restaurant/dish-details1.jpg"
                     alt="dish"
                     width={640}
@@ -33,7 +30,7 @@ const DishDetailsContent = () => {
               )}
               {activeTab === 1 && (
                 <>
-                  <Image
+                  <img
                     src="/images/restaurant/dish-details2.jpg"
                     alt="dish"
                     width={640}
@@ -47,7 +44,7 @@ const DishDetailsContent = () => {
               )}
               {activeTab === 2 && (
                 <>
-                  <Image
+                  <img
                     src="/images/restaurant/dish-details3.jpg"
                     alt="dish"
                     width={640}
@@ -61,7 +58,7 @@ const DishDetailsContent = () => {
               )}
               {activeTab === 3 && (
                 <>
-                  <Image
+                  <img
                     src="/images/restaurant/dish-details4.jpg"
                     alt="dish"
                     width={640}
@@ -82,7 +79,7 @@ const DishDetailsContent = () => {
                   activeTab === 0 ? "border-color-primary" : ""
                 }`}
               >
-                <Image
+                <img
                   src="/images/restaurant/dish-details1.jpg"
                   alt="dish"
                   width={117}
@@ -99,7 +96,7 @@ const DishDetailsContent = () => {
                   activeTab === 1 ? "border-color-primary" : ""
                 }`}
               >
-                <Image
+                <img
                   src="/images/restaurant/dish-details2.jpg"
                   alt="dish"
                   width={117}
@@ -116,7 +113,7 @@ const DishDetailsContent = () => {
                   activeTab === 2 ? "border-color-primary" : ""
                 }`}
               >
-                <Image
+                <img
                   src="/images/restaurant/dish-details3.jpg"
                   alt="dish"
                   width={117}
@@ -133,7 +130,7 @@ const DishDetailsContent = () => {
                   activeTab === 3 ? "border-color-primary" : ""
                 }`}
               >
-                <Image
+                <img
                   src="/images/restaurant/dish-details4.jpg"
                   alt="dish"
                   width={117}

@@ -1,16 +1,11 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const InternalError = () => {
+import { Link } from "react-router-dom";const InternalError = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-4">
           <div className="text-center">
-            <Image
+            <img
               src="/images/internal-error.png"
               className="mb-5"
               alt="error"
@@ -27,8 +22,7 @@ const InternalError = () => {
               safely.
             </p>
 
-            <Link
-              href="/dashboard/ecommerce/"
+            <Link to="/dashboard/ecommerce/"
               className="btn btn-primary py-2 px-4 fs-16 fw-medium"
             >
               <span className="d-inline-block py-1">Back To Dashboard</span>

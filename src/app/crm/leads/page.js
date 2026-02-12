@@ -1,5 +1,3 @@
-"use client";
-  
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import AnnualProfit from '@/components/Crm/AnnualProfit';
 import RevenueGrowth from '@/components/Crm/RevenueGrowth';

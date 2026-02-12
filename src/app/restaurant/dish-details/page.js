@@ -1,5 +1,3 @@
-"use client";
- 
 import CustomerRatings from "@/components/Dashboard/Restaurant/CustomerRatings";
 import DishDetailsContent from "@/components/Restaurant/DishDetailsContent";
 import { Breadcrumb } from "react-bootstrap";

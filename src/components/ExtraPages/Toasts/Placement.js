@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Toast, ToastContainer } from "react-bootstrap";
-import Image from "next/image";
-
 const Placement = () => {
   const [position, setPosition] = useState("top-start");
 
@@ -53,7 +49,7 @@ const Placement = () => {
             >
               <Toast>
                 <Toast.Header closeButton={false}>
-                  <Image
+                  <img
                     src="/images/holder1.svg"
                     className="rounded me-2"
                     alt="holder1"

@@ -1,10 +1,5 @@
-"use client";
-
 import { Card, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const topPerformerData = [
+import { Link } from "react-router-dom";const topPerformerData = [
   {
     userImg: "/images/user-6.jpg",
     userName: "Alex Davis",
@@ -65,7 +60,7 @@ const TopPerformer = () => {
                 >
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src={value.userImg}
                         className="wh-44 rounded-circle"
                         alt="user"
@@ -78,8 +73,7 @@ const TopPerformer = () => {
                       <span>{value.email}</span>
                     </div>
                   </div>
-                  <Link
-                    href={value.link}
+                  <Link to={value.link}
                     className="wh-35 d-inline-block border text-center lh-35 rounded-circle text-decoration-none hover-bg"
                   >
                     <i className="ri-arrow-right-up-line fs-18"></i>

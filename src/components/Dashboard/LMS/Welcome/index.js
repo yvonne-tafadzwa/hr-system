@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Welcome = () => {
   return (
     <>
@@ -40,7 +36,7 @@ const Welcome = () => {
           </div>
         </Card.Body>
 
-        <Image
+        <img
           src="/images/welcome-2.gif"
           className="welcome-2 d-none d-sm-block"
           alt="welcome"

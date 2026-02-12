@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import ToDo from '@/components/ProjectManagement/KanbanBoard/ToDo';
 import Doing from '@/components/ProjectManagement/KanbanBoard/Doing';

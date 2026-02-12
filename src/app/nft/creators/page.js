@@ -1,5 +1,3 @@
-"use client";
- 
 import Creators from "@/components/NFT/Creators";
 import { Breadcrumb } from "react-bootstrap";
 

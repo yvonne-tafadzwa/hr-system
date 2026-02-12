@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const ProjectsOverview = () => {
   return (
     <>
@@ -98,7 +94,7 @@ const ProjectsOverview = () => {
                     <span className="fs-12">Hard Worker</span>
                     <ul className="ps-0 mb-0 list-unstyled d-flex align-items-center">
                       <li>
-                        <Image
+                        <img
                           src="/images/user-16.jpg"
                           className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                           alt="user"
@@ -107,7 +103,7 @@ const ProjectsOverview = () => {
                         />
                       </li>
                       <li className="ms-m-15">
-                        <Image
+                        <img
                           src="/images/user-17.jpg"
                           className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                           alt="user"
@@ -116,7 +112,7 @@ const ProjectsOverview = () => {
                         />
                       </li>
                       <li className="ms-m-15">
-                        <Image
+                        <img
                           src="/images/user-18.jpg"
                           className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                           alt="user"
@@ -125,7 +121,7 @@ const ProjectsOverview = () => {
                         />
                       </li>
                       <li className="ms-m-15">
-                        <Image
+                        <img
                           src="/images/user-19.jpg"
                           className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                           alt="user"

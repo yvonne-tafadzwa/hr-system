@@ -1,5 +1,3 @@
-"use client";
-      
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import RevenueGrowth from '@/components/Widgets/RevenueGrowth';
 import LeadConversion from '@/components/Widgets/LeadConversion';

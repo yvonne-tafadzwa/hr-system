@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown, Card, OverlayTrigger, Tooltip} from "react-bootstrap";
-import Image from "next/image";
-
 const ReadEmail = () => {
   return (
     <>
@@ -90,7 +86,7 @@ const ReadEmail = () => {
           <div className="d-flex justify-content-between align-items-center mb-4 pb-md-3">
             <div className="d-flex align-items-center">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-48.jpg"
                   className="wh-45 rounded-circle"
                   alt="user"

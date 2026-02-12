@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Table, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const LatestTransactions = () => {
   // Sample transaction data
   const transactionsData = [
@@ -224,7 +220,7 @@ const LatestTransactions = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={transaction.avatar}
                                 className="rounded-circle"
                                 alt={transaction.client}
@@ -250,7 +246,7 @@ const LatestTransactions = () => {
 
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Image
+                            <img
                               src={getPaymentMethodIcon(
                                 transaction.paymentMethod
                               )}

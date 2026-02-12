@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import OrderTracking from '@/components/eCommerce/Orders/OrderTracking';
 import OrderSummary from '@/components/eCommerce/Orders/OrderTracking/OrderSummary';

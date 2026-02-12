@@ -1,8 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image"; 
-
 const Prescriptions = () => {
   return (
     <>
@@ -26,7 +22,7 @@ const Prescriptions = () => {
                 </span>
               </div>
               <div>
-                <Image
+                <img
                   src="/images/trezo-clinic.png"
                   className="mb-2 doctor-filter-img"
                   alt="trezo-clinic"
@@ -46,7 +42,7 @@ const Prescriptions = () => {
           <div className="border-bottom"></div>
 
           <div className="card-body custom-padding-30 pt-4 pb-0">
-            <Image
+            <img
               src="/images/bar-code.png"
               className="mb-20 doctor-filter-img"
               alt="bar-code"
@@ -239,7 +235,7 @@ const Prescriptions = () => {
 
             <div className="ms-auto mt-3 mt-sm-0" style={{ maxWidth: "227px" }}>
               <div className="border-bottom mb-4 pb-1 text-center border-border-color-50">
-                <Image
+                <img
                   src="/images/signature.png"
                   className="doctor-filter-img"
                   alt="signature"

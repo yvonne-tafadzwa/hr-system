@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
 
 const myTasksData = [

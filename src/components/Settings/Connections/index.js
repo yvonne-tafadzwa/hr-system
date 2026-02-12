@@ -1,10 +1,5 @@
-"use client";
-
 import { Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const Connections = () => {
+import { Link } from "react-router-dom";const Connections = () => {
   // Dynamic data for connected accounts
   const connectedAccounts = [
     {
@@ -95,7 +90,7 @@ const Connections = () => {
                 <tr key={account.id}>
                   <td className="ps-0">
                     <div className="d-flex align-items-center">
-                      <Image
+                      <img
                         src={account.icon}
                         alt={account.alt}
                         width={40}
@@ -112,8 +107,7 @@ const Connections = () => {
                     </div>
                   </td>
                   <td className="text-end">
-                    <Link
-                      href="#"
+                    <Link to="#"
                       className="text-decoration-none text-primary fs-14"
                     >
                       Click to Disconnect
@@ -136,7 +130,7 @@ const Connections = () => {
                 <tr key={account.id}>
                   <td className="ps-0">
                     <div className="d-flex align-items-center">
-                      <Image
+                      <img
                         src={account.icon}
                         alt={account.alt}
                         width={40}
@@ -153,8 +147,7 @@ const Connections = () => {
                     </div>
                   </td>
                   <td className="text-end">
-                    <Link
-                      href="#"
+                    <Link to="#"
                       className="text-decoration-none text-primary fs-14"
                     >
                       Click to Disconnect

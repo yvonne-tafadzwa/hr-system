@@ -1,7 +1,4 @@
-"use client";
-
 import { Button } from "react-bootstrap";
-import Image from "next/image";
 import { useState } from "react";
 
 const ClientFeedbacks = () => {
@@ -111,7 +108,7 @@ const ClientFeedbacks = () => {
           <div className="mb-4" key={index}>
             <div className="d-flex align-items-center mb-2">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src={review.image}
                   className="rounded-circle"
                   alt={review.name.toLowerCase()}

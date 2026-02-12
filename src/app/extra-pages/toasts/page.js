@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import Basic from "@/components/ExtraPages/Toasts/Basic";
 import Dismissible from "@/components/ExtraPages/Toasts/Dismissible";

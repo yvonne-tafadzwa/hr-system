@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Profile = ({ userData }) => {
   const { name, title, profilePicture, socialLinks, propertyDetails } =
     userData;
@@ -14,7 +10,7 @@ const Profile = ({ userData }) => {
           className="bg-danger rounded-top-3 position-absolute z-n1 top-0 d-block w-100"
           style={{ height: "120px" }}
         ></span>
-        <Image
+        <img
           src="/images/shape-9.png"
           className="position-absolute top-0 start-0"
           alt="shape"
@@ -22,7 +18,7 @@ const Profile = ({ userData }) => {
           height={66}
         />
         <Card.Body className="px-4 pb-4" style={{ paddingTop: "35px" }}>
-          <Image
+          <img
             src={profilePicture || "/images/user-70.png"}
             className="rounded-circle mb-4"
             alt="user"

@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import Pagination from "./Pagination";
+import { Link } from "react-router-dom";import Pagination from "./Pagination";
 
 const courseData = [
   {
@@ -173,7 +169,7 @@ const Courses = () => {
                         <td className="text-body">{value.id}</td>
 
                         <td>
-                          <Link href={value.detailsLink}>
+                          <Link to={value.detailsLink}>
                             {value.courseName}
                           </Link>
                         </td>
@@ -183,7 +179,7 @@ const Courses = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={value.instructorImg}
                                 className="wh-34 rounded-circle"
                                 alt="user"
@@ -209,7 +205,7 @@ const Courses = () => {
 
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Link href={value.detailsLink}>
+                            <Link to={value.detailsLink}>
                               <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                 <span className="material-symbols-outlined fs-16 text-primary">
                                   visibility

@@ -1,5 +1,3 @@
-"use client";
-
 import Contacts from '@/components/Crm/Contacts';
 import { Breadcrumb } from "react-bootstrap";
 

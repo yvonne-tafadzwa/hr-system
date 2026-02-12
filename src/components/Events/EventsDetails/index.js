@@ -1,7 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
 import EventInfo from "./EventInfo";
 import AboutThisEvent from "./AboutThisEvent";
 import Speakers from "./Speakers";
@@ -10,7 +7,7 @@ const EventsDetails = () => {
   return (
     <>
       <div className="mb-4">
-        <Image
+        <img
           src="/images/event-details.jpg"
           className="rounded-3"
           alt="event-details"

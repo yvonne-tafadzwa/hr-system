@@ -1,10 +1,5 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image"; 
-
-const Congratulations = () => {
+import { Link } from "react-router-dom";const Congratulations = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4 position-relative">
@@ -19,12 +14,12 @@ const Congratulations = () => {
 
           <p>Ticket Solved</p>
 
-          <Link href="/my-profile" className="btn btn-primary fw-medium">
+          <Link to="/my-profile" className="btn btn-primary fw-medium">
             View Profile
           </Link>
         </Card.Body>
 
-        <Image
+        <img
           src="/images/congratulations.gif"
           className="congratulations wh-150 position-absolute"
           alt="congratulations"

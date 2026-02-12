@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card, Form, Table } from "react-bootstrap";
 
 const Checkout = () => {

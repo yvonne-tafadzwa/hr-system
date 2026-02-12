@@ -1,12 +1,10 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card, Row, Col, Button } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 
 const EmployeeDetails = ({ employeeId }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const [employee, setEmployee] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -86,7 +84,7 @@ const EmployeeDetails = ({ employeeId }) => {
           <br />
           <Button
             variant="secondary"
-            onClick={() => router.push('/employees/')}
+            onClick={() => navigate('/employees/')}
             className="mt-3"
           >
             Back to Employees
@@ -105,7 +103,7 @@ const EmployeeDetails = ({ employeeId }) => {
             <div className="d-flex gap-2">
               <Button
                 variant="primary"
-                onClick={() => router.push(`/employees/edit/${employeeId}`)}
+                onClick={() => navigate(`/employees/edit/${employeeId}`)}
                 className="text-white"
                 style={{ fontSize: '12px' }}
               >
@@ -114,7 +112,7 @@ const EmployeeDetails = ({ employeeId }) => {
               </Button>
               <Button
                 variant="secondary"
-                onClick={() => router.push('/employees/')}
+                onClick={() => navigate('/employees/')}
                 style={{ fontSize: '12px' }}
               >
                 Back

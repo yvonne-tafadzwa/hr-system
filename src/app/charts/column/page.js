@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicColumnChart from '@/components/Charts/ColumnCharts/BasicColumnChart';
 import DataLabelsColumnChart from '@/components/Charts/ColumnCharts/DataLabelsColumnChart';

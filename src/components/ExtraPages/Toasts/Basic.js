@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Toast } from "react-bootstrap";
-import Image from "next/image";
-
 const Basic = () => {
   return (
     <>
@@ -14,7 +10,7 @@ const Basic = () => {
 
           <Toast>
             <Toast.Header>
-              <Image src="/images/holder1.svg" className="rounded me-2" alt="holder1" width={20} height={20} />
+              <img src="/images/holder1.svg" className="rounded me-2" alt="holder1" width={20} height={20} />
               <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>

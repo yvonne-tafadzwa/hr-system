@@ -1,9 +1,5 @@
-"use client";
-
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const statsData = [
   {
     title: "Appointments",
@@ -53,7 +49,7 @@ const Stats = () => {
                   </span>
                 </div>
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={stat.icon}
                     alt={`${stat.title}-icon`}
                     width={46}

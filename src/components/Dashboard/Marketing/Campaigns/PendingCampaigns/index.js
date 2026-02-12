@@ -1,11 +1,6 @@
-"use client";
-
 import React from "react";
 import { Table } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const campaignData = [
+import { Link } from "react-router-dom";const campaignData = [
   {
     title: "Team Gateway",
     dateRange: "From 05 Oct - 17 Oct, 24",
@@ -104,7 +99,7 @@ const PendingCampaigns = () => {
                   <td>
                     <div className="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap">
                       {campaign.platforms.map((platform, pIndex) => (
-                        <Image
+                        <img
                           key={pIndex}
                           src={platform}
                           alt="platform"
@@ -128,7 +123,7 @@ const PendingCampaigns = () => {
                           key={mIndex}
                           className={mIndex > 0 ? "ms-m-15" : ""}
                         >
-                          <Image
+                          <img
                             src={member}
                             className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                             alt="user"
@@ -140,8 +135,7 @@ const PendingCampaigns = () => {
                     </ul>
                   </td>
                   <td>
-                    <Link
-                      href="#"
+                    <Link to="#"
                       className="rounded-circle d-inline-block text-center fs-18 hover-bg"
                       style={{
                         backgroundColor: "#ECEEF2",

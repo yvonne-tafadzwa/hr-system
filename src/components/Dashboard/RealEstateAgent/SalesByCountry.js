@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import WorldMap from "react-svg-worldmap";
 
 const data = [
@@ -101,7 +98,7 @@ const SalesByCountry = () => {
                     className="d-flex align-items-center"
                     style={{ gap: "8px" }}
                   >
-                    <Image
+                    <img
                       src={item.flag}
                       alt={item.country}
                       width={24}

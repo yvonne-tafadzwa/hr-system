@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
 import DefaultSelect from './DefaultSelect';
 import MultiTagsSelect from './MultiTagsSelect';

@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Toast, ToastContainer } from "react-bootstrap";
-import Image from "next/image";
-
 const Stacking = () => {
   return (
     <>
@@ -15,7 +11,7 @@ const Stacking = () => {
           <ToastContainer className="position-static">
             <Toast>
               <Toast.Header>
-                <Image
+                <img
                   src="/images/holder1.svg"
                   className="rounded me-2"
                   alt="holder1"
@@ -30,7 +26,7 @@ const Stacking = () => {
             
             <Toast>
               <Toast.Header>
-                <Image
+                <img
                   src="/images/holder1.svg"
                   className="rounded me-2"
                   alt="holder1"

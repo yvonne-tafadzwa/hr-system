@@ -1,7 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 
 const ProfileIntro = () => {
@@ -54,7 +51,7 @@ const ProfileIntro = () => {
           <div className="d-flex align-items-center mb-4">
             <div className="flex-shrink-0">
               {profile?.avatar_url ? (
-                <Image
+                <img
                   src={profile.avatar_url}
                   className="rounded-circle border border-2 wh-75"
                   alt="user"

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Breadcrumb } from "react-bootstrap";
 import Nav from "@/components/Settings/Nav"; 
 import TermsAndConditions from "@/components/Settings/TermsAndConditions";

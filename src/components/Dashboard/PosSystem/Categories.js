@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const categoriesData = [
+import { Link } from "react-router-dom";const categoriesData = [
   {
     name: "All",
     icon: "/images/all-icon.svg",
@@ -440,7 +435,7 @@ const Categories = () => {
                 paddingBottom: "16px",
               }}
             >
-              <Image
+              <img
                 src={category.icon}
                 className="mb-3"
                 alt={category.name}
@@ -463,11 +458,10 @@ const Categories = () => {
             <Col md={4} sm={6} key={product.id}>
               <div className="card custom-shadow rounded-3 border mb-4 bg-white p-20">
                 <div className="pb-1">
-                  <Link
-                    href={product.viewLink}
+                  <Link to={product.viewLink}
                     className="d-block text-decoration-none mb-2"
                   >
-                    <Image
+                    <img
                       src={product.image}
                       className="rounded-2 mb-3"
                       alt={product.name}

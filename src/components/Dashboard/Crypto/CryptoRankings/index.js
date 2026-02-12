@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const cryptoData = [
   {
     rank: 1,
@@ -201,7 +197,7 @@ const CryptoRankings = () => {
                     <td className="fw-medium">{crypto.rank}</td>
                     <td className="text-end fw-medium ps-0">
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src={crypto.img}
                           className="rounded-circle"
                           alt={crypto.name}

@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
-
 const TestimonialsStyle6 = () => {
   return (
     <>
@@ -24,7 +20,7 @@ const TestimonialsStyle6 = () => {
                 }}
               >
                 <div style={{ marginBottom: "15px" }}>
-                  <Image
+                  <img
                     src="/images/user-68.jpg"
                     width={100}
                     height={100}
@@ -82,7 +78,7 @@ const TestimonialsStyle6 = () => {
                 }}
               >
                 <div style={{ marginBottom: "15px" }}>
-                  <Image
+                  <img
                     src="/images/user-69.jpg"
                     width={100}
                     height={100}
@@ -140,7 +136,7 @@ const TestimonialsStyle6 = () => {
                 }}
               >
                 <div style={{ marginBottom: "15px" }}>
-                  <Image
+                  <img
                     src="/images/user-70.png"
                     width={100}
                     height={100}

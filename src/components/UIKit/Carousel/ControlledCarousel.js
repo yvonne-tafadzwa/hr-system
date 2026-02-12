@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from 'react';
 import { Card, Carousel } from "react-bootstrap";
-import Image from "next/image";
-
 const ControlledCarousel = () => {
 
   const [index, setIndex] = useState(0);
@@ -20,7 +16,7 @@ const ControlledCarousel = () => {
 
           <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
-              <Image
+              <img
                 src="/images/carousel-1.jpg"
                 className="d-block w-100"
                 alt="carousel"
@@ -36,7 +32,7 @@ const ControlledCarousel = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-              <Image
+              <img
                 src="/images/carousel-2.jpg"
                 className="d-block w-100"
                 alt="carousel"

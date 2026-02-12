@@ -1,7 +1,3 @@
-"use client";
-
-import Image from "next/image"; 
-
 const Testimonials = () => {
   return (
     <>
@@ -44,7 +40,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-1.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"
@@ -89,7 +85,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-2.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"
@@ -135,7 +131,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-3.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"
@@ -180,7 +176,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-4.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"
@@ -225,7 +221,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-5.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"
@@ -270,7 +266,7 @@ const Testimonials = () => {
 
                 <div className="d-flex align-items-center review-info">
                   <div className="review">
-                    <Image
+                    <img
                       src="/images/landing/testimonial-6.jpg"
                       className="rounded-circle wh-50"
                       alt="testimonial"

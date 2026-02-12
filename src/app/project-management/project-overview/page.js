@@ -1,5 +1,3 @@
-"use client";
- 
 import { Row, Col, Breadcrumb } from "react-bootstrap"; 
 import ProductDevelopment from '@/components/ProjectManagement/ProjectOverview/ProductDevelopment';
 import RecentActivity from '@/components/ProjectManagement/ProjectOverview/RecentActivity';

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "react-bootstrap";
 import ProductImage from "./ProductImage";
 import CapacitySelector from "./CapacitySelector";

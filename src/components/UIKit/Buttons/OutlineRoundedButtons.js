@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Button } from "react-bootstrap";
 
 const OutlineRoundedButtons = () => {

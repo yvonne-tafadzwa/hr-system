@@ -1,11 +1,7 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Table } from "react-bootstrap";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
-import Image from "next/image";
-
 const RecentActivities = () => {
   const { isSuperAdmin, companyId } = useAuth();
   const [activities, setActivities] = useState([]);
@@ -227,7 +223,7 @@ const RecentActivities = () => {
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
                             {activity.avatar ? (
-                              <Image
+                              <img
                                 src={activity.avatar}
                                 className="rounded-circle"
                                 alt={activity.employeeName}

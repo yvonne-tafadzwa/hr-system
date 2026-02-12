@@ -1,7 +1,3 @@
-"use client";
-
-import Image from "next/image";
-
 const Widget = () => {
   return (
     <>
@@ -10,7 +6,7 @@ const Widget = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="tailor-img">
-                <Image
+                <img
                   src="/images/landing/tailor-img.png"
                   alt="tailor"
                   width={646}
@@ -102,14 +98,14 @@ const Widget = () => {
         </div>
 
         {/* Shape Images */}
-        <Image
+        <img
           src="/images/landing/shape-1.png"
           className="shape shape-1"
           alt="shape"
           width={1130}
           height={1130}
         />
-        <Image
+        <img
           src="/images/landing/shape-2.png"
           className="shape shape-2"
           alt="shape"

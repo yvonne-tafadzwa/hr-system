@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const CustomerSegmentation = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -150,7 +146,7 @@ const CustomerSegmentation = () => {
                     lineHeight: "44px",
                   }}
                 >
-                  <Image
+                  <img
                     src="/images/new-customers-icon.svg"
                     alt="new-customers-icon"
                     width={24}
@@ -181,7 +177,7 @@ const CustomerSegmentation = () => {
                     lineHeight: "44px",
                   }}
                 >
-                  <Image
+                  <img
                     src="/images/returning-customers-icon.svg"
                     alt="returning-customers-icon"
                     width={24}

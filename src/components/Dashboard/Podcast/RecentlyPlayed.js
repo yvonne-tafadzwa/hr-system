@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Table, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const audioData = [
   {
     id: 1,
@@ -111,7 +107,7 @@ const RecentlyPlayed = () => {
                         </button>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={track.image}
                               className="rounded-1"
                               alt="played"

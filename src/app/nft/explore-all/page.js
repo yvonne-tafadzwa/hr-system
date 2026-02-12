@@ -1,5 +1,3 @@
-"use client";
-
 import NftArtworks from "@/components/NFT/ExploreAll/NftArtworks";
 import { Breadcrumb } from "react-bootstrap";
 

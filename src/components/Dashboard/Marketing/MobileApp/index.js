@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const MobileApp = () => {
   return (
     <>
@@ -18,7 +14,7 @@ const MobileApp = () => {
           <h3 className="fs-24 text-white">New Mobile App?</h3>
 
           <div className="py-4 mb-3">
-            <Image src="/images/app.png" alt="app" width={240} height={214} />
+            <img src="/images/app.png" alt="app" width={240} height={214} />
           </div>
 
           <a

@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Form } from "react-bootstrap";
 
 const Editors = () => {

@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -172,7 +169,7 @@ const ClientRatings = () => {
                 >
                   <div className="d-flex align-items-center gap-3 mb-4">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src={review.image}
                         className="rounded-circle position-relative"
                         alt="user"

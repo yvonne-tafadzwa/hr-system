@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image"; 
-
 const SingleUserExample = () => {
   return (
     <>
@@ -13,7 +9,7 @@ const SingleUserExample = () => {
           <div className="d-sm-flex justify-content-between align-items-center">
             <div className="d-flex align-items-center mb-3 mb-sm-0">
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-62.jpg"
                   className="wh-60 rounded-circle"
                   alt="user"

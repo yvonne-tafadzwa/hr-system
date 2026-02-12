@@ -1,9 +1,5 @@
-"use client";
-
 import { Row, Col } from "react-bootstrap";
-import Link from "next/link";
-
-const Welcome = () => {
+import { Link } from "react-router-dom";const Welcome = () => {
   return (
     <>
       <Row>
@@ -21,8 +17,7 @@ const Welcome = () => {
 
         <Col md={5}>
           <div className="d-flex flex-wrap gap-2 justify-content-md-end mb-4">
-            <Link
-              href="/extra-pages/pricing-plan/"
+            <Link to="/extra-pages/pricing-plan/"
               className="btn d-flex align-items-center gap-1"
               style={{
                 backgroundColor: "#F3E8FF",

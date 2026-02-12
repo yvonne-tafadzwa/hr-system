@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const AnimationX = () => {
   return (
     <>
@@ -13,35 +9,35 @@ const AnimationX = () => {
           </div>
 
           <div>
-            <Image
+            <img
               src="/images/user-1.jpg"
               className="wh-38 rounded-circle border border-2 border-white transition-x"
               alt="user"
               width={48}
               height={38}
             />
-            <Image
+            <img
               src="/images/user-2.jpg"
               className="wh-38 rounded-circle border border-2 border-white transition-x ms-8"
               alt="user"
               width={48}
               height={38}
             />
-            <Image
+            <img
               src="/images/user-3.jpg"
               className="wh-38 rounded-circle border border-2 border-white transition-x ms-8"
               alt="user"
               width={48}
               height={38}
             />
-            <Image
+            <img
               src="/images/user-4.jpg"
               className="wh-38 rounded-circle border border-2 border-white transition-x ms-8"
               alt="user"
               width={48}
               height={38}
             />
-            <Image
+            <img
               src="/images/user-5.jpg"
               className="wh-38 rounded-circle border border-2 border-white transition-x ms-8"
               alt="user"

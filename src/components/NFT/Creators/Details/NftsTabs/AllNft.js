@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const AllNft = () => {
   // NFT data array
   const [nfts] = useState([
@@ -159,7 +155,7 @@ const AllNft = () => {
                 <td>
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src={nft.image}
                         className="rounded-3"
                         alt={nft.title}

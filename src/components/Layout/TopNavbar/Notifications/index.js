@@ -1,5 +1,3 @@
-"use client";
-
 import { Dropdown, Spinner } from "react-bootstrap";
 import { useNotifications } from "@/context/NotificationContext";
 import { formatDistanceToNow } from 'date-fns';

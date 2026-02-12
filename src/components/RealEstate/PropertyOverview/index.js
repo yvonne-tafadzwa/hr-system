@@ -1,7 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
 import Profile from "./Profile";
 
 const PropertyOverview = () => {
@@ -12,7 +9,7 @@ const PropertyOverview = () => {
           <Card className="border-0 rounded-3 bg-white mb-4">
             <Card.Body className="p-4">
               <div className="position-relative mb-4">
-                <Image
+                <img
                   src="/images/property-5.png"
                   alt="property"
                   width={1240}

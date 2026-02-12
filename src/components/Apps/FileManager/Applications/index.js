@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col, Dropdown, Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const Applications = () => {
   return (
     <>
@@ -43,7 +39,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/figma.svg"
                   alt="figma"
                   width={20}
@@ -98,7 +94,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/dribbble.svg"
                   alt="dribbble"
                   width={30}
@@ -153,7 +149,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/spotify.svg"
                   alt="spotify"
                   width={30}
@@ -208,7 +204,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/github.svg"
                   alt="github"
                   width={30}
@@ -263,7 +259,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/gdrive.svg"
                   alt="gdrive"
                   width={30}
@@ -318,7 +314,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/trello.svg"
                   alt="trello"
                   width={30}
@@ -373,7 +369,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/slak.svg"
                   alt="slak"
                   width={30}
@@ -428,7 +424,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/pinterest.svg"
                   alt="pinterest"
                   width={30}
@@ -483,7 +479,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/facebook.svg"
                   alt="facebook"
                   width={30}
@@ -538,7 +534,7 @@ const Applications = () => {
               </div>
 
               <div className="d-flex align-items-center py-4 my-3">
-                <Image
+                <img
                   src="/images/linkedin.svg"
                   alt="linkedin"
                   width={30}

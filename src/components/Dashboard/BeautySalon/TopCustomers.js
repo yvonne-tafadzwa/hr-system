@@ -1,9 +1,5 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Table, Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const TopCustomers = () => {
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -281,7 +277,7 @@ const TopCustomers = () => {
                         <td>
                           <div className="d-flex align-items-center gap-2">
                             <div className="flex-shrink-0">
-                              <Image
+                              <img
                                 src={customer.image}
                                 className="rounded-circle"
                                 alt="user"

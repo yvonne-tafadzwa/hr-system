@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-
-const myTasksData = [
+import { Link } from "react-router-dom";const myTasksData = [
   {
     projectName: "Web Development",
     deadline: "10 Jan 2024",

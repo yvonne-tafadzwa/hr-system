@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import { Card, Row, Col, Form } from "react-bootstrap";
 
 const WritePrescription = () => {
@@ -26,7 +23,7 @@ const WritePrescription = () => {
               </span>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/trezo-clinic.png"
                 className="mb-2 doctor-filter-img"
                 alt="trezo-clinic"

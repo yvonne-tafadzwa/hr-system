@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import TrackingID from '@/components/eCommerce/Orders/OrderDetails/TrackingID';
 import RecentOrders from '@/components/eCommerce/Orders/OrderDetails/RecentOrders';

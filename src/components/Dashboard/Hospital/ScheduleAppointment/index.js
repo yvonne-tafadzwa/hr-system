@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const ScheduleAppointment = () => {
   return (
     <>
@@ -21,7 +17,7 @@ const ScheduleAppointment = () => {
           </p>
 
           <div className="py-4 mb-2">
-            <Image
+            <img
               src="/images/schedule.png"
               alt="schedule"
               width={175}

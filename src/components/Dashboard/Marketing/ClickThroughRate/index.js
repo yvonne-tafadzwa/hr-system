@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const ClickThroughRate = () => {
   return (
     <>
@@ -18,7 +14,7 @@ const ClickThroughRate = () => {
               <p className="fs-12">vs previous 30 days</p>
             </div>
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src="/images/banner.gif"
                 alt="banner"
                 width={60}

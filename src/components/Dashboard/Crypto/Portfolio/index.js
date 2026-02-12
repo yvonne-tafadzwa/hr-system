@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const Portfolio = () => {
+import { Link } from "react-router-dom";const Portfolio = () => {
   const [portfolioData, setPortfolioData] = useState([
     {
       coin: "Bitcoin",
@@ -38,7 +33,7 @@ const Portfolio = () => {
 
         <div className="d-flex align-items-center mb-4 gap-3">
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/images/balance.png"
               alt="balance"
               width={40}
@@ -104,8 +99,7 @@ const Portfolio = () => {
           </div>
 
           <div className="text-end mt-4">
-            <Link
-              href="#"
+            <Link to="#"
               className="btn btn-outline-primary text-white py-2 px-3"
               style={{ borderColor: "#757DFF" }}
             >
@@ -115,14 +109,14 @@ const Portfolio = () => {
         </div>
 
         {/* Shape Images */}
-        <Image
+        <img
           src="/images/shape-5.png"
           className="position-absolute bottom-0 start-0 z-n1"
           alt="shape"
           width={453}
           height={232}
         />
-        <Image
+        <img
           src="/images/shape-6.png"
           className="position-absolute top-0 end-0 z-n1 pt-4 pe-4 shape-6"
           alt="shape"

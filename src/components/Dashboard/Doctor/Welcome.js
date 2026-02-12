@@ -1,8 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-
 const Welcome = () => {
   return (
     <>
@@ -21,7 +17,7 @@ const Welcome = () => {
             </h2>
             
             <div className="d-flex align-items-center gap-1 mb-1 mb-sm-2">
-              <Image
+              <img
                 src="/images/heart.png"
                 alt="heart"
                 width={18}
@@ -39,7 +35,7 @@ const Welcome = () => {
             </p>
           </div>
 
-          <Image
+          <img
             src="/images/andrew-rashel.png"
             className="mt-3 mt-sm-0"
             alt="andrew-rashel"
@@ -48,7 +44,7 @@ const Welcome = () => {
           />
         </div>
 
-        <Image
+        <img
           src="/images/shape-11.png"
           className="position-absolute bottom-0 end-0"
           alt="shape"

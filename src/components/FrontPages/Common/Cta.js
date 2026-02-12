@@ -1,9 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
-
-const Cta = () => {
+import { Link } from "react-router-dom";const Cta = () => {
   return (
     <>
       <div className="unlock-area ptb-150 position-relative z-1" id="admin">
@@ -18,8 +13,7 @@ const Cta = () => {
                   revolutionize your data analysis process.
                 </p>
 
-                <Link
-                  href="/front-pages/contact/"
+                <Link to="/front-pages/contact/"
                   className="btn btn-primary-div py-2 px-4 fs-16 fw-medium rounded-3 text-white"
                 >
                   <div className="d-flex align-items-center gap-1">
@@ -32,14 +26,14 @@ const Cta = () => {
           </div>
         </div>
 
-        <Image
+        <img
           src="/images/landing/shape-1.png"
           className="shape shape-5"
           alt="shape"
           width={1000}
           height={1000}
         />
-        <Image
+        <img
           src="/images/landing/shape-2.png"
           className="shape shape-6"
           alt="shape"

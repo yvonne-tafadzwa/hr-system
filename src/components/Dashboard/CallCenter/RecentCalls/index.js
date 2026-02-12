@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Table, Button, Form, Dropdown } from "react-bootstrap";
-import Image from "next/image";
 import { useState } from "react";
 
 // Sample data for recent calls
@@ -278,7 +275,7 @@ const RecentCalls = () => {
                   <td>
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0">
-                        <Image
+                        <img
                           src={call.image}
                           className="rounded-circle"
                           alt="user"

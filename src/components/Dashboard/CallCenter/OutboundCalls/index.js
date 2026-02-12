@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const OutboundCalls = () => {
   // Chart
   const [Chart, setChart] = useState();
@@ -189,7 +185,7 @@ const OutboundCalls = () => {
                   className="bg-body-bg border text-center rounded-2"
                   style={{ width: "48px", height: "48px", lineHeight: "48px" }}
                 >
-                  <Image
+                  <img
                     src="/images/outbound-calls.svg"
                     alt="inbound-calls"
                     width={26}

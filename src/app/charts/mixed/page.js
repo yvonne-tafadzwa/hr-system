@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import LineColumnChart from '@/components/Charts/MixedCharts/LineColumnChart';
 import MultipleYAxisChart from '@/components/Charts/MixedCharts/MultipleYAxisChart';

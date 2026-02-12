@@ -1,11 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link"; 
-
-const initialCreatorsData = [
+import { Link } from "react-router-dom";const initialCreatorsData = [
   {
     id: 1,
     name: "Hunny Bunny",
@@ -62,7 +57,7 @@ const TopCreators = () => {
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
         <h3 className="mb-0">Top Creators</h3>
 
-        <Link href="/nft/creators" className="d-flex text-decoration-none">
+        <Link to="/nft/creators" className="d-flex text-decoration-none">
           <span>Browse All</span>
           <i className="ri-arrow-right-s-line fs-15"></i>
         </Link>
@@ -73,7 +68,7 @@ const TopCreators = () => {
           <Col key={creator.id} sm={6} md={4} lg={3}>
             <div className="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4 text-center">
               <div className="position-relative">
-                <Image
+                <img
                   src={creator.coverImage}
                   className="rounded-3 w-100"
                   alt="top-creator"
@@ -81,7 +76,7 @@ const TopCreators = () => {
                   height={220}
                 />
                 <div className="position-absolute top-100 start-50 translate-middle">
-                  <Image
+                  <img
                     src={creator.profileImage}
                     className="rounded-circle"
                     alt="user"
@@ -89,7 +84,7 @@ const TopCreators = () => {
                     height={64}
                   />
                   {creator.isVerified && (
-                    <Image
+                    <img
                       src="/images/verify.svg"
                       className="position-absolute bottom-0 end-0"
                       alt="verify"

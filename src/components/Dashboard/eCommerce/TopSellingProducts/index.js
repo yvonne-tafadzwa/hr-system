@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const topSellingProductsData = [
+import { Link } from "react-router-dom";const topSellingProductsData = [
   {
     product: {
       img: "/images/product-1.jpg",
@@ -181,11 +176,10 @@ const TopSellingProducts = () => {
                   {paginatedData.map((item, i) => (
                     <tr key={i}>
                       <td>
-                        <Link
-                          href={item.product.detailsLink}
+                        <Link to={item.product.detailsLink}
                           className="d-flex align-items-center"
                         >
-                          <Image
+                          <img
                             src={item.product.img}
                             className="wh-40 rounded-3"
                             alt={item.product.title}

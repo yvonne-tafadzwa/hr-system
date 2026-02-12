@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const ResignedEmployees = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -95,7 +91,7 @@ const ResignedEmployees = () => {
                 className="text-center rounded-2 bg-danger-50"
                 style={{ width: "44px", height: "44px", lineHeight: "44px" }}
               >
-                <Image
+                <img
                   src="/images/icon-resigned.svg"
                   alt="icon-resigned"
                   width={25}

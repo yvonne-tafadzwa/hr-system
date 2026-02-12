@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 // Mock data for transactions (replace with data from an API or a state variable)
 const transactionData = [
   // Add your mock transaction items here
@@ -193,7 +189,7 @@ const LatestTransaction = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={transaction.client.image}
                               className="rounded-circle"
                               alt="client"
@@ -219,7 +215,7 @@ const LatestTransaction = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center gap-1">
-                          <Image
+                          <img
                             src={transaction.paymentMethod.icon}
                             alt={transaction.paymentMethod.name}
                             width={24}

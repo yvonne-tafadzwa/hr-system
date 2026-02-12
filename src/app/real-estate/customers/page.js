@@ -1,5 +1,3 @@
-"use client";
-
 import Customers from "@/components/RealEstate/Customers";
 import { Breadcrumb } from "react-bootstrap";
 

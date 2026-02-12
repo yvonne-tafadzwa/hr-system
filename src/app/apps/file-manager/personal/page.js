@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import Sidebar from '@/components/Apps/FileManager/Sidebar';
 import Personal from '@/components/Apps/FileManager/Personal'; 

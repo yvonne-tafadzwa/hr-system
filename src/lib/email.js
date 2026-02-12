@@ -6,8 +6,8 @@ import nodemailer from 'nodemailer';
 // SMTP_PORT=587
 // SMTP_USER=your-email@gmail.com
 // SMTP_PASSWORD=your-app-password
-// SMTP_FROM_NAME=HRSY System
-// SMTP_FROM_EMAIL=noreply@hrsy.com
+// SMTP_FROM_NAME=Verity App
+// SMTP_FROM_EMAIL=noreply@verityapp.com
 
 const createTransporter = () => {
   // Use environment variables for SMTP configuration
@@ -34,8 +34,8 @@ const createTransporter = () => {
 
 // Get sender info from environment
 const getFromAddress = () => {
-  const fromName = process.env.SMTP_FROM_NAME || 'HRSY System';
-  const fromEmail = process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER || 'noreply@hrsy.com';
+  const fromName = process.env.SMTP_FROM_NAME || 'Verity App';
+  const fromEmail = process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER || 'noreply@verityapp.com';
   return `"${fromName}" <${fromEmail}>`;
 };
 
@@ -82,7 +82,7 @@ export const sendEmail = async ({ to, subject, text, html }) => {
  * @returns {Promise<{success: boolean, messageId?: string, error?: string}>}
  */
 export const sendWelcomeEmail = async ({ email, firstName, lastName, companyName, companyCode, departments = [] }) => {
-  const subject = `Welcome to HRSY - ${companyName} Registration Successful!`;
+  const subject = `Welcome to Verity App - ${companyName} Registration Successful!`;
 
   const departmentsList = departments && departments.length > 0
     ? `\n\nDepartments created:\n${departments.map(d => `- ${d}`).join('\n')}`
@@ -91,7 +91,7 @@ export const sendWelcomeEmail = async ({ email, firstName, lastName, companyName
   const text = `
 Hello ${firstName} ${lastName},
 
-Welcome to HRSY! Your company "${companyName}" has been successfully registered.
+Welcome to Verity App! Your company "${companyName}" has been successfully registered.
 
 Here are your login details:
 - Company Code: ${companyCode}
@@ -99,7 +99,7 @@ Here are your login details:
 - Password: (the password you chose during registration)
 ${departmentsList}
 
-You can now log in to the HRSY system using your company code and password.
+You can now log in to Verity App using your company code and password.
 
 What you can do next:
 1. Log in to your dashboard
@@ -110,7 +110,7 @@ What you can do next:
 If you have any questions or need assistance, please don't hesitate to contact our support team.
 
 Best regards,
-The HRSY Team
+The Verity App Team
 `;
 
   const departmentsHtml = departments && departments.length > 0
@@ -130,12 +130,12 @@ The HRSY Team
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to HRSY</title>
+  <title>Welcome to Verity App</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
-    <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to HRSY!</h1>
-    <p style="color: rgba(255,255,255,0.9); margin-top: 10px;">Human Resource System</p>
+    <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to Verity App!</h1>
+    <p style="color: rgba(255,255,255,0.9); margin-top: 10px;">Employee Management System</p>
   </div>
   
   <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #eee; border-top: none;">
@@ -172,7 +172,7 @@ The HRSY Team
     </ul>
     
     <div style="text-align: center; margin-top: 30px;">
-      <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/sign-in/" 
+      <a href="${import.meta.env.VITE_APP_URL || 'http://localhost:3000'}/sign-in/" 
          style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-weight: bold;">
         Log In to Your Dashboard
       </a>
@@ -186,13 +186,13 @@ The HRSY Team
     
     <p style="color: #888; font-size: 14px; text-align: center;">
       Best regards,<br>
-      <strong>The HRSY Team</strong>
+      <strong>The Verity App Team</strong>
     </p>
   </div>
   
   <div style="text-align: center; padding: 20px; color: #888; font-size: 12px;">
-    <p>© ${new Date().getFullYear()} HRSY. All rights reserved.</p>
-    <p>This email was sent to ${email} because you registered an account with HRSY.</p>
+    <p>© ${new Date().getFullYear()} Verity App. All rights reserved.</p>
+    <p>This email was sent to ${email} because you registered an account with Verity App.</p>
   </div>
 </body>
 </html>

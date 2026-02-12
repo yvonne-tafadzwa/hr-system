@@ -1,16 +1,11 @@
-"use client";
-
 import { Row, Col, Form } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const ResetPasswordForm = () => {
+import { Link } from "react-router-dom";const ResetPasswordForm = () => {
   return (
     <>
       <div className="auth-main-content m-auto m-1230 px-3">
         <Row className="align-items-center">
           <Col lg={6} className="d-none d-lg-block">
-            <Image
+            <img
               src="/images/reset.jpg"
               className="rounded-3"
               alt="reset"
@@ -22,14 +17,14 @@ const ResetPasswordForm = () => {
           <Col lg={6}>
             <div className="mw-480 ms-lg-auto">
               <div className="d-inline-block mb-4">
-                <Image
+                <img
                   src="/images/logo.svg"
                   className="rounded-3 for-light-logo"
                   alt="login"
                   width={100}
                   height={26}
                 />
-                <Image
+                <img
                   src="/images/white-logo.svg"
                   className="rounded-3 for-dark-logo"
                   alt="login"
@@ -88,8 +83,7 @@ const ResetPasswordForm = () => {
                 <Form.Group>
                   <p>
                     Back to{" "}
-                    <Link
-                      href="/sign-in/"
+                    <Link to="/sign-in/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Sign In

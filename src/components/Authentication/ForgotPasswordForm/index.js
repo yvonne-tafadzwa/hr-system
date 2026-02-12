@@ -1,9 +1,5 @@
-"use client";
-
 import { Row, Col, Form } from "react-bootstrap";
-import Link from "next/link";
-
-const ForgotPasswordForm = () => {
+import { Link } from "react-router-dom";const ForgotPasswordForm = () => {
   return (
     <>
       <div className="auth-main-content d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
@@ -44,8 +40,7 @@ const ForgotPasswordForm = () => {
                 <Form.Group>
                   <p>
                     Back to{" "}
-                    <Link
-                      href="/sign-in/"
+                    <Link to="/sign-in/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Sign In

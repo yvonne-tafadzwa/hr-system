@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, ProgressBar } from "react-bootstrap";
-import Image from "next/image";
 import ReviewsForm from "./ReviewsForm";
 
 const Reviews = () => {
@@ -45,7 +42,7 @@ const Reviews = () => {
 
                   <div className="d-flex align-items-center mt-3">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-34.jpg"
                         className="rounded-circle wh-35"
                         alt="user"
@@ -88,7 +85,7 @@ const Reviews = () => {
 
                   <div className="d-flex align-items-center mt-3">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-35.jpg"
                         className="rounded-circle wh-35"
                         alt="user"
@@ -131,7 +128,7 @@ const Reviews = () => {
 
                   <div className="d-flex align-items-center mt-3">
                     <div className="flex-shrink-0">
-                      <Image
+                      <img
                         src="/images/user-36.jpg"
                         className="rounded-circle wh-35"
                         alt="user"

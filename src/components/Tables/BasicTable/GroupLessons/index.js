@@ -1,10 +1,5 @@
-"use client";
-
 import { Dropdown, Card, Table } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-
-const groupLessonsData = [
+import { Link } from "react-router-dom";const groupLessonsData = [
   {
     images: [
       {
@@ -176,7 +171,7 @@ const GroupLessons = () => {
                             <div className="flex-shrink-0">
                               <div className="d-flex">
                                 {value.images.slice(0, 5).map((value, i) => (
-                                  <Image
+                                  <img
                                     key={i}
                                     src={value.img}
                                     className="wh-44 rounded-circle border border-2 border-color-white minus-l-20"
@@ -200,8 +195,7 @@ const GroupLessons = () => {
                         </td>
 
                         <td className="text-end">
-                          <Link
-                            href={value.link}
+                          <Link to={value.link}
                             className="wh-35 d-inline-block border text-center lh-35 rounded-circle text-decoration-none hover-bg"
                           >
                             <i className="ri-arrow-right-up-line fs-18"></i>

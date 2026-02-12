@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, Table, Form, Button, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const WalletTable = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -369,7 +365,7 @@ const WalletTable = () => {
 
                       <td className="text-body">
                         <div className="d-flex align-items-center gap-2">
-                          <Image
+                          <img
                             src={item.cryptoAsset.image}
                             alt={item.cryptoAsset.name.toLowerCase()}
                             width={22}

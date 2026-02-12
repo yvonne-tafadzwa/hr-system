@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
 import PropertyStatus from "./PropertyStatus";
 import ClientFeedbacks from "./ClientFeedbacks";

@@ -1,9 +1,5 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const OurTopCourses = () => {
@@ -32,7 +28,7 @@ const OurTopCourses = () => {
 
               <div className="d-flex align-items-center py-3">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/courses-1.jpg"
                     className="wh-130-113 rounded-3"
                     alt="courses"
@@ -57,8 +53,7 @@ const OurTopCourses = () => {
               </ul>
 
               <div className="text-end">
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn border-color-white text-white py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
                 >
                   <span className="py-sm-1 d-block">
@@ -69,7 +64,7 @@ const OurTopCourses = () => {
               </div>
             </Card.Body>
 
-            <Image
+            <img
               src="/images/shape.png"
               className="position-absolute top-0 end-0"
               alt="shape"
@@ -88,7 +83,7 @@ const OurTopCourses = () => {
 
               <div className="d-flex align-items-center py-3">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/event-5.jpg"
                     className="wh-130-113 rounded-3"
                     alt="courses"
@@ -111,8 +106,7 @@ const OurTopCourses = () => {
               </ul>
 
               <div className="text-end">
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn border-color-white text-white py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
                 >
                   <span className="py-sm-1 d-block">
@@ -123,7 +117,7 @@ const OurTopCourses = () => {
               </div>
             </Card.Body>
 
-            <Image
+            <img
               src="/images/shape.png"
               className="position-absolute top-0 end-0"
               alt="shape"

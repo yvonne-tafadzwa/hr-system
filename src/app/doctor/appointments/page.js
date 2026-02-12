@@ -1,5 +1,3 @@
-"use client"; 
- 
 import Appointments from "@/components/Doctor/Appointments";
 import { Breadcrumb } from "react-bootstrap";
 

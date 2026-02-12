@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Badge, ListGroup } from "react-bootstrap";
 
 const ListGroupWithBadge = () => {

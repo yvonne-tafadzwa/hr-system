@@ -1,5 +1,3 @@
-"use client";
-
 import { Breadcrumb } from "react-bootstrap";
 import EventsDetails from '@/components/Events/EventsDetails'; 
 

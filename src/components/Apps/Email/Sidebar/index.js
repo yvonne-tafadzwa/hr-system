@@ -1,11 +1,8 @@
-"use client";
-
 import { Card, Form } from "react-bootstrap";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -26,8 +23,7 @@ const Sidebar = () => {
             </span>
           </Form>
 
-          <Link
-            href="/apps/email/compose/"
+          <Link to="/apps/email/compose/"
             className="btn btn-primary fs-16 fw-medium text-center d-block py-2 mb-4"
           >
             <div className="d-flex align-items-center justify-content-center py-lg-1">
@@ -38,8 +34,7 @@ const Sidebar = () => {
 
           <ul className="email-sidebar-nav ps-0 mb-4 list-unstyled">
             <li className="mb-3 d-flex justify-content-between align-items-center">
-              <Link
-                href="/apps/email/inbox/"
+              <Link to="/apps/email/inbox/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/inbox/" ? "active" : ""
                 }`}
@@ -53,8 +48,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="/apps/email/starred/"
+              <Link to="/apps/email/starred/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/starred/" ? "active" : ""
                 }`}
@@ -67,8 +61,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="/apps/email/snoozed/"
+              <Link to="/apps/email/snoozed/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/snoozed/" ? "active" : ""
                 }`}
@@ -81,8 +74,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="/apps/email/sent-mail/"
+              <Link to="/apps/email/sent-mail/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/sent-mail/" ? "active" : ""
                 }`}
@@ -95,8 +87,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="/apps/email/draft/"
+              <Link to="/apps/email/draft/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/draft/" ? "active" : ""
                 }`}
@@ -109,8 +100,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="/apps/email/important/"
+              <Link to="/apps/email/important/"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "/apps/email/important/" ? "active" : ""
                 }`}
@@ -123,8 +113,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="#"
+              <Link to="#"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "#" ? "active" : ""
                 }`}
@@ -137,8 +126,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="#"
+              <Link to="#"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "#" ? "active" : ""
                 }`}
@@ -151,8 +139,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="#"
+              <Link to="#"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "#" ? "active" : ""
                 }`}
@@ -165,8 +152,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="#"
+              <Link to="#"
                 className={`d-flex align-items-center text-decoration-none ${
                   pathname === "#" ? "active" : ""
                 }`}
@@ -179,8 +165,7 @@ const Sidebar = () => {
             </li>
 
             <li className="mb-3">
-              <Link
-                href="#"
+              <Link to="#"
                 className="d-flex align-items-center text-decoration-none"
               >
                 <span className="material-symbols-outlined fs-18 position-relative top-1 me-2">
@@ -191,8 +176,7 @@ const Sidebar = () => {
             </li>
 
             <li>
-              <Link
-                href="#"
+              <Link to="#"
                 className="d-flex align-items-center text-decoration-none"
               >
                 <span className="material-symbols-outlined fs-18 position-relative top-1 me-2">

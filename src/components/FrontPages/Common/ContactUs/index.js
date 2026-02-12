@@ -1,8 +1,4 @@
-"use client";
-
 import { Container, Row, Col, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const ContactUs = () => {
   return (
     <>
@@ -13,7 +9,7 @@ const ContactUs = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="contact-us-img mb-4 mb-lg-0">
-                <Image
+                <img
                   src="/images/landing/contact-us.jpg"
                   alt="contact-us"
                   width={1084}

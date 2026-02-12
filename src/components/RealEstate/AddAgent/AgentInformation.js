@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const AgentInformation = () => {
   // State to store the uploaded image
   const [image, setImage] = useState(null);
@@ -196,7 +192,7 @@ const AgentInformation = () => {
                   {/* Show the uploaded image or default image */}
                   <div className="mt-3">
                     {image ? (
-                      <Image
+                      <img
                         src={image}
                         alt="property"
                         width={60}
@@ -204,7 +200,7 @@ const AgentInformation = () => {
                         objectFit="cover"
                       />
                     ) : (
-                      <Image
+                      <img
                         src="/images/agent-1.png" // Default image
                         alt="agent"
                         width={60}

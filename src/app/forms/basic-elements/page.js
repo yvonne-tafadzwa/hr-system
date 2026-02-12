@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import TextualInputs from '@/components/Forms/BasicElements/TextualInputs';
 import BasicForm from '@/components/Forms/BasicElements/BasicForm';

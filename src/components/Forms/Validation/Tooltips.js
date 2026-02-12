@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card, Form, Button, InputGroup } from "react-bootstrap";
 import * as formik from "formik";
 import * as yup from "yup";

@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";  
-
 const AvatarSizeRoundedCircleExample = () => {
   return (
     <>
@@ -11,35 +7,35 @@ const AvatarSizeRoundedCircleExample = () => {
           <h4 className="fs-18 mb-4">Avatar Size Rounded-Circle Example</h4>
 
           <div className="d-flex align-items-center gap-4 flex-wrap">
-            <Image
+            <img
               src="/images/user-68.jpg"
               className="wh-87 rounded-circle"
               alt="user"
               width={87}
               height={87}
             />
-            <Image
+            <img
               src="/images/user-68.jpg"
               className="wh-77 rounded-circle"
               alt="user"
               width={77}
               height={77}
             />
-            <Image
+            <img
               src="/images/user-68.jpg"
               className="wh-67 rounded-circle"
               alt="user"
               width={67}
               height={67}
             />
-            <Image
+            <img
               src="/images/user-68.jpg"
               className="wh-57 rounded-circle"
               alt="user"
               width={57}
               height={57}
             />
-            <Image
+            <img
               src="/images/user-68.jpg"
               className="wh-47 rounded-circle"
               alt="user"

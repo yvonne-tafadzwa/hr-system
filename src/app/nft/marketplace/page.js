@@ -1,5 +1,3 @@
-"use client";
-
 import FeaturedNftArtworks from "@/components/NFT/Marketplace/FeaturedNftArtworks";
 import ManageYourNft from "@/components/NFT/Marketplace/ManageYourNft";
 import TopCreators from "@/components/NFT/Marketplace/TopCreators";

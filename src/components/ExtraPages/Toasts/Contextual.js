@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Toast } from "react-bootstrap";
-import Image from "next/image";
-
 const Contextual = () => {
   return (
     <>
@@ -28,7 +24,7 @@ const Contextual = () => {
               key={idx}
             >
               <Toast.Header>
-                <Image
+                <img
                   src="/images/holder1.svg"
                   className="rounded me-2"
                   alt="holder1"

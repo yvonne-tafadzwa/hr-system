@@ -1,5 +1,3 @@
-"use client"; 
-   
 import WritePrescription from "@/components/Doctor/WritePrescription";
 import { Breadcrumb } from "react-bootstrap";
 

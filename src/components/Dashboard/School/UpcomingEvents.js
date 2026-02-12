@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";

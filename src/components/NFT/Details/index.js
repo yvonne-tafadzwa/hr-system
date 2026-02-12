@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import Image from "next/image";
 import Content from "./Content";
 
 const Details = () => {
@@ -23,7 +20,7 @@ const Details = () => {
         <Col xs={12} sm={12} lg={4} xl={4} xxl={4}>
           <div className="mb-4">
             <div className="tab-content mb-3 card border-0 bg-white p-3 rounded-2">
-              <Image
+              <img
                 src={images[activeTab].src}
                 className="rounded-2"
                 alt={images[activeTab].alt}
@@ -41,7 +38,7 @@ const Details = () => {
                       activeTab === index ? "active" : ""
                     }`}
                   >
-                    <Image
+                    <img
                       src={image.src}
                       className="rounded-2"
                       alt={image.alt}

@@ -1,15 +1,12 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Table, Button } from "react-bootstrap";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "react-router-dom";import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 import Pagination from "./Pagination";
 
 const AllCompanies = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [companies, setCompanies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -250,11 +247,11 @@ const AllCompanies = () => {
   };
 
   const handleView = (companyId) => {
-    router.push(`/companies/details/${companyId}`);
+    navigate(`/companies/details/${companyId}`);
   };
 
   const handleEdit = (companyId) => {
-    router.push(`/companies/edit/${companyId}`);
+    navigate(`/companies/edit/${companyId}`);
   };
 
   const handleDelete = async (companyIdToDelete) => {
@@ -305,7 +302,7 @@ const AllCompanies = () => {
               </h3>
               {/* Only show Add Company button for super admin */}
               {resolvedIsSuperAdmin && (
-                <Link href="/companies/add-company">
+                <Link to="/companies/add-company">
                   <Button variant="primary" className="text-white fw-semibold py-1 px-2" style={{ fontSize: '11px' }}>
                     <i className="ri-add-line me-1" style={{ fontSize: '12px' }}></i>
                     Add Company

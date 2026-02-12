@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
-import Link from "next/link";
-import { Row, Col, Card, Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Row, Col, Card, Dropdown } from "react-bootstrap";
 
 const topSellingItems = [
   {
@@ -75,8 +72,7 @@ const TopSellingItems = () => {
           <Row>
             {topSellingItems.slice(0, 4).map((item) => (
               <Col key={item.id} sm={6} md={3}>
-                <Link
-                  href={item.link}
+                <Link to={item.link}
                   className="text-decoration-none d-block"
                   style={{ marginTop: "22px" }}
                 >

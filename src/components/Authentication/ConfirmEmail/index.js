@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const ConfirmEmail = () => {
   return (
     <>
@@ -11,7 +7,7 @@ const ConfirmEmail = () => {
           <Card className="bg-white border-0 rounded-10 mb-4 text-center">
             <Card.Body className="p-4">
               <div className="mb-3 mb-md-4">
-                <Image
+                <img
                   src="/images/logo.svg"
                   alt="logo"
                   width={100}
@@ -19,7 +15,7 @@ const ConfirmEmail = () => {
                 />
               </div>
 
-              <Image
+              <img
                 src="/images/message.svg"
                 className="mb-3 mb-md-4"
                 alt="message"

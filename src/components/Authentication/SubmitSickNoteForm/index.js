@@ -1,9 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Form, Modal, Button } from "react-bootstrap";
-import Link from "next/link";
-import { submitSickNoteAction } from "@/app/actions/submitSickNote";
+import { Link } from "react-router-dom";import { submitSickNoteAction } from "@/app/actions/submitSickNote";
 
 const SubmitSickNoteForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -217,7 +214,7 @@ const SubmitSickNoteForm = () => {
 
                                 <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                                     Already have an account?{' '}
-                                    <Link href="/sign-in/" className="text-primary fw-medium">
+                                    <Link to="/sign-in/" className="text-primary fw-medium">
                                         Sign In
                                     </Link>
                                 </p>

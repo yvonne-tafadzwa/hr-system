@@ -1,9 +1,9 @@
-"use client";
-
+import { useParams } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 import CompanyDetails from '@/components/Companies/CompanyDetails';
 
-export default function Page({ params }) {
+export default function Page() {
+  const { id } = useParams();
   return (
     <div style={{ overflowX: 'hidden', width: '100%' }}>
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
@@ -25,8 +25,7 @@ export default function Page({ params }) {
         </Breadcrumb>
       </div>
 
-      <CompanyDetails companyId={params?.id} />
+      <CompanyDetails companyId={id} />
     </div>
   );
 }
-

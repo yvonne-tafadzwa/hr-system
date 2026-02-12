@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const OrderDetails = () => {
   // Initial product data
   const initialProducts = [
@@ -92,7 +88,7 @@ const OrderDetails = () => {
               >
                 <div className="d-flex align-items-center">
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={product.image}
                       className="rounded-1"
                       alt="product"
@@ -235,7 +231,7 @@ const OrderDetails = () => {
                       padding: "9px 0",
                     }} 
                   >
-                    <Image
+                    <img
                       src={`/images/${method}.svg`}
                       alt={method}
                       width={27}

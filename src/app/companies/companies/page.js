@@ -1,5 +1,3 @@
-"use client";
-
 import { Breadcrumb } from "react-bootstrap";
 import AllCompanies from '@/components/Companies/AllCompanies'; 
 

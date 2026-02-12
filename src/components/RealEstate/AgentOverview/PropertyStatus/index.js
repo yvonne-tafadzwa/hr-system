@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col } from "react-bootstrap";
 import PropertiesForSale from "./PropertiesForSale";
 import PropertiesForRent from "./PropertiesForRent";

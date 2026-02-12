@@ -1,5 +1,3 @@
-"use client";
- 
 import { Breadcrumb } from "react-bootstrap";
 import TestimonialsStyle1 from "@/components/ExtraPages/Testimonials/TestimonialsStyle1";
 import TestimonialsStyle2 from "@/components/ExtraPages/Testimonials/TestimonialsStyle2";

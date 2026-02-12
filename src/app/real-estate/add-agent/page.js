@@ -1,5 +1,3 @@
-"use client";
- 
 import AgentInformation from "@/components/RealEstate/AddAgent/AgentInformation";
 import { Breadcrumb } from "react-bootstrap";
 

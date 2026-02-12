@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import Sidebar from "@/components/Apps/Email/Sidebar";
 import Compose from "@/components/Apps/Email/Compose";

@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Card, Dropdown } from "react-bootstrap";
 import { useState } from "react";
 
@@ -120,7 +117,7 @@ const RecentInstagramFollowers = () => {
             >
               <div className="d-flex align-items-center gap-2">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={follower.profileImage}
                     className="rounded-circle"
                     alt={follower.name}

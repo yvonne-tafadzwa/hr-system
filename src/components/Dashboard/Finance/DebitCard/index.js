@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Row, Col } from "react-bootstrap";
-import Image from "next/image";  
 import AddCardModal from "./AddCardModal";
 
 const DebitCard = () => {
@@ -23,7 +20,7 @@ const DebitCard = () => {
               >
                 <div className="d-flex align-content-center justify-content-between mb-4">
                   <span className="text-white fs-12 fw-medium">Debit Card</span>
-                  <Image
+                  <img
                     src="/images/debit.svg"
                     alt="debit"
                     width={22}
@@ -31,7 +28,7 @@ const DebitCard = () => {
                   />
                 </div>
 
-                <Image
+                <img
                   className="mb-4"
                   src="/images/board-1.png"
                   alt="board"
@@ -64,7 +61,7 @@ const DebitCard = () => {
               >
                 <div className="d-flex align-content-center justify-content-between mb-4">
                   <span className="text-white fs-12 fw-medium">Debit Card</span>
-                  <Image
+                  <img
                     src="/images/virtual.svg"
                     alt="debit"
                     width={22}
@@ -72,7 +69,7 @@ const DebitCard = () => {
                   />
                 </div>
 
-                <Image
+                <img
                   className="mb-4"
                   src="/images/board-1.png"
                   alt="board"

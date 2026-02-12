@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicAreaChart from '@/components/Charts/AreaChart/BasicAreaChart';
 import SplineAreaChart from '@/components/Charts/AreaChart/SplineAreaChart';

@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const OrderSummary = () => {
   return (
     <>
@@ -64,7 +60,7 @@ const OrderSummary = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image 
+                  <img 
                     src="/images/master-card.png" 
                     alt="master-card" 
                     width={50}

@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import UncontrolledSlides from "@/components/UIKit/Carousel/UncontrolledSlides";
 import ControlledCarousel from "@/components/UIKit/Carousel/ControlledCarousel";

@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const Reviews = () => {
   const [ratings, setRatings] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -148,7 +144,7 @@ const Reviews = () => {
                     <td style={{ paddingTop: "14px", paddingBottom: "14px" }}>
                       <div className="d-flex align-items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                          <img
                             src={rating.image}
                             className="rounded-circle"
                             alt="order"

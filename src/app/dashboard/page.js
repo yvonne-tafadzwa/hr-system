@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import TotalSales from '@/components/Dashboard/eCommerce/TotalSales';

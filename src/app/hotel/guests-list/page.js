@@ -1,5 +1,3 @@
-"use client";
-
 import GuestsListTable from "@/components/Hotel/GuestsListTable";
 import { Breadcrumb } from "react-bootstrap";
 

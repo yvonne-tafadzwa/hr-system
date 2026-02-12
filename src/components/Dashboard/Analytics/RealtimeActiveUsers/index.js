@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Card } from "react-bootstrap";
 
 const RealtimeActiveUsers = () => {
@@ -109,7 +106,7 @@ const RealtimeActiveUsers = () => {
       <Card
         className="border-0 rounded-3 p-4 position-relative mb-4 bg-4936F5 realtime-for-dark" 
       >
-        <Image
+        <img
           src="/images/shape-3.png"
           className="position-absolute top-0 end-0"
           alt="shape"

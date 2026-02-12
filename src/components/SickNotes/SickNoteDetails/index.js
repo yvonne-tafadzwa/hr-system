@@ -1,13 +1,11 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card, Row, Col, Button, ProgressBar, Alert } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { sickNotesService } from "@/lib/services";
 
 const SickNoteDetails = ({ sickNoteId }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const [sickNote, setSickNote] = useState(null);
   const [sickDaysInfo, setSickDaysInfo] = useState(null);
@@ -175,7 +173,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
           <br />
           <Button
             variant="secondary"
-            onClick={() => router.push('/dashboard/ecommerce')}
+            onClick={() => navigate('/dashboard/ecommerce')}
             className="mt-3"
             style={{ fontSize: '12px' }}
           >
@@ -194,7 +192,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
           <br />
           <Button
             variant="secondary"
-            onClick={() => router.push('/dashboard/ecommerce')}
+            onClick={() => navigate('/dashboard/ecommerce')}
             className="mt-3"
             style={{ fontSize: '12px' }}
           >
@@ -215,7 +213,7 @@ const SickNoteDetails = ({ sickNoteId }) => {
             <h3 className="mb-0" style={{ fontSize: '14px' }}>Sick Note Details</h3>
             <Button
               variant="secondary"
-              onClick={() => router.push('/dashboard/ecommerce')}
+              onClick={() => navigate('/dashboard/ecommerce')}
               style={{ fontSize: '12px' }}
             >
               Back

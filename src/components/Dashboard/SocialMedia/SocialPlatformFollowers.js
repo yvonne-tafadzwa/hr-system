@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Row, Col, Card } from "react-bootstrap";
 
 // Sample dynamic data for social platforms
@@ -74,7 +71,7 @@ const SocialPlatformFollowers = () => {
         <Col sm={4} key={platform.id}>
           <Card className="custom-shadow rounded-3 bg-white border mb-4">
             <div className="p-4">
-              <Image
+              <img
                 src={platform.icon}
                 className="mb-3"
                 alt={platform.name}

@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
-import Image from "next/image";
-
 const TodaysSchedule = () => {
   const [date, setDate] = useState(new Date());
   const [schedule, setSchedule] = useState([]);
@@ -79,7 +75,7 @@ const TodaysSchedule = () => {
                 </span>
                 <p className="mb-2">{item.title}</p>
                 <div className="d-flex align-items-center mb-3">
-                  <Image
+                  <img
                     src={item.image}
                     className="rounded-circle border border-color-white"
                     alt="user"
@@ -107,7 +103,7 @@ const TodaysSchedule = () => {
                   </div>
                 </div>
 
-                <Image
+                <img
                   src="/images/shape-12.png"
                   className="position-absolute top-0 end-0"
                   alt="shape"

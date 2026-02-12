@@ -1,7 +1,4 @@
-"use client";
-
 import { Table, Button } from "react-bootstrap";
-import Image from "next/image";
 import { useState } from "react";
 
 const PlaceBids = () => {
@@ -96,7 +93,7 @@ const PlaceBids = () => {
                   <td>
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0">
-                        <Image
+                        <img
                           src={bid.nftImage}
                           className="rounded-3"
                           alt={bid.title}

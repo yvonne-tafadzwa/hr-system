@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 

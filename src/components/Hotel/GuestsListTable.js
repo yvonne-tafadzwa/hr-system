@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, Table, Form, Button, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const GuestsListTable = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -448,7 +444,7 @@ const GuestsListTable = () => {
                             className="d-flex align-items-center"
                             style={{ gap: "12px" }}
                           >
-                            <Image
+                            <img
                               src={guest.image}
                               className="rounded-circle"
                               alt={guest.name}
@@ -693,7 +689,7 @@ const GuestsListTable = () => {
                     <div className="d-flex align-items-center gap-2 flex-wrap mt-2">
                       {images.map((image, index) => (
                         <div key={index} className="position-relative">
-                          <Image
+                          <img
                             src={image.url}
                             alt={image.name}
                             width={60}

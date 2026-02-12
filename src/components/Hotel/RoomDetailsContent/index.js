@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const RoomDetailsContent = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -23,7 +19,7 @@ const RoomDetailsContent = () => {
           >
             {activeTab === 0 && (
               <>
-                <Image
+                <img
                   src="/images/room-10.jpg"
                   className="rounded-3 w-100"
                   alt="room"
@@ -35,7 +31,7 @@ const RoomDetailsContent = () => {
 
             {activeTab === 1 && (
               <>
-                <Image
+                <img
                   src="/images/room-11.jpg"
                   className="rounded-3 w-100"
                   alt="room"
@@ -47,7 +43,7 @@ const RoomDetailsContent = () => {
 
             {activeTab === 2 && (
               <>
-                <Image
+                <img
                   src="/images/room-12.jpg"
                   className="rounded-3 w-100"
                   alt="room"
@@ -59,7 +55,7 @@ const RoomDetailsContent = () => {
 
             {activeTab === 3 && (
               <>
-                <Image
+                <img
                   src="/images/room-13.jpg"
                   className="rounded-3 w-100"
                   alt="room"
@@ -77,7 +73,7 @@ const RoomDetailsContent = () => {
                 activeTab === 0 ? "border-color-primary" : ""
               }`}
             >
-              <Image
+              <img
                 src="/images/room-10.jpg"
                 className="rounded-3"
                 alt="room"
@@ -92,7 +88,7 @@ const RoomDetailsContent = () => {
                 activeTab === 1 ? "border-color-primary" : ""
               }`}
             >
-              <Image
+              <img
                 src="/images/room-11.jpg"
                 className="rounded-3"
                 alt="room"
@@ -107,7 +103,7 @@ const RoomDetailsContent = () => {
                 activeTab === 2 ? "border-color-primary" : ""
               }`}
             >
-              <Image
+              <img
                 src="/images/room-12.jpg"
                 className="rounded-3"
                 alt="room"
@@ -122,7 +118,7 @@ const RoomDetailsContent = () => {
                 activeTab === 3 ? "border-color-primary" : ""
               }`}
             >
-              <Image
+              <img
                 src="/images/room-13.jpg"
                 className="rounded-3"
                 alt="room"
@@ -142,7 +138,7 @@ const RoomDetailsContent = () => {
               }}
             >
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/user-190.jpg"
                   className="rounded-circle"
                   alt="user"
@@ -180,7 +176,7 @@ const RoomDetailsContent = () => {
                 className="d-flex align-items-center"
                 style={{ gap: "10px" }}
               >
-                <Image
+                <img
                   src="/images/schedule.svg"
                   alt="schedule"
                   width={28}
@@ -198,7 +194,7 @@ const RoomDetailsContent = () => {
                 className="d-flex align-items-center"
                 style={{ gap: "10px" }}
               >
-                <Image
+                <img
                   src="/images/schedule.svg"
                   alt="schedule"
                   width={28}

@@ -1,5 +1,3 @@
-"use client";
- 
 import AddPatientForm from "@/components/Doctor/AddPatientForm";
 import { Breadcrumb } from "react-bootstrap";
 

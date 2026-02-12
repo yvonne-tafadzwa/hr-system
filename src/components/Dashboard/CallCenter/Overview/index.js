@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Row, Col, Form } from "react-bootstrap";
-import Image from "next/image";
 import TotalCalls from "./TotalCalls";
 import AnsweredCalls from "./AnsweredCalls";
 import MissedCalls from "./MissedCalls";
@@ -43,13 +40,13 @@ const Overview = () => {
                   </div>
 
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/call5.svg"
                       alt="total-calls"
                       width={32}
                       height={32}
                     />
-                    <Image
+                    <img
                       src="/images/call4.svg"
                       alt="total-calls"
                       width={32}
@@ -84,13 +81,13 @@ const Overview = () => {
                   </div>
 
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/call3.svg"
                       alt="answered-calls"
                       width={32}
                       height={32}
                     />
-                    <Image
+                    <img
                       src="/images/call6.svg"
                       alt="answered-calls"
                       width={32}
@@ -123,13 +120,13 @@ const Overview = () => {
                   </div>
 
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src="/images/call7.svg"
                       alt="missed-calls"
                       width={32}
                       height={32}
                     />
-                    <Image
+                    <img
                       src="/images/call8.svg"
                       alt="missed-calls"
                       width={32}

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Table, Button, Form } from "react-bootstrap";
 import AddANewTransaction from "./AddANewTransaction";

@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react"; 
-import Image from "next/image";
 import { Button } from "react-bootstrap";
 
 const Completed = () => {
@@ -12,7 +9,7 @@ const Completed = () => {
         style={{ maxWidth: "625px" }}
       >
         <div className="mb-4">
-          <Image
+          <img
             src="/images/interface-welcome.png"
             alt="interface-welcome"
             width={308}

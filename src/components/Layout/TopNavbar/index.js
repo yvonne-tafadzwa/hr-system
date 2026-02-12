@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import Notifications from "./Notifications";
 import Profile from "./Profile";
@@ -94,11 +92,23 @@ const TopNavbar = ({ toogleActive }) => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="left-header-content">
-                <div className="d-flex flex-column">
-                  <h4 className="mb-0 d-flex align-items-center" style={{ fontSize: '16px', fontWeight: '600', color: '#333' }}>
-                    Hi, {authLoading ? '...' : (companyName || 'Company')} 👋
-                  </h4>
-                  <span style={{ fontSize: '12px', color: '#6c757d' }}>Welcome back! Here&apos;s what&apos;s happening today.</span>
+                <div className="d-flex align-items-center">
+                  {/* Hamburger menu button - visible only on small screens */}
+                  <button
+                    className="burger-menu-btn bg-transparent border-0 p-0 d-lg-none me-3"
+                    onClick={toogleActive}
+                    aria-label="Toggle sidebar menu"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <i className="ri-menu-line" style={{ fontSize: '24px', color: '#333' }}></i>
+                  </button>
+
+                  <div className="d-flex flex-column">
+                    <h4 className="mb-0 d-flex align-items-center" style={{ fontSize: '16px', fontWeight: '600', color: '#333' }}>
+                      Hi, {authLoading ? '...' : (companyName || 'Company')} 👋
+                    </h4>
+                    <span style={{ fontSize: '12px', color: '#6c757d' }}>Welcome back! Here&apos;s what&apos;s happening today.</span>
+                  </div>
                 </div>
               </div>
             </div>

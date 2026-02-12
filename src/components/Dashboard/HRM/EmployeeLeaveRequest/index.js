@@ -1,9 +1,5 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card, Table, Form, Button } from "react-bootstrap";
-import Image from "next/image";
-
 // Example dynamic data (could be fetched from an API)
 const mockLeaveRequests = [
   {
@@ -172,7 +168,7 @@ const EmployeeLeaveRequest = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={request.imageUrl}
                               className="rounded-circle"
                               alt="user"

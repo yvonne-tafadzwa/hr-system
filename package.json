@@ -1,12 +1,13 @@
 {
   "name": "trezo-react",
-  "version": "3.5.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/api.js",
+    "dev:full": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.15",
@@ -20,8 +21,6 @@
     "html2canvas": "^1.4.1",
     "jspdf": "^4.1.0",
     "jspdf-autotable": "^5.0.7",
-    "next": "^16.1.6",
-    "nodemailer": "^7.0.13",
     "react": "^18.3.1",
     "react-apexcharts": "^1.4.1",
     "react-bootstrap": "^2.10.4",
@@ -29,6 +28,7 @@
     "react-datetime-picker": "^6.0.1",
     "react-dom": "^18.3.1",
     "react-material-symbols": "^4.4.0",
+    "react-router-dom": "^7.1.0",
     "react-select": "^5.8.0",
     "react-svg-worldmap": "^2.0.0-alpha.16",
     "react-tabs": "^6.0.2",
@@ -37,7 +37,15 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "eslint": "^9.14.0",
-    "eslint-config-next": "^15.0.2"
+    "@vitejs/plugin-react": "^4.3.0",
+    "@vitejs/plugin-react-swc": "^4.2.3",
+    "concurrently": "^9.1.0",
+    "vite": "^6.1.0"
+  },
+  "optionalDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "nodemailer": "^7.0.13"
   }
 }

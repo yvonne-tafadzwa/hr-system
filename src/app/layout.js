@@ -12,13 +12,9 @@ import 'react-tabs/style/react-tabs.css';
 import "../../styles/style.css";
 
 import LayoutProvider from '@/providers/LayoutProvider';
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "Human Resources System",
-  description: "Human Resources System - Employee Management Dashboard",
+  title: "Verity App",
+  description: "Verity App - Employee Management Dashboard",
 };
 
 export default function RootLayout({ children }) {

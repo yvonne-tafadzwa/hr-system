@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Col, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const Profile = () => {
   // State to manage follow status
   const [isFollowing, setIsFollowing] = useState(false);
@@ -19,7 +15,7 @@ const Profile = () => {
         <Card className="border-0 rounded-2 p-4 bg-white mb-4">
           <div className="d-flex align-items-center mb-4">
             <div className="flex-shrink-0 position-relative">
-              <Image
+              <img
                 src="/images/nft-21.png"
                 className="rounded-circle"
                 alt="nft"
@@ -36,7 +32,7 @@ const Profile = () => {
           <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
             <div className="d-flex align-items-center">
               <div className="flex-shrink-0 position-relative">
-                <Image
+                <img
                   src="/images/schedule2.png"
                   alt="schedule2"
                   width={30}

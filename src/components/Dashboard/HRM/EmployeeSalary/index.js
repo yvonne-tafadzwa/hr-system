@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const EmployeeSalary = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -184,7 +180,7 @@ const EmployeeSalary = () => {
                 className="bg-primary-50 bg-opacity-10 text-center rounded-1"
                 style={{ width: "42px", height: "42px", lineHeight: "42px" }}
               >
-                <Image
+                <img
                   src="/images/icon-total-payroll.svg"
                   alt="icon-total-payroll"
                   width={26}
@@ -216,7 +212,7 @@ const EmployeeSalary = () => {
                   className="bg-success-60 bg-opacity-10 text-center rounded-1"
                   style={{ width: "42px", height: "42px", lineHeight: "37px" }}
                 >
-                  <Image
+                  <img
                     src="/images/icon-salary-paid.svg"
                     alt="icon-salary-paid"
                     width={26}
@@ -236,7 +232,7 @@ const EmployeeSalary = () => {
                   className="bg-danger-50 bg-opacity-10 text-center rounded-1"
                   style={{ width: "42px", height: "42px", lineHeight: "42px" }}
                 >
-                  <Image
+                  <img
                     src="/images/icon-salary-pending.svg"
                     alt="icon-salary-paid"
                     width={26}

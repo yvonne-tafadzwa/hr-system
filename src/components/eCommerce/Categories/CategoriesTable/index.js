@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const categoriesData = [
   {
     image: "/images/product-1.jpg",
@@ -195,7 +191,7 @@ const CategoriesTable = () => {
                         </td>
 
                         <td>
-                          <Image
+                          <img
                             src={item.image}
                             className="wh-40 rounded-100"
                             alt="product-1"

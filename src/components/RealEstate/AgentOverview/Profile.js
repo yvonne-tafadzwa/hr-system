@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const Profile = () => {
   // Example dynamic profile data
   const profileData = {
@@ -30,7 +26,7 @@ const Profile = () => {
           style={{ height: "120px" }}
         ></span>
 
-        <Image
+        <img
           src="/images/shape-9.png"
           className="position-absolute top-0 start-0"
           alt="shape"
@@ -39,7 +35,7 @@ const Profile = () => {
         />
 
         <Card.Body className="px-4 pb-4" style={{ paddingTop: "35px" }}>
-          <Image
+          <img
             src={profileData.profileImage}
             className="rounded-circle mb-4"
             alt="user"

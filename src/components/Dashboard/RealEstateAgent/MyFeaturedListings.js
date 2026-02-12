@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const MyFeaturedListings = () => {
@@ -107,8 +104,7 @@ const MyFeaturedListings = () => {
         >
           {listings.map((listing) => (
             <SwiperSlide key={listing.id}>
-              <Link
-                href={listing.link}
+              <Link to={listing.link}
                 className="text-decoration-none position-relative d-block"
               >
                 <div

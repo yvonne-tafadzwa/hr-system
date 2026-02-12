@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Dropdown, Card, Form } from "react-bootstrap";
 
 const Assets = () => {

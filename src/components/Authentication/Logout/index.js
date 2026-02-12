@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import { Row, Col, Spinner } from "react-bootstrap";
 import { supabase } from "@/lib/supabase";

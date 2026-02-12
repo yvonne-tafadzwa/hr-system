@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Accordion } from "react-bootstrap";
 
 const FaqContent = () => {

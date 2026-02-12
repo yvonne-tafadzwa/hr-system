@@ -1,7 +1,4 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Image from "next/image";
 import Pagination from "./Pagination";
 
 const recentLeadsData = [
@@ -115,7 +112,7 @@ const RecentLeads = () => {
 
                         <td>
                           <div className="d-flex align-items-center">
-                            <Image
+                            <img
                               src={value.customerImg}
                               className="wh-44 rounded-circle"
                               alt="user"

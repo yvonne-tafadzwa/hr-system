@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Toast } from "react-bootstrap";
-import Image from "next/image";
-
 const Dismissible = () => {
   const [showA, setShowA] = useState(true);
   const [showB, setShowB] = useState(true);
@@ -26,7 +22,7 @@ const Dismissible = () => {
               </Button>
               <Toast show={showA} onClose={toggleShowA}>
                 <Toast.Header>
-                  <Image
+                  <img
                     src="/images/holder1.svg"
                     className="rounded me-2"
                     alt="holder"
@@ -48,7 +44,7 @@ const Dismissible = () => {
               </Button>
               <Toast onClose={toggleShowB} show={showB} animation={false}>
                 <Toast.Header>
-                  <Image
+                  <img
                     src="/images/holder1.svg"
                     className="rounded me-2"
                     alt="holder"

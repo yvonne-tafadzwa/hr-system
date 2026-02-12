@@ -1,13 +1,11 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Form } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
 const LatestSickNotes = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [sickNotes, setSickNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -234,7 +232,7 @@ const LatestSickNotes = () => {
               {sickNotes.map((note, index) => (
                 <div
                   key={note.id}
-                  onClick={() => router.push(`/sick-notes/details/${note.id}`)}
+                  onClick={() => navigate(`/sick-notes/details/${note.id}`)}
                   className={`d-flex align-items-start justify-content-between py-2 ${
                     index < sickNotes.length - 1 ? 'border-bottom' : ''
                   }`}

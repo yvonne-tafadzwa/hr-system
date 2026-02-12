@@ -1,10 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const followingData = [
+import { Link } from "react-router-dom";const followingData = [
   {
     image: "/images/user-6.jpg",
     name: "Alex Davis",
@@ -68,7 +63,7 @@ const Following = () => {
                         <td>
                           <div className="d-flex align-items-center">
                             <div className="flex-shrink-0 position-relative">
-                              <Image
+                              <img
                                 src={value.image}
                                 className="wh-44 rounded-circle"
                                 alt="user"
@@ -89,8 +84,7 @@ const Following = () => {
                         </td>
 
                         <td className="text-end">
-                          <Link
-                            href="#"
+                          <Link to="#"
                             className="wh-35 d-inline-block border text-center lh-35 rounded-circle text-decoration-none hover-bg"
                           >
                             <i className="ri-arrow-right-up-line fs-18"></i>

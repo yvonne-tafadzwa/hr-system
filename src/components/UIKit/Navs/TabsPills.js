@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Nav } from "react-bootstrap";
 
 const TabsPills = () => {

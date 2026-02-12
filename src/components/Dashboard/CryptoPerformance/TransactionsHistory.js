@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Dropdown, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const TransactionsHistory = () => {
   // Sample transaction data
   const transactionsData = [
@@ -196,7 +192,7 @@ const TransactionsHistory = () => {
                               gap: "8px",
                             }}
                           >
-                            <Image
+                            <img
                               src={transaction.icon}
                               alt={transaction.symbol}
                               width={22}

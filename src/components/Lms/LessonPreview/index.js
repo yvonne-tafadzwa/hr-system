@@ -1,9 +1,5 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Link from 'next/link';  
-
-const LessonPreview = () => {
+import { Link } from "react-router-dom";const LessonPreview = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -14,7 +10,7 @@ const LessonPreview = () => {
 
           <p className="mb-md-4 mb-3">Node.js for Beginners: Alias animi labque, deserunt distinctio eum excepturi fuga iure labore magni molestias mollitia natus, officia pofro quis sunt temporibus veritatis voluptatem voluptatum.</p>
 
-          <Link href="#" className="btn btn-primary py-2 px-4 fw-medium fs-16">
+          <Link to="#" className="btn btn-primary py-2 px-4 fw-medium fs-16">
               <span className="d-inline-block py-1">Next Tutoorial</span>
           </Link>
         </Card.Body>

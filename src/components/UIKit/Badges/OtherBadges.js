@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Button, Badge } from "react-bootstrap";
 
 const OtherBadges = () => {

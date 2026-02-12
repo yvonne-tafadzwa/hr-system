@@ -1,17 +1,13 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-router-dom";import { useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   return (
     <>
       <ul className="ps-0 mb-4 list-unstyled d-flex flex-wrap gap-2 gap-lg-3">
         <li>
-          <Link
-            href="/settings/account-settings/"
+          <Link to="/settings/account-settings/"
             className={`btn border border-primary text-primary py-2 px-3 fw-semibold ${
               pathname === "/settings/account-settings/"
                 ? "btn-primary text-white"
@@ -23,8 +19,7 @@ const Nav = () => {
         </li>
 
         <li>
-          <Link
-            href="/settings/change-password/"
+          <Link to="/settings/change-password/"
             className={`btn border border-primary text-primary py-2 px-3 fw-semibold ${
               pathname === "/settings/change-password/"
                 ? "btn-primary text-white"
@@ -36,8 +31,7 @@ const Nav = () => {
         </li>
 
         <li>
-          <Link
-            href="/settings/connections/"
+          <Link to="/settings/connections/"
             className={`btn border border-primary text-primary py-2 px-3 fw-semibold ${
               pathname === "/settings/connections/"
                 ? "btn-primary text-white"
@@ -49,8 +43,7 @@ const Nav = () => {
         </li>
 
         <li>
-          <Link
-            href="/settings/privacy-policy/"
+          <Link to="/settings/privacy-policy/"
             className={`btn border border-primary text-primary py-2 px-3 fw-semibold ${
               pathname === "/settings/privacy-policy/"
                 ? "btn-primary text-white"
@@ -62,8 +55,7 @@ const Nav = () => {
         </li>
 
         <li>
-          <Link
-            href="/settings/terms-conditions/"
+          <Link to="/settings/terms-conditions/"
             className={`btn border border-primary text-primary py-2 px-3 fw-semibold ${
               pathname === "/settings/terms-conditions/"
                 ? "btn-primary text-white"

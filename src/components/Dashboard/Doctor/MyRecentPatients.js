@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { Card, Table, Dropdown } from "react-bootstrap";
 
 const MyRecentPatients = () => {
@@ -227,7 +224,7 @@ const MyRecentPatients = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={patient.image}
                               className="rounded-circle"
                               alt="nft"

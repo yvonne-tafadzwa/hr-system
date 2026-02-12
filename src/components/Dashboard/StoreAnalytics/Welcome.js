@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const welcomeData = {
   storeStats: [
     {
@@ -57,7 +53,7 @@ const Welcome = () => {
             </h3>
           </div>
           <div className="py-sm-1">
-            <Image
+            <img
               src="/images/store.png"
               alt="store"
               width={208}

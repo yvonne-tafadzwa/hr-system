@@ -1,7 +1,3 @@
-"use client";
-
-import Image from "next/image";
-
 const PageBanner = ({ pageTitle }) => {
   return (
     <>
@@ -11,14 +7,14 @@ const PageBanner = ({ pageTitle }) => {
             <h1 className="fs-60 mb-0">{pageTitle}</h1>
           </div>
 
-          <Image
+          <img
             src="/images/landing/shape-5.png"
             className="shape-5"
             alt="shape"
             width={658}
             height={656}
           />
-          <Image
+          <img
             src="/images/landing/shape-6.png"
             className="shape-6"
             alt="shape"

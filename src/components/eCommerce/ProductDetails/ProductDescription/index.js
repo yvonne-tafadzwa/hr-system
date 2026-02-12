@@ -1,5 +1,3 @@
-"use client";
-
 import { Tab, Tabs } from "react-bootstrap";
 import Description from './Description';
 import Specification from './Specification';

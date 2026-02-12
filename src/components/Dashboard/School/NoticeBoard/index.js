@@ -1,8 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Card } from "react-bootstrap";
 
 // Sample dynamic data for the notices
 const notices = [
@@ -65,7 +61,7 @@ const NoticeBoard = () => {
                   className={`text-center ${notice.color} rounded-circle`}
                   style={{ width: "40px", height: "40px", lineHeight: "40px" }}
                 >
-                  <Image
+                  <img
                     src={notice.icon}
                     alt="notice-board-icon"
                     width={22}
@@ -85,8 +81,7 @@ const NoticeBoard = () => {
               </div>
             </div>
 
-            <Link
-              href="#"
+            <Link to="#"
               className="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read text-decoration-none border"
               style={{ width: "43px", height: "43px", lineHeight: "42px" }}
             >

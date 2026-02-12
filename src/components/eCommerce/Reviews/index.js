@@ -1,10 +1,5 @@
-"use client";
-
-import Image from "next/image";
 import { Card, Table, Form } from "react-bootstrap";
-import Link from "next/link";
-
-const Reviews = () => {
+import { Link } from "react-router-dom";const Reviews = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -46,7 +41,7 @@ const Reviews = () => {
                   <tr>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src="/images/user-6.jpg"
                           className="wh-40 rounded-circle"
                           alt="user"
@@ -77,7 +72,7 @@ const Reviews = () => {
 
                     <td>
                       <div className="d-flex align-items-center text-secondary hover">
-                        <Image
+                        <img
                           src="/images/product-1.jpg"
                           className="rounded-3 wh-40"
                           alt="product"
@@ -125,7 +120,7 @@ const Reviews = () => {
                   <tr>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src="/images/user-7.jpg"
                           className="wh-40 rounded-circle"
                           alt="user"
@@ -156,7 +151,7 @@ const Reviews = () => {
 
                     <td>
                       <div className="d-flex align-items-center text-secondary hover">
-                        <Image
+                        <img
                           src="/images/product-2.jpg"
                           className="rounded-3 wh-40"
                           alt="product"
@@ -204,7 +199,7 @@ const Reviews = () => {
                   <tr>
                     <td>
                       <div className="d-flex align-items-center">
-                        <Image
+                        <img
                           src="/images/user-8.jpg"
                           className="wh-40 rounded-circle"
                           alt="user"
@@ -235,7 +230,7 @@ const Reviews = () => {
 
                     <td>
                       <div className="d-flex align-items-center text-secondary hover">
-                        <Image
+                        <img
                           src="/images/product-3.jpg"
                           className="rounded-3 wh-40"
                           alt="product"

@@ -1,13 +1,10 @@
-"use client";
-
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Row, Col, Form } from "react-bootstrap";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "react-router-dom";import { useNavigate } from "react-router-dom";
 import { authService } from "@/lib/services";
 
 const SignInForm = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -16,6 +13,16 @@ const SignInForm = () => {
   // Form fields
   const [companyId, setCompanyId] = useState("");
   const [password, setPassword] = useState("");
+
+  // Safety timeout ref — prevents "Signing in..." from getting stuck forever
+  const timeoutRef = useRef(null);
+
+  // Clean up timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,6 +39,12 @@ const SignInForm = () => {
     }
 
     setIsLoading(true);
+
+    // Safety net: if login hasn't completed in 15s, unblock the button
+    timeoutRef.current = setTimeout(() => {
+      setIsLoading(false);
+      setError("Login is taking too long. Please check your connection and try again.");
+    }, 15000);
 
     try {
       console.log('Submitting login for:', companyId.trim().toUpperCase());
@@ -52,6 +65,8 @@ const SignInForm = () => {
         sessionStorage.setItem('just_logged_in', 'true');
         // Use window.location for a full page load to ensure clean dashboard state
         window.location.href = "/dashboard/";
+        // Don't clear timeout here — let the navigation happen
+        return;
       }
 
     } catch (err) {
@@ -62,6 +77,11 @@ const SignInForm = () => {
         setError(`Error: ${err.message || "An unexpected error occurred"}`);
       }
     } finally {
+      // Clear the safety timeout since we got a response
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
       setIsLoading(false);
     }
   };
@@ -185,8 +205,7 @@ const SignInForm = () => {
                         Keep me logged in
                       </label>
                     </div>
-                    <Link
-                      href='/forgot-password/'
+                    <Link to='/forgot-password/'
                       className="fw-medium text-primary text-decoration-none"
                       style={{ fontSize: '12px' }}
                     >
@@ -213,8 +232,7 @@ const SignInForm = () => {
                 <Form.Group>
                   <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                     Don&apos;t have an account?{" "}
-                    <Link
-                      href="/sign-up/"
+                    <Link to="/sign-up/"
                       className="fw-medium text-primary text-decoration-none"
                     >
                       Register Company

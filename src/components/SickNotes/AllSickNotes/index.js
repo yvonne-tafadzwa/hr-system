@@ -1,14 +1,12 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Form, Table, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 import { sickNotesService } from "@/lib/services";
 
 const AllSickNotes = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [sickNotes, setSickNotes] = useState([]);
   const [employeeSickDaysMap, setEmployeeSickDaysMap] = useState({});
@@ -279,11 +277,11 @@ const AllSickNotes = () => {
   };
 
   const handleView = (noteId) => {
-    router.push(`/sick-notes/details/${noteId}`);
+    navigate(`/sick-notes/details/${noteId}`);
   };
 
   const handleEdit = (noteId) => {
-    router.push(`/sick-notes/edit/${noteId}`);
+    navigate(`/sick-notes/edit/${noteId}`);
   };
 
   const handleDelete = async (noteId) => {
@@ -424,7 +422,7 @@ const AllSickNotes = () => {
               </Button>
               <Button
                 variant="primary"
-                onClick={() => router.push('/sick-notes/add')}
+                onClick={() => navigate('/sick-notes/add')}
                 className="text-white fw-semibold py-1 px-2"
                 style={{ fontSize: '11px' }}
               >

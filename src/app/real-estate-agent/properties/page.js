@@ -1,5 +1,3 @@
-"use client";
- 
 import PropertiesTable from "@/components/RealEstateAgent/PropertiesTable";
 import { Breadcrumb } from "react-bootstrap";
 

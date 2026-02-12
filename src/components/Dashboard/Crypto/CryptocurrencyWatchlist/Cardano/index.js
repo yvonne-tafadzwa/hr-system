@@ -1,8 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-
 const Cardano = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -125,7 +121,7 @@ const Cardano = () => {
       <div className="border-0 rounded-3 mb-4 bg-warning bg-opacity-10 p-4">
         <div className="d-flex align-items-center">
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/images/cardano.png"
               className="rounded-circle"
               width={48}

@@ -1,10 +1,5 @@
-"use client";
-
 import { Card, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const topSellingProductsData = [
+import { Link } from "react-router-dom";const topSellingProductsData = [
   {
     product: {
       img: "/images/product-1.jpg",
@@ -103,11 +98,10 @@ const TopSellingProducts = () => {
                     topSellingProductsData.slice(0, 5).map((value, i) => (
                       <tr key={i}>
                         <td>
-                          <Link
-                            href={value.product.detailsLink}
+                          <Link to={value.product.detailsLink}
                             className="d-flex align-items-center"
                           >
-                            <Image
+                            <img
                               src={value.product.img}
                               className="wh-40 rounded-3"
                               alt="product-1"

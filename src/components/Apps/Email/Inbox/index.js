@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Dropdown,
   Card,
@@ -9,9 +7,7 @@ import {
   Tab,
   Tabs,
 } from "react-bootstrap";
-import Link from "next/link";
-
-const Inbox = () => {
+import { Link } from "react-router-dom";const Inbox = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -202,8 +198,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             2-Step Verification Turn Off{" "}
@@ -238,8 +233,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Facebook</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Friend Request{" "}
@@ -273,8 +267,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Linkedin</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Travel Information{" "}
@@ -308,8 +301,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Ethan Parker</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Leave Application{" "}
@@ -343,8 +335,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Dribbble</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Design Inspiration{" "}
@@ -378,8 +369,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Instagram</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Training Schedule{" "}
@@ -415,8 +405,7 @@ const Inbox = () => {
                           </span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Internal Auditor{" "}
@@ -450,8 +439,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Password Changed{" "}
@@ -487,8 +475,7 @@ const Inbox = () => {
                           </span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Virtual Training{" "}
@@ -522,8 +509,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">YouTube</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             New Subscriber{" "}
@@ -557,8 +543,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Security Alert{" "}
@@ -604,8 +589,7 @@ const Inbox = () => {
                           </span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Internal Auditor{" "}
@@ -639,8 +623,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Password Changed{" "}
@@ -676,8 +659,7 @@ const Inbox = () => {
                           </span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Virtual Training{" "}
@@ -711,8 +693,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">YouTube</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             New Subscriber{" "}
@@ -746,8 +727,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Security Alert{" "}
@@ -781,8 +761,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Google</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             2-Step Verification Turn Off{" "}
@@ -851,8 +830,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Linkedin</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Travel Information{" "}
@@ -886,8 +864,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Ethan Parker</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Leave Application{" "}
@@ -921,8 +898,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Dribbble</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Design Inspiration{" "}
@@ -956,8 +932,7 @@ const Inbox = () => {
                           <span className="fs-14 fw-medium">Instagram</span>
                         </td>
                         <td>
-                          <Link
-                            href="/apps/email/read-email/"
+                          <Link to="/apps/email/read-email/"
                             className="w-330 d-inline-block text-truncate text-secondary"
                           >
                             Training Schedule{" "}

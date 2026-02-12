@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Dropdown } from "react-bootstrap";
 import OneDay from "./OneDay";

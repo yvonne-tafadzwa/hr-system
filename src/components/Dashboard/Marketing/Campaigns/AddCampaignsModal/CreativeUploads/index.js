@@ -1,9 +1,5 @@
-"use client";
-
 import React from "react";
 import { Form, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const CreativeUploads = () => {
   return (
     <>
@@ -19,7 +15,7 @@ const CreativeUploads = () => {
               style={{ border: "2px dashed #5DA8FF" }}
             >
               <div className="flex-shrink-0">
-                <Image
+                <img
                   src="/images/upload.png"
                   alt="upload"
                   width={46}
@@ -54,7 +50,7 @@ const CreativeUploads = () => {
             <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom pb-4 mb-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/pdf.png"
                     alt="pdf"
                     width={35}
@@ -96,7 +92,7 @@ const CreativeUploads = () => {
             <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom pb-4 mb-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/doc.png"
                     alt="doc"
                     width={35}
@@ -138,7 +134,7 @@ const CreativeUploads = () => {
             <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom pb-4 mb-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/xl4.png"
                     alt="xl4"
                     width={35}
@@ -180,7 +176,7 @@ const CreativeUploads = () => {
             <div className="d-flex flex-wrap gap-2 justify-content-between align-items-center border-bottom pb-4 mb-4">
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src="/images/jpg.png"
                     alt="pdf"
                     width={35}

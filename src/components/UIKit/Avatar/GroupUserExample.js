@@ -1,10 +1,5 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link"; 
-
-const GroupUserExample = () => {
+import { Link } from "react-router-dom";const GroupUserExample = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -14,7 +9,7 @@ const GroupUserExample = () => {
           <div className="d-flex justify-content-between">
             <ul className="ps-0 mb-0 list-unstyled d-flex align-items-center">
               <li className="ms-m-15">
-                <Image
+                <img
                   src="/images/user-1.jpg"
                   className="wh-40 rounded-circle border border-2 border-color-white"
                   alt="user"
@@ -24,7 +19,7 @@ const GroupUserExample = () => {
               </li>
 
               <li className="ms-m-15">
-                <Image
+                <img
                   src="/images/user-2.jpg"
                   className="wh-40 rounded-circle border border-2 border-color-white"
                   alt="user"
@@ -34,7 +29,7 @@ const GroupUserExample = () => {
               </li>
 
               <li className="ms-m-15">
-                <Image
+                <img
                   src="/images/user-3.jpg"
                   className="wh-40 rounded-circle border border-2 border-color-white"
                   alt="user"
@@ -50,8 +45,7 @@ const GroupUserExample = () => {
               </li>
             </ul>
 
-            <Link
-              href="#"
+            <Link to="#"
               className="btn bg-primary bg-opacity-10 fw-bold fs-14 hover-bg"
             >
               <span className="position-relative top-2">View Details</span>

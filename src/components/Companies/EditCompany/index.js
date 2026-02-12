@@ -1,12 +1,10 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
 import { Row, Col, Card, Form, Button, ProgressBar, Alert } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 
 const EditCompany = ({ companyId }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -599,7 +597,7 @@ EMP002,2024-03-15,2024-03-18,Back pain,pending
       }
 
       // Success - redirect to companies list
-      router.push('/companies/');
+      navigate('/companies/');
     } catch (err) {
       console.error('Error updating company:', err);
       setError('An unexpected error occurred. Please try again.');
@@ -813,7 +811,7 @@ EMP002,2024-03-15,2024-03-18,Back pain,pending
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/companies/')}
+                        onClick={() => navigate('/companies/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                       >

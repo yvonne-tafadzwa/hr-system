@@ -1,13 +1,11 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
 const AllEmployees = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { isSuperAdmin, companyId } = useAuth();
   const [employees, setEmployees] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -271,11 +269,11 @@ const AllEmployees = () => {
   };
 
   const handleView = (employeeId) => {
-    router.push(`/employees/details/${employeeId}`);
+    navigate(`/employees/details/${employeeId}`);
   };
 
   const handleEdit = (employeeId) => {
-    router.push(`/employees/edit/${employeeId}`);
+    navigate(`/employees/edit/${employeeId}`);
   };
 
   const handleDelete = async (employeeId) => {
@@ -351,7 +349,7 @@ const AllEmployees = () => {
               </Form.Select>
               <Button
                 variant="primary"
-                onClick={() => router.push('/employees/add')}
+                onClick={() => navigate('/employees/add')}
                 className="text-white fw-semibold py-1 px-2"
                 style={{ fontSize: '11px' }}
               >

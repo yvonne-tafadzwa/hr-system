@@ -1,7 +1,4 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Image from "next/image";
 import Nav from "./Nav";
 import Followers from "./Followers";
 import MyProjects from "./MyProjects";
@@ -10,7 +7,7 @@ const Profile = () => {
   return (
     <>
       <div className="position-relative">
-        <Image
+        <img
           src="/images/profile-bg.jpg"
           className="rounded-top-3"
           alt="profile-bg"
@@ -38,14 +35,14 @@ const Profile = () => {
           <div className="d-flex justify-content-between flex-wrap gap-3">
             <div className="d-flex align-items-end">
               <div className="flex-shrink-0 position-relative mt-minus-110">
-                <Image
+                <img
                   src="/images/user-68.jpg"
                   className="rounded-circle border border-2 wh-160"
                   alt="user"
                   width={160}
                   height={160}
                 />
-                <Image
+                <img
                   src="/images/check.svg"
                   className="position-absolute bottom-0 end-0"
                   alt="check"

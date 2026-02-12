@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const statsData = [
   {
     title: "Total Students",
@@ -45,7 +41,7 @@ const Starts = () => {
             <Card.Body className="custom-padding-30 mx-xl-2">
               <div className="d-flex align-items-center mb-5">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={stat.icon}
                     alt={stat.title}
                     width={42}

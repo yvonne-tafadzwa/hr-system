@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import RatingWithStartIcon from "@/components/ExtraPages/Ratings/RatingWithStartIcon";
 import RatingWithHeartIcon from "@/components/ExtraPages/Ratings/RatingWithHeartIcon";

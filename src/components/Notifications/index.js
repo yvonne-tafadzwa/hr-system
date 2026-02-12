@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Table } from "react-bootstrap";
 

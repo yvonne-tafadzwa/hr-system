@@ -1,12 +1,7 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
 import SearchForm from "./SearchForm";
 import Pagination from "./Pagination";
-import Link from "next/link";
-import Image from "next/image";
-
-const eventsListData = [
+import { Link } from "react-router-dom";const eventsListData = [
   {
     eventID: "#JAN-258",
     image: "/images/event-1.jpg",
@@ -118,7 +113,7 @@ const EventsList = () => {
             <SearchForm />
 
             <div className="text-end">
-              <Link href="/events/create-an-event/">
+              <Link to="/events/create-an-event/">
                 <button className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg">
                   <span className="py-sm-1 d-block">
                     <i className="ri-add-line"></i>
@@ -151,11 +146,10 @@ const EventsList = () => {
                         <td className="text-body">{value.eventID}</td>
 
                         <td>
-                          <Link
-                            href={value.detailsLink}
+                          <Link to={value.detailsLink}
                             className="d-flex align-items-center"
                           >
-                            <Image
+                            <img
                               src={value.image}
                               className="rounded-3"
                               alt="event-1"
@@ -186,7 +180,7 @@ const EventsList = () => {
 
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Link href={value.detailsLink}>
+                            <Link to={value.detailsLink}>
                               <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                 <span className="material-symbols-outlined fs-16 text-primary">
                                   visibility

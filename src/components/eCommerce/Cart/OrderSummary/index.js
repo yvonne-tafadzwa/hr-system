@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
 
 const OrderSummary = () => {

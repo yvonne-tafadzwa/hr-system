@@ -1,9 +1,5 @@
-"use client";
-
 import { useState } from "react";
 import { Card, Form, Table, Button, Dropdown } from "react-bootstrap";
-import Image from "next/image";
-
 const ShipmentList = () => {
   // Dynamic shipment data
   const shipments = [
@@ -235,7 +231,7 @@ const ShipmentList = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <Image
+                          <img
                             src={shipment.customerImage}
                             className="wh-30 rounded-circle"
                             alt="user"

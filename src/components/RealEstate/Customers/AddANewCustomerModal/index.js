@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const AddANewCustomerModal = () => {
   // Modal
   const [isShowModal, setShowModal] = useState("false");
@@ -174,7 +170,7 @@ const AddANewCustomerModal = () => {
                     />
 
                     <div className="mt-3">
-                      <Image
+                      <img
                         src={imagePreview}
                         alt="customer"
                         width={50}

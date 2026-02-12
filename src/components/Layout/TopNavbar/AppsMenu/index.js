@@ -1,8 +1,4 @@
-"use client";
-
 import { Dropdown} from "react-bootstrap";
-import Image from "next/image";
-
 const AppsMenu = () => {
   return (
     <>
@@ -27,7 +23,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/figma.svg" 
                 alt="Figma"
                 className='wh-25'
@@ -42,7 +38,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/dribbble.svg" 
                 alt="Dribbble"
                 className='wh-25'
@@ -57,7 +53,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/spotify.svg" 
                 alt="Spotify"
                 className='wh-25'
@@ -72,7 +68,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/github.svg" 
                 alt="Github"
                 className='wh-25'
@@ -87,7 +83,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/gdrive.svg" 
                 alt="GDrive"
                 className='wh-25'
@@ -102,7 +98,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/trello.svg" 
                 alt="Trello"
                 className='wh-25'
@@ -117,7 +113,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/slak.svg" 
                 alt="Slak"
                 className='wh-25'
@@ -132,7 +128,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/pinterest.svg" 
                 alt="Pinterest"
                 className='wh-25'
@@ -147,7 +143,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/facebook.svg" 
                 alt="Facebook"
                 className='wh-25'
@@ -162,7 +158,7 @@ const AppsMenu = () => {
               target="_blank"
               className="dropdown-item p-0 text-center"
             >
-              <Image
+              <img
                 src="/images/linkedin.svg" 
                 alt="Linkedin"
                 className='wh-25'

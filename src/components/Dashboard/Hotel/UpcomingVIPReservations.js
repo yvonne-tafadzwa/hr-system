@@ -1,8 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Table, Card, Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";import { Table, Card, Dropdown } from "react-bootstrap";
 
 const UpcomingVIPReservations = () => {
   // State for reservations and pagination
@@ -207,8 +204,7 @@ const UpcomingVIPReservations = () => {
                       {reservation.id}
                     </td>
                     <td>
-                      <Link
-                        href={reservation.viewRoom}
+                      <Link to={reservation.viewRoom}
                         className="fs-14 fw-semibold text-secondary"
                       >
                         {reservation.room}
@@ -233,7 +229,7 @@ const UpcomingVIPReservations = () => {
                     <td className="text-end">
                       <div className="d-flex justify-content-end align-items-center gap-2">
                         <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                          <Link href={reservation.viewRoom}>
+                          <Link to={reservation.viewRoom}>
                             <i className="material-symbols-outlined fs-16 text-primary">
                               visibility
                             </i>

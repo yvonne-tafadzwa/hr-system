@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const GrossEarnings = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -79,7 +75,7 @@ const GrossEarnings = () => {
       <Card className="bg-primary-div bg-opacity-10 border-0 rounded-3 p-4 mb-4">
         <div className="d-flex align-items-center gap-3">
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/images/balance-2.png"
               alt="balance"
               width={40}

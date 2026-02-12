@@ -1,9 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image"; 
-
-const Footer = () => {
+import { Link } from "react-router-dom";const Footer = () => {
   return (
     <>
       <div className="footers-area pb-125 position-relative z-2">
@@ -11,15 +6,15 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-3 col-sm-6">
               <div className="footer-single-item mb-4">
-                <Link href="/" className="footer-logo d-inline-block mb-4">
-                  <Image
+                <Link to="/" className="footer-logo d-inline-block mb-4">
+                  <img
                     src="/images/landing/logo.svg"
                     alt="logo"
                     width={132}
                     height={34}
                     className="black-logo"
                   />
-                  <Image
+                  <img
                     src="/images/white-logo.svg"
                     alt="logo"
                     width={132}

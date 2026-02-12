@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Card, Form } from "react-bootstrap";
 
 const CreateAnEvent = () => {

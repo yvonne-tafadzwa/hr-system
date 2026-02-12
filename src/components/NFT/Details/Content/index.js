@@ -1,7 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
 import ProductDescription from "./ProductDescription";
 import CountdownTimer from "./CountdownTimer";
 
@@ -17,14 +14,14 @@ const Content = () => {
         <div className="d-flex flex-wrap gap-2 gap-sm-5 mb-4">
           <div className="d-flex align-items-center">
             <div className="flex-shrink-0 position-relative">
-              <Image
+              <img
                 src="/images/user-76.gif"
                 className="rounded-circle"
                 alt="user"
                 width={30}
                 height={30}
               />
-              <Image
+              <img
                 src="/images/verify.svg"
                 className="position-absolute top-100 start-100 translate-middle"
                 alt="verify"
@@ -40,7 +37,7 @@ const Content = () => {
 
           <div className="d-flex align-items-center">
             <div className="flex-shrink-0 position-relative">
-              <Image
+              <img
                 src="/images/schedule2.png"
                 alt="schedule2"
                 width={30}

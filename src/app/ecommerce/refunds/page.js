@@ -1,5 +1,3 @@
-"use client";
- 
 import Refunds from '@/components/eCommerce/Refunds';
 import { Breadcrumb } from "react-bootstrap";
 

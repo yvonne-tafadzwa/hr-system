@@ -1,8 +1,4 @@
-"use client";
-
 import { Row, Col } from "react-bootstrap";
-import Image from "next/image";
-
 const ActiveTotalProperty = () => {
   return (
     <>
@@ -24,13 +20,13 @@ const ActiveTotalProperty = () => {
 
           <Col sm={5} className="mt-md-3 mt-xxl-0">
             <div className="pt-sm-4 mt-sm-3 text-end">
-              <Image
+              <img
                 src="/images/real-property.png"
                 alt="real-property"
                 width={188}
                 height={125}
               />
-              <Image
+              <img
                 src="/images/shape-9.png"
                 className="position-absolute bottom-0 start-0"
                 alt="shape"

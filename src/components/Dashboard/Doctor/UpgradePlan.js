@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import { Card } from "react-bootstrap";
 
 const UpgradePlan = () => {
@@ -25,7 +22,7 @@ const UpgradePlan = () => {
           </h3>
 
           <div>
-            <Image
+            <img
               src="/images/upgrade.png"
               alt="upgrade"
               width={145}

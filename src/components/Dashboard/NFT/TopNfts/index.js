@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Table, Form, Card, Button } from "react-bootstrap";
 import { useState } from "react";
 
@@ -183,7 +180,7 @@ const TopNfts = () => {
                     <td>
                       <div className="d-flex align-items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                          <img
                             src={nft.imageUrl}
                             className="rounded-circle"
                             alt="nft"

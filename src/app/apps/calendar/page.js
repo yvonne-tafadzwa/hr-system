@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import FullCalendarDemo from "@/components/Apps/Calendar/FullCalendarDemo";
 import WorkingSchedule from "@/components/Dashboard/ProjectManagement/WorkingSchedule";

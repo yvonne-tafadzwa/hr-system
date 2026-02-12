@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const stylistsData = [
   {
     id: 1,
@@ -84,7 +80,7 @@ const TopStylistPerformance = () => {
             >
               <div className="d-flex align-items-center gap-3">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={stylist.image}
                     className="rounded-3"
                     alt={stylist.name}

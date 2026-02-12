@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import NewTicketsSolvedTickets from '@/components/Helpdesk/Reports/NewTicketsSolvedTickets';
 import TicketsStatus from '@/components/Helpdesk/Reports/TicketsStatus';

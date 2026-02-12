@@ -1,8 +1,4 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-
 const CostPerClick = () => {
   return (
     <>
@@ -18,7 +14,7 @@ const CostPerClick = () => {
               <p className="fs-12">vs previous 30 days</p>
             </div>
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src="/images/call-to-action.gif"
                 alt="call-to-action"
                 width={60}

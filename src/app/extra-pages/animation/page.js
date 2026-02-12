@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import AnimationX from "@/components/ExtraPages/Animation/AnimationX";
 import AnimationXRight from "@/components/ExtraPages/Animation/AnimationXRight";

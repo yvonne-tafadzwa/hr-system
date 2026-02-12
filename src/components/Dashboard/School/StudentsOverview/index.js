@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Form } from "react-bootstrap";
-import Image from "next/image";
-
 const StudentsOverview = () => {
   const [Chart, setChart] = useState();
   useEffect(() => {
@@ -149,7 +145,7 @@ const StudentsOverview = () => {
                     lineHeight: "42px",
                   }}
                 >
-                  <Image
+                  <img
                     src="/images/boys.svg"
                     alt="boys"
                     width={30}
@@ -172,7 +168,7 @@ const StudentsOverview = () => {
                     lineHeight: "42px",
                   }}
                 >
-                  <Image
+                  <img
                     src="/images/girls.svg"
                     alt="girls"
                     width={30}

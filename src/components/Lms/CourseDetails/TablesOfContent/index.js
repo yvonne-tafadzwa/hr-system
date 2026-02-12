@@ -1,9 +1,5 @@
-"use client";
-
 import { Row, Col, Card, Accordion } from "react-bootstrap";
-import Link from "next/link";
-
-const TablesOfContent = () => {
+import { Link } from "react-router-dom";const TablesOfContent = () => {
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -371,8 +367,7 @@ const TablesOfContent = () => {
                     Get access to all videos in the library
                   </p>
 
-                  <Link
-                    href="#"
+                  <Link to="#"
                     className="btn btn-primary bg-white bg-opacity-10 text-white fs-16 py-2 py-md-3 px-3 px-md-4 fw-medium mb-3"
                   >
                     Sign Up - Only $120/mo
@@ -380,8 +375,7 @@ const TablesOfContent = () => {
 
                   <p className="fs-14 text-white">
                     Have an account?{" "}
-                    <Link
-                      href="#"
+                    <Link to="#"
                       className="fw-semibold text-white text-decoration-none"
                     >
                       Login

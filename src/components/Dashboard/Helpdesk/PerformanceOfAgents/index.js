@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import Image from "next/image";
-
 const agentsData = [
   {
     id: "#850",
@@ -189,7 +185,7 @@ const PerformanceOfAgents = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               src={agent.agentName.img}
                               className="wh-34 rounded-circle"
                               alt="user"

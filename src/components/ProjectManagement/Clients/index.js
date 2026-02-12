@@ -1,10 +1,5 @@
-"use client";
-
 import { Row, Col, Card } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const Clients = () => {
+import { Link } from "react-router-dom";const Clients = () => {
   return (
     <>
       <Row>
@@ -13,7 +8,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-1.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -55,8 +50,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -71,7 +65,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-2.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -111,8 +105,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -127,7 +120,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-3.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -168,8 +161,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -184,7 +176,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-4.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -224,8 +216,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -240,7 +231,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-5.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -280,8 +271,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -296,7 +286,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-6.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -338,8 +328,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -354,7 +343,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-7.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -396,8 +385,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -412,7 +400,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-8.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -454,8 +442,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -470,7 +457,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-9.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -510,8 +497,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -526,7 +512,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-10.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -566,8 +552,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -582,7 +567,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-11.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -623,8 +608,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project
@@ -639,7 +623,7 @@ const Clients = () => {
             <div className="d-flex">
               <div className="flex-shrink-0">
                 <div className="bg-body pe-3 pb-3 bg-for-dark-mode">
-                  <Image
+                  <img
                     src="/images/client-12.jpg"
                     className="wh-80 rounded-3"
                     alt="client"
@@ -681,8 +665,7 @@ const Clients = () => {
                 >
                   Message
                 </a>
-                <Link
-                  href="#"
+                <Link to="#"
                   className="btn btn-outline-primary py-2 fw-medium ms-3"
                 >
                   View Project

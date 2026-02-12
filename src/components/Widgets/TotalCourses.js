@@ -1,5 +1,3 @@
-"use client";
-
 import { Card } from "react-bootstrap";
 
 const TotalCourses = () => {

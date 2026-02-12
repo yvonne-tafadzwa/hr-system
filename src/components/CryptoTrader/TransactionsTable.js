@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, Table, Form, Button, Dropdown, Row, Col } from "react-bootstrap";
 

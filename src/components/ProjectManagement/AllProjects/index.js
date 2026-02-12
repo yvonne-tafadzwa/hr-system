@@ -1,9 +1,5 @@
-"use client";
-
 import { Card, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import Pagination from "./Pagination";
+import { Link } from "react-router-dom";import Pagination from "./Pagination";
 
 const projectsData = [
   {
@@ -263,8 +259,7 @@ const AllProjects = () => {
             <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
               <h3 className="mb-0">All Projects</h3>
 
-              <Link
-                href="/project-management/create-project/"
+              <Link to="/project-management/create-project/"
                 className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
               >
                 <span className="py-sm-1 d-block">
@@ -298,7 +293,7 @@ const AllProjects = () => {
                         <td className="text-body">{value.id}</td>
 
                         <td>
-                          <Link href={value.viewLink}>{value.projectName}</Link>
+                          <Link to={value.viewLink}>{value.projectName}</Link>
                         </td>
 
                         <td>{value.client}</td>
@@ -309,7 +304,7 @@ const AllProjects = () => {
                               .slice(0, 5)
                               .map((value, i) => (
                                 <li key={i} className="ms-m-10">
-                                  <Image
+                                  <img
                                     src={value.img}
                                     className="wh-34 lh-34 rounded-circle border border-1 border-color-white"
                                     alt="user"
@@ -343,7 +338,7 @@ const AllProjects = () => {
 
                         <td>
                           <div className="d-flex align-items-center gap-1">
-                            <Link href={value.viewLink}>
+                            <Link to={value.viewLink}>
                               <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                 <span className="material-symbols-outlined fs-16 text-primary">
                                   visibility

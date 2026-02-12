@@ -1,5 +1,3 @@
-"use client";
-
 import { Container, Card, NavDropdown, Navbar, Nav } from "react-bootstrap";
 
 const BasicNavbar = () => {

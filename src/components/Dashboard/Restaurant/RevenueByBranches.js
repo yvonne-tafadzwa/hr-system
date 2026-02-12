@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import WorldMap from "react-svg-worldmap";
 import { Card, Dropdown } from "react-bootstrap";
 
@@ -115,7 +112,7 @@ const RevenueByBranches = () => {
                 <div className="d-flex align-items-center flex-wrap justify-content-between">
                   <div className="flex-shrink-0">
                     <div className="d-flex align-items-center">
-                      <Image
+                      <img
                         src={branch.image}
                         alt={branch.name}
                         width={24}

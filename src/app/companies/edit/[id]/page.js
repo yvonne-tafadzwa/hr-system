@@ -1,13 +1,9 @@
-"use client";
-
-import React, { use } from "react";
+import { useParams } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 import EditCompany from '@/components/Companies/EditCompany';
 
-export default function Page({ params }) {
-  // In Next.js 15+, params is a promise that needs to be unwrapped with use()
-  const resolvedParams = typeof params?.then === 'function' ? use(params) : params;
-  const companyId = resolvedParams?.id;
+export default function Page() {
+  const { id } = useParams();
 
   return (
     <div style={{ overflowX: 'hidden', width: '100%' }}>
@@ -30,7 +26,7 @@ export default function Page({ params }) {
         </Breadcrumb>
       </div>
 
-      <EditCompany companyId={companyId} />
+      <EditCompany companyId={id} />
     </div>
   );
 }

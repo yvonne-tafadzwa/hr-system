@@ -1,7 +1,4 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { Card, Dropdown } from "react-bootstrap";
 
 const ActiveUsers = () => {
@@ -100,7 +97,7 @@ const ActiveUsers = () => {
           >
             <div className="flex-shrink-0">
               <div className="position-relative">
-                <Image
+                <img
                   src={user.image}
                   className="rounded-circle"
                   alt="user"

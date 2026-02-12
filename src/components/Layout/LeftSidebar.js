@@ -1,13 +1,8 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
-
-const LeftSidebar = ({ toogleActive }) => {
-  const pathname = usePathname();
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom"; const LeftSidebar = ({ toogleActive }) => {
+  const pathname = useLocation().pathname;
 
   // Enable the dark sidebar exclusively for the /dashboard/beauty-salon/ page URL.
   const [isDark, setIsDark] = useState(false);
@@ -36,24 +31,24 @@ const LeftSidebar = ({ toogleActive }) => {
           }`}
       >
         <div className="logo position-relative">
-          <Link
-            href="/dashboard/"
+          <Link to="/dashboard/"
             className="d-block text-decoration-none position-relative"
             style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}
           >
-            <Image
+            <img
               src="/images/logo-icon.png"
               alt="logo-icon"
               width={16}
               height={16}
             />
-            <span className="logo-text fw-bold text-dark" style={{ fontSize: '18px' }}>Verity Workflow</span>
+            <span className="logo-text fw-bold text-dark" style={{ fontSize: '18px' }}>Verity</span>
           </Link>
           <button
-            className="sidebar-burger-menu bg-transparent p-0 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
+            className="sidebar-burger-menu bg-transparent p-0 border-0 d-lg-none position-absolute top-50 end-0 translate-middle-y"
             onClick={toogleActive}
+            style={{ marginRight: '10px' }}
           >
-            <i className="material-symbols-outlined fs-24">close</i>
+            <i className="ri-close-line" style={{ fontSize: '24px', color: '#333' }}></i>
           </button>
         </div>
 
@@ -62,8 +57,7 @@ const LeftSidebar = ({ toogleActive }) => {
           <div style={{ flex: 1 }}>
             <Accordion defaultActiveKey="0" flush>
               <div className="menu-item">
-                <Link
-                  href="/dashboard/"
+                <Link to="/dashboard/"
                   className={`menu-link ${pathname === "/dashboard/" ? "active" : ""
                     }`}
                 >
@@ -72,8 +66,7 @@ const LeftSidebar = ({ toogleActive }) => {
                 </Link>
               </div>
               <div className="menu-item">
-                <Link
-                  href="/companies/"
+                <Link to="/companies/"
                   className={`menu-link ${pathname === "/companies/" ? "active" : ""
                     }`}
                 >
@@ -82,8 +75,7 @@ const LeftSidebar = ({ toogleActive }) => {
                 </Link>
               </div>
               <div className="menu-item">
-                <Link
-                  href="/sick-notes/"
+                <Link to="/sick-notes/"
                   className={`menu-link ${pathname === "/sick-notes/" ? "active" : ""
                     }`}
                 >
@@ -92,8 +84,7 @@ const LeftSidebar = ({ toogleActive }) => {
                 </Link>
               </div>
               <div className="menu-item">
-                <Link
-                  href="/employees/"
+                <Link to="/employees/"
                   className={`menu-link ${pathname === "/employees/" ? "active" : ""
                     }`}
                 >
@@ -103,8 +94,7 @@ const LeftSidebar = ({ toogleActive }) => {
               </div>
 
               <div className="menu-item">
-                <Link
-                  href="/calendar/"
+                <Link to="/calendar/"
                   className={`menu-link ${pathname === "/calendar/" ? "active" : ""
                     }`}
                 >
@@ -114,8 +104,7 @@ const LeftSidebar = ({ toogleActive }) => {
               </div>
 
               <div className="menu-item">
-                <Link
-                  href="/reports"
+                <Link to="/reports"
                   className={`menu-link ${pathname === "/reports" ? "active" : ""
                     }`}
                 >
@@ -145,8 +134,7 @@ const LeftSidebar = ({ toogleActive }) => {
               Account
             </span>
             <div className="menu-item">
-              <Link
-                href="/logout/"
+              <Link to="/logout/"
                 className={`menu-link ${pathname === "/logout/" ? "active" : ""
                   }`}
               >

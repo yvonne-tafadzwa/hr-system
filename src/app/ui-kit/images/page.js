@@ -1,5 +1,3 @@
-"use client";
-   
 import { Breadcrumb } from "react-bootstrap";
 import FluidExample from "@/components/UIKit/Images/FluidExample";
 import ShapeExample from "@/components/UIKit/Images/ShapeExample";

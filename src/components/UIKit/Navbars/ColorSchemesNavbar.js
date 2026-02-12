@@ -1,5 +1,3 @@
-"use client";
-
 import { Container, Card, Navbar, Nav } from "react-bootstrap";
 
 const ColorSchemesNavbar = () => {

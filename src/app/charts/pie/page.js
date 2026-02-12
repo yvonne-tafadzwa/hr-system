@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import BasicPieChart from '@/components/Charts/PieCharts/BasicPieChart'; 
 import PieDonutChart from '@/components/Charts/PieCharts/PieDonutChart'; 

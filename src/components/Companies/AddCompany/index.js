@@ -1,13 +1,11 @@
-"use client";
-
 import { useState, useRef } from "react";
 import { Row, Col, Card, Form, Button, Modal, ProgressBar, Alert, Tab, Tabs } from "react-bootstrap";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { registerCompanyAction } from "@/app/actions/registerCompany";
 import { supabase } from "@/lib/supabase";
 
 const AddCompany = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -512,7 +510,7 @@ EMP003,Bob Johnson,Sales,Sales Representative,2023-06-01,,,,
 
   const handleCloseSuccessModal = () => {
     setShowSuccessModal(false);
-    router.push('/companies/');
+    navigate('/companies/');
   };
 
   return (
@@ -786,7 +784,7 @@ EMP003,Bob Johnson,Sales,Sales Representative,2023-06-01,,,,
                           <Button
                             variant="secondary"
                             type="button"
-                            onClick={() => router.push('/companies/')}
+                            onClick={() => navigate('/companies/')}
                             className="fw-semibold py-2 px-3"
                             style={{ fontSize: '12px' }}
                           >
@@ -1027,7 +1025,7 @@ EMP003,Bob Johnson,Sales,Sales Representative,2023-06-01,,,,
                       <Button
                         variant="secondary"
                         type="button"
-                        onClick={() => router.push('/companies/')}
+                        onClick={() => navigate('/companies/')}
                         className="fw-semibold py-2 px-3"
                         style={{ fontSize: '12px' }}
                         disabled={isUploading}

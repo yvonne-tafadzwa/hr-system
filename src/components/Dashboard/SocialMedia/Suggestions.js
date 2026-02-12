@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Card, Dropdown } from "react-bootstrap";
 
 // Sample dynamic data for suggested users
@@ -99,7 +96,7 @@ const Suggestions = () => {
             >
               <div className="d-flex align-items-center">
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={user.profileImage}
                     className="rounded-circle"
                     alt={user.name}

@@ -1,11 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
 import { Card, Tab, Tabs, Form, Table } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-
-const productsData = [
+import { Link } from "react-router-dom";const productsData = [
   {
     id: "#JAN-999",
     img: "/images/product-1.jpg",
@@ -350,8 +345,7 @@ const ProductsList = () => {
                     </span>
                   </Form>
 
-                  <Link
-                    href="/ecommerce/create-product/"
+                  <Link to="/ecommerce/create-product/"
                     className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
                   >
                     <span className="py-sm-1 d-block">
@@ -386,11 +380,10 @@ const ProductsList = () => {
                               <td>{product.id}</td>
 
                               <td>
-                                <Link
-                                  href={product.detailsLink}
+                                <Link to={product.detailsLink}
                                   className="d-flex align-items-center"
                                 >
-                                  <Image
+                                  <img
                                     src={product.img}
                                     className="wh-40 rounded-3"
                                     alt="product-1"
@@ -430,7 +423,7 @@ const ProductsList = () => {
 
                               <td>
                                 <div className="d-flex align-items-center gap-1">
-                                  <Link href={product.detailsLink}>
+                                  <Link to={product.detailsLink}>
                                     <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                       <span className="material-symbols-outlined fs-16 text-primary">
                                         visibility

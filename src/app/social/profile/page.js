@@ -1,5 +1,3 @@
-"use client";
-  
 import React, { useState } from "react";
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import Profile from '@/components/Social/Profile';

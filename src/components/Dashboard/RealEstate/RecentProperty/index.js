@@ -1,9 +1,5 @@
-"use client";
-
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const RecentProperty = () => {
@@ -50,7 +46,7 @@ const RecentProperty = () => {
             className="recent-property-slide z-0"
           >
             <SwiperSlide className="bg-white p-2 rounded-3">
-              <Image
+              <img
                 src="/images/property-5.png"
                 className="rounded-3"
                 alt="property"
@@ -62,8 +58,7 @@ const RecentProperty = () => {
                 <h3 className="mb-2">$800,000</h3>
                 <div className="d-flex flex-wrap gap-2 justify-content-between mb-2">
                   <span>35 Prince Consort Road</span>
-                  <Link
-                    href="#"
+                  <Link to="#"
                     className="fs-14 text-primary fw-medium text-decoration-none"
                   >
                     View More
@@ -88,7 +83,7 @@ const RecentProperty = () => {
             </SwiperSlide>
 
             <SwiperSlide className="bg-white p-2 rounded-3">
-              <Image
+              <img
                 src="/images/property-6.png"
                 className="rounded-3"
                 alt="property"
@@ -100,8 +95,7 @@ const RecentProperty = () => {
                 <h3 className="mb-2">$220,000</h3>
                 <div className="d-flex flex-wrap gap-2 justify-content-between mb-2">
                   <span>58 Gateway Road Portland</span>
-                  <Link
-                    href="#"
+                  <Link to="#"
                     className="fs-14 text-primary fw-medium text-decoration-none"
                   >
                     View More
@@ -126,7 +120,7 @@ const RecentProperty = () => {
             </SwiperSlide>
 
             <SwiperSlide className="bg-white p-2 rounded-3">
-              <Image
+              <img
                 src="/images/property-5.png"
                 className="rounded-3"
                 alt="property"
@@ -138,8 +132,7 @@ const RecentProperty = () => {
                 <h3 className="mb-2">$800,000</h3>
                 <div className="d-flex flex-wrap gap-2 justify-content-between mb-2">
                   <span>35 Prince Consort Road</span>
-                  <Link
-                    href="#"
+                  <Link to="#"
                     className="fs-14 text-primary fw-medium text-decoration-none"
                   >
                     View More
@@ -164,7 +157,7 @@ const RecentProperty = () => {
             </SwiperSlide>
 
             <SwiperSlide className="bg-white p-2 rounded-3">
-              <Image
+              <img
                 src="/images/property-6.png"
                 className="rounded-3"
                 alt="property"
@@ -176,8 +169,7 @@ const RecentProperty = () => {
                 <h3 className="mb-2">$220,000</h3>
                 <div className="d-flex flex-wrap gap-2 justify-content-between mb-2">
                   <span>58 Gateway Road Portland</span>
-                  <Link
-                    href="#"
+                  <Link to="#"
                     className="fs-14 text-primary fw-medium text-decoration-none"
                   >
                     View More

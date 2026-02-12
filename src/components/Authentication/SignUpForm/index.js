@@ -1,13 +1,10 @@
-"use client";
-
 import { useState } from "react";
 import { Row, Col, Form, Modal, Button } from "react-bootstrap";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "react-router-dom";import { useNavigate } from "react-router-dom";
 import { registerCompanyAction } from "@/app/actions/registerCompany";
 
 const SignUpForm = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -102,7 +99,7 @@ const SignUpForm = () => {
 
   const handleCloseSuccessModal = () => {
     setShowSuccessModal(false);
-    router.push('/sign-in/');
+    navigate('/sign-in/');
   };
 
   return (
@@ -286,9 +283,9 @@ const SignUpForm = () => {
                     label={
                       <span style={{ fontSize: '12px' }}>
                         By creating an account you agree to the{' '}
-                        <Link href="/settings/terms-conditions/" className="text-primary">Terms and Conditions</Link>
+                        <Link to="/settings/terms-conditions/" className="text-primary">Terms and Conditions</Link>
                         {' '}and{' '}
-                        <Link href="/settings/privacy-policy/" className="text-primary">Privacy Policy</Link>
+                        <Link to="/settings/privacy-policy/" className="text-primary">Privacy Policy</Link>
                       </span>
                     }
                     required
@@ -313,7 +310,7 @@ const SignUpForm = () => {
 
                 <p className="text-center mb-0" style={{ fontSize: '12px' }}>
                   Already have an account?{' '}
-                  <Link href="/sign-in/" className="text-primary fw-medium">
+                  <Link to="/sign-in/" className="text-primary fw-medium">
                     Sign In
                   </Link>
                 </p>

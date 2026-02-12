@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Card, Dropdown, Table } from "react-bootstrap";
-import Image from "next/image";
-
 const LivePriceTracker = () => {
   // Sample cryptocurrency data
   const [cryptoData, setCryptoData] = useState([
@@ -223,7 +219,7 @@ const LivePriceTracker = () => {
                     <tr key={crypto.id}>
                       <td className="text-body">
                         <div className="d-flex align-items-center gap-2">
-                          <Image
+                          <img
                             src={crypto.icon}
                             alt={crypto.symbol}
                             width={22}

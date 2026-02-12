@@ -1,10 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-import Calendar from "react-calendar";
+import { Link } from "react-router-dom";import Calendar from "react-calendar";
 
 const RecentBookings = () => {
   // State for current date
@@ -147,7 +143,7 @@ const RecentBookings = () => {
                   style={{ gap: "15px" }}
                 >
                   <div className="flex-shrink-0">
-                    <Image
+                    <img
                       src={booking.image}
                       className="rounded-1"
                       alt={booking.room}

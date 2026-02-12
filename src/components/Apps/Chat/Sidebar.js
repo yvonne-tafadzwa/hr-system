@@ -1,8 +1,4 @@
-"use client";
-
 import { Card, Form, Tab, Tabs} from "react-bootstrap";
-import Image from "next/image"; 
-
 const Sidebar = () => {
   return (
     <>
@@ -39,7 +35,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-48.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -68,7 +64,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom border-color-gray pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-49.jpg"
                           className="wh-48 rounded-circle"
                           alt="user"
@@ -92,7 +88,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-50.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -118,7 +114,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-51.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -146,7 +142,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-52.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -183,7 +179,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-53.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -211,7 +207,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-54.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -239,7 +235,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-55.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -267,7 +263,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-56.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -295,7 +291,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-57.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -323,7 +319,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-58.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -351,7 +347,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-59.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -392,7 +388,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/wordpress.png"
                           className="wh-45 rounded-circle"
                           alt="wordpress"
@@ -421,7 +417,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom border-color-gray pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/html.png"
                           className="wh-48 rounded-circle"
                           alt="html"
@@ -443,7 +439,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/question-and-answer.png"
                           className="wh-45 rounded-circle"
                           alt="question-and-answer"
@@ -469,7 +465,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/social-media.png"
                           className="wh-45 rounded-circle"
                           alt="social-media"
@@ -497,7 +493,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-52.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -532,7 +528,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-53.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -560,7 +556,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-54.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -588,7 +584,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-55.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -616,7 +612,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-56.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -644,7 +640,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-57.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -672,7 +668,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-58.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -700,7 +696,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-59.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -741,7 +737,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-48.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -771,7 +767,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom border-color-gray pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-49.jpg"
                           className="wh-48 rounded-circle"
                           alt="user"
@@ -798,7 +794,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-50.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -828,7 +824,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-51.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -860,7 +856,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-52.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -898,7 +894,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-53.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -930,7 +926,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-54.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -962,7 +958,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-55.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -994,7 +990,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-56.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -1026,7 +1022,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-57.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -1058,7 +1054,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-58.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"
@@ -1090,7 +1086,7 @@ const Sidebar = () => {
                   <li className="d-flex justify-content-between align-items-center cursor">
                     <div className="d-flex align-items-center">
                       <div className="flex-shrink-0 position-relative">
-                        <Image
+                        <img
                           src="/images/user-59.jpg"
                           className="wh-45 rounded-circle"
                           alt="user"

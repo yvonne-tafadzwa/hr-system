@@ -1,5 +1,3 @@
-"use client";
-   
 import { Row, Col, Breadcrumb } from "react-bootstrap";
 import TopSellingProducts from "@/components/Tables/DataTable/TopSellingProducts";
 import RecentOrders from "@/components/Tables/DataTable/RecentOrders";
