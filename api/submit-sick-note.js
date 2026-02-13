@@ -60,6 +60,19 @@ module.exports = async function handler(req, res) {
         return res.status(200).end();
     }
 
+    // Temporary diagnostic endpoint - GET request shows env var status
+    if (req.method === 'GET') {
+        return res.json({
+            envStatus: {
+                SUPABASE_URL: !!process.env.SUPABASE_URL ? `set (${process.env.SUPABASE_URL.substring(0, 20)}...)` : 'NOT SET',
+                VITE_SUPABASE_URL: !!process.env.VITE_SUPABASE_URL ? `set (${process.env.VITE_SUPABASE_URL.substring(0, 20)}...)` : 'NOT SET',
+                NEXT_PUBLIC_SUPABASE_URL: !!process.env.NEXT_PUBLIC_SUPABASE_URL ? `set (${process.env.NEXT_PUBLIC_SUPABASE_URL.substring(0, 20)}...)` : 'NOT SET',
+                SUPABASE_SERVICE_ROLE_KEY: !!process.env.SUPABASE_SERVICE_ROLE_KEY ? `set (${process.env.SUPABASE_SERVICE_ROLE_KEY.substring(0, 10)}...)` : 'NOT SET',
+                VITE_SUPABASE_ANON_KEY: !!process.env.VITE_SUPABASE_ANON_KEY ? `set (${process.env.VITE_SUPABASE_ANON_KEY.substring(0, 10)}...)` : 'NOT SET',
+            }
+        });
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ success: false, error: 'Method not allowed' });
     }
