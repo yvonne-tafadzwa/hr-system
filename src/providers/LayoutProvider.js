@@ -8,6 +8,33 @@ import { AuthProvider } from "@/context/AuthContext";
 import { NotificationProvider } from "@/context/NotificationContext";
 import { LeaderboardProvider } from "@/context/LeaderboardContext";
 
+// Paths that should NOT show the dashboard layout (sidebar, topbar, footer)
+const PUBLIC_PATHS = [
+  "/sign-in",
+  "/sign-up",
+  "/forgot-password",
+  "/reset-password",
+  "/lock-screen",
+  "/confirm-email",
+  "/logout",
+  "/submit-sick-note",
+  "/front-pages/features",
+  "/front-pages/team",
+  "/front-pages/faq",
+  "/front-pages/contact",
+];
+
+const isPublicPage = (pathname) => {
+  // Normalize: remove trailing slash for comparison
+  const normalized = pathname.endsWith("/") && pathname !== "/"
+    ? pathname.slice(0, -1)
+    : pathname;
+
+  if (normalized === "") return true; // root path
+
+  return PUBLIC_PATHS.some((p) => normalized === p);
+};
+
 const LayoutProvider = ({ children }) => {
   const [active, setActive] = useState(false);
   const { pathname } = useLocation();
@@ -16,73 +43,30 @@ const LayoutProvider = ({ children }) => {
     setActive(!active);
   };
 
+  const isPublic = isPublicPage(pathname);
+
   return (
     <AuthProvider>
       <NotificationProvider>
         <LeaderboardProvider>
           <>
             <div className={`main-wrapper-content ${active && "active"}`}>
-              {!(
-                pathname === "/sign-in/" ||
-                pathname === "/sign-up/" ||
-                pathname === "/forgot-password/" ||
-                pathname === "/reset-password/" ||
-                pathname === "/lock-screen/" ||
-                pathname === "/confirm-email/" ||
-                pathname === "/logout/" ||
-                pathname === "/submit-sick-note/" ||
+              {!isPublic && (
+                <>
+                  <LeftSidebar toogleActive={toogleActive} />
+                </>
+              )}
 
-                pathname === "/" ||
-                pathname === "/front-pages/features/" ||
-                pathname === "/front-pages/team/" ||
-                pathname === "/front-pages/faq/" ||
-                pathname === "/front-pages/contact/"
-              ) && (
+              <div className="main-content d-flex flex-column">
+                {!isPublic && (
                   <>
-                    <LeftSidebar toogleActive={toogleActive} />
+                    <TopNavbar toogleActive={toogleActive} />
                   </>
                 )}
 
-              <div className="main-content d-flex flex-column">
-                {!(
-                  pathname === "/sign-in/" ||
-                  pathname === "/sign-up/" ||
-                  pathname === "/forgot-password/" ||
-                  pathname === "/reset-password/" ||
-                  pathname === "/lock-screen/" ||
-                  pathname === "/confirm-email/" ||
-                  pathname === "/logout/" ||
-                  pathname === "/submit-sick-note/" ||
-
-                  pathname === "/" ||
-                  pathname === "/front-pages/features/" ||
-                  pathname === "/front-pages/team/" ||
-                  pathname === "/front-pages/faq/" ||
-                  pathname === "/front-pages/contact/"
-                ) && (
-                    <>
-                      <TopNavbar toogleActive={toogleActive} />
-                    </>
-                  )}
-
                 {children}
 
-                {!(
-                  pathname === "/sign-in/" ||
-                  pathname === "/sign-up/" ||
-                  pathname === "/forgot-password/" ||
-                  pathname === "/reset-password/" ||
-                  pathname === "/lock-screen/" ||
-                  pathname === "/confirm-email/" ||
-                  pathname === "/logout/" ||
-                  pathname === "/submit-sick-note/" ||
-
-                  pathname === "/" ||
-                  pathname === "/front-pages/features/" ||
-                  pathname === "/front-pages/team/" ||
-                  pathname === "/front-pages/faq/" ||
-                  pathname === "/front-pages/contact/"
-                ) && <Footer />}
+                {!isPublic && <Footer />}
               </div>
             </div>
 
@@ -105,4 +89,3 @@ const LayoutProvider = ({ children }) => {
 };
 
 export default LayoutProvider;
-
