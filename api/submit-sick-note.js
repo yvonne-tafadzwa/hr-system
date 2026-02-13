@@ -77,16 +77,50 @@ module.exports = async function handler(req, res) {
         const supabase = createServerSupabase();
         const searchEmployeeId = employeeId.trim().toUpperCase();
 
-        const { data: employees, error: employeeError } = await supabase
+        // Try exact match first, then try with/without dash
+        // e.g., user enters EMP2314 -> also try EMP-2314, or vice versa
+        let employees = null;
+        let employeeError = null;
+
+        // First try: exact ilike match
+        const result1 = await supabase
             .from('employees').select('id, employee_id, name, email, company_id')
             .ilike('employee_id', searchEmployeeId);
 
+        employees = result1.data;
+        employeeError = result1.error;
+
+        // If no results and the ID doesn't contain a dash, try inserting a dash
+        // e.g., EMP2314 -> EMP-2314
+        if (!employeeError && (!employees || employees.length === 0)) {
+            const withDash = searchEmployeeId.replace(/^([A-Z]+)(\d+)$/, '$1-$2');
+            if (withDash !== searchEmployeeId) {
+                const result2 = await supabase
+                    .from('employees').select('id, employee_id, name, email, company_id')
+                    .ilike('employee_id', withDash);
+                employees = result2.data;
+                employeeError = result2.error;
+            }
+        }
+
+        // If no results and the ID contains a dash, try removing it
+        // e.g., EMP-2314 -> EMP2314
+        if (!employeeError && (!employees || employees.length === 0) && searchEmployeeId.includes('-')) {
+            const withoutDash = searchEmployeeId.replace(/-/g, '');
+            const result3 = await supabase
+                .from('employees').select('id, employee_id, name, email, company_id')
+                .ilike('employee_id', withoutDash);
+            employees = result3.data;
+            employeeError = result3.error;
+        }
+
         if (employeeError) {
-            return res.json({ success: false, error: 'Error looking up employee.' });
+            console.error('Employee lookup error:', employeeError);
+            return res.json({ success: false, error: `Error looking up employee: ${employeeError.message}` });
         }
 
         if (!employees || employees.length === 0) {
-            return res.json({ success: false, error: 'Employee ID not found.' });
+            return res.json({ success: false, error: `Employee ID "${searchEmployeeId}" not found. Please check the ID and try again.` });
         }
 
         const employee = employees[0];
